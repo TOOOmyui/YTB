@@ -3,7 +3,6 @@ name: Quai de diffusion
 on:
   push:
     branches: [quai]
-    paths: ['envoi/**', 'nettoyage/**']
   workflow_dispatch:
 
 permissions:
