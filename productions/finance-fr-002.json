@@ -1,0 +1,510 @@
+{
+ "id": "finance-fr-002",
+ "chaine": "finance-fr",
+ "titre": "PEA, assurance vie ou compte-titres : le même ETF, pas le même impôt",
+ "theme": "finance",
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 1.0
+ },
+ "verification": {
+  "date": "2026-10-27",
+  "sources": [
+   "La finance pour tous — PFU 31,4 % au 1er janvier 2026 (12,8 % IR + 18,6 % PS)",
+   "Corrige ton impôt — assurance vie exclue de la hausse (PS 17,2 %), PEA concerné à la sortie (18,6 %)",
+   "CGI art. 200 A, 2 — option globale pour le barème progressif",
+   "Loi PACTE (2019) — retraits partiels du PEA après 5 ans sans clôture, versements toujours possibles",
+   "CGI art. 125-0 A — assurance vie après 8 ans : abattement 4 600 € / 9 200 €, 7,5 % jusqu'à 150 000 € de primes",
+   "CGI art. 990 I — abattement de 152 500 € par bénéficiaire (primes versées avant 70 ans)",
+   "Calculs : CTO 50 000 × 31,4 % = 15 700 ; PEA × 18,6 % = 9 300 ; AV seul 8 600 + 7,5 % × 45 400 = 12 005 ; AV couple 8 600 + 7,5 % × 40 800 = 11 660 ; AV étalé 8 600 ; dividendes 2 000 × 31,4 % = 628",
+   "CGI art. 150-0 D, 11 — moins-values imputables sur les plus-values de l'année et des 10 années suivantes",
+   "CGI art. 757 B — versements après 70 ans : abattement global de 30 500 €, produits exonérés",
+   "Simulation boule de neige : 200 €/mois, 20 ans, 7 %/an dont 2 % de dividendes ; CTO ≈ 83 240 € net, PEA ≈ 92 022 € net"
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "Même ETF, pas le même impôt",
+   "voix": "Deux personnes. Le même ETF. Le même gain : 50 000 €. La première paie 15 700 € d'impôt. La deuxième, 9 300. Même placement. Même argent. La seule différence ? Le nom du compte.",
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Personne A",
+      "ton": "negatif",
+      "lignes": [
+       "Même ETF",
+       "Gain : 50 000 €",
+       "Impôt : 15 700 €"
+      ]
+     },
+     {
+      "titre": "Personne B",
+      "ton": "positif",
+      "lignes": [
+       "Même ETF",
+       "Gain : 50 000 €",
+       "Impôt : 9 300 €"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "voix": "Dans la dernière vidéo, on a vu que les frais pouvaient te coûter des dizaines de milliers d'euros. Aujourd'hui, c'est l'autre fuite : l'impôt. Et celle-là, tu la choisis toi-même, le jour où tu ouvres ton compte. On va comparer les trois enveloppes, chiffres à l'appui. On va voir laquelle gagne sur un retrait unique. Puis je vais te montrer un cas où le classement s'inverse complètement. Et à la fin, les trois erreurs qui coûtent le plus cher. On commence par la plus simple.",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Même ETF.",
+     "Pas le même impôt."
+    ],
+    "accent": 1
+   }
+  },
+  {
+   "voix": "Le compte-titres ordinaire. Le compte de base. Actions américaines, ETF, obligations : tu achètes ce que tu veux. Pas de plafond. Tu retires quand tu veux. Et il a un vrai avantage : si tu perds sur une ligne, cette moins-value peut compenser tes gains de la même année, ou des dix années suivantes. Liberté totale, donc. Mais la liberté a un prix.",
+   "visuel": {
+    "type": "section",
+    "titre": "Le compte-titres",
+    "sous": "Pas de plafond. Liberté totale."
+   }
+  },
+  {
+   "voix": "Depuis janvier 2026, chaque euro de gain sur un compte-titres est taxé à 31,4 %. C'est la flat tax. 12,8 d'impôt sur le revenu. Plus 18,6 de prélèvements sociaux. Avant, c'était 30 % tout rond. La hausse est passée presque inaperçue.",
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "12,8 %",
+      "impôt sur le revenu"
+     ],
+     [
+      "+"
+     ],
+     [
+      "18,6 %",
+      "prélèvements sociaux"
+     ],
+     [
+      "="
+     ],
+     [
+      "31,4 %",
+      "flat tax 2026",
+      "accent"
+     ]
+    ]
+   }
+  },
+  {
+   "voix": "Sur 50 000 € de gain, ça fait 15 700 € pour l'État. Presque un tiers de ton gain. Il te reste 34 300 €.",
+   "visuel": {
+    "type": "ledger",
+    "titre": "Compte-titres · 50 000 € de gain",
+    "lignes": [
+     [
+      "Gain",
+      "50 000 €"
+     ],
+     [
+      "Flat tax (31,4 %)",
+      "− 15 700 €",
+      "negatif"
+     ]
+    ],
+    "total": [
+     "Il te reste",
+     "34 300 €"
+    ]
+   }
+  },
+  {
+   "voix": "Et ce n'est pas tout. Sur un compte-titres, les dividendes sont taxés chaque année, au moment où tu les touches. Même si tu les réinvestis aussitôt. Prends un portefeuille de 100 000 € qui verse 2 % de dividendes. Ça fait 2 000 € par an. Et 628 € partent directement en impôt. Chaque année. Ces 628 €, ce sont des euros qui ne travailleront plus jamais pour toi.",
+   "visuel": {
+    "type": "ledger",
+    "titre": "Dividendes · portefeuille de 100 000 €",
+    "lignes": [
+     [
+      "Dividendes (2 %)",
+      "2 000 €"
+     ],
+     [
+      "Flat tax (31,4 %)",
+      "− 628 €",
+      "negatif"
+     ]
+    ],
+    "total": [
+     "Réinvesti",
+     "1 372 €"
+    ]
+   }
+  },
+  {
+   "voix": "Petite nuance, quand même. Tu peux renoncer à la flat tax et choisir d'être imposé au barème progressif. Ça peut être intéressant si ta tranche d'imposition est à zéro ou à 11 %. Mais attention : cette option est globale. Elle s'applique à tous tes revenus du capital de l'année, pas à une seule ligne. Et les prélèvements sociaux, eux, restent dus. Donc pour la plupart des gens, le compte-titres coûte cher. Heureusement, il existe une enveloppe créée pour éviter exactement ça. Et beaucoup de gens ne l'ont toujours pas ouverte.",
+   "visuel": {
+    "type": "liste",
+    "titre": "L'option pour le barème",
+    "items": [
+     "Intéressante si ta tranche est à 0 % ou 11 %",
+     "Option globale : tous tes revenus du capital de l'année",
+     "Les prélèvements sociaux restent dus"
+    ]
+   }
+  },
+  {
+   "voix": "Le PEA. Le plan d'épargne en actions. Le deal est simple : l'État te fait un cadeau fiscal. En échange, tu investis en actions européennes. Et tu es patient.",
+   "visuel": {
+    "type": "section",
+    "titre": "Le PEA",
+    "sous": "Plan d'épargne en actions"
+   }
+  },
+  {
+   "voix": "Après 5 ans, tes gains ne paient plus d'impôt sur le revenu. Zéro. Il ne reste que les prélèvements sociaux : 18,6 %. Et tant que l'argent reste dedans, les dividendes réinvestis ne paient rien du tout. Tu te souviens des 628 € par an du compte-titres ? Dans un PEA, ils restent investis.",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "5 ans",
+    "compteur": false,
+    "label": "Ensuite : 0 € d'impôt sur le revenu, seulement 18,6 % de prélèvements sociaux"
+   }
+  },
+  {
+   "chapitre": "L'effet boule de neige",
+   "voix": "Et sur la durée, cet écart fait boule de neige. Prends 200 € par mois, pendant 20 ans. 48 000 € versés au total. On suppose que le marché fait 7 % par an, dont 2 % de dividendes. C'est une hypothèse, pas une promesse, mais c'est la même pour les deux comptes. Sur le compte-titres, les dividendes sont taxés chaque année, puis la plus-value à la sortie. Résultat, après impôt : environ 83 000 €. Sur le PEA, rien n'est taxé pendant 20 ans, puis 18,6 % à la sortie. Résultat : environ 92 000 €. Près de 9 000 € d'écart. Mêmes ETF, mêmes versements, même effort. La seule différence, c'est l'enveloppe. Et cet écart n'apparaît sur aucun relevé. Il se creuse en silence, année après année.",
+   "visuel": {
+    "type": "courbe",
+    "titre": "200 €/mois pendant 20 ans · 7 %/an dont 2 % de dividendes",
+    "axe_x": [
+     "0",
+     "5 ans",
+     "10 ans",
+     "15 ans",
+     "20 ans"
+    ],
+    "series": [
+     {
+      "nom": "Compte-titres",
+      "ton": "negatif",
+      "fin": "≈ 83 000 € net",
+      "points": [
+       0,
+       14040,
+       33122,
+       59055,
+       94299
+      ]
+     },
+     {
+      "nom": "PEA",
+      "ton": "positif",
+      "fin": "≈ 92 000 € net",
+      "points": [
+       0,
+       14320,
+       34404,
+       62573,
+       102081
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "voix": "31,4, contre 18,6. Sur nos 50 000 €, le PEA ne coûte plus 15 700 €. Il en coûte 9 300. 6 400 € d'écart. Pour une case cochée. Mais attends. J'ai dit actions européennes. Alors comment tu mets un ETF monde dans un PEA ?",
+   "visuel": {
+    "type": "barres",
+    "titre": "Taxation des gains",
+    "items": [
+     [
+      "Compte-titres",
+      31.4,
+      "31,4 %",
+      "negatif"
+     ],
+     [
+      "PEA après 5 ans",
+      18.6,
+      "18,6 %",
+      "positif"
+     ]
+    ]
+   }
+  },
+  {
+   "voix": "C'est là que ça devient malin. Certains ETF monde sont éligibles au PEA. Sur le papier, ils détiennent des actions européennes. Puis ils échangent leur performance contre celle de l'indice mondial. Ça s'appelle la réplication synthétique. Résultat : tu suis le monde entier. Avec la fiscalité du PEA. Ce montage a un coût, et un petit risque de contrepartie, encadré par la réglementation européenne. Mais pour la plupart des épargnants, l'économie d'impôt compense largement.",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Un ETF monde",
+     "dans un PEA ?"
+    ],
+    "accent": 1
+   }
+  },
+  {
+   "voix": "Et il y a une règle que beaucoup de gens ignorent encore. Avant la loi Pacte de 2019, les règles de retrait étaient bien plus strictes. Aujourd'hui, après 5 ans, tu peux retirer une partie de ton argent, quand tu veux, sans fermer ton PEA. Et tu peux continuer à faire des versements ensuite. Ton PEA devient une réserve d'argent que tu utilises à ton rythme. Seule limite : l'exonération porte sur l'impôt sur le revenu. Les prélèvements sociaux, eux, s'appliquent toujours aux gains retirés.",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Après 5 ans :",
+     "retire sans fermer ton PEA."
+    ],
+    "accent": 1
+   }
+  },
+  {
+   "voix": "Mais le PEA a ses règles. Un : pas plus de 150 000 € de versements. Par personne : un couple peut donc en ouvrir deux. Deux : si tu retires avant 5 ans, en général, le plan est clôturé, et tes gains sont taxés comme sur un compte-titres. Trois : pas n'importe quoi dedans. Pas d'action américaine en direct, par exemple. Et c'est là qu'arrive la troisième enveloppe. La préférée des Français. Et la plus mal utilisée.",
+   "visuel": {
+    "type": "liste",
+    "titre": "Les 3 règles du PEA",
+    "items": [
+     "150 000 € de versements maximum",
+     "Retrait avant 5 ans : en général, plan clôturé",
+     "Pas d'actions américaines en direct"
+    ]
+   }
+  },
+  {
+   "voix": "L'assurance vie. Malgré son nom, ce n'est pas une assurance décès. C'est une enveloppe. Dedans, tu peux mettre un fonds en euros, sans risque. Ou des unités de compte, comme des ETF. Si ton contrat le permet.",
+   "visuel": {
+    "type": "section",
+    "titre": "L'assurance vie",
+    "sous": "Une enveloppe, pas une assurance décès"
+   }
+  },
+  {
+   "voix": "Premier avantage, que presque personne n'a remarqué. L'assurance vie a échappé à la hausse de 2026. Ses prélèvements sociaux restent à 17,2 %. Pas 18,6.",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "17,2 %",
+    "couleur": "positif",
+    "label": "L'assurance vie a échappé à la hausse de 2026"
+   }
+  },
+  {
+   "voix": "Deuxième avantage. Après 8 ans, chaque année, les 4 600 premiers euros de gains retirés ne paient pas d'impôt sur le revenu. 9 200 pour un couple. Et au-delà, l'impôt tombe à 7,5 %. Tant que tes versements ne dépassent pas 150 000 €. Retiens bien le mot chaque année. Il va devenir très important dans quelques minutes.",
+   "visuel": {
+    "type": "ledger",
+    "titre": "Après 8 ans, chaque année",
+    "lignes": [
+     [
+      "Abattement personne seule",
+      "4 600 €",
+      "positif"
+     ],
+     [
+      "Abattement couple",
+      "9 200 €",
+      "positif"
+     ],
+     [
+      "Impôt au-delà",
+      "7,5 %"
+     ]
+    ]
+   }
+  },
+  {
+   "voix": "Troisième avantage : la transmission. Pour les versements faits avant 70 ans, chaque bénéficiaire peut recevoir jusqu'à 152 500 € sans droits de succession. Après 70 ans, ça change : l'abattement tombe à 30 500 €, partagé entre tous les bénéficiaires. Mais les gains accumulés, eux, restent exonérés. Les notaires adorent. Mais il y a un revers. Et il se cache dans les conditions générales.",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "152 500 €",
+    "label": "par bénéficiaire, sans droits de succession (versements avant 70 ans)"
+   }
+  },
+  {
+   "voix": "Une assurance vie, ce sont des frais de contrat, en plus des frais des fonds. Dans les contrats de banque traditionnels, les frais de gestion sur les unités de compte sont souvent proches de 1 % par an. Parfois avec des frais d'entrée en plus. Et c'est l'assureur qui choisit ce que tu peux acheter. Dans beaucoup de ces contrats, pas un seul ETF. Juste les fonds maison. Ceux dont on a vu les résultats dans la dernière vidéo. À l'inverse, certains contrats en ligne proposent des ETF, sans frais d'entrée, avec des frais de gestion plus bas. Même enveloppe. Même fiscalité. Mais pas du tout le même résultat. Alors, concrètement : qui gagne ?",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Le vrai piège :",
+     "le catalogue du contrat"
+    ],
+    "accent": 1
+   }
+  },
+  {
+   "chapitre": "Qui gagne ?",
+   "voix": "Nos 50 000 € de gains, personne seule, retrait en une fois. Compte-titres : 15 700 €. Assurance vie après 8 ans : environ 12 000. PEA après 5 ans : 9 300. Sur un retrait unique, le PEA gagne. Et de loin.",
+   "visuel": {
+    "type": "barres",
+    "titre": "Impôt sur 50 000 € de gains · retrait unique",
+    "items": [
+     [
+      "Compte-titres",
+      15700,
+      "15 700 €",
+      "negatif"
+     ],
+     [
+      "Assurance vie (8 ans)",
+      12005,
+      "≈ 12 000 €",
+      "accent"
+     ],
+     [
+      "PEA (5 ans)",
+      9300,
+      "9 300 €",
+      "positif"
+     ]
+    ]
+   }
+  },
+  {
+   "voix": "Et pour un couple ? L'abattement double : 9 200 €. L'impôt sur le revenu tombe à 3 060 €. Ajoute les prélèvements sociaux : 8 600 €. Total : 11 660 €. C'est mieux. Mais toujours plus cher que le PEA. Sauf qu'on a fait une hypothèse discutable. On a tout retiré d'un coup. Et c'est précisément là que le classement va s'inverser.",
+   "visuel": {
+    "type": "ledger",
+    "titre": "Couple · 50 000 € de gain · assurance vie",
+    "lignes": [
+     [
+      "Prélèvements sociaux (17,2 %)",
+      "8 600 €"
+     ],
+     [
+      "Impôt 7,5 % après 9 200 €",
+      "3 060 €"
+     ]
+    ],
+    "total": [
+     "Total",
+     "11 660 €"
+    ]
+   }
+  },
+  {
+   "chapitre": "Le classement s'inverse",
+   "voix": "Rappelle-toi. L'abattement de l'assurance vie, ce n'est pas une fois dans ta vie. C'est chaque année. Alors imagine que tu retires ton argent progressivement, pour que la part de gains retirée chaque année reste sous 4 600 €. Résultat : zéro impôt sur le revenu. Année après année.",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Et si tu retirais",
+     "petit à petit ?"
+    ],
+    "accent": 1
+   }
+  },
+  {
+   "voix": "Il ne reste que les prélèvements sociaux, à 17,2 %. Sur nos 50 000 € de gains : 8 600 €. Moins que le PEA. Avec des retraits étalés, l'assurance vie repasse devant. Mais seulement de 700 €. Et c'est là que les frais reprennent la main. Un contrat à 1 % de frais par an, sur un capital de 100 000 €, ça coûte 1 000 € par an. Les 700 € d'avantage fiscal disparaissent en moins d'un an. Avec un contrat bon marché, l'assurance vie reste excellente. Avec un contrat cher, elle perd. Retiens ça : en assurance vie, c'est le contrat qui décide, pas l'enveloppe.",
+   "visuel": {
+    "type": "barres",
+    "titre": "Impôt sur 50 000 € de gains · retraits étalés",
+    "items": [
+     [
+      "Compte-titres",
+      15700,
+      "15 700 €",
+      "negatif"
+     ],
+     [
+      "PEA (5 ans)",
+      9300,
+      "9 300 €",
+      "accent"
+     ],
+     [
+      "Assurance vie étalée",
+      8600,
+      "8 600 €",
+      "positif"
+     ]
+    ]
+   }
+  },
+  {
+   "voix": "Donc la vraie question, ce n'est pas laquelle est la meilleure. C'est dans quel ordre les utiliser. Parce qu'elles ne font pas le même travail.",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "La vraie question :",
+     "l'ordre, pas le gagnant"
+    ],
+    "accent": 1
+   }
+  },
+  {
+   "chapitre": "Dans quel ordre ?",
+   "voix": "Pour beaucoup de gens, l'ordre logique ressemble à ça. D'abord, l'épargne de précaution, sur un livret. Ensuite, le PEA, pour les actions, sur 5 ans et plus. Puis l'assurance vie, pour la suite, pour les retraits étalés, et pour la transmission. Et le compte-titres, quand le reste est plein, ou pour ce que les autres n'acceptent pas.",
+   "visuel": {
+    "type": "liste",
+    "titre": "Un ordre logique pour beaucoup de gens",
+    "items": [
+     "Épargne de précaution : un livret",
+     "PEA : les actions, 5 ans et plus",
+     "Assurance vie : la suite et la transmission",
+     "Compte-titres : quand le reste est plein"
+    ]
+   }
+  },
+  {
+   "chapitre": "Les 3 erreurs les plus chères",
+   "voix": "Avant de finir, voici les trois erreurs que je vois le plus souvent. Chacune peut coûter des milliers d'euros.",
+   "visuel": {
+    "type": "section",
+    "titre": "3 erreurs",
+    "sous": "qui coûtent des milliers d'euros"
+   }
+  },
+  {
+   "voix": "Erreur numéro un : garder sur un compte-titres un ETF qui existe en version éligible au PEA. Tu paies 31,4 % au lieu de 18,6 %. Pour rien. Erreur numéro deux : vider son PEA avant 5 ans pour un achat imprévu. Le plan est en général clôturé, l'avantage fiscal disparaît, et le chrono repart à zéro. C'est pour ça que l'épargne de précaution passe avant tout le reste. Erreur numéro trois : ouvrir l'assurance vie de sa banque par défaut, sans comparer. Frais d'entrée, frais de gestion élevés, pas d'ETF. Sur vingt ans, la différence peut se compter en dizaines de milliers d'euros.",
+   "visuel": {
+    "type": "liste",
+    "titre": "Les 3 erreurs les plus chères",
+    "items": [
+     "Garder sur un compte-titres un ETF éligible au PEA",
+     "Vider son PEA avant 5 ans",
+     "Prendre l'assurance vie de sa banque sans comparer"
+    ]
+   }
+  },
+  {
+   "voix": "Et le conseil le plus rentable de cette vidéo. Le chrono des 5 ans du PEA, et des 8 ans de l'assurance vie, démarre à l'ouverture. Pas à ton premier gros versement. Ouvrir un PEA avec quelques euros aujourd'hui, c'est lancer le chrono. Dans 5 ans, tu te remercieras.",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Ouvre-le aujourd'hui.",
+     "Le chrono démarre à l'ouverture."
+    ],
+    "accent": 0
+   }
+  },
+  {
+   "voix": "Ce n'est pas un conseil personnalisé : ta situation compte. Mais maintenant, tu sais où ranger ton ETF. Sauf qu'il reste un détail qui change tout sur 20 ans. Ton ETF doit-il te verser des dividendes ? Ou les réinvestir tout seul ? La réponse n'est pas celle que tu crois. C'est la prochaine vidéo. Abonne-toi. Et dis-moi en commentaire : toi, tu as déjà ouvert ton PEA ?",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "capitalisant ou distribuant ?"
+    ],
+    "accent": 1
+   }
+  }
+ ],
+ "titre_youtube": "PEA, assurance vie ou compte-titres : même ETF, pas le même impôt (2026)",
+ "accroche": "Même ETF, même gain de 50 000 € : 15 700 € d'impôt sur un compte-titres, 9 300 € sur un PEA. Et avec des retraits étalés, l'assurance vie peut repasser devant. On compare les trois enveloppes avec la fiscalité 2026, chiffres à l'appui.",
+ "tags": [
+  "PEA",
+  "assurance vie",
+  "compte-titres",
+  "flat tax 2026",
+  "PFU 31,4 %",
+  "ETF",
+  "fiscalité placement",
+  "investir en bourse",
+  "épargne",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#PEA",
+  "#AssuranceVie",
+  "#ETF"
+ ],
+ "miniature": {
+  "chiffre": "−6 400 €",
+  "l1": "Même ETF, pas le même impôt",
+  "l2": "PEA · AV · CTO",
+  "ton": "negatif"
+ }
+}

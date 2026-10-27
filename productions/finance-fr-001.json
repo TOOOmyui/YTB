@@ -1,0 +1,556 @@
+{
+ "id": "finance-fr-001",
+ "chaine": "finance-fr",
+ "titre": "Ton Livret A te fait perdre de l'argent (et ta banque le sait)",
+ "titre_youtube": "Ton Livret A te fait perdre de l'argent (et ta banque le sait)",
+ "accroche": "Livret A à 1,7 %, inflation à 3,1 % : ton épargne recule. Et quand tu veux « faire travailler ton argent », 98 % des fonds actions français font moins bien que leur indice sur 10 ans. Les chiffres officiels, et ce qu'ils te coûtent en euros.",
+ "tags": [
+  "Livret A",
+  "inflation 2026",
+  "épargne",
+  "fonds actions",
+  "ETF",
+  "SPIVA",
+  "frais bancaires",
+  "gestion passive",
+  "investir",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#LivretA",
+  "#ETF",
+  "#Epargne"
+ ],
+ "miniature": {
+  "chiffre": "−1,4 %",
+  "l1": "Ton Livret A recule",
+  "l2": "et ta banque le sait",
+  "ton": "negatif"
+ },
+ "theme": "finance",
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 0.97
+ },
+ "verification": {
+  "date": "2026-10-27",
+  "sources": [
+   "Gouvernement (info.gouv.fr) — Livret A et LDDS à 1,7 % au 1er août 2026 ; LEP maintenu à 2,5 %",
+   "Gouvernement (info.gouv.fr) — taux du Livret A révisé tous les six mois selon l'inflation hors tabac et les taux d'intérêt de la zone euro",
+   "Gouvernement (info.gouv.fr) — Livret A garanti par l'État, disponible à tout moment, intérêts exonérés d'impôt sur le revenu et de prélèvements sociaux ; plafonds réglementaires 22 950 € (Livret A) et 12 000 € (LDDS)",
+   "Insee — Indice des prix à la consommation, septembre 2026 (résultats définitifs du 15/10/2026) : +3,1 % sur un an",
+   "Caisse des dépôts — collecte de septembre 2026 (22/10/2026) : encours Livret A + LDDS 606,7 Md€",
+   "AMF — Lettre de l'Observatoire de l'épargne n°65 (avril 2026) : frais courants moyens des fonds actions 1,32 % en 2025 (1,39 % en 2023), ETF actions 0,33 %",
+   "S&P Dow Jones Indices — SPIVA Europe Year-End 2025 (Reports 1a et 2) : fonds actions France sous-performant 66,9 % (1 an), 95,4 % (3 ans), 98,1 % (5 et 10 ans) ; Europe 97,0 % et Monde 98,4 % sur 10 ans ; survie à 10 ans 56,8 % (Europe), 60,4 % (France)",
+   "Calculs : rendement réel 1,7 − 3,1 = −1,4 % ; 10 170 / 1,031 ≈ 9 864 € ; 606,7 Md€ × 1,4 % ≈ 8,5 Md€",
+   "Simulation : 200 €/mois, 30 ans, 7 %/an avant frais ; 5,7 % net ≈ 185 500 € ; 6,8 % net ≈ 226 700 € ; écart ≈ 41 000 €",
+   "Calcul : 10 000 × (1,017 / 1,031)^10 ≈ 8 722 €"
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "Le Livret A recule",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "−1,4 %",
+    "couleur": "negatif",
+    "compteur": false,
+    "label": "par an, en pouvoir d'achat"
+   },
+   "voix": "Stop. Ne scrolle pas. Pendant que tu regardes cette vidéo, ton Livret A est en train de te faire perdre de l'argent. Pas beaucoup. Juste assez pour que tu ne le remarques jamais. Et c'est exactement ça, le problème."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Pas une arnaque.",
+     "Pas un scandale.",
+     "Juste des maths."
+    ],
+    "accent": 2
+   },
+   "voix": "Je ne vais pas te parler d'arnaque, ni de complot. Je vais te montrer des chiffres officiels, que n'importe qui peut vérifier. Et à la fin, tu vas comprendre pourquoi personne à ta banque n'a intérêt à te les montrer. Mais d'abord, commençons par le plus simple."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "1,7 %",
+    "compteur": true,
+    "label": "Livret A depuis le 1er août 2026"
+   },
+   "voix": "Depuis le premier août 2026, le Livret A rapporte 1,7 %. Ça sonne plutôt bien. Il venait même d'augmenter. Sauf que mi-octobre, l'Insee publie l'inflation de septembre : 3,1 % sur un an. Tu vois le souci ?"
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "1,7 %",
+      "Livret A",
+      "positif"
+     ],
+     [
+      "−"
+     ],
+     [
+      "3,1 %",
+      "inflation",
+      "negatif"
+     ],
+     [
+      "="
+     ],
+     [
+      "−1,4 %",
+      "rendement réel",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Ton argent grossit de 1,7. Les prix grossissent de 3,1. Donc en vrai, en pouvoir d'achat, tu recules d'environ 1,4 % par an. Ton solde monte, mais ce que tu peux acheter avec, lui, descend. C'est ce qu'on appelle un rendement réel négatif. Et même le LEP, à 2,5 %, réservé aux revenus modestes, reste sous l'inflation."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "10 000 € sur un Livret A pendant 1 an",
+    "lignes": [
+     [
+      "Solde affiché",
+      "10 170 €",
+      "positif"
+     ],
+     [
+      "Pouvoir d'achat réel",
+      "≈ 9 864 €",
+      "negatif"
+     ]
+    ],
+    "total": [
+     "Recul réel",
+     "≈ −136 €",
+     "negatif"
+    ]
+   },
+   "voix": "Prends 10 000 €. Dans un an, ton relevé affichera 10 170 €. Content. Sauf que si les prix continuent de monter au même rythme, ces 10 170 € achèteront à peu près ce que 9 864 € achètent aujourd'hui. Tu as gagné de l'argent. Et tu t'es appauvri. Les deux en même temps."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "≈ 8 722 €",
+    "couleur": "negatif",
+    "compteur": true,
+    "label": "de pouvoir d'achat, pour 10 000 € laissés 10 ans à ces taux"
+   },
+   "voix": "Et sur dix ans ? Si ces taux restaient les mêmes, tes 10 000 € auraient le pouvoir d'achat d'environ 8 722 € d'aujourd'hui. Près de 13 % envolés. Sans que ton solde baisse une seule fois. C'est ça, le piège : l'inflation ne fait jamais de bruit."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Le Livret A reste utile",
+    "items": [
+     "Garanti par l'État",
+     "Disponible à tout moment",
+     "Intérêts sans impôt ni prélèvements sociaux",
+     "Plafond : 22 950 € (LDDS : 12 000 €)"
+    ]
+   },
+   "voix": "Attention, je ne te dis pas de vider ton Livret A. Il a de vraies qualités. Il est garanti par l'État. Ton argent est disponible à tout moment. Et ses intérêts ne paient ni impôt, ni prélèvements sociaux. Il est simplement plafonné, à 22 950 €, et 12 000 € pour le LDDS. C'est un excellent coffre-fort. Mais un coffre-fort, ça protège. Ça ne fait pas grandir."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Révisé tous les six mois,",
+     "selon l'inflation et les taux."
+    ],
+    "accent": 1
+   },
+   "voix": "Et une précision honnête. Le taux du Livret A n'est pas figé. Il est révisé tous les six mois, en fonction de l'inflation et des taux d'intérêt de la zone euro. Si l'inflation redescend sous le taux du livret, le rendement réel redevient positif. Mais même dans ce cas, il restera proche de zéro. Le Livret A est conçu pour protéger ton épargne, pas pour la faire grandir. Et c'est là que la plupart des gens prennent une mauvaise décision."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "606,7 Md€",
+    "compteur": true,
+    "label": "sur les Livrets A et LDDS fin septembre 2026"
+   },
+   "voix": "Et maintenant, multiplie ça à l'échelle du pays. Fin septembre 2026, il y a 606,7 milliards d'euros sur les Livrets A et les LDDS. Plus de 600 milliards. Posés là, bien au chaud."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "≈ 8,5 Md€",
+    "couleur": "negatif",
+    "compteur": true,
+    "label": "de pouvoir d'achat évaporés en un an"
+   },
+   "voix": "1,4 % de 600 milliards, c'est environ 8,5 milliards d'euros de pouvoir d'achat qui s'évaporent en un an. Sans bruit. Sans que personne ne reçoive de facture. Mais attention. Le Livret A, ce n'est pas le vrai problème. Le Livret A, c'est l'appât. Le vrai problème, c'est ce qu'on va te proposer quand tu vas dire à ton conseiller : je veux que mon argent travaille."
+  },
+  {
+   "chapitre": "Le rendez-vous chez le conseiller",
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Je veux que mon argent travaille. »"
+    ]
+   },
+   "voix": "Tu connais la scène. Tu prends rendez-vous. Ton conseiller est sympa, vraiment. Il t'explique que le Livret A, c'est pour l'épargne de précaution, et que pour le long terme, il a mieux. Un fonds actions. Géré par des professionnels. Qui choisissent les meilleures entreprises à ta place."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "1,32 %",
+    "compteur": true,
+    "label": "de frais courants par an, en moyenne, pour un fonds actions (AMF, 2025)"
+   },
+   "voix": "Et ce fonds, il a un prix. D'après l'Autorité des marchés financiers, les frais courants moyens des fonds actions en France étaient de 1,32 % par an en 2025. Chaque année. Que le fonds gagne ou qu'il perde. Et ça, c'est sans compter les frais de ton contrat d'assurance vie, si le fonds est logé dedans."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Frais courants moyens des fonds actions (AMF)",
+    "items": [
+     [
+      "2023",
+      1.39,
+      "1,39 %",
+      "negatif"
+     ],
+     [
+      "2024",
+      1.37,
+      "1,37 %",
+      "negatif"
+     ],
+     [
+      "2025",
+      1.32,
+      "1,32 %",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Bonne nouvelle : ces frais baissent. 1,39 % en 2023. 1,37 % en 2024. 1,32 % en 2025. Mauvaise nouvelle : ils baissent très lentement. Et la vraie question n'est pas leur niveau. C'est ce que tu obtiens en échange."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Un gérant payé 1,3 % par an",
+     "bat-il le marché ?"
+    ],
+    "accent": 1
+   },
+   "voix": "Alors la question devient simple. Si tu paies un gérant 1,3 % par an pour choisir les bonnes actions, est-ce qu'il fait mieux que le marché tout seul ? Est-ce qu'il bat l'indice ? Parce que sinon, tu paies un chef étoilé pour te servir un plat surgelé. Et justement, il existe une étude qui répond exactement à cette question. Depuis plus de vingt ans."
+  },
+  {
+   "chapitre": "L'étude SPIVA",
+   "visuel": {
+    "type": "section",
+    "titre": "SPIVA",
+    "sous": "S&P Dow Jones Indices · deux fois par an"
+   },
+   "voix": "Elle s'appelle SPIVA. C'est S&P Dow Jones Indices qui la publie, deux fois par an. Le principe est brutal : on prend tous les fonds gérés activement, et on compare leur performance à celle de leur indice de référence. Pas de storytelling, pas de plaquette commerciale. Juste le résultat."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Fonds actions France moins bons que leur indice (fin 2025)",
+    "items": [
+     [
+      "1 an",
+      66.9,
+      "66,9 %",
+      "accent"
+     ],
+     [
+      "3 ans",
+      95.4,
+      "95,4 %",
+      "negatif"
+     ],
+     [
+      "5 ans",
+      98.1,
+      "98,1 %",
+      "negatif"
+     ],
+     [
+      "10 ans",
+      98.1,
+      "98,1 %",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Voilà les chiffres pour les fonds actions françaises, arrêtés fin 2025. Sur un an, 66,9 % font moins bien que leur indice. Deux sur trois. Sur trois ans, 95,4 %. Sur cinq ans, 98,1 %. Et sur dix ans, toujours 98,1 %. Plus tu attends, plus le constat devient sévère."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "98 / 100",
+    "couleur": "negatif",
+    "compteur": false,
+    "label": "fonds actions français battus par leur indice sur 10 ans"
+   },
+   "voix": "Relis ça tranquillement. Sur dix ans, sur 100 fonds actions français, à peu près deux battent leur indice. Deux. Les 98 autres, tu les as payés plus cher, pour avoir moins. Et rien ne garantit que les deux gagnants d'hier seront ceux de demain."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "Marché",
+      "avant frais"
+     ],
+     [
+      "−"
+     ],
+     [
+      "Frais",
+      "de gestion",
+      "negatif"
+     ],
+     [
+      "="
+     ],
+     [
+      "Moyenne",
+      "des gérants",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Et ce n'est pas parce que les gérants seraient mauvais. C'est de l'arithmétique. Avant frais, l'ensemble des investisseurs, c'est le marché lui-même. Leur performance moyenne est donc celle de l'indice. Mais ensuite, on retire les frais. Et après frais, le gérant moyen fait forcément moins bien que l'indice. Chaque année. Pour le battre durablement, il faut être meilleur que la moyenne, d'une marge plus grande que ses propres frais. Très peu y arrivent. Et presque jamais longtemps."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Sous-performance sur 10 ans, par catégorie (SPIVA, fin 2025)",
+    "items": [
+     [
+      "Actions France",
+      98.1,
+      "98,1 %",
+      "negatif"
+     ],
+     [
+      "Actions Europe",
+      97.0,
+      "97,0 %",
+      "negatif"
+     ],
+     [
+      "Actions Monde",
+      98.4,
+      "98,4 %",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Et ce n'est pas une spécificité française. Actions européennes : 97 % sous-performent sur dix ans. Actions monde : 98,4. Le résultat est le même partout. Mais il y a un chiffre encore plus fou dans ce rapport. Et presque personne n'en parle."
+  },
+  {
+   "chapitre": "Le biais du survivant",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "43 %",
+    "couleur": "negatif",
+    "compteur": true,
+    "label": "des fonds actions européennes d'il y a 10 ans ont disparu"
+   },
+   "voix": "43 % des fonds actions européennes qui existaient il y a dix ans n'existent plus. Fermés, ou fusionnés avec un autre. Côté France, c'est environ 40 %. Et devine lesquels disparaissent ? Rarement les meilleurs."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Le catalogue d'aujourd'hui",
+     "ne montre que les survivants."
+    ],
+    "accent": 1
+   },
+   "voix": "Les fonds qui ratent sont discrètement effacés, et le catalogue que ton conseiller te montre aujourd'hui ne contient que les survivants. Ça s'appelle le biais du survivant. Et ça rend la gestion active bien plus belle sur le papier qu'elle ne l'est en réalité. L'étude SPIVA, elle, garde les fonds disparus dans ses calculs. C'est pour ça que ses chiffres sont si durs."
+  },
+  {
+   "chapitre": "Suivre l'argent",
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Alors pourquoi",
+     "on te le propose encore ?"
+    ],
+    "accent": 1
+   },
+   "voix": "Donc si quasiment tous les fonds font moins bien que l'indice, pourquoi ta banque continue de te les proposer ? Pourquoi ton conseiller ne te dit jamais : écoute, achète l'indice, et reviens dans vingt ans ? La réponse n'a rien de mystérieux. Il suffit de suivre l'argent."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Frais courants moyens par an (AMF, 2025)",
+    "items": [
+     [
+      "Fonds actions",
+      1.32,
+      "1,32 %",
+      "negatif"
+     ],
+     [
+      "Fonds indiciels non cotés",
+      0.75,
+      "0,75 %",
+      "accent"
+     ],
+     [
+      "ETF actions",
+      0.33,
+      "0,33 %",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "En face du fonds maison, il existe un produit qui fait exactement ce que l'indice fait. Ça s'appelle un ETF, ou un tracker. D'après l'AMF, les ETF actions coûtaient en moyenne 0,33 % par an en 2025. Et les ETF sur les grandes entreprises mondiales descendent souvent sous 0,2 %. Quatre à six fois moins cher. Et c'est là que tout se joue."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Tes frais =",
+     "leur chiffre d'affaires."
+    ],
+    "accent": 1
+   },
+   "voix": "Les frais que tu paies, ce ne sont pas une perte qui disparaît dans la nature. C'est le chiffre d'affaires de quelqu'un. Un fonds à 1,3 % fait vivre toute une chaîne : la société de gestion, le distributeur, parfois ton conseiller via ses objectifs commerciaux. Un ETF à 0,2, lui, ne fait vivre presque personne. Personne n'est méchant là-dedans. C'est juste que l'intérêt de celui qui vend n'est pas forcément le tien. Et maintenant, je vais te montrer combien cet écart te coûte, à toi, en euros."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Les frais qu'on ne voit pas",
+    "items": [
+     "Frais d'entrée sur chaque versement",
+     "Frais de gestion du contrat d'assurance vie",
+     "Frais d'arbitrage quand tu changes de support",
+     "Commissions de surperformance"
+    ]
+   },
+   "voix": "Et les frais courants ne sont pas les seuls. Selon les contrats, il peut y avoir des frais d'entrée sur chaque versement. Des frais de gestion du contrat d'assurance vie, en plus de ceux du fonds. Des frais d'arbitrage quand tu changes de support. Et parfois une commission de surperformance, quand le fonds a bien marché. Chacun paraît petit. Ensemble, ils changent tout."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Le DIC :",
+     "le document qui dit tout."
+    ],
+    "accent": 1
+   },
+   "voix": "Comment les trouver ? Chaque fonds doit fournir un document d'informations clés, le DIC. Deux ou trois pages, obligatoires. Tu y trouves les frais, le niveau de risque, et les scénarios de performance. Demande-le systématiquement. Si ton conseiller ne peut pas te le donner tout de suite, c'est déjà une réponse."
+  },
+  {
+   "chapitre": "Combien ça te coûte",
+   "visuel": {
+    "type": "liste",
+    "titre": "Notre exemple",
+    "items": [
+     "200 € par mois pendant 30 ans",
+     "Hypothèse : 7 % par an avant frais",
+     "Même hypothèse pour les deux scénarios"
+    ]
+   },
+   "voix": "On prend un exemple simple. Tu investis 200 € par mois, pendant 30 ans. On suppose que le marché fait 7 % par an avant frais. C'est une hypothèse, pas une promesse : les marchés peuvent faire moins, et ils ne montent pas en ligne droite. Mais c'est la même hypothèse pour les deux scénarios, donc la comparaison reste juste."
+  },
+  {
+   "visuel": {
+    "type": "courbe",
+    "titre": "200 €/mois pendant 30 ans · 7 %/an avant frais",
+    "axe_x": [
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25",
+     "30 ans"
+    ],
+    "series": [
+     {
+      "nom": "Fonds à 1,3 %",
+      "ton": "negatif",
+      "fin": "≈ 185 500 €",
+      "points": [
+       0,
+       13860,
+       32147,
+       56274,
+       88108,
+       130109,
+       185525
+      ]
+     },
+     {
+      "nom": "ETF à 0,2 %",
+      "ton": "positif",
+      "fin": "≈ 226 700 €",
+      "points": [
+       0,
+       14248,
+       34046,
+       61554,
+       99777,
+       152888,
+       226684
+      ]
+     }
+    ]
+   },
+   "voix": "Scénario un, le fonds actif à 1,3 % de frais : il te reste 5,7 % par an. Au bout de 30 ans, environ 185 500 €. Scénario deux, l'ETF à 0,2 % : il te reste 6,8 %. Au bout de 30 ans, environ 226 700 €. Regarde bien la courbe. Pendant dix ans, l'écart est presque invisible. Puis il s'ouvre, de plus en plus vite."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "≈ 41 000 €",
+    "couleur": "negatif",
+    "compteur": true,
+    "label": "d'écart, pour les mêmes 72 000 € versés"
+   },
+   "voix": "41 000 € d'écart. Pour les mêmes 72 000 € versés. Le même effort. Les mêmes 30 ans. Et le plus vicieux, c'est que tu ne vois jamais cette somme partir. Il n'y a pas de ligne sur ton relevé qui dit : moins 41 000. Ça se passe en silence, un petit pourcentage à la fois, grâce aux intérêts composés. Qui travaillent pour toi, ou contre toi. Et justement, il y a une manière très simple de les remettre de ton côté."
+  },
+  {
+   "chapitre": "3 questions à ton conseiller",
+   "visuel": {
+    "type": "liste",
+    "titre": "3 questions à poser à ton conseiller",
+    "items": [
+     "Quels sont les frais totaux par an, contrat compris ?",
+     "Ce fonds a-t-il battu son indice sur 10 ans, chiffres à l'appui ?",
+     "Pourquoi pas un ETF à la place ?"
+    ]
+   },
+   "voix": "Je ne suis pas là pour te dire quoi acheter. Ce n'est pas un conseil en investissement, et ta situation est unique. Mais la prochaine fois que tu es face à ton conseiller, pose-lui ces trois questions. Un : quels sont les frais totaux, en pourcentage, par an, contrat compris. Deux : est-ce que ce fonds a battu son indice sur les dix dernières années, chiffres à l'appui. Trois : pourquoi pas un ETF à la place. Regarde bien sa réaction à la troisième."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Garde en tête",
+    "items": [
+     "Le Livret A : pour l'épargne de précaution, pas pour 20 ans",
+     "Les frais : le seul rendement garanti… pour celui qui les encaisse",
+     "Ton avantage : le temps, et des frais bas"
+    ]
+   },
+   "voix": "Et garde trois idées en tête. Le Livret A, c'est parfait pour ton épargne de précaution, l'argent dont tu peux avoir besoin demain. On parle souvent de trois à six mois de dépenses. Pas pour faire fructifier ton patrimoine sur vingt ans. Ensuite, les frais sont le seul rendement garanti de la finance. Garanti pour celui qui les encaisse. Et enfin, ton vrai avantage de particulier, ce n'est pas d'être plus malin que les pros. C'est d'avoir du temps, et de payer moins cher."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "PEA, assurance vie ou compte-titres ?"
+    ],
+    "accent": 1
+   },
+   "voix": "Maintenant, il reste une question, et elle est énorme. Si tu veux acheter un ETF, tu le mets où ? PEA, assurance vie, compte-titres ? Parce que selon l'enveloppe, l'impôt que tu paieras dans vingt ans n'a rien à voir. Et une erreur d'enveloppe peut te coûter presque autant que les frais qu'on vient de voir. C'est le sujet de la prochaine vidéo. Abonne-toi pour ne pas la rater. Et toi, ton argent, il dort où ? Dis-le moi en commentaire."
+  }
+ ]
+}
