@@ -37,8 +37,8 @@ def auto_visuel(phrase, deja):
     nus = phrase.strip()
     for m in RE_NOMBRE.finditer(nus):
         val = m.group(1) + ((' ' if m.group(2) not in ('%', '€') else '\u202f') + m.group(2).replace('euros', '€') if m.group(2) else '')
-        if m.group(2) is None and len(m.group(1)) < 3:
-            continue
+        if m.group(2) is None:
+            continue  # un nombre sans unité n'a pas de sens isolé à l'écran
         if val in deja:
             continue
         deja.add(val)

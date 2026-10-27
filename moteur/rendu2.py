@@ -281,7 +281,7 @@ def dessiner(v, t, dur, th):
         x1 = W - x0
         pas = 104
         n = len(lignes) + (1 if tot else 0)
-        y = (H - n * pas - (120 if titre else 0)) / 2
+        y = max((H - n * pas - (120 if titre else 0)) / 2, 200)
         # carte
         a, _ = apparait(t, 0, 0.3)
         d.rounded_rectangle([x0 - 60, y - 50, x1 + 60, y + n * pas + (120 if titre else 0) + 30], radius=28,
@@ -318,8 +318,8 @@ def dessiner(v, t, dur, th):
         val_w = max(d.textlength(it[2], font=polV) for it in items)
         x0 = max(W * 0.26, marge + lab_w + 40)
         xl = W - marge - val_w - 30
-        pas = 160
-        y = (H - len(items) * pas) / 2 + (50 if titre else 0)
+        pas = 160 if len(items) <= 3 else 140
+        y = max((H - len(items) * pas) / 2 + (50 if titre else 0), 330 if titre else 200)
         if titre:
             a, dy = apparait(t, 0)
             centre(d, y - 120, titre, P('semibold', 52), T('muet'), a, dy, th=th)
