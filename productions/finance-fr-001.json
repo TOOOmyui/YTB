@@ -552,5 +552,10 @@
    },
    "voix": "Maintenant, il reste une question, et elle est énorme. Si tu veux acheter un ETF, tu le mets où ? PEA, assurance vie, compte-titres ? Parce que selon l'enveloppe, l'impôt que tu paieras dans vingt ans n'a rien à voir. Et une erreur d'enveloppe peut te coûter presque autant que les frais qu'on vient de voir. C'est le sujet de la prochaine vidéo. Abonne-toi pour ne pas la rater. Et toi, ton argent, il dort où ? Dis-le moi en commentaire."
   }
- ]
+ ],
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-HenriNeural",
+  "debit": "+6%"
+ }
 }

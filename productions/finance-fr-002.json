@@ -506,5 +506,10 @@
   "l1": "Même ETF, pas le même impôt",
   "l2": "PEA · AV · CTO",
   "ton": "negatif"
+ },
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-HenriNeural",
+  "debit": "+6%"
  }
 }
