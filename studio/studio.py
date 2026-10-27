@@ -19,6 +19,92 @@ import base64, json, os, sys, time, urllib.request, urllib.parse, urllib.error
 
 API = 'https://api.elevenlabs.io/v1'
 CLE = os.environ.get('ELEVENLABS_API_KEY', '')
+AZ_CLE = os.environ.get('AZURE_SPEECH_KEY', '')
+AZ_REGION = os.environ.get('AZURE_SPEECH_REGION', '')
+
+# ------------------------------------------------------------------ Azure
+
+import re
+from xml.sax.saxutils import escape
+
+SIGLES_MOTS = {'SPIVA', 'INSEE', 'CAC', 'NASDAQ', 'UNESCO', 'OCDE'}
+
+
+def ssml(texte, voix, debit='+6%', hauteur='+0%', style=None, degre=None, langue='fr-FR'):
+    t = escape(texte)
+    t = re.sub(r'\b([A-Z]{2,5})\b', lambda m: m.group(1) if m.group(1) in SIGLES_MOTS
+               else f'<say-as interpret-as="characters">{m.group(1)}</say-as>', t)
+    corps = f'<prosody rate="{debit}" pitch="{hauteur}">{t}</prosody>'
+    if style:
+        corps = f'<mstts:express-as style="{style}"' + (f' styledegree="{degre}"' if degre else '') + f'>{corps}</mstts:express-as>'
+    return ('<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" '
+            f'xml:lang="{langue}"><voice name="{voix}">{corps}</voice></speak>')
+
+
+def azure_tts(doc_ssml):
+    import azure.cognitiveservices.speech as sdk
+    cfg = sdk.SpeechConfig(subscription=AZ_CLE, region=AZ_REGION)
+    cfg.set_speech_synthesis_output_format(sdk.SpeechSynthesisOutputFormat.Audio24Khz96KBitRateMonoMp3)
+    synth = sdk.SpeechSynthesizer(speech_config=cfg, audio_config=None)
+    mots = []
+
+    def frontiere(evt):
+        if evt.boundary_type == sdk.SpeechSynthesisBoundaryType.Word:
+            d = evt.audio_offset / 1e7
+            mots.append([round(d, 3), round(d + evt.duration.total_seconds(), 3), evt.text])
+    synth.synthesis_word_boundary.connect(frontiere)
+    for essai in range(4):
+        r = synth.speak_ssml_async(doc_ssml).get()
+        if r.reason == sdk.ResultReason.SynthesizingAudioCompleted:
+            return r.audio_data, mots
+        det = r.cancellation_details
+        if essai < 3 and det and '429' in str(det.error_details):
+            time.sleep(6 * (essai + 1)); mots.clear(); continue
+        raise RuntimeError(f'Azure : {det.reason if det else r.reason} {det.error_details if det else ""}')
+
+
+def azure_voix(langue='fr-FR'):
+    url = f'https://{AZ_REGION}.tts.speech.microsoft.com/cognitiveservices/voices/list'
+    req = urllib.request.Request(url, headers={'Ocp-Apim-Subscription-Key': AZ_CLE})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        tout = json.loads(r.read())
+    return [v for v in tout if v.get('Locale') == langue or langue in (v.get('SecondaryLocaleList') or [])]
+
+
+def azure_casting(c, dossier):
+    os.makedirs(dossier, exist_ok=True)
+    rapport = []
+    voix = azure_voix(c.get('langue', 'fr-FR'))
+    if c.get('genre'):
+        voix = [v for v in voix if v.get('Gender', '').lower() == c['genre'].lower()]
+    for v in voix:
+        nom = v['ShortName']
+        variantes = [(None, '')]
+        for st in (v.get('StyleList') or []):
+            if st in c.get('styles', ['newscast', 'excited', 'cheerful', 'narration-professional']):
+                variantes.append((st, '-' + st))
+        for st, suffixe in variantes:
+            try:
+                audio, _ = azure_tts(ssml(c['texte'], nom, c.get('debit', '+6%'), style=st, degre=c.get('degre')))
+                f = nom + suffixe + '.mp3'
+                open(os.path.join(dossier, f), 'wb').write(audio)
+                rapport.append({'fichier': f, 'voix': nom, 'style': st, 'genre': v.get('Gender'), 'ok': True})
+            except Exception as e:
+                rapport.append({'voix': nom, 'style': st, 'ok': False, 'erreur': str(e)[:300]})
+    json.dump(rapport, open(os.path.join(dossier, 'rapport.json'), 'w'), ensure_ascii=False, indent=1)
+
+
+def azure_production(c, dossier):
+    os.makedirs(dossier, exist_ok=True)
+    for i, txt in enumerate(c['beats']):
+        cible = os.path.join(dossier, f'b{i:03d}.mp3')
+        if os.path.exists(cible):
+            continue
+        audio, mots = azure_tts(ssml(txt, c['voix'], c.get('debit', '+6%'), c.get('hauteur', '+0%'), c.get('style'), c.get('degre')))
+        open(cible, 'wb').write(audio)
+        json.dump(mots, open(os.path.join(dossier, f'b{i:03d}.json'), 'w'), ensure_ascii=False)
+        print(f'beat {i + 1}/{len(c["beats"])}', flush=True)
+
 
 
 def appel(methode, chemin, corps=None, params=None, brut=False):
@@ -140,8 +226,6 @@ def production(c, dossier):
 
 
 def main():
-    if not CLE:
-        sys.exit('Secret ELEVENLABS_API_KEY absent : ajoute-le dans Settings > Secrets and variables > Actions.')
     os.makedirs('sorties', exist_ok=True)
     for f in sorted(os.listdir('commandes')):
         if not f.endswith('.json'):
@@ -153,7 +237,14 @@ def main():
             continue
         dossier = os.path.join('sorties', nom)
         try:
-            {'casting': casting, 'essai': essai, 'tts': production}[c['mode']](c, dossier)
+            fournisseur = c.get('fournisseur', 'azure')
+            if fournisseur == 'azure' and not (AZ_CLE and AZ_REGION):
+                raise RuntimeError('Secrets AZURE_SPEECH_KEY / AZURE_SPEECH_REGION absents (Settings > Secrets and variables > Actions).')
+            if fournisseur == 'elevenlabs' and not CLE:
+                raise RuntimeError('Secret ELEVENLABS_API_KEY absent (Settings > Secrets and variables > Actions).')
+            table = {('azure', 'casting'): azure_casting, ('azure', 'tts'): azure_production,
+                     ('elevenlabs', 'casting'): casting, ('elevenlabs', 'essai'): essai, ('elevenlabs', 'tts'): production}
+            table[(fournisseur, c['mode'])](c, dossier)
             c['statut'] = 'traitée'
         except Exception as e:
             c['statut'] = 'erreur'

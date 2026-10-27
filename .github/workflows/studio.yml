@@ -21,9 +21,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: studio
+      - name: Installer le kit voix
+        run: pip install -q azure-cognitiveservices-speech
       - name: Traiter les commandes en attente
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
         run: python3 studio/studio.py
       - name: Livrer les enregistrements
         run: |
