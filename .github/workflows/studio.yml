@@ -1,0 +1,34 @@
+name: Studio voix
+
+on:
+  push:
+    branches: [studio]
+    paths: ['commandes/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: studio-voix
+  cancel-in-progress: false
+
+jobs:
+  enregistrer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: studio
+      - name: Traiter les commandes en attente
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 studio/studio.py
+      - name: Livrer les enregistrements
+        run: |
+          git config user.name "Studio voix"
+          git config user.email "studio@users.noreply.github.com"
+          git add -A sorties commandes
+          git diff --cached --quiet || git commit -m "studio : livraison"
+          for i in 1 2 3; do git pull --rebase origin studio && git push origin studio && break; sleep 5; done
