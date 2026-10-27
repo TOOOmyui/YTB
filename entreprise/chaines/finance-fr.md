@@ -4,7 +4,8 @@
 - **Langue** : français
 - **Statut** : active (lancement)
 - **Plateformes** : YouTube (vidéos longues + Shorts), Instagram Reels — via Metricool, marque 7683914
-- **Voix** : voix premium Azure (casting en cours), générée par le studio voix GitHub ; repli : Pierre (Piper). Une voix unique et exclusive par chaîne.
+- **Voix** : voix premium Azure générée par le studio voix GitHub (casting en cours, voix provisoire ci-dessous). Une voix unique et exclusive par chaîne. La voix locale (Pierre, Piper) sert uniquement aux tests : jamais de publication avec elle.
+- **voix_studio** (à copier tel quel dans chaque spec) : `{"fournisseur": "azure", "voix": "fr-FR-HenriNeural", "debit": "+6%"}`
 
 ## Ligne éditoriale
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.
