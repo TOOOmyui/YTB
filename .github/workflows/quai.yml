@@ -1,0 +1,52 @@
+name: Quai de diffusion
+
+on:
+  push:
+    branches: [quai]
+    paths: ['envoi/**', 'nettoyage/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quai
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: quai
+      - name: Recoller et publier les vidéos en attente
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          mkdir -p livres
+          for d in envoi/*/; do
+            [ -d "$d" ] || continue
+            nom=$(basename "$d")
+            fichier=$(cat "$d/nom.txt")
+            cat "$d"/part_* > "livres/$fichier"
+            if [ -f "$d/sha256.txt" ]; then echo "$(cat $d/sha256.txt)  livres/$fichier" | sha256sum -c -; fi
+            gh release delete "$nom" --yes --cleanup-tag 2>/dev/null || true
+            gh release create "$nom" "livres/$fichier" --target quai --title "$nom" --notes "Quai de diffusion de la régie (supprimé après import)."
+            echo "https://github.com/${GITHUB_REPOSITORY}/releases/download/$nom/$fichier" > "envoi/$nom.url"
+            git rm -rq "$d"
+          done
+          for f in nettoyage/*.txt; do
+            [ -f "$f" ] || continue
+            gh release delete "$(basename "$f" .txt)" --yes --cleanup-tag 2>/dev/null || true
+            git rm -q "$f"
+          done
+      - name: Enregistrer
+        run: |
+          git config user.name "Quai"
+          git config user.email "quai@users.noreply.github.com"
+          git add -A envoi nettoyage 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "quai : publication"
+          for i in 1 2 3; do git pull --rebase origin quai && git push origin quai && break; sleep 5; done
