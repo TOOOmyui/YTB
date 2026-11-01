@@ -3,7 +3,7 @@
  "chaine": "finance-fr",
  "titre": "Ton Livret A te fait perdre de l'argent (et ta banque le sait)",
  "titre_youtube": "Ton Livret A te fait perdre de l'argent (et ta banque le sait)",
- "accroche": "Livret A à 1,7 %, inflation à 3,1 % : ton épargne recule. Et quand tu veux « faire travailler ton argent », 98 % des fonds actions français font moins bien que leur indice sur 10 ans. Les chiffres officiels, et ce qu'ils te coûtent en euros.",
+ "accroche": "Livret A à 1,7 %, inflation à 3,4 % : ton épargne recule. Et quand tu veux « faire travailler ton argent », 98 % des fonds actions français font moins bien que leur indice sur 10 ans. Les chiffres officiels, et ce qu'ils te coûtent en euros.",
  "tags": [
   "Livret A",
   "inflation 2026",
@@ -22,7 +22,7 @@
   "#Epargne"
  ],
  "miniature": {
-  "chiffre": "−1,4 %",
+  "chiffre": "−1,7 %",
   "l1": "Ton Livret A recule",
   "l2": "et ta banque le sait",
   "ton": "negatif"
@@ -34,18 +34,20 @@
   "vitesse": 0.97
  },
  "verification": {
-  "date": "2026-10-27",
+  "date": "2026-11-01",
   "sources": [
    "Gouvernement (info.gouv.fr) — Livret A et LDDS à 1,7 % au 1er août 2026 ; LEP maintenu à 2,5 %",
+   "Service-public.gouv.fr (actualité A18000, MAJ 31/07/2026, consultée le 01/11/2026) — Livret A et LDDS 1,7 % du 1er août 2026 au 31 janvier 2027 ; LEP 2,5 % ; révision semestrielle selon IPC hors tabac et taux interbancaires ; fiche F2365 : plafond 22 950 €, intérêts exonérés",
    "Gouvernement (info.gouv.fr) — taux du Livret A révisé tous les six mois selon l'inflation hors tabac et les taux d'intérêt de la zone euro",
    "Gouvernement (info.gouv.fr) — Livret A garanti par l'État, disponible à tout moment, intérêts exonérés d'impôt sur le revenu et de prélèvements sociaux ; plafonds réglementaires 22 950 € (Livret A) et 12 000 € (LDDS)",
-   "Insee — Indice des prix à la consommation, septembre 2026 (résultats définitifs du 15/10/2026) : +3,1 % sur un an",
+   "Insee — Indice des prix à la consommation, octobre 2026 (estimation provisoire du 30/10/2026, Informations rapides n°266) : +3,4 % sur un an (septembre définitif : +3,1 %)",
    "Caisse des dépôts — collecte de septembre 2026 (22/10/2026) : encours Livret A + LDDS 606,7 Md€",
    "AMF — Lettre de l'Observatoire de l'épargne n°65 (avril 2026) : frais courants moyens des fonds actions 1,32 % en 2025 (1,39 % en 2023), ETF actions 0,33 %",
    "S&P Dow Jones Indices — SPIVA Europe Year-End 2025 (Reports 1a et 2) : fonds actions France sous-performant 66,9 % (1 an), 95,4 % (3 ans), 98,1 % (5 et 10 ans) ; Europe 97,0 % et Monde 98,4 % sur 10 ans ; survie à 10 ans 56,8 % (Europe), 60,4 % (France)",
-   "Calculs : rendement réel 1,7 − 3,1 = −1,4 % ; 10 170 / 1,031 ≈ 9 864 € ; 606,7 Md€ × 1,4 % ≈ 8,5 Md€",
+   "Calculs (01/11/2026) : rendement réel 1,7 − 3,4 = −1,7 % (exact : 1,017/1,034 − 1 ≈ −1,64 %) ; 10 170 / 1,034 ≈ 9 836 € (recul ≈ 164 €) ; 606,7 Md€ × 1,7 % ≈ 10,3 Md€",
    "Simulation : 200 €/mois, 30 ans, 7 %/an avant frais ; 5,7 % net ≈ 185 500 € ; 6,8 % net ≈ 226 700 € ; écart ≈ 41 000 €",
-   "Calcul : 10 000 × (1,017 / 1,031)^10 ≈ 8 722 €"
+   "Calcul : 10 000 × (1,017 / 1,034)^10 ≈ 8 472 € (≈ −15 %)",
+   "Re-vérification du 01/11/2026 : inflation mise à jour (3,1 % → 3,4 %, estimation provisoire Insee d'octobre) ; encours 606,7 Md€ (CDC, 22/10/2026) confirmé ; AMF n°65 et SPIVA Europe fin 2025 inchangés (rapports datés)"
   ]
  },
  "scenes": [
@@ -53,7 +55,7 @@
    "chapitre": "Le Livret A recule",
    "visuel": {
     "type": "chiffre",
-    "valeur": "−1,4 %",
+    "valeur": "−1,7 %",
     "couleur": "negatif",
     "compteur": false,
     "label": "par an, en pouvoir d'achat"
@@ -79,7 +81,7 @@
     "compteur": true,
     "label": "Livret A depuis le 1er août 2026"
    },
-   "voix": "Depuis le premier août 2026, le Livret A rapporte 1,7 %. Ça sonne plutôt bien. Il venait même d'augmenter. Sauf que mi-octobre, l'Insee publie l'inflation de septembre : 3,1 % sur un an. Tu vois le souci ?"
+   "voix": "Depuis le premier août 2026, le Livret A rapporte 1,7 %. Ça sonne plutôt bien. Il venait même d'augmenter. Sauf que fin octobre, l'Insee publie sa première estimation de l'inflation d'octobre : 3,4 % sur un an. Tu vois le souci ?"
   },
   {
    "visuel": {
@@ -94,7 +96,7 @@
       "−"
      ],
      [
-      "3,1 %",
+      "3,4 %",
       "inflation",
       "negatif"
      ],
@@ -102,13 +104,13 @@
       "="
      ],
      [
-      "−1,4 %",
+      "−1,7 %",
       "rendement réel",
       "negatif"
      ]
     ]
    },
-   "voix": "Ton argent grossit de 1,7. Les prix grossissent de 3,1. Donc en vrai, en pouvoir d'achat, tu recules d'environ 1,4 % par an. Ton solde monte, mais ce que tu peux acheter avec, lui, descend. C'est ce qu'on appelle un rendement réel négatif. Et même le LEP, à 2,5 %, réservé aux revenus modestes, reste sous l'inflation."
+   "voix": "Ton argent grossit de 1,7. Les prix grossissent de 3,4. Donc en vrai, en pouvoir d'achat, tu recules d'environ 1,7 % par an. Ton solde monte, mais ce que tu peux acheter avec, lui, descend. C'est ce qu'on appelle un rendement réel négatif. Et même le LEP, à 2,5 %, réservé aux revenus modestes, reste sous l'inflation."
   },
   {
    "visuel": {
@@ -122,27 +124,27 @@
      ],
      [
       "Pouvoir d'achat réel",
-      "≈ 9 864 €",
+      "≈ 9 836 €",
       "negatif"
      ]
     ],
     "total": [
      "Recul réel",
-     "≈ −136 €",
+     "≈ −164 €",
      "negatif"
     ]
    },
-   "voix": "Prends 10 000 €. Dans un an, ton relevé affichera 10 170 €. Content. Sauf que si les prix continuent de monter au même rythme, ces 10 170 € achèteront à peu près ce que 9 864 € achètent aujourd'hui. Tu as gagné de l'argent. Et tu t'es appauvri. Les deux en même temps."
+   "voix": "Prends 10 000 €. Dans un an, ton relevé affichera 10 170 €. Content. Sauf que si les prix continuent de monter au même rythme, ces 10 170 € achèteront à peu près ce que 9 836 € achètent aujourd'hui. Tu as gagné de l'argent. Et tu t'es appauvri. Les deux en même temps."
   },
   {
    "visuel": {
     "type": "chiffre",
-    "valeur": "≈ 8 722 €",
+    "valeur": "≈ 8 472 €",
     "couleur": "negatif",
     "compteur": true,
     "label": "de pouvoir d'achat, pour 10 000 € laissés 10 ans à ces taux"
    },
-   "voix": "Et sur dix ans ? Si ces taux restaient les mêmes, tes 10 000 € auraient le pouvoir d'achat d'environ 8 722 € d'aujourd'hui. Près de 13 % envolés. Sans que ton solde baisse une seule fois. C'est ça, le piège : l'inflation ne fait jamais de bruit."
+   "voix": "Et sur dix ans ? Si ces taux restaient les mêmes, tes 10 000 € auraient le pouvoir d'achat d'environ 8 472 € d'aujourd'hui. Environ 15 % envolés. Sans que ton solde baisse une seule fois. C'est ça, le piège : l'inflation ne fait jamais de bruit."
   },
   {
    "visuel": {
@@ -180,12 +182,12 @@
   {
    "visuel": {
     "type": "chiffre",
-    "valeur": "≈ 8,5 Md€",
+    "valeur": "≈ 10 Md€",
     "couleur": "negatif",
     "compteur": true,
     "label": "de pouvoir d'achat évaporés en un an"
    },
-   "voix": "1,4 % de 600 milliards, c'est environ 8,5 milliards d'euros de pouvoir d'achat qui s'évaporent en un an. Sans bruit. Sans que personne ne reçoive de facture. Mais attention. Le Livret A, ce n'est pas le vrai problème. Le Livret A, c'est l'appât. Le vrai problème, c'est ce qu'on va te proposer quand tu vas dire à ton conseiller : je veux que mon argent travaille."
+   "voix": "1,7 % de 600 milliards, c'est environ 10 milliards d'euros de pouvoir d'achat qui s'évaporent en un an. Sans bruit. Sans que personne ne reçoive de facture. Mais attention. Le Livret A, ce n'est pas le vrai problème. Le Livret A, c'est l'appât. Le vrai problème, c'est ce qu'on va te proposer quand tu vas dire à ton conseiller : je veux que mon argent travaille."
   },
   {
    "chapitre": "Le rendez-vous chez le conseiller",
