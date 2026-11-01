@@ -207,5 +207,8 @@
   "Abonne-toi pour ne pas la rater.",
   "Et toi, ton argent, il dort où ?",
   "Dis-le moi en commentaire."
- ]
+ ],
+ "statut": "erreur",
+ "erreur": "Secrets AZURE_SPEECH_KEY / AZURE_SPEECH_REGION absents (Settings > Secrets and variables > Actions).",
+ "traitee_le": "2026-11-01T07:42:36Z"
 }
