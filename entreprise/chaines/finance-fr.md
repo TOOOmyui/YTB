@@ -17,7 +17,7 @@
 
 ## Format des scripts
 - Vidéos longues : 11 à 14 minutes visées, **plancher absolu de 10 minutes** (le pipeline refuse en dessous) ; avant toute commande au studio, `estimer_duree.py` doit donner au moins 10 min 30 (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 700 à 2 300 mots de voix selon la voix. La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
-- Réels : 30 à 60 secondes.
+- Réels / Shorts : **en pause** (décision du PDG du 02/11/2026). Ne pas en produire ni en programmer jusqu'à nouvel ordre.
 - Pas d'intro générique ; ouverture par un pattern interrupt.
 - Une nouvelle boucle de curiosité environ toutes les 45 secondes.
 - Ton conversationnel, tutoiement, non corporate ; chaque section enchaîne sur la suivante.
@@ -43,7 +43,7 @@
 
 ## Créneaux
 - Longues : lun., mer., ven., dim. 18:00 Europe/Paris
-- Réels : mar., jeu., sam. 12:30 Europe/Paris
+- Réels : en pause (décision du PDG du 02/11/2026)
 
 ## Voix réservées aux futures chaînes
 - Tom (fr_FR-tom-medium), Jessica (fr_FR-upmc-medium, locuteur 0), Siwis (fr_FR-siwis-medium).
