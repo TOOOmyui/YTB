@@ -248,10 +248,11 @@ def produire(spec, dossier, plage=None, mode_voix='piper', audio_dir=None, sous_
         seg = np.concatenate([x, np.zeros(int(pause * SR), np.float32)])
         pistes.append(seg)
         jm = os.path.join(audio_dir, f'b{i:03d}.json') if audio_dir else None
-        if jm and os.path.exists(jm):
-            mots = [(max(0.0, m[0] - decalage), max(0.0, m[1] - decalage), m[2]) for m in json.load(open(jm))]
+        brut = json.load(open(jm)) if jm and os.path.exists(jm) else []
+        if len(brut) >= max(1, len(b['voix'].split()) // 2):
+            mots = [(max(0.0, m[0] - decalage), max(0.0, m[1] - decalage), m[2]) for m in brut]
         else:
-            mots = minutage_estime(b['voix'], parole)
+            mots = minutage_estime(b['voix'], parole)  # voix sans minutage mot à mot : estimation
         nouveau = b['visuel'] is not None
         if nouveau:
             groupe += 1
