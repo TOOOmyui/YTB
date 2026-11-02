@@ -249,6 +249,16 @@ def produire(spec, dossier, plage=None, mode_voix='piper', audio_dir=None, sous_
         pistes.append(seg)
         jm = os.path.join(audio_dir, f'b{i:03d}.json') if audio_dir else None
         brut = json.load(open(jm)) if jm and os.path.exists(jm) else []
+        # les sigles épelés (PEA, ETF, CTO…) arrivent lettre par lettre : on les recolle
+        recolle = []
+        for m in brut:
+            if (recolle and len(m[2]) == 1 and m[2].isalpha() and m[2].isupper()
+                    and recolle[-1][2].isalpha() and recolle[-1][2].isupper() and len(recolle[-1][2]) < 6
+                    and m[0] - recolle[-1][1] < 0.35):
+                recolle[-1] = [recolle[-1][0], m[1], recolle[-1][2] + m[2]]
+            else:
+                recolle.append(list(m))
+        brut = recolle
         if len(brut) >= max(1, len(b['voix'].split()) // 2):
             mots = [(max(0.0, m[0] - decalage), max(0.0, m[1] - decalage), m[2]) for m in brut]
         else:
