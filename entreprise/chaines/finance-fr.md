@@ -1,6 +1,7 @@
-# Fiche chaîne — Finance (FR)
+# Fiche chaîne — Clear Assets (finance-fr)
 
-- **Identifiant** : finance-fr
+- **Nom public** : Clear Assets (décision du PDG, 02/11/2026) — devise : « La finance personnelle, textes et chiffres à l'appui »
+- **Identifiant interne** : finance-fr
 - **Langue** : français
 - **Statut** : active (lancement)
 - **Plateformes** : YouTube (vidéos longues + Shorts), Instagram Reels — via Metricool, marque 7683914
@@ -9,6 +10,11 @@
   - numéro impair (001, 003, 005…) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+0%"}`
   - numéro pair (002, 004, 006…) : `{"fournisseur": "azure", "voix": "fr-FR-Remy:DragonHDLatestNeural", "debit": "+0%"}`
 - **Vitesses étalonnées sur vidéos complètes (02/11)** : Marc ≈ 3 % plus rapide que la voix de test au débit naturel, Rémy ≈ 2 % plus rapide. `moteur/estimer_duree.py` applique ces coefficients.
+
+## Identité visuelle
+- Monogramme « CA » dans un médaillon à double filet, typographie Libre Baskerville ; couleurs : beige papier #FAF7F0 / #F0E8D8, encre bleu nuit #1B2433, or #B0843C.
+- Fichiers : `marque/finance-fr/` (logo 800 px, bannière 2560×1440, pastille 160 px pour le filigrane YouTube et les miniatures).
+- Miniatures : fond beige, gros chiffre en couleur (rouge = coût, vert = gain, ambre = neutre), bandeau bleu nuit, signature « CLEAR ASSETS » en bas à droite.
 
 ## Ligne éditoriale
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.

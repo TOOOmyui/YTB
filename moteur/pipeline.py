@@ -68,7 +68,11 @@ def main():
     from packaging import description
     m = spec.get('miniature', {})
     mini = os.path.join(a.sortie, 'miniature.jpg')
-    miniature(mini, m.get('chiffre', ''), m.get('l1', spec.get('titre', '')), m.get('l2', ''), m.get('ton', 'accent'))
+    racine = os.path.join(ICI, '..')
+    marques = {'finance-fr': ('Clear Assets', os.path.join(racine, 'marque', 'finance-fr', 'clear-assets-pastille-160.png'))}
+    nom_marque, pastille = marques.get(spec.get('chaine'), (None, None))
+    miniature(mini, m.get('chiffre', ''), m.get('l1', spec.get('titre', '')), m.get('l2', ''), m.get('ton', 'accent'),
+              marque=nom_marque, pastille=pastille)
     res['miniature'] = mini
     if not a.sans_publication and a.quai:
         r = run([sys.executable, os.path.join(ICI, 'publier.py'), mini, f"{spec['id']}-mini-{os.path.getsize(mini) % 100000}",
