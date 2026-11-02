@@ -6,9 +6,9 @@
 - **Plateformes** : YouTube (vidéos longues + Shorts), Instagram Reels — via Metricool, marque 7683914
 - **Voix** : deux voix en alternance d'une vidéo à l'autre (décision du PDG, 02/11/2026) — Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited ») pour les vidéos de numéro impair, Rémy HD (Azure fr-FR-Remy:DragonHDLatestNeural) pour les vidéos de numéro pair. Voix exclusives de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
 - **voix_studio** (à copier tel quel dans chaque spec selon le numéro de la vidéo) :
-  - numéro impair (001, 003, 005…) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+6%"}`
+  - numéro impair (001, 003, 005…) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+0%"}`
   - numéro pair (002, 004, 006…) : `{"fournisseur": "azure", "voix": "fr-FR-Remy:DragonHDLatestNeural", "debit": "+0%"}`
-- **Vitesses mesurées** (même phrase, casting du 02/11) : Marc ≈ 17 % plus lent que la voix de test, Rémy (débit naturel) ≈ 2 % plus lent. `moteur/estimer_duree.py` applique ces coefficients.
+- **Vitesses étalonnées sur vidéos complètes (02/11)** : Marc ≈ 3 % plus rapide que la voix de test au débit naturel, Rémy ≈ 2 % plus rapide. `moteur/estimer_duree.py` applique ces coefficients.
 
 ## Ligne éditoriale
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.

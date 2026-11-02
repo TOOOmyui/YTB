@@ -10,11 +10,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from voix import synthetiser
 from produire2 import beats_de, rogner_silences, lire_wav
 
-# durée voix studio / durée voix locale (Piper upmc locuteur 1, vitesse 0,97), même texte
+# durée réelle produite / durée estimée avec la voix locale (Piper upmc locuteur 1, vitesse 0,97)
+# étalonné sur des vidéos complètes le 02/11/2026 (finance-fr-001 Marc +6 % : 0,92 ; finance-fr-002 Rémy +0 % : 0,98)
 COEF = {
-    ('fr-FR-Marc:MAI-Voice-2.1', '+6%'): 1.17,
-    ('fr-FR-Remy:DragonHDLatestNeural', '+6%'): 0.96,
-    ('fr-FR-Remy:DragonHDLatestNeural', '+0%'): 1.02,
+    ('fr-FR-Marc:MAI-Voice-2.1', '+6%'): 0.92,
+    ('fr-FR-Marc:MAI-Voice-2.1', '+0%'): 0.97,
+    ('fr-FR-Remy:DragonHDLatestNeural', '+0%'): 0.98,
+    ('fr-FR-Remy:DragonHDLatestNeural', '+6%'): 0.92,
 }
 SEUIL = 630
 

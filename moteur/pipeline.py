@@ -23,6 +23,7 @@ def main():
     ap.add_argument('--studio'); ap.add_argument('--quai')
     ap.add_argument('--duree-min', type=float, default=600)
     ap.add_argument('--sans-publication', action='store_true')
+    ap.add_argument('--audio-dir', help='réutilise un audio studio déjà livré (bNNN.mp3/.json) au lieu de recommander')
     a = ap.parse_args()
     spec = json.load(open(a.spec))
     os.makedirs(a.sortie, exist_ok=True)
@@ -30,7 +31,10 @@ def main():
 
     # 1. voix
     args_voix = []
-    if spec.get('voix_studio') and a.studio:
+    if a.audio_dir:
+        args_voix = ['--voix', 'studio', '--audio-dir', a.audio_dir]
+        res['voix'] = 'studio:' + (spec.get('voix_studio') or {}).get('voix', '')
+    elif spec.get('voix_studio') and a.studio:
         audio = os.path.join(a.sortie, 'audio_studio')
         r = run([sys.executable, os.path.join(ICI, 'voix_studio.py'), a.spec, audio, '--depot', a.studio])
         if r.returncode == 0:
@@ -40,8 +44,14 @@ def main():
             res['alerte_voix'] = 'Studio indisponible : repli sur la voix locale.'
 
     # 2. rendu
-    r = run([sys.executable, os.path.join(ICI, 'produire2.py'), a.spec, a.sortie, *args_voix], capture_output=True, text=True)
+    r = run([sys.executable, os.path.join(ICI, 'produire2.py'), a.spec, a.sortie, *args_voix, '--duree-min', str(a.duree_min)],
+            capture_output=True, text=True)
     print(r.stdout[-1500:], r.stderr[-1500:])
+    if r.returncode == 4:
+        info = json.loads(r.stdout.strip().splitlines()[-1])
+        res['erreur'] = f"Durée {info['duree']:.0f} s inférieure au plancher de {a.duree_min:.0f} s (mesurée sur l'audio, avant montage)"
+        json.dump(res, open(os.path.join(a.sortie, 'resultat.json'), 'w'), ensure_ascii=False, indent=1)
+        print(res['erreur']); sys.exit(4)
     if r.returncode:
         res['erreur'] = 'Rendu en échec'; json.dump(res, open(os.path.join(a.sortie, 'resultat.json'), 'w'), ensure_ascii=False, indent=1); sys.exit(5)
     prod = json.loads(r.stdout.strip().splitlines()[-1])

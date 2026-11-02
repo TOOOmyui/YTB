@@ -217,7 +217,7 @@ def musique_rythmee(duree, sr=44100, bpm=102, graine=11):
 
 # ------------------------------------------------------------------ production
 
-def produire(spec, dossier, plage=None, mode_voix='piper', audio_dir=None, sous_titres=True):
+def produire(spec, dossier, plage=None, mode_voix='piper', audio_dir=None, sous_titres=True, duree_min=0):
     os.makedirs(dossier, exist_ok=True)
     tmp = os.path.join(dossier, '_tmp')
     os.makedirs(tmp, exist_ok=True)
@@ -279,6 +279,9 @@ def produire(spec, dossier, plage=None, mode_voix='piper', audio_dir=None, sous_
             p['t_groupe'] = pg[0]['debut']
             p['d_groupe'] = pg[-1]['debut'] + pg[-1]['duree'] - pg[0]['debut']
     duree = t
+    if duree_min and duree < duree_min:
+        print(json.dumps({'erreur': 'duree_insuffisante', 'duree': round(duree, 1), 'minimum': duree_min}, ensure_ascii=False), flush=True)
+        sys.exit(4)
     voix_wav = os.path.join(tmp, 'voix.wav')
     ecrire_wav(voix_wav, np.concatenate(pistes), SR)
 
@@ -352,8 +355,9 @@ if __name__ == '__main__':
     ap.add_argument('spec'); ap.add_argument('sortie')
     ap.add_argument('--scenes'); ap.add_argument('--voix', default='piper'); ap.add_argument('--audio-dir')
     ap.add_argument('--sans-sous-titres', action='store_true')
+    ap.add_argument('--duree-min', type=float, default=0)
     a = ap.parse_args()
     spec = json.load(open(a.spec))
     plage = tuple(map(int, a.scenes.split('-'))) if a.scenes else None
-    out, d, chap = produire(spec, a.sortie, plage, a.voix, a.audio_dir, not a.sans_sous_titres)
+    out, d, chap = produire(spec, a.sortie, plage, a.voix, a.audio_dir, not a.sans_sous_titres, a.duree_min)
     print(json.dumps({'fichier': out, 'duree': round(d, 1), 'chapitres': chap}, ensure_ascii=False))
