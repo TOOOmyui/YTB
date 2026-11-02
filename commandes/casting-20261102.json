@@ -1,0 +1,12 @@
+{
+ "fournisseur": "azure",
+ "mode": "casting",
+ "langue": "fr-FR",
+ "debit": "+6%",
+ "styles": [
+  "newscast",
+  "excited",
+  "cheerful"
+ ],
+ "texte": "Stop. Ne scrolle pas. Pendant que tu regardes cette vidéo, ton Livret A est en train de te faire perdre de l'argent. 1,7 % d'un côté, 3,4 % d'inflation de l'autre : tu recules de 1,7 % par an. Et presque personne ne s'en rend compte."
+}
