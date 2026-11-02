@@ -4,8 +4,8 @@
 - **Langue** : français
 - **Statut** : active (lancement)
 - **Plateformes** : YouTube (vidéos longues + Shorts), Instagram Reels — via Metricool, marque 7683914
-- **Voix** : voix premium Azure générée par le studio voix GitHub (casting en cours, voix provisoire ci-dessous). Une voix unique et exclusive par chaîne. La voix locale (Pierre, Piper) sert uniquement aux tests : jamais de publication avec elle.
-- **voix_studio** (à copier tel quel dans chaque spec) : `{"fournisseur": "azure", "voix": "fr-FR-HenriNeural", "debit": "+6%"}`
+- **Voix** : Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited »), choisie par le PDG le 02/11/2026 après casting de 8 voix. Voix exclusive de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
+- **voix_studio** (à copier tel quel dans chaque spec) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+6%"}`
 
 ## Ligne éditoriale
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.
@@ -13,7 +13,7 @@
 - Avantage distinctif : précision juridique et fiscale française.
 
 ## Format des scripts
-- Vidéos longues : 10 à 14 minutes, **plancher obligatoire de 10 minutes** (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 800 à 2 400 mots de voix (rythme mesuré : environ 170 mots par minute avec la voix Pierre). La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
+- Vidéos longues : 10 à 14 minutes, **plancher obligatoire de 10 minutes** (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 800 à 2 400 mots de voix (rythme à mesurer avec la voix Marc ; le pipeline refuse toute vidéo sous 10 minutes). La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
 - Réels : 30 à 60 secondes.
 - Pas d'intro générique ; ouverture par un pattern interrupt.
 - Une nouvelle boucle de curiosité environ toutes les 45 secondes.

@@ -509,7 +509,8 @@
  },
  "voix_studio": {
   "fournisseur": "azure",
-  "voix": "fr-FR-HenriNeural",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1",
+  "style": "excited",
   "debit": "+6%"
  }
 }
