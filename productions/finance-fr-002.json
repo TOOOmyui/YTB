@@ -9,7 +9,7 @@
   "vitesse": 1.0
  },
  "verification": {
-  "date": "2026-10-27",
+  "date": "2026-11-02",
   "sources": [
    "La finance pour tous — PFU 31,4 % au 1er janvier 2026 (12,8 % IR + 18,6 % PS)",
    "Corrige ton impôt — assurance vie exclue de la hausse (PS 17,2 %), PEA concerné à la sortie (18,6 %)",
@@ -20,7 +20,10 @@
    "Calculs : CTO 50 000 × 31,4 % = 15 700 ; PEA × 18,6 % = 9 300 ; AV seul 8 600 + 7,5 % × 45 400 = 12 005 ; AV couple 8 600 + 7,5 % × 40 800 = 11 660 ; AV étalé 8 600 ; dividendes 2 000 × 31,4 % = 628",
    "CGI art. 150-0 D, 11 — moins-values imputables sur les plus-values de l'année et des 10 années suivantes",
    "CGI art. 757 B — versements après 70 ans : abattement global de 30 500 €, produits exonérés",
-   "Simulation boule de neige : 200 €/mois, 20 ans, 7 %/an dont 2 % de dividendes ; CTO ≈ 83 240 € net, PEA ≈ 92 022 € net"
+   "Simulation boule de neige : 200 €/mois, 20 ans, 7 %/an dont 2 % de dividendes ; CTO ≈ 83 240 € net, PEA ≈ 92 022 € net",
+   "La finance pour tous — frais de transfert d'un PEA plafonnés à 15 € par ligne (50 € titres non cotés) et 150 € au total (décret du 5 février 2020, en vigueur au 1er juillet 2020)",
+   "Légifiscal — au décès, PEA clôturé ; plus-values exonérées d'impôt sur le revenu quelle que soit l'ancienneté ; prélèvements sociaux dus ; valeur intégrée à la succession",
+   "Meilleurtaux Placement (18/06/2026) — transfert Pacte d'assurance vie possible uniquement chez le même assureur, antériorité fiscale conservée ; pas de transfert vers un autre assureur"
   ]
  },
  "scenes": [
@@ -267,6 +270,17 @@
    }
   },
   {
+   "visuel": {
+    "type": "liste",
+    "titre": "2 règles du PEA qu'on découvre trop tard",
+    "items": [
+     "Transfert vers une autre banque : 15 € par ligne, 150 € maximum",
+     "Au décès : PEA clôturé, pas d'impôt sur le revenu, mais prélèvements sociaux et succession"
+    ]
+   },
+   "voix": "Et deux règles qu'on découvre souvent trop tard. Un : ton PEA n'est pas prisonnier de ta banque. Tu peux le transférer ailleurs sans perdre ton ancienneté fiscale, et les frais de transfert sont plafonnés par la loi : 15 € par ligne, 150 € au maximum. Deux : au décès, le PEA est clôturé. Les gains échappent à l'impôt sur le revenu, quelle que soit la durée, mais les prélèvements sociaux restent dus, et tout entre dans la succession. Le PEA est fait pour faire grossir ton argent. Pas pour le transmettre."
+  },
+  {
    "voix": "L'assurance vie. Malgré son nom, ce n'est pas une assurance décès. C'est une enveloppe. Dedans, tu peux mettre un fonds en euros, sans risque. Ou des unités de compte, comme des ETF. Si ton contrat le permet.",
    "visuel": {
     "type": "section",
@@ -324,6 +338,17 @@
     ],
     "accent": 1
    }
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Coincé dans un contrat cher ?",
+     "Le transfert Pacte."
+    ],
+    "accent": 1
+   },
+   "voix": "Et si tu as déjà un vieux contrat cher ? Bonne nouvelle, tu n'es pas forcément coincé. Depuis la loi Pacte, tu peux transférer ton assurance vie vers un contrat plus récent, chez le même assureur, sans perdre ton ancienneté fiscale. Tes huit ans restent acquis. En revanche, pour changer d'assureur, il n'existe pas de transfert : il faut ouvrir un nouveau contrat, à côté de l'ancien. Et c'est justement pour ça que le choix du premier contrat compte autant."
   },
   {
    "chapitre": "Qui gagne ?",
@@ -510,6 +535,6 @@
  "voix_studio": {
   "fournisseur": "azure",
   "voix": "fr-FR-Remy:DragonHDLatestNeural",
-  "debit": "+6%"
+  "debit": "+0%"
  }
 }
