@@ -1,0 +1,3320 @@
+[
+ {
+  "fichier": "ar-AE-Rashid:DragonHDLatestNeural.mp3",
+  "voix": "ar-AE-Rashid:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Seraphina:DragonHDLatestNeural.mp3",
+  "voix": "de-DE-Seraphina:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Florian:DragonHDLatestNeural.mp3",
+  "voix": "de-DE-Florian:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-SeraphinaMultilingualNeural.mp3",
+  "voix": "de-DE-SeraphinaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-FlorianMultilingualNeural.mp3",
+  "voix": "de-DE-FlorianMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2-Flash.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2.1-Flash.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2-Flash.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2.1-Flash.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2-excited.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2.1.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Klaus:MAI-Voice-2.1-excited.mp3",
+  "voix": "de-DE-Klaus:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2-excited.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2.1.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "de-DE-Mia:MAI-Voice-2.1-excited.mp3",
+  "voix": "de-DE-Mia:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "el-GR-Athina:DragonHDLatestNeural.mp3",
+  "voix": "el-GR-Athina:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-WilliamMultilingualNeural.mp3",
+  "voix": "en-AU-WilliamMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2-Flash.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2.1-Flash.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2-excited.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2.1.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-AU-Isla:MAI-Voice-2.1-excited.mp3",
+  "voix": "en-AU-Isla:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-GB-Ada:DragonHDLatestNeural.mp3",
+  "voix": "en-GB-Ada:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-GB-Ollie:DragonHDLatestNeural.mp3",
+  "voix": "en-GB-Ollie:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-GB-AdaMultilingualNeural.mp3",
+  "voix": "en-GB-AdaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-GB-OllieMultilingualNeural.mp3",
+  "voix": "en-GB-OllieMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-GB-Ryan:DragonHDLatestNeural.mp3",
+  "voix": "en-GB-Ryan:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-GB-Sonia:DragonHDLatestNeural.mp3",
+  "voix": "en-GB-Sonia:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-IN-Diya:DragonHDLatestNeural.mp3",
+  "voix": "en-IN-Diya:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-IN-Lavanya:DragonHDLatestNeural.mp3",
+  "voix": "en-IN-Lavanya:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-IN-Meera:DragonHDLatestNeural.mp3",
+  "voix": "en-IN-Meera:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-IN-Aarti:DragonHDLatestNeural.mp3",
+  "voix": "en-IN-Aarti:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-IN-Arjun:DragonHDLatestNeural.mp3",
+  "voix": "en-IN-Arjun:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-IN-Neerja:DragonHDLatestNeural.mp3",
+  "voix": "en-IN-Neerja:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ava:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Ava:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Andrew:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Andrew:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Adam:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Adam:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Alloy:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Alloy:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Aria:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Aria:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Bree:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Bree:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Brian:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Brian:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Davis:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Davis:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Emma:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Emma:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Jane:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Jane:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Jenny:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Jenny:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Nova:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Nova:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Phoebe:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Phoebe:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Serena:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Serena:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Steffan:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Steffan:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Andrew:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-US-Andrew:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Brian:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-US-Brian:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Caleb:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-US-Caleb:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Dana:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-US-Dana:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Lewis:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-US-Lewis:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Phoebe:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-US-Phoebe:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-AvaMultilingualNeural.mp3",
+  "voix": "en-US-AvaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-AndrewMultilingualNeural.mp3",
+  "voix": "en-US-AndrewMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-AmandaMultilingualNeural.mp3",
+  "voix": "en-US-AmandaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-AdamMultilingualNeural.mp3",
+  "voix": "en-US-AdamMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-EmmaMultilingualNeural.mp3",
+  "voix": "en-US-EmmaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-PhoebeMultilingualNeural.mp3",
+  "voix": "en-US-PhoebeMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-AlloyTurboMultilingualNeural.mp3",
+  "voix": "en-US-AlloyTurboMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-EchoTurboMultilingualNeural.mp3",
+  "voix": "en-US-EchoTurboMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-FableTurboMultilingualNeural.mp3",
+  "voix": "en-US-FableTurboMultilingualNeural",
+  "style": null,
+  "genre": "Neutral",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-OnyxTurboMultilingualNeural.mp3",
+  "voix": "en-US-OnyxTurboMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-NovaTurboMultilingualNeural.mp3",
+  "voix": "en-US-NovaTurboMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-ShimmerTurboMultilingualNeural.mp3",
+  "voix": "en-US-ShimmerTurboMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-BrianMultilingualNeural.mp3",
+  "voix": "en-US-BrianMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-CoraMultilingualNeural.mp3",
+  "voix": "en-US-CoraMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-ChristopherMultilingualNeural.mp3",
+  "voix": "en-US-ChristopherMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-BrandonMultilingualNeural.mp3",
+  "voix": "en-US-BrandonMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-DavisMultilingualNeural.mp3",
+  "voix": "en-US-DavisMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-DerekMultilingualNeural.mp3",
+  "voix": "en-US-DerekMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-DerekMultilingualNeural-excited.mp3",
+  "voix": "en-US-DerekMultilingualNeural",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-DustinMultilingualNeural.mp3",
+  "voix": "en-US-DustinMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-EvelynMultilingualNeural.mp3",
+  "voix": "en-US-EvelynMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-JennyMultilingualNeural.mp3",
+  "voix": "en-US-JennyMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-LewisMultilingualNeural.mp3",
+  "voix": "en-US-LewisMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-LolaMultilingualNeural.mp3",
+  "voix": "en-US-LolaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-NancyMultilingualNeural.mp3",
+  "voix": "en-US-NancyMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-NancyMultilingualNeural-excited.mp3",
+  "voix": "en-US-NancyMultilingualNeural",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-RyanMultilingualNeural.mp3",
+  "voix": "en-US-RyanMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-SamuelMultilingualNeural.mp3",
+  "voix": "en-US-SamuelMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-SerenaMultilingualNeural.mp3",
+  "voix": "en-US-SerenaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-SerenaMultilingualNeural-excited.mp3",
+  "voix": "en-US-SerenaMultilingualNeural",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-SteffanMultilingualNeural.mp3",
+  "voix": "en-US-SteffanMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2-Flash.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2.1-Flash.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2-Flash.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2.1-Flash.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2-Flash.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2.1-Flash.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Evelyn:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Evelyn:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Jimmie:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Jimmie:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Juno:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Juno:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Tiana:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Tiana:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Tyler:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Tyler:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Vance:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Vance:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Andrew-Preview:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Andrew-Preview:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ava-Preview:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Ava-Preview:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-us-ava:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-us-ava:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Colin:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Colin:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-us-emma:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-us-emma:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2-excited.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2.1.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Ethan:MAI-Voice-2.1-excited.mp3",
+  "voix": "en-US-Ethan:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2-excited.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2.1.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Harper:MAI-Voice-2.1-excited.mp3",
+  "voix": "en-US-Harper:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-us-jelly:DragonHDOmniLatestNeural.mp3",
+  "voix": "en-us-jelly:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2-excited.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2.1.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Olivia:MAI-Voice-2.1-excited.mp3",
+  "voix": "en-US-Olivia:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Paige:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Paige:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "en-US-Serena-Preview:DragonHDLatestNeural.mp3",
+  "voix": "en-US-Serena-Preview:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Ximena:DragonHDLatestNeural.mp3",
+  "voix": "es-ES-Ximena:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Tristan:DragonHDLatestNeural.mp3",
+  "voix": "es-ES-Tristan:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-ArabellaMultilingualNeural.mp3",
+  "voix": "es-ES-ArabellaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-IsidoraMultilingualNeural.mp3",
+  "voix": "es-ES-IsidoraMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-TristanMultilingualNeural.mp3",
+  "voix": "es-ES-TristanMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-XimenaMultilingualNeural.mp3",
+  "voix": "es-ES-XimenaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2-Flash.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2.1-Flash.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2-excited.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2.1.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-ES-Marta:MAI-Voice-2.1-excited.mp3",
+  "voix": "es-ES-Marta:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-DaliaMultilingualNeural.mp3",
+  "voix": "es-MX-DaliaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-JorgeMultilingualNeural.mp3",
+  "voix": "es-MX-JorgeMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2-Flash.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2.1-Flash.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2-Flash.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2.1-Flash.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2-excited.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2.1.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Alejo:MAI-Voice-2.1-excited.mp3",
+  "voix": "es-MX-Alejo:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Dalia:DragonHDLatestNeural.mp3",
+  "voix": "es-MX-Dalia:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Jorge:DragonHDLatestNeural.mp3",
+  "voix": "es-MX-Jorge:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2-excited.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2.1.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "es-MX-Valeria:MAI-Voice-2.1-excited.mp3",
+  "voix": "es-MX-Valeria:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fil-PH-Angelo:DragonHDLatestNeural.mp3",
+  "voix": "fil-PH-Angelo:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fil-PH-Blessica:DragonHDLatestNeural.mp3",
+  "voix": "fil-PH-Blessica:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fil-PH-Mariela:DragonHDLatestNeural.mp3",
+  "voix": "fil-PH-Mariela:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-CA-Sylvie:DragonHDLatestNeural.mp3",
+  "voix": "fr-CA-Sylvie:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-CA-Thierry:DragonHDLatestNeural.mp3",
+  "voix": "fr-CA-Thierry:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Vivienne:DragonHDLatestNeural.mp3",
+  "voix": "fr-FR-Vivienne:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Remy:DragonHDLatestNeural.mp3",
+  "voix": "fr-FR-Remy:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-DeniseNeural.mp3",
+  "voix": "fr-FR-DeniseNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-DeniseNeural-cheerful.mp3",
+  "voix": "fr-FR-DeniseNeural",
+  "style": "cheerful",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-HenriNeural.mp3",
+  "voix": "fr-FR-HenriNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-HenriNeural-cheerful.mp3",
+  "voix": "fr-FR-HenriNeural",
+  "style": "cheerful",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-VivienneMultilingualNeural.mp3",
+  "voix": "fr-FR-VivienneMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-RemyMultilingualNeural.mp3",
+  "voix": "fr-FR-RemyMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-LucienMultilingualNeural.mp3",
+  "voix": "fr-FR-LucienMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-AlainNeural.mp3",
+  "voix": "fr-FR-AlainNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-BrigitteNeural.mp3",
+  "voix": "fr-FR-BrigitteNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-CelesteNeural.mp3",
+  "voix": "fr-FR-CelesteNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-ClaudeNeural.mp3",
+  "voix": "fr-FR-ClaudeNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-CoralieNeural.mp3",
+  "voix": "fr-FR-CoralieNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-EloiseNeural.mp3",
+  "voix": "fr-FR-EloiseNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-JacquelineNeural.mp3",
+  "voix": "fr-FR-JacquelineNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-JeromeNeural.mp3",
+  "voix": "fr-FR-JeromeNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-JosephineNeural.mp3",
+  "voix": "fr-FR-JosephineNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-MauriceNeural.mp3",
+  "voix": "fr-FR-MauriceNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-YvesNeural.mp3",
+  "voix": "fr-FR-YvesNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-YvetteNeural.mp3",
+  "voix": "fr-FR-YvetteNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Grant:MAI-Voice-2.1-Flash.mp3",
+  "voix": "fr-FR-Grant:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Harper:MAI-Voice-2.1-Flash.mp3",
+  "voix": "fr-FR-Harper:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2-Flash.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2.1-Flash.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2-Flash.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2.1-Flash.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Grant:MAI-Voice-2.1.mp3",
+  "voix": "fr-FR-Grant:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Harper:MAI-Voice-2.1.mp3",
+  "voix": "fr-FR-Harper:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2-excited.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2.1.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Marc:MAI-Voice-2.1-excited.mp3",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2-excited.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2.1.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "fr-FR-Soleil:MAI-Voice-2.1-excited.mp3",
+  "voix": "fr-FR-Soleil:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2-Flash.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2-Flash.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2-Flash.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2-Flash.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2-excited.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2.1.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Arjun:MAI-Voice-2.1-excited.mp3",
+  "voix": "hi-IN-Arjun:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2-excited.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2.1.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Dhruv:MAI-Voice-2.1-excited.mp3",
+  "voix": "hi-IN-Dhruv:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2-excited.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2.1.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Kavya:MAI-Voice-2.1-excited.mp3",
+  "voix": "hi-IN-Kavya:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2-excited.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2.1.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hi-IN-Priya:MAI-Voice-2.1-excited.mp3",
+  "voix": "hi-IN-Priya:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Bence:MAI-Voice-2-Flash.mp3",
+  "voix": "hu-HU-Bence:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Bence:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hu-HU-Bence:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Levente:MAI-Voice-2-Flash.mp3",
+  "voix": "hu-HU-Levente:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Levente:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hu-HU-Levente:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Lilla:MAI-Voice-2-Flash.mp3",
+  "voix": "hu-HU-Lilla:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Lilla:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hu-HU-Lilla:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Réka:MAI-Voice-2-Flash.mp3",
+  "voix": "hu-HU-Réka:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Reka:MAI-Voice-2.1-Flash.mp3",
+  "voix": "hu-HU-Reka:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Bence:MAI-Voice-2.mp3",
+  "voix": "hu-HU-Bence:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Bence:MAI-Voice-2.1.mp3",
+  "voix": "hu-HU-Bence:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Levente:MAI-Voice-2.mp3",
+  "voix": "hu-HU-Levente:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Levente:MAI-Voice-2.1.mp3",
+  "voix": "hu-HU-Levente:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Lilla:MAI-Voice-2.mp3",
+  "voix": "hu-HU-Lilla:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Lilla:MAI-Voice-2.1.mp3",
+  "voix": "hu-HU-Lilla:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Réka:MAI-Voice-2.mp3",
+  "voix": "hu-HU-Réka:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "hu-HU-Reka:MAI-Voice-2.1.mp3",
+  "voix": "hu-HU-Reka:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "id-ID-Ardi:DragonHDLatestNeural.mp3",
+  "voix": "id-ID-Ardi:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "id-ID-Gadis:DragonHDLatestNeural.mp3",
+  "voix": "id-ID-Gadis:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "id-ID-Larasati:DragonHDLatestNeural.mp3",
+  "voix": "id-ID-Larasati:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Isabella:DragonHDLatestNeural.mp3",
+  "voix": "it-IT-Isabella:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Alessio:DragonHDLatestNeural.mp3",
+  "voix": "it-IT-Alessio:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-AlessioMultilingualNeural.mp3",
+  "voix": "it-IT-AlessioMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-IsabellaMultilingualNeural.mp3",
+  "voix": "it-IT-IsabellaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-GiuseppeMultilingualNeural.mp3",
+  "voix": "it-IT-GiuseppeMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-MarcelloMultilingualNeural.mp3",
+  "voix": "it-IT-MarcelloMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2-Flash.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2.1-Flash.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2-Flash.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2.1-Flash.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Giuseppe:DragonHDLatestNeural.mp3",
+  "voix": "it-IT-Giuseppe:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2-excited.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2.1.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Luca:MAI-Voice-2.1-excited.mp3",
+  "voix": "it-IT-Luca:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2-excited.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2.1.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "it-IT-Rosa:MAI-Voice-2.1-excited.mp3",
+  "voix": "it-IT-Rosa:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ja-JP-Nanami:DragonHDLatestNeural.mp3",
+  "voix": "ja-JP-Nanami:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ja-JP-Masaru:DragonHDLatestNeural.mp3",
+  "voix": "ja-JP-Masaru:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-SunHi:DragonHDLatestNeural.mp3",
+  "voix": "ko-KR-SunHi:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Hyunsu:DragonHDLatestNeural.mp3",
+  "voix": "ko-KR-Hyunsu:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-HyunsuMultilingualNeural.mp3",
+  "voix": "ko-KR-HyunsuMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2-Flash.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2-Flash.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2-excited.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2.1.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Haena:MAI-Voice-2.1-excited.mp3",
+  "voix": "ko-KR-Haena:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2-excited.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2.1.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ko-KR-Junho:MAI-Voice-2.1-excited.mp3",
+  "voix": "ko-KR-Junho:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ms-MY-Osman:DragonHDLatestNeural.mp3",
+  "voix": "ms-MY-Osman:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ms-MY-Yasmin:DragonHDLatestNeural.mp3",
+  "voix": "ms-MY-Yasmin:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ms-MY-Nadira:DragonHDLatestNeural.mp3",
+  "voix": "ms-MY-Nadira:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2-Flash.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2.1-Flash.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2-excited.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2.1.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "nl-NL-Sander:MAI-Voice-2.1-excited.mp3",
+  "voix": "nl-NL-Sander:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Thalita:DragonHDLatestNeural.mp3",
+  "voix": "pt-BR-Thalita:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Macerio:DragonHDLatestNeural.mp3",
+  "voix": "pt-BR-Macerio:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-MacerioMultilingualNeural.mp3",
+  "voix": "pt-BR-MacerioMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-ThalitaMultilingualNeural.mp3",
+  "voix": "pt-BR-ThalitaMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2-Flash.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2.1-Flash.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2-Flash.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2.1-Flash.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2-Flash.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2.1-Flash.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2-Flash.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2.1-Flash.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2-excited.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2.1.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Caio:MAI-Voice-2.1-excited.mp3",
+  "voix": "pt-BR-Caio:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2-excited.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2.1.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Luana:MAI-Voice-2.1-excited.mp3",
+  "voix": "pt-BR-Luana:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2-excited.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2.1.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Pedro:MAI-Voice-2.1-excited.mp3",
+  "voix": "pt-BR-Pedro:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2-excited.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2.1.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-BR-Rafael:MAI-Voice-2.1-excited.mp3",
+  "voix": "pt-BR-Rafael:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2-Flash.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2.1-Flash.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2-excited.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2.1.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "pt-PT-Rui:MAI-Voice-2.1-excited.mp3",
+  "voix": "pt-PT-Rui:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Andrei:MAI-Voice-2-Flash.mp3",
+  "voix": "ro-RO-Andrei:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Andrei:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ro-RO-Andrei:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Elena:MAI-Voice-2-Flash.mp3",
+  "voix": "ro-RO-Elena:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Elena:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ro-RO-Elena:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Ioana:MAI-Voice-2-Flash.mp3",
+  "voix": "ro-RO-Ioana:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Ioana:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ro-RO-Ioana:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Radu:MAI-Voice-2-Flash.mp3",
+  "voix": "ro-RO-Radu:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Radu:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ro-RO-Radu:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Andrei:MAI-Voice-2.mp3",
+  "voix": "ro-RO-Andrei:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Andrei:MAI-Voice-2.1.mp3",
+  "voix": "ro-RO-Andrei:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Elena:MAI-Voice-2.mp3",
+  "voix": "ro-RO-Elena:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Elena:MAI-Voice-2.1.mp3",
+  "voix": "ro-RO-Elena:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Ioana:MAI-Voice-2.mp3",
+  "voix": "ro-RO-Ioana:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Ioana:MAI-Voice-2.1.mp3",
+  "voix": "ro-RO-Ioana:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Radu:MAI-Voice-2.mp3",
+  "voix": "ro-RO-Radu:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ro-RO-Radu:MAI-Voice-2.1.mp3",
+  "voix": "ro-RO-Radu:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2-Flash.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2-Flash.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2.1-Flash.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2-excited.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2.1.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Lev:MAI-Voice-2.1-excited.mp3",
+  "voix": "ru-RU-Lev:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2-excited.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2.1.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "ru-RU-Masha:MAI-Voice-2.1-excited.mp3",
+  "voix": "ru-RU-Masha:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2-Flash.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2.1-Flash.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2-Flash.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2.1-Flash.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2-excited.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2.1.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Krit:MAI-Voice-2.1-excited.mp3",
+  "voix": "th-TH-Krit:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2-excited.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2.1.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "th-TH-Nattapong:MAI-Voice-2.1-excited.mp3",
+  "voix": "th-TH-Nattapong:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydin:MAI-Voice-2.1-Flash.mp3",
+  "voix": "tr-TR-Aydin:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydin:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "tr-TR-Aydin:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydın:MAI-Voice-2-Flash.mp3",
+  "voix": "tr-TR-Aydın:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydın:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "tr-TR-Aydın:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2-Flash.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2.1-Flash.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydin:MAI-Voice-2.1.mp3",
+  "voix": "tr-TR-Aydin:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydin:MAI-Voice-2.1-excited.mp3",
+  "voix": "tr-TR-Aydin:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydın:MAI-Voice-2.mp3",
+  "voix": "tr-TR-Aydın:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Aydın:MAI-Voice-2-excited.mp3",
+  "voix": "tr-TR-Aydın:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2-excited.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2.1.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "tr-TR-Elif:MAI-Voice-2.1-excited.mp3",
+  "voix": "tr-TR-Elif:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Xiaochen:DragonHDLatestNeural.mp3",
+  "voix": "zh-CN-Xiaochen:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Yunfan:DragonHDLatestNeural.mp3",
+  "voix": "zh-CN-Yunfan:DragonHDLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Xiaoyue:DragonHDOmniLatestNeural.mp3",
+  "voix": "zh-CN-Xiaoyue:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Yunqi:DragonHDOmniLatestNeural.mp3",
+  "voix": "zh-CN-Yunqi:DragonHDOmniLatestNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaochenMultilingualNeural.mp3",
+  "voix": "zh-CN-XiaochenMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoshuangMultilingualNeural.mp3",
+  "voix": "zh-CN-XiaoshuangMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoxiaoMultilingualNeural.mp3",
+  "voix": "zh-CN-XiaoxiaoMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoxiaoMultilingualNeural-cheerful.mp3",
+  "voix": "zh-CN-XiaoxiaoMultilingualNeural",
+  "style": "cheerful",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoxiaoMultilingualNeural-excited.mp3",
+  "voix": "zh-CN-XiaoxiaoMultilingualNeural",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoyouMultilingualNeural.mp3",
+  "voix": "zh-CN-XiaoyouMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoyouMultilingualNeural-cheerful.mp3",
+  "voix": "zh-CN-XiaoyouMultilingualNeural",
+  "style": "cheerful",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-XiaoyuMultilingualNeural.mp3",
+  "voix": "zh-CN-XiaoyuMultilingualNeural",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-YunfanMultilingualNeural.mp3",
+  "voix": "zh-CN-YunfanMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-YunxiaoMultilingualNeural.mp3",
+  "voix": "zh-CN-YunxiaoMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-YunyiMultilingualNeural.mp3",
+  "voix": "zh-CN-YunyiMultilingualNeural",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2-Flash.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2.1-Flash.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2-Flash.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2.1-Flash.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2-Flash.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2.1-Flash.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2-Flash.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2-Flash-excited.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2.1-Flash.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2.1-Flash",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2.1-Flash-excited.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2.1-Flash",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2-excited.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2.1.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Bo:MAI-Voice-2.1-excited.mp3",
+  "voix": "zh-CN-Bo:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2-excited.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2.1.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Lan:MAI-Voice-2.1-excited.mp3",
+  "voix": "zh-CN-Lan:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2-excited.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2.1.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Mei:MAI-Voice-2.1-excited.mp3",
+  "voix": "zh-CN-Mei:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Female",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2-excited.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2.1.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2.1",
+  "style": null,
+  "genre": "Male",
+  "ok": true
+ },
+ {
+  "fichier": "zh-CN-Wei:MAI-Voice-2.1-excited.mp3",
+  "voix": "zh-CN-Wei:MAI-Voice-2.1",
+  "style": "excited",
+  "genre": "Male",
+  "ok": true
+ }
+]
