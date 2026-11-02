@@ -7,7 +7,8 @@
 - **Voix** : deux voix en alternance d'une vidéo à l'autre (décision du PDG, 02/11/2026) — Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited ») pour les vidéos de numéro impair, Rémy HD (Azure fr-FR-Remy:DragonHDLatestNeural) pour les vidéos de numéro pair. Voix exclusives de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
 - **voix_studio** (à copier tel quel dans chaque spec selon le numéro de la vidéo) :
   - numéro impair (001, 003, 005…) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+6%"}`
-  - numéro pair (002, 004, 006…) : `{"fournisseur": "azure", "voix": "fr-FR-Remy:DragonHDLatestNeural", "debit": "+6%"}`
+  - numéro pair (002, 004, 006…) : `{"fournisseur": "azure", "voix": "fr-FR-Remy:DragonHDLatestNeural", "debit": "+0%"}`
+- **Vitesses mesurées** (même phrase, casting du 02/11) : Marc ≈ 17 % plus lent que la voix de test, Rémy (débit naturel) ≈ 2 % plus lent. `moteur/estimer_duree.py` applique ces coefficients.
 
 ## Ligne éditoriale
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.
@@ -15,7 +16,7 @@
 - Avantage distinctif : précision juridique et fiscale française.
 
 ## Format des scripts
-- Vidéos longues : 10 à 14 minutes, **plancher obligatoire de 10 minutes** (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 800 à 2 400 mots de voix (rythme à mesurer avec la voix Marc ; le pipeline refuse toute vidéo sous 10 minutes). La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
+- Vidéos longues : 11 à 14 minutes visées, **plancher absolu de 10 minutes** (le pipeline refuse en dessous) ; avant toute commande au studio, `estimer_duree.py` doit donner au moins 10 min 30 (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 700 à 2 300 mots de voix selon la voix. La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
 - Réels : 30 à 60 secondes.
 - Pas d'intro générique ; ouverture par un pattern interrupt.
 - Une nouvelle boucle de curiosité environ toutes les 45 secondes.
@@ -31,6 +32,10 @@
 - Types de plans : chiffre clé animé, phrase choc, titre, équation, tableau comptable, barres, courbe, liste, comparatif, carte de chapitre.
 - Musique électro sobre générée par la régie (libre de droits), atténuée sous la voix.
 - Le scénariste découpe chaque scène en phrases courtes ; dans les scènes de données, chaque phrase doit commenter ce qui apparaît à l'écran.
+
+## Miniatures
+- 1280×720, générées par `moteur/miniature.py` depuis le champ `miniature` de la spec ; publiées sur le quai (`url_miniature`).
+- Miniatures personnalisées YouTube : **en attente de la vérification de la chaîne par le PDG** (youtube.com/verify). Tant que ce n'est pas fait, ne pas envoyer `videoThumbnailUrl` à Metricool (requête refusée). Une fois vérifiée, ce paragraphe est mis à jour et la publication envoie la miniature.
 
 ## Conformité propre
 - Mention « ce n'est pas un conseil en investissement » dans chaque vidéo et chaque description.

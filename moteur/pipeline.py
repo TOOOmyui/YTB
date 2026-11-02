@@ -60,6 +60,12 @@ def main():
     mini = os.path.join(a.sortie, 'miniature.jpg')
     miniature(mini, m.get('chiffre', ''), m.get('l1', spec.get('titre', '')), m.get('l2', ''), m.get('ton', 'accent'))
     res['miniature'] = mini
+    if not a.sans_publication and a.quai:
+        r = run([sys.executable, os.path.join(ICI, 'publier.py'), mini, f"{spec['id']}-mini-{os.path.getsize(mini) % 100000}",
+                 '--depot', a.quai, '--attente', '600'], capture_output=True, text=True)
+        if r.returncode == 0:
+            res['url_miniature'] = r.stdout.strip().splitlines()[-1]
+            res['release_miniature'] = res['url_miniature'].split('/download/')[1].split('/')[0]
     res['description'] = description(spec, prod)
     open(os.path.join(a.sortie, 'description.txt'), 'w').write(res['description'])
 
