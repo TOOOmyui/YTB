@@ -4,8 +4,10 @@
 - **Langue** : français
 - **Statut** : active (lancement)
 - **Plateformes** : YouTube (vidéos longues + Shorts), Instagram Reels — via Metricool, marque 7683914
-- **Voix** : Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited »), choisie par le PDG le 02/11/2026 après casting de 8 voix. Voix exclusive de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
-- **voix_studio** (à copier tel quel dans chaque spec) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+6%"}`
+- **Voix** : deux voix en alternance d'une vidéo à l'autre (décision du PDG, 02/11/2026) — Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited ») pour les vidéos de numéro impair, Rémy HD (Azure fr-FR-Remy:DragonHDLatestNeural) pour les vidéos de numéro pair. Voix exclusives de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
+- **voix_studio** (à copier tel quel dans chaque spec selon le numéro de la vidéo) :
+  - numéro impair (001, 003, 005…) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+6%"}`
+  - numéro pair (002, 004, 006…) : `{"fournisseur": "azure", "voix": "fr-FR-Remy:DragonHDLatestNeural", "debit": "+6%"}`
 
 ## Ligne éditoriale
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.

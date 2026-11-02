@@ -509,8 +509,7 @@
  },
  "voix_studio": {
   "fournisseur": "azure",
-  "voix": "fr-FR-Marc:MAI-Voice-2.1",
-  "style": "excited",
+  "voix": "fr-FR-Remy:DragonHDLatestNeural",
   "debit": "+6%"
  }
 }
