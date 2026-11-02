@@ -48,13 +48,16 @@ def azure_tts(doc_ssml):
     synth = sdk.SpeechSynthesizer(speech_config=cfg, audio_config=None)
     mots = []
 
+    import threading
+
     def frontiere(evt):
         if evt.boundary_type == sdk.SpeechSynthesisBoundaryType.Word:
             d = evt.audio_offset / 1e7
             mots.append([round(d, 3), round(d + evt.duration.total_seconds(), 3), evt.text])
     synth.synthesis_word_boundary.connect(frontiere)
     for essai in range(4):
-        r = synth.speak_ssml_async(doc_ssml).get()
+        fut = synth.speak_ssml_async(doc_ssml)
+        r = fut.get()
         if r.reason == sdk.ResultReason.SynthesizingAudioCompleted:
             return r.audio_data, mots
         det = r.cancellation_details
@@ -75,6 +78,8 @@ def azure_casting(c, dossier):
     os.makedirs(dossier, exist_ok=True)
     rapport = []
     voix = azure_voix(c.get('langue', 'fr-FR'))
+    if c.get('voix'):
+        voix = [v for v in voix if v['ShortName'] in c['voix']]
     if c.get('genre'):
         voix = [v for v in voix if v.get('Gender', '').lower() == c['genre'].lower()]
     for v in voix:
