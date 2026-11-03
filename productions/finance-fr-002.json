@@ -9,7 +9,7 @@
   "vitesse": 1.0
  },
  "verification": {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "sources": [
    "La finance pour tous — PFU 31,4 % au 1er janvier 2026 (12,8 % IR + 18,6 % PS)",
    "Corrige ton impôt — assurance vie exclue de la hausse (PS 17,2 %), PEA concerné à la sortie (18,6 %)",
@@ -23,7 +23,15 @@
    "Simulation boule de neige : 200 €/mois, 20 ans, 7 %/an dont 2 % de dividendes ; CTO ≈ 83 240 € net, PEA ≈ 92 022 € net",
    "La finance pour tous — frais de transfert d'un PEA plafonnés à 15 € par ligne (50 € titres non cotés) et 150 € au total (décret du 5 février 2020, en vigueur au 1er juillet 2020)",
    "Légifiscal — au décès, PEA clôturé ; plus-values exonérées d'impôt sur le revenu quelle que soit l'ancienneté ; prélèvements sociaux dus ; valeur intégrée à la succession",
-   "Meilleurtaux Placement (18/06/2026) — transfert Pacte d'assurance vie possible uniquement chez le même assureur, antériorité fiscale conservée ; pas de transfert vers un autre assureur"
+   "Meilleurtaux Placement (18/06/2026) — transfert Pacte d'assurance vie possible uniquement chez le même assureur, antériorité fiscale conservée ; pas de transfert vers un autre assureur",
+   "Meilleurtaux Placement (avril 2026, et article du 23/10/2026) — PFU 31,4 % depuis le 01/01/2026 (12,8 % IR + 18,6 % PS : CSG 10,6 %, CRDS 0,5 %, solidarité 7,5 %) ; assurance vie et épargne logement exclues (CSG 9,2 %)",
+   "Légifiscal (06/12/2025) — LFSS 2026 : hausse de CSG sauf assurance vie (CSG maintenue à 9,2 %, soit 17,2 % de PS)",
+   "service-public.gouv.fr F22414 (vérifié le 01/01/2026) — assurance vie > 8 ans : abattement 4 600 € / 9 200 €, 7,5 % jusqu'à 150 000 € de primes, PS 17,2 %",
+   "service-public.gouv.fr F2385 (vérifié le 22/05/2026) — PEA : plafond 150 000 € ; retrait avant 5 ans = clôture en principe ; retrait partiel après 5 ans sans clôture ; décès : clôture, pas d'IR même avant 5 ans, PS dus",
+   "La finance pour tous (MAJ 09/09/2026) — PEA : transfert 15 € par ligne (50 € non coté), 150 € au total ; PS 18,6 %",
+   "impots.gouv.fr — assurance vie au décès : 152 500 € par bénéficiaire (primes avant 70 ans), 30 500 € global (primes après 70 ans)",
+   "Moneyvox (13/10/2026) / Meilleurtaux (23/10/2026) — PLFSS 2027 : amendements proposant une nouvelle hausse de la CSG sur les revenus du capital, aucun adopté à ce jour",
+   "Calculs refaits le 03/11 (Python) : 15 700 / 9 300 / 12 005 / 11 660 / 8 600 / 628 / écarts 6 400 et 700 confirmés ; boule de neige (dividendes mensuels taxés à 31,4 % et réinvestis, base de PV ajustée) : CTO ≈ 83 343 €, PEA ≈ 92 022 € → « environ 83 000 / 92 000 », « près de 9 000 € » confirmés"
   ]
  },
  "scenes": [
@@ -74,7 +82,7 @@
    }
   },
   {
-   "voix": "Depuis janvier 2026, chaque euro de gain sur un compte-titres est taxé à 31,4 %. C'est la flat tax. 12,8 d'impôt sur le revenu. Plus 18,6 de prélèvements sociaux. Avant, c'était 30 % tout rond. La hausse est passée presque inaperçue.",
+   "voix": "Depuis janvier 2026, chaque euro de gain sur un compte-titres est taxé à 31,4 %. C'est la flat tax. 12,8 d'impôt sur le revenu. Plus 18,6 de prélèvements sociaux. Avant, c'était 30 % tout rond. La hausse est passée presque inaperçue. Et le budget 2027 est encore en discussion au Parlement : ces taux peuvent encore bouger. Ici, on prend les règles en vigueur aujourd'hui.",
    "visuel": {
     "type": "equation",
     "termes": [
@@ -485,7 +493,7 @@
    }
   },
   {
-   "voix": "Et le conseil le plus rentable de cette vidéo. Le chrono des 5 ans du PEA, et des 8 ans de l'assurance vie, démarre à l'ouverture. Pas à ton premier gros versement. Ouvrir un PEA avec quelques euros aujourd'hui, c'est lancer le chrono. Dans 5 ans, tu te remercieras.",
+   "voix": "Et la règle la plus rentable de cette vidéo. Le chrono des 5 ans du PEA, et des 8 ans de l'assurance vie, démarre à l'ouverture. Pas à ton premier gros versement. Ouvrir un PEA avec quelques euros aujourd'hui, c'est lancer le chrono. Dans 5 ans, tu te remercieras.",
    "visuel": {
     "type": "titre",
     "lignes": [
@@ -496,7 +504,7 @@
    }
   },
   {
-   "voix": "Ce n'est pas un conseil personnalisé : ta situation compte. Mais maintenant, tu sais où ranger ton ETF. Sauf qu'il reste un détail qui change tout sur 20 ans. Ton ETF doit-il te verser des dividendes ? Ou les réinvestir tout seul ? La réponse n'est pas celle que tu crois. C'est la prochaine vidéo. Abonne-toi. Et dis-moi en commentaire : toi, tu as déjà ouvert ton PEA ?",
+   "voix": "Rappel : ce n'est pas un conseil en investissement, et ta situation compte. Mais maintenant, tu sais où ranger ton ETF. Sauf qu'il reste un détail qui change tout sur 20 ans. Ton ETF doit-il te verser des dividendes ? Ou les réinvestir tout seul ? La réponse n'est pas celle que tu crois. C'est la prochaine vidéo. Abonne-toi. Et dis-moi en commentaire : toi, tu as déjà ouvert ton PEA ?",
    "visuel": {
     "type": "titre",
     "lignes": [
