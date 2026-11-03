@@ -4,7 +4,8 @@
 - **Identifiant interne** : finance-fr
 - **Langue** : français
 - **Statut** : active (lancement)
-- **Plateformes** : YouTube (vidéos longues + Shorts), Instagram Reels — via Metricool, marque 7683914
+- **Plateformes** : YouTube (vidéos longues ; Shorts et Reels en pause) — via Metricool, marque 7683914
+- **Chaîne YouTube** : vérifiée par téléphone le 03/11/2026 (miniatures personnalisées et vidéos de plus de 15 min autorisées)
 - **Voix** : deux voix en alternance d'une vidéo à l'autre (décision du PDG, 02/11/2026) — Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited ») pour les vidéos de numéro impair, Rémy HD (Azure fr-FR-Remy:DragonHDLatestNeural) pour les vidéos de numéro pair. Voix exclusives de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
 - **voix_studio** (à copier tel quel dans chaque spec selon le numéro de la vidéo) :
   - numéro impair (001, 003, 005…) : `{"fournisseur": "azure", "voix": "fr-FR-Marc:MAI-Voice-2.1", "style": "excited", "debit": "+0%"}`
@@ -41,7 +42,8 @@
 
 ## Miniatures
 - 1280×720, générées par `moteur/miniature.py` depuis le champ `miniature` de la spec ; publiées sur le quai (`url_miniature`).
-- Miniatures personnalisées YouTube : **en attente de la vérification de la chaîne par le PDG** (youtube.com/verify). Tant que ce n'est pas fait, ne pas envoyer `videoThumbnailUrl` à Metricool (requête refusée). Une fois vérifiée, ce paragraphe est mis à jour et la publication envoie la miniature.
+- Miniatures personnalisées YouTube : **actives** — chaîne vérifiée par le PDG le 03/11/2026. Chaque post Metricool envoie `videoThumbnailUrl: url_miniature` ; la release de la miniature n'est nettoyée qu'après confirmation de l'import (l'URL renvoyée par Metricool commence par static.metricool.com).
+- Toute miniature porte la signature Clear Assets (pastille + nom) : `pipeline.py` l'ajoute automatiquement pour la chaîne finance-fr.
 
 ## Conformité propre
 - Mention « ce n'est pas un conseil en investissement » dans chaque vidéo et chaque description.
