@@ -30,7 +30,8 @@ def description(spec, res):
         d = v.get('date', '')
         d = '/'.join(reversed(d.split('-'))) if d.count('-') == 2 else d
         lignes.append(f"Sources (vérifiées le {d})")
-        lignes += [f"- {s}" for s in v['sources'] if not s.startswith(('Calculs', 'Simulation'))]
+        internes = ('calcul', 'simulation', 're-vérification', 'reverification', 'note', 'vérificateur')
+        lignes += [f"- {s}" for s in v['sources'] if not s.strip().lower().startswith(internes)]
         lignes.append('')
     lignes.append(MENTION)
     if spec.get('hashtags'):
