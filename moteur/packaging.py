@@ -3,10 +3,22 @@
 Usage : python3 packaging.py spec.json resultat.json > description.txt
 resultat.json = sortie JSON de produire.py ({"fichier","duree","chapitres"})
 """
-import json, sys
+import json, re, sys
 
 MENTION = ("Cette vidéo est éducative : ce n'est pas un conseil en investissement personnalisé. "
            "Les chiffres cités sont vérifiés à la date indiquée et peuvent évoluer ; investir comporte un risque de perte en capital.")
+
+
+LIMITE_OCTETS = 4900  # YouTube : 5 000 octets maximum
+
+
+def propre(texte):
+    """YouTube refuse les caractères < et > dans une description."""
+    texte = re.sub(r'\s*>=\s*', ' au moins ', texte)
+    texte = re.sub(r'\s*<=\s*', ' au plus ', texte)
+    texte = re.sub(r'\s*>\s*', ' plus de ', texte)
+    texte = re.sub(r'\s*<\s*', ' moins de ', texte)
+    return texte.replace('≥', 'au moins').replace('≤', 'au plus')
 
 
 def horo(t):
@@ -33,10 +45,15 @@ def description(spec, res):
         internes = ('calcul', 'simulation', 're-vérification', 'reverification', 'note', 'vérificateur')
         lignes += [f"- {s}" for s in v['sources'] if not s.strip().lower().startswith(internes)]
         lignes.append('')
-    lignes.append(MENTION)
+    fin = [MENTION]
     if spec.get('hashtags'):
-        lignes += ['', ' '.join(spec['hashtags'])]
-    return '\n'.join(lignes)
+        fin += ['', ' '.join(spec['hashtags'])]
+    lignes = [propre(l) for l in lignes]
+    # Respect de la limite YouTube : on retire les dernières sources si nécessaire
+    while len('\n'.join(lignes + fin).encode('utf-8')) > LIMITE_OCTETS and any(l.startswith('- ') for l in lignes):
+        i = max(k for k, l in enumerate(lignes) if l.startswith('- '))
+        del lignes[i]
+    return '\n'.join(lignes + fin)
 
 
 if __name__ == '__main__':
