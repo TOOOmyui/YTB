@@ -1,0 +1,571 @@
+{
+  "id": "finance-fr-003",
+  "chaine": "finance-fr",
+  "titre": "ETF capitalisant ou distribuant : la différence qui te coûte cher sur 20 ans",
+  "titre_youtube": "ETF capitalisant ou distribuant : la différence qui te coûte cher sur 20 ans",
+  "theme": "finance",
+  "accroche": "Même ETF, même indice, mêmes 50 000 € pendant 20 ans : sur un compte-titres, la version qui verse des dividendes finit environ 6 500 € derrière celle qui les réinvestit, alors qu'elle paie moins d'impôt au total. On démonte l'idée reçue du dividende « gratuit », en compte-titres, PEA et assurance vie, avec la fiscalité 2026.",
+  "tags": [
+    "ETF capitalisant",
+    "ETF distribuant",
+    "dividendes",
+    "fiscalité dividendes 2026",
+    "flat tax 31,4 %",
+    "compte-titres",
+    "PEA",
+    "assurance vie",
+    "investir en ETF",
+    "finance personnelle",
+    "Acc ou Dist"
+  ],
+  "hashtags": [
+    "#ETF",
+    "#Dividendes",
+    "#PEA"
+  ],
+  "miniature": {
+    "chiffre": "−6 500 €",
+    "l1": "Capitalisant ou distribuant ?",
+    "l2": "Le piège du dividende",
+    "ton": "negatif"
+  },
+  "voix": {
+    "modele": "fr_FR-upmc-medium.onnx",
+    "locuteur": 1,
+    "vitesse": 0.97
+  },
+  "voix_studio": {
+    "fournisseur": "azure",
+    "voix": "fr-FR-Marc:MAI-Voice-2.1",
+    "style": "excited",
+    "debit": "+0%"
+  },
+  "verification": {
+    "date": "2026-11-07",
+    "sources": [
+      "AMF, médiateur — « Le détachement d'un dividende peut avoir des conséquences sur vos ordres de bourse » : au détachement, « le cours de l'action concernée est mécaniquement abaissé du même montant »",
+      "La finance pour tous (MAJ 26/07/2024) — le détachement provoque une diminution du cours approximativement du montant du dividende ; l'actionnaire ne s'enrichit pas à court terme",
+      "Morgen Capital (22/09/2026, MAJ 12/10/2026) — depuis le 01/01/2026 : CTO (dividendes, intérêts, plus-values) 12,8 % + 18,6 % = 31,4 % ; assurance vie PS 17,2 % ; PLF/PLFSS 2027 : aucun changement de ces taux prévu, aucune mesure votée à ce jour (vote PLF le 17/11)",
+      "Que Choisir (19/01/2026) — LFSS 2026 : CSG 10,6 %, PS 18,6 % sur dividendes et gains du PEA ; assurance vie exclue (CSG 9,2 %, PS 17,2 %)",
+      "service-public.gouv.fr F2385 (vérifié le 22/05/2026) — PEA : « En l'absence de retrait, les dividendes perçus et les plus-values réalisées dans le PEA ne sont pas imposables » ; après 5 ans exonération d'IR, PS dus ; plafond de versements 150 000 €, le calcul ne tient pas compte des gains",
+      "service-public.gouv.fr F22414 (vérifié le 15/04/2026) — assurance vie : imposition lors d'un rachat ; PS 17,2 % ; après 8 ans abattement 4 600 € / 9 200 € ; 7,5 % jusqu'à 150 000 € de primes, 12,8 % au-delà",
+      "AG2R La Mondiale — PS sur fonds en euros prélevés chaque année à l'inscription en compte ; sur unités de compte, lors du rachat (prorata) ou du dénouement",
+      "Avenue des investisseurs (MAJ 27/08/2026) — ETF distribuant en assurance vie : dividendes réinvestis dans l'ETF ou versés sur le fonds euros selon le contrat ; en PEA, dividendes sur la poche espèces à réinvestir manuellement ; en CTO, dividendes imposés l'année de perception (31,4 %)",
+      "Fortuneo (blog) — sur un CTO, l'ETF distribuant génère une imposition à chaque versement, même réinvesti, avec ordre d'achat et frais de courtage ; en PEA, aucun des deux ne déclenche d'imposition sans retrait",
+      "impots.gouv.fr — dispense du PFNL de 12,8 % : dividendes si RFR N-2 < 50 000 € (seul) / 75 000 € (couple), demande avant le 30 novembre de l'année précédant le paiement ; ne couvre pas les prélèvements sociaux",
+      "CGI art. 150-0 D, 3 (Légifiscal, CE n° 449292 du 20/10/2021) — prix d'acquisition = valeur moyenne pondérée des titres de même nature",
+      "CGI art. 200 A, 2 — option globale pour le barème progressif (vérifiée le 03/11 pour finance-fr-002)",
+      "Calculs (Python, 07/11) : 50 000 € une fois, 7 %/an dont 2 % de dividendes, 20 ans. Capitalisant CTO : brut 193 484, impôt 31,4 % × 143 484 = 45 054, net 148 430. Distribuant CTO (dividendes taxés 31,4 % puis réinvestis, base ajustée) : brut 171 995, impôts dividendes 12 023 + PV 30 058 = 42 082, net 141 937 → écart 6 493. PEA : 193 484 − 18,6 % × 143 484 = 166 796. AV > 8 ans, seul, hors frais : 193 484 − 17,2 % × 143 484 − 7,5 % × (143 484 − 4 600) = 158 389. Écart à 10 ans 968, 30 ans 24 080. Part 100 € : 2 × 31,4 % = 0,628 → 99,37. Année 1 : 1 000 / 314 / 686 ; PS seuls 186. Revenu 2 000 € à 10 ans : dividende 628 ; revente (PMP) part de PV 48 358 / 98 358 = 49,2 % → 983 × 31,4 % ≈ 309"
+    ]
+  },
+  "scenes": [
+    {
+      "chapitre": "Le dividende n'est pas un cadeau",
+      "visuel": {
+        "type": "comparatif",
+        "colonnes": [
+          {
+            "titre": "ETF qui verse",
+            "ton": "negatif",
+            "lignes": [
+              "Même indice",
+              "50 000 € pendant 20 ans",
+              "≈ 141 900 € net"
+            ]
+          },
+          {
+            "titre": "ETF qui réinvestit",
+            "ton": "positif",
+            "lignes": [
+              "Même indice",
+              "50 000 € pendant 20 ans",
+              "≈ 148 400 € net"
+            ]
+          }
+        ]
+      },
+      "voix": "Deux ETF. Le même indice. Les mêmes entreprises. Les mêmes 50 000 € placés pendant 20 ans. Le premier te verse des dividendes chaque année. Le deuxième ne te verse rien. Et c'est le deuxième qui finit avec environ 6 500 € de plus. Le plus fou ? Le premier a payé moins d'impôt au total. Et il finit quand même plus pauvre."
+    },
+    {
+      "visuel": {
+        "type": "titre",
+        "lignes": [
+          "Le dividende",
+          "n'est pas un cadeau."
+        ],
+        "accent": 1
+      },
+      "voix": "Si tu crois qu'un dividende, c'est de l'argent en plus, cette vidéo va te piquer un peu. On va voir ce qui se passe vraiment le jour où un dividende tombe. Pourquoi, sur un compte-titres, il te coûte de l'argent chaque année. Pourquoi tout change dans un PEA ou une assurance vie. Et dans quels cas la version qui verse des dividendes reste quand même le bon choix. Parce que oui, il y en a. Mais d'abord, une petite expérience."
+    },
+    {
+      "visuel": {
+        "type": "liste",
+        "titre": "Deux versions du même ETF",
+        "items": [
+          "Distribuant (« Dist ») : verse les dividendes",
+          "Capitalisant (« Acc ») : les réinvestit dans le fonds",
+          "Même indice, mêmes actions"
+        ]
+      },
+      "voix": "Un ETF, c'est un panier d'actions qui copie un indice. Les entreprises de ce panier versent des dividendes. Et l'ETF a deux façons de les gérer. Version distribuante : il te les reverse, sur ton compte. Souvent, tu verras « Dist » dans le nom. Version capitalisante : il les garde et les réinvestit directement dans le fonds. Souvent, c'est marqué « Acc ». Même indice. Mêmes actions. Seule la gestion des dividendes change. Et ce petit détail va peser des milliers d'euros."
+    },
+    {
+      "chapitre": "Le jour du dividende",
+      "visuel": {
+        "type": "section",
+        "titre": "Le jour du dividende",
+        "sous": "Ce que ton relevé ne montre pas"
+      },
+      "voix": "Alors, l'expérience. Imagine une part d'ETF à 100 €. Ce matin, elle verse un dividende de 2 €. Tu as gagné 2 € ? Pas vraiment."
+    },
+    {
+      "visuel": {
+        "type": "equation",
+        "termes": [
+          [
+            "100 €",
+            "la part, la veille"
+          ],
+          [
+            "="
+          ],
+          [
+            "98 €",
+            "la part, le matin"
+          ],
+          [
+            "+"
+          ],
+          [
+            "2 €",
+            "le dividende",
+            "accent"
+          ]
+        ]
+      },
+      "voix": "Le jour où le dividende est détaché, le prix de la part baisse d'autant. C'est mécanique, l'Autorité des marchés financiers le rappelle elle-même. Ta part de 100 € devient une part de 98 €. Plus 2 € en espèces. Total : 100 €. Exactement ce que tu avais la veille. L'argent n'a pas été créé. Il est juste passé d'une poche à l'autre."
+    },
+    {
+      "visuel": {
+        "type": "ledger",
+        "titre": "Une part à 100 € · compte-titres",
+        "lignes": [
+          [
+            "Part après détachement",
+            "98,00 €"
+          ],
+          [
+            "Dividende",
+            "+ 2,00 €"
+          ],
+          [
+            "Flat tax (31,4 %)",
+            "− 0,63 €",
+            "negatif"
+          ]
+        ],
+        "total": [
+          "Il te reste",
+          "99,37 €",
+          "negatif"
+        ]
+      },
+      "voix": "Sauf que sur un compte-titres, ce passage d'une poche à l'autre est taxé. 31,4 % de flat tax sur les 2 €. Ça fait 63 centimes. Donc après le dividende, tu n'as plus 100 €. Tu as 99,37 €. Tu n'as rien gagné, et tu as payé un impôt. Dit comme ça, 63 centimes, ça paraît ridicule. Mais attends de voir ce que ça donne sur vingt ans."
+    },
+    {
+      "chapitre": "L'impôt chaque année",
+      "visuel": {
+        "type": "section",
+        "titre": "Le compte-titres",
+        "sous": "L'impôt tombe chaque année"
+      },
+      "voix": "Sur un compte-titres, les dividendes sont imposés l'année où tu les touches. Même si tu les réinvestis dans la minute. Depuis janvier 2026, c'est 31,4 % : 12,8 % d'impôt sur le revenu, plus 18,6 % de prélèvements sociaux."
+    },
+    {
+      "visuel": {
+        "type": "ledger",
+        "titre": "Année 1 · 50 000 € · 2 % de dividendes",
+        "lignes": [
+          [
+            "Dividendes versés",
+            "1 000 €"
+          ],
+          [
+            "Flat tax (31,4 %)",
+            "− 314 €",
+            "negatif"
+          ]
+        ],
+        "total": [
+          "Réinvesti",
+          "686 €"
+        ]
+      },
+      "voix": "Prends 50 000 € investis dans un ETF qui distribue 2 % par an. La première année, ça fait 1 000 € de dividendes. 314 € partent en impôt. Il t'en reste 686 à réinvestir. Et pour les réinvestir, tu dois passer un ordre toi-même, avec des frais de courtage. Avec la version capitalisante, rien de tout ça. Les 1 000 € restent dans le fonds. Pas d'impôt. Pas d'ordre. Pas de frais."
+    },
+    {
+      "visuel": {
+        "type": "chiffre",
+        "valeur": "314 €",
+        "couleur": "negatif",
+        "compteur": true,
+        "label": "d'impôt la première année… puis chaque année"
+      },
+      "voix": "Et ces 314 €, ce n'est pas juste 314 €. C'est de l'argent qui ne travaillera plus jamais pour toi. Pas cette année, pas l'année prochaine, pas dans vingt ans. Et l'année suivante, ça recommence, sur un portefeuille un peu plus gros. Et la suivante. Et la suivante. Alors combien ça fait, au bout de vingt ans ?"
+    },
+    {
+      "visuel": {
+        "type": "ledger",
+        "titre": "Non imposable ? 1 000 € de dividendes",
+        "lignes": [
+          [
+            "Dividendes",
+            "1 000 €"
+          ],
+          [
+            "Impôt sur le revenu (tranche 0 %)",
+            "0 €",
+            "positif"
+          ],
+          [
+            "Prélèvements sociaux (18,6 %)",
+            "− 186 €",
+            "negatif"
+          ]
+        ],
+        "total": [
+          "Il te reste",
+          "814 €"
+        ]
+      },
+      "voix": "Tu vas peut-être me dire : moi, je ne suis pas imposable, donc je m'en fiche. Pas si vite. Tu peux effectivement renoncer à la flat tax et choisir le barème progressif. À tranche zéro, l'impôt sur le revenu disparaît. Mais attention, cette option est globale : elle vaut pour tous tes revenus du capital de l'année. Et surtout, les prélèvements sociaux restent dus. Sur 1 000 € de dividendes, 186 € partent quand même, chaque année. Même pour un non-imposable, le distribuant laisse donc une fuite sur un compte-titres."
+    },
+    {
+      "chapitre": "20 ans plus tard",
+      "visuel": {
+        "type": "courbe",
+        "titre": "50 000 € pendant 20 ans · 7 %/an dont 2 % de dividendes · compte-titres",
+        "axe_x": [
+          "0",
+          "5 ans",
+          "10 ans",
+          "15 ans",
+          "20 ans"
+        ],
+        "series": [
+          {
+            "nom": "Distribuant",
+            "ton": "negatif",
+            "fin": "≈ 141 900 € net",
+            "points": [
+              50000,
+              68094,
+              92735,
+              126293,
+              171995
+            ]
+          },
+          {
+            "nom": "Capitalisant",
+            "ton": "positif",
+            "fin": "≈ 148 400 € net",
+            "points": [
+              50000,
+              70128,
+              98358,
+              137952,
+              193484
+            ]
+          }
+        ]
+      },
+      "voix": "Faisons le calcul complet. 50 000 € placés une fois, pendant 20 ans. On suppose que le marché fait 7 % par an, dont 2 % de dividendes. C'est une hypothèse, pas une promesse. Mais c'est la même pour les deux ETF. Côté distribuant, les dividendes sont taxés chaque année, puis réinvestis. Au bout de 20 ans, le portefeuille vaut environ 172 000 €. Côté capitalisant, rien n'est taxé en route. Le portefeuille vaut environ 193 500 €. Avant impôt, l'écart dépasse déjà 21 000 €."
+    },
+    {
+      "visuel": {
+        "type": "barres",
+        "titre": "Après impôt, à la revente",
+        "items": [
+          [
+            "Distribuant",
+            141937,
+            "≈ 141 900 €",
+            "negatif"
+          ],
+          [
+            "Capitalisant",
+            148430,
+            "≈ 148 400 €",
+            "positif"
+          ]
+        ]
+      },
+      "voix": "Maintenant, on revend tout, et on paie l'impôt sur la plus-value. Pour le capitalisant, il te reste environ 148 400 €. Pour le distribuant, environ 141 900 €. Environ 6 500 € d'écart. Même indice, mêmes entreprises, même effort. Juste un choix de version au moment d'acheter. Mais il y a un détail dans ce calcul qui devrait te surprendre."
+    },
+    {
+      "chapitre": "Le paradoxe",
+      "visuel": {
+        "type": "barres",
+        "titre": "Impôts payés en 20 ans",
+        "items": [
+          [
+            "Distribuant",
+            42082,
+            "≈ 42 100 €",
+            "positif"
+          ],
+          [
+            "Capitalisant",
+            45054,
+            "≈ 45 100 €",
+            "negatif"
+          ]
+        ]
+      },
+      "voix": "Regarde les impôts payés au total. Le distribuant a payé environ 12 000 € sur ses dividendes, puis 30 000 € à la revente. Environ 42 100 € en tout. Le capitalisant a tout payé à la fin : environ 45 100 €. Il a payé plus d'impôt. Et pourtant, c'est lui qui finit avec 6 500 € de plus. Comment c'est possible ?"
+    },
+    {
+      "visuel": {
+        "type": "titre",
+        "lignes": [
+          "Ce n'est pas combien tu paies.",
+          "C'est quand."
+        ],
+        "accent": 1
+      },
+      "voix": "Parce que ce qui compte, ce n'est pas seulement combien tu paies. C'est quand tu le paies. Un euro d'impôt payé la première année, c'est un euro qui ne fait plus d'intérêts composés pendant 19 ans. Avec le capitalisant, cet euro reste investi. Il travaille pour toi pendant vingt ans. Et c'est seulement à la fin que l'État prend sa part. C'est un peu comme si l'État te prêtait ton propre impôt, sans intérêts, pendant vingt ans. Et plus la durée est longue, plus cet avantage grossit."
+    },
+    {
+      "visuel": {
+        "type": "barres",
+        "titre": "Écart capitalisant − distribuant · compte-titres · 50 000 €",
+        "items": [
+          [
+            "10 ans",
+            968,
+            "≈ 1 000 €",
+            "accent"
+          ],
+          [
+            "20 ans",
+            6493,
+            "≈ 6 500 €",
+            "negatif"
+          ],
+          [
+            "30 ans",
+            24080,
+            "≈ 24 000 €",
+            "negatif"
+          ]
+        ]
+      },
+      "voix": "Regarde comment l'écart évolue avec le temps, toujours avec nos 50 000 € et la même hypothèse. Sur 10 ans, la différence après impôt est d'environ 1 000 €. Franchement, pas de quoi en faire une vidéo. Sur 20 ans, on passe à 6 500 €. Et sur 30 ans, l'écart grimpe à environ 24 000 €. Ce n'est pas une ligne droite : c'est une courbe qui accélère. Si tu as 25 ans et que tu investis pour ta retraite, c'est sur cette troisième barre que tu joues."
+    },
+    {
+      "visuel": {
+        "type": "liste",
+        "titre": "Ce que le calcul ne compte pas",
+        "items": [
+          "Les frais de courtage pour réinvestir",
+          "Les dividendes trop petits pour une part entière",
+          "L'argent qui dort en attendant"
+        ]
+      },
+      "voix": "Et encore, ce calcul est gentil avec le distribuant. Il suppose que tu réinvestis chaque euro de dividende, gratuitement, le jour même. Dans la vraie vie, chaque réinvestissement coûte des frais de courtage. Un petit dividende ne suffit parfois pas à acheter une part entière, donc il reste en espèces. Et soyons honnêtes : une partie finit souvent dépensée. Dans la vraie vie, l'écart est donc souvent plus grand. Mais tout ça, c'est sur un compte-titres. Et dans un PEA, l'histoire change complètement."
+    },
+    {
+      "chapitre": "PEA et assurance vie",
+      "visuel": {
+        "type": "section",
+        "titre": "PEA et assurance vie",
+        "sous": "Là où la différence s'efface"
+      },
+      "voix": "Le PEA, d'abord. La règle est simple. Tant que tu ne retires rien, les dividendes perçus et les plus-values réalisées dans le plan ne sont pas imposés. C'est écrit noir sur blanc sur service-public. Donc dans un PEA, le dividende ne déclenche aucun impôt."
+    },
+    {
+      "visuel": {
+        "type": "comparatif",
+        "colonnes": [
+          {
+            "titre": "Distribuant en PEA",
+            "ton": "accent",
+            "lignes": [
+              "0 € d'impôt sur le dividende",
+              "Arrive en espèces dans le plan",
+              "À réinvestir toi-même"
+            ]
+          },
+          {
+            "titre": "Capitalisant en PEA",
+            "ton": "positif",
+            "lignes": [
+              "0 € d'impôt",
+              "Réinvesti automatiquement",
+              "Rien à faire"
+            ]
+          }
+        ]
+      },
+      "voix": "Avec un ETF distribuant, le dividende arrive en espèces sur ton PEA. Sans impôt. Mais il ne se réinvestit pas tout seul. C'est à toi de passer un ordre, avec des frais. Avec un capitalisant, il n'y a rien à faire. Petit bonus : le plafond de 150 000 € du PEA ne porte que sur tes versements. Les dividendes qui tombent dans le plan n'entament pas ce plafond."
+    },
+    {
+      "visuel": {
+        "type": "chiffre",
+        "valeur": "≈ 166 800 €",
+        "couleur": "positif",
+        "compteur": true,
+        "label": "net après 20 ans en PEA · capitalisant ou distribuant réinvesti"
+      },
+      "voix": "Reprenons nos 50 000 € sur 20 ans. Dans un PEA de plus de cinq ans, tu ne paies que les prélèvements sociaux à la sortie, 18,6 % sur le gain. Résultat : environ 166 800 € net. Et c'est le même chiffre avec les deux versions, à condition de réinvestir chaque dividende. La différence se limite aux frais de courtage et à l'argent qui dort en attendant. Rien à voir avec les 6 500 € du compte-titres."
+    },
+    {
+      "visuel": {
+        "type": "liste",
+        "titre": "Assurance vie · unités de compte",
+        "items": [
+          "Pas d'impôt tant que tu ne retires rien",
+          "Prélèvements sociaux au rachat : 17,2 %",
+          "Dividendes : réinvestis ou versés sur un autre support, selon le contrat"
+        ]
+      },
+      "voix": "L'assurance vie, maintenant. Sur les unités de compte, tant que tu ne fais pas de rachat, il n'y a pas d'impôt sur le revenu. Et les prélèvements sociaux, 17,2 % en assurance vie, ne tombent qu'au moment du rachat. Les dividendes d'un ETF distribuant, eux, dépendent de ton contrat. Certains assureurs les réinvestissent dans l'ETF. D'autres les versent sur un autre support, comme le fonds en euros. Dans ce cas, pense à les replacer, sinon ton allocation dérive sans que tu t'en rendes compte."
+    },
+    {
+      "visuel": {
+        "type": "barres",
+        "titre": "50 000 € · 20 ans · même hypothèse · après impôt",
+        "items": [
+          [
+            "CTO distribuant",
+            141937,
+            "≈ 141 900 €",
+            "negatif"
+          ],
+          [
+            "CTO capitalisant",
+            148430,
+            "≈ 148 400 €",
+            "accent"
+          ],
+          [
+            "Assurance vie",
+            158389,
+            "≈ 158 400 €",
+            "accent"
+          ],
+          [
+            "PEA",
+            166796,
+            "≈ 166 800 €",
+            "positif"
+          ]
+        ]
+      },
+      "voix": "Si on met tout côte à côte, pour une personne seule, avec un contrat de plus de huit ans et hors frais de contrat, l'assurance vie donne environ 158 400 €. Le PEA, environ 166 800 €. Le compte-titres capitalisant, 148 400. Et le compte-titres distribuant ferme la marche, à 141 900. Retiens bien ça : le choix capitalisant ou distribuant pèse surtout sur un compte-titres. Dans un PEA ou une assurance vie, c'est surtout l'enveloppe qui compte. On l'a vu en détail dans la vidéo précédente."
+    },
+    {
+      "chapitre": "Quand le distribuant a du sens",
+      "visuel": {
+        "type": "section",
+        "titre": "Le distribuant a-t-il encore un intérêt ?",
+        "sous": "Oui. Dans certains cas."
+      },
+      "voix": "Alors, faut-il jeter tous les ETF distribuants ? Non. Et je vais être honnête avec toi : il y a des cas où ils gardent un vrai intérêt. Le premier, c'est celui que tout le monde cite. Mais il cache un piège."
+    },
+    {
+      "visuel": {
+        "type": "comparatif",
+        "colonnes": [
+          {
+            "titre": "Distribuant",
+            "ton": "negatif",
+            "lignes": [
+              "Dividende de 2 000 €",
+              "Tout est imposable",
+              "Impôt : 628 €"
+            ]
+          },
+          {
+            "titre": "Capitalisant",
+            "ton": "positif",
+            "lignes": [
+              "Tu revends 2 000 €",
+              "Seule la plus-value est imposable",
+              "Impôt : ≈ 310 €"
+            ]
+          }
+        ]
+      },
+      "voix": "Le cas classique : tu veux des revenus réguliers. Tu te dis que le distribuant est fait pour ça. Sauf que tu peux aussi revendre un petit bout de ton ETF capitalisant chaque année. Et là, sur un compte-titres, la différence est énorme. Prenons notre portefeuille après dix ans : environ 98 000 €, pour 50 000 € investis. Tu as besoin de 2 000 €. Avec un dividende de 2 000 €, tout est imposable : 628 € d'impôt. Si tu revends pour 2 000 € de parts, seule la plus-value contenue dans ces parts est imposée. Environ la moitié. Résultat : environ 310 € d'impôt. Deux fois moins."
+    },
+    {
+      "visuel": {
+        "type": "liste",
+        "titre": "Quand le distribuant a du sens",
+        "items": [
+          "Un revenu automatique, sans choisir quoi vendre",
+          "En PEA ou assurance vie : pas d'impôt en jeu",
+          "Un indice qui n'existe qu'en distribuant",
+          "Voir et suivre ses revenus"
+        ]
+      },
+      "voix": "Donc le vrai intérêt du distribuant, ce n'est pas la fiscalité. C'est le confort. Certaines personnes ne veulent pas décider chaque année quoi vendre. Elles veulent un revenu qui tombe tout seul, et c'est un choix légitime. Ensuite, dans un PEA ou une assurance vie, l'impôt n'entre pas en jeu tant que l'argent reste dedans, donc l'écart devient minime. Il arrive aussi que l'indice que tu vises n'existe qu'en version distribuante. Et enfin, voir ses dividendes tomber, ça aide certains à tenir sur la durée. Mais si tu es en compte-titres, que tu réinvestis tout et que tu vises vingt ans, le capitalisant part avec une avance."
+    },
+    {
+      "chapitre": "Les 3 erreurs à éviter",
+      "visuel": {
+        "type": "section",
+        "titre": "Les 3 erreurs à éviter",
+        "sous": "Et la date à retenir"
+      },
+      "voix": "Avant de finir, trois erreurs que je vois tout le temps. Et une date à noter dans ton agenda, parce qu'elle tombe dans quelques semaines."
+    },
+    {
+      "visuel": {
+        "type": "liste",
+        "titre": "Les 3 erreurs",
+        "items": [
+          "Choisir un ETF pour son « rendement » de dividende",
+          "Ne pas regarder la version (Acc ou Dist) avant d'acheter",
+          "Revendre pour changer de version sur un compte-titres sans calculer"
+        ]
+      },
+      "voix": "Erreur numéro un : choisir un ETF parce qu'il affiche un gros rendement de dividende. Tu l'as vu au début : le dividende sort de la valeur de ta part, il ne s'y ajoute pas. Ce qui compte, c'est la performance totale. Erreur numéro deux : ne pas regarder la version avant d'acheter. Sur un compte-titres, vérifie si c'est la version capitalisante ou distribuante. Erreur numéro trois, et elle est piégeuse : vouloir passer du distribuant au capitalisant sur un compte-titres en revendant tout. Revendre, c'est payer tout de suite 31,4 % sur ta plus-value. Fais le calcul avant. Parfois, il vaut mieux garder l'ancien et diriger les nouveaux versements vers l'autre version."
+    },
+    {
+      "visuel": {
+        "type": "chiffre",
+        "valeur": "30 novembre",
+        "couleur": "accent",
+        "compteur": false,
+        "label": "Dispense d'acompte sur les dividendes : RFR inférieur à 50 000 € (seul) ou 75 000 € (couple)"
+      },
+      "voix": "Et la date. Sur un compte-titres, ta banque prélève les 12,8 % d'impôt dès le versement du dividende. C'est un acompte, déduit ensuite de ton impôt. Mais si ton revenu fiscal de référence est sous 50 000 € pour une personne seule, ou 75 000 € pour un couple, tu peux demander à en être dispensé. La demande se fait auprès de ta banque, avant le 30 novembre, pour les dividendes de l'année suivante. Attention : ça n'annule pas l'impôt, ça évite juste de l'avancer. Et les prélèvements sociaux, eux, restent prélevés."
+    },
+    {
+      "chapitre": "Ce qu'il faut retenir",
+      "visuel": {
+        "type": "liste",
+        "titre": "Garde en tête",
+        "items": [
+          "Le dividende n'est pas un gain : il sort de la valeur de ta part",
+          "En compte-titres, le capitalisant reporte l'impôt et prend l'avance",
+          "En PEA et assurance vie, l'enveloppe compte plus que la version"
+        ]
+      },
+      "voix": "Je résume. Un dividende n'est pas un gain en plus : ce qui sort en dividende, ta part le perd en valeur. Sur un compte-titres, le capitalisant reporte l'impôt à la revente, et sur vingt ans, ce report vaut des milliers d'euros. Dans un PEA ou une assurance vie, la différence s'efface : c'est le choix de l'enveloppe qui pèse. Les taux que j'ai utilisés sont ceux de 2026, et le budget 2027 est encore en discussion au Parlement. Et comme toujours : ce n'est pas un conseil en investissement. Ta situation est unique."
+    },
+    {
+      "visuel": {
+        "type": "titre",
+        "lignes": [
+          "Prochaine vidéo :",
+          "Le PER, vraie économie d'impôt ?"
+        ],
+        "accent": 1
+      },
+      "voix": "On a parlé d'impôt reporté. Et il y a un produit qui en a fait son argument de vente : le PER, le plan d'épargne retraite. Tu verses, tu déduis, tu paies moins d'impôt cette année. Mais à la sortie ? Selon ta tranche d'imposition, ce cadeau peut être énorme… ou presque nul. On fait le calcul, profil par profil, avant le 31 décembre. C'est dans la prochaine vidéo. Abonne-toi pour ne pas la rater. Et toi, ton ETF, il est capitalisant ou distribuant ? Dis-le moi en commentaire."
+    }
+  ]
+}
