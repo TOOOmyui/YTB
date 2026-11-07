@@ -31,6 +31,11 @@
 - Montage légèrement plus dynamique que la vidéo n°1.
 - Fin : teaser de la vidéo suivante + appel à l'abonnement + question ouverte.
 
+### Variété obligatoire — prévention du contenu « produit en masse » (décision du 07/11/2026, D-2026-11-07-2)
+- Chaque vidéo suit l'une des 4 structures ci-dessous, **jamais la même que l'une des 2 vidéos précédentes** : (A) enquête / démonstration chiffrée ; (B) cas par profils (3 personnages chiffrés) ; (C) checklist datée (échéance réelle) ; (D) idée reçue contre réalité (3 à 5 mythes testés sur sources). Le champ `structure` de la régie l'indique.
+- Chaque vidéo contient au moins **un calcul original de la régie** (simulation propre, recalculée en Python par le vérificateur) et au moins une source primaire nouvelle par rapport aux 3 vidéos précédentes.
+- Accroche, transitions et conclusion réécrites à chaque vidéo : aucune phrase de plus de 8 mots reprise mot pour mot d'une vidéo précédente (hors mention de conformité). Le contrôle qualité le vérifie.
+
 ## Charte visuelle (moteur v2 — validée par le PDG le 27/10/2026)
 - Montage dynamique et rapide, jamais monotone : un plan par phrase (changement toutes les 2 à 4 secondes), caméra toujours en mouvement (poussée lente, recadrages à chaque phrase, coups de zoom sur les chiffres), transitions rapides avec effets sonores.
 - Sous-titres mot à mot, mot prononcé surligné dans la couleur d'accent.
@@ -39,6 +44,10 @@
 - Types de plans : chiffre clé animé, phrase choc, titre, équation, tableau comptable, barres, courbe, liste, comparatif, carte de chapitre.
 - Musique électro sobre générée par la régie (libre de droits), atténuée sous la voix.
 - Le scénariste découpe chaque scène en phrases courtes ; dans les scènes de données, chaque phrase doit commenter ce qui apparaît à l'écran.
+
+## Titres (décision du 07/11/2026, D-2026-11-07-3)
+- **60 caractères maximum** (lisible en entier sur mobile), mot-clé recherché dans les 30 premiers caractères (ex. « PER », « Livret A 2027 », « ETF »), promesse tenue par la vidéo, aucun gain garanti ni urgence fabriquée.
+- Miniature : 4 mots maximum, un seul chiffre, différent du titre (le titre et la miniature se complètent).
 
 ## Miniatures
 - 1280×720, générées par `moteur/miniature.py` depuis le champ `miniature` de la spec ; publiées sur le quai (`url_miniature`).
@@ -50,7 +59,7 @@
 - Aucune recommandation de produit nominatif à acheter ; comparaisons de catégories uniquement.
 
 ## Créneaux
-- Longues : lun., mer., ven., dim. 18:00 Europe/Paris
+- Longues : **16:00 Europe/Paris** (décision de direction du 07/11/2026, D-2026-11-07-1 ; indice d'audience Metricool +20 à 30 % vs 18:00). Jours : lun., mer., ven., dim. jusqu'au 15/11 inclus ; **à partir du 16/11 : lun., mer., jeu., ven.** (dimanche = créneau le plus faible de la grille, indice 16h 5 648 contre 11 979 le jeudi). Maximum 4 vidéos longues par semaine. Production la veille du créneau (tâches à recaler par le DG).
 - Réels : en pause (décision du PDG du 02/11/2026)
 
 ## Voix réservées aux futures chaînes
