@@ -1,0 +1,732 @@
+{
+ "id": "finance-fr-005",
+ "chaine": "finance-fr",
+ "titre": "Livret A 2027 : 4 idées reçues face à la formule",
+ "titre_youtube": "Livret A 2027 : 4 idées reçues face à la formule",
+ "theme": "finance",
+ "accroche": "Le taux du Livret A au 1er février 2027 n'est pas un mystère : on a appliqué la formule officielle aux dernières données de la BCE et de l'Insee, et elle donne environ 2,6 % (projection). Qui décide vraiment, pourquoi l'inflation ne suffit pas, LEP, quinzaines, et où en est le plafond à 30 000 €.",
+ "tags": [
+  "Livret A",
+  "Livret A 2027",
+  "taux Livret A février 2027",
+  "formule Livret A",
+  "LEP 2027",
+  "épargne réglementée",
+  "inflation 2026",
+  "€STR",
+  "BCE taux",
+  "plafond Livret A",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#LivretA",
+  "#Epargne",
+  "#LEP"
+ ],
+ "miniature": {
+  "chiffre": "2,6 %",
+  "l1": "Ce que dit",
+  "l2": "la formule",
+  "ton": "positif"
+ },
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 0.97
+ },
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1",
+  "style": "excited",
+  "debit": "+0%"
+ },
+ "structure": "D",
+ "verification": {
+  "date": "2026-11-10",
+  "sources": [
+   "Arrêté du 27 janvier 2021 relatif aux taux d'intérêt des produits d'épargne réglementée (JO du 11/02/2021), art. 1er : Livret A/LDDS = plus élevé entre la moyenne de l'€STR semestriel moyen et de l'inflation hors tabac (série Insee 001763852) moyennée sur le semestre, et 0,5 % ; arrondi au dixième le plus proche ou à défaut supérieur ; LEP = plus élevé entre Livret A + 0,5 point et l'inflation ; calcul les 15 janvier et 15 juillet par la Banque de France, transmission au DG du Trésor, publication au JO ; dérogation (circonstances exceptionnelles ou pouvoir d'achat non préservé) : le gouverneur saisit le ministre de l'Économie, qui examine l'opportunité de modifier ; texte abrogeant le règlement CRBF 86-13 (CCLRF, version consolidée)",
+   "Banque de France, communiqué du 15/01/2026 : Livret A formule 1,4 %, proposition 1,5 % ; LEP formule 1,9 %, proposition 2,5 % ; inflation hors tabac moyenne 0,88 %, €STR moyen 1,93 % (juillet-décembre 2025)",
+   "Banque de France, communiqué du 15/07/2026 : Livret A formule et proposition 1,7 % ; LEP formule 2,2 %, proposition maintien 2,5 % ; inflation hors tabac moyenne 1,52 %, €STR moyen 1,95 % (janvier-juin 2026)",
+   "service-public.gouv.fr A18000 (MAJ 31/07/2026) : Livret A et LDDS 1,7 % du 01/08/2026 au 31/01/2027 (1,5 % du 01/02 au 31/07/2026), LEP 2,5 % (formule 2,2 %, coup de pouce) ; arrêté du 28/07/2026",
+   "service-public.gouv.fr F2365 (vérifiée le 01/08/2026) : plafond 22 950 €, intérêts capitalisés au 31/12 pouvant dépasser le plafond, règle des quinzaines (versement 1-15 → intérêts dès le 16 ; 16-fin → dès le 1er ; retrait 1-15 → depuis la fin du mois précédent ; 16-fin → depuis le 15), exonération IR et PS",
+   "La finance pour tous (21/12/2012) : plafond porté de 19 125 € à 22 950 € au 01/01/2013 (décret du 24/12/2012)",
+   "BCE, décisions du 11/06/2026 (Banco de España : +25 pb, taux de dépôt 2,25 % au 17/06/2026, première hausse depuis 3 ans selon Euronews) et du 10/09/2026 (communiqué BCE : taux de dépôt 2,50 %, effectif le 16/09/2026)",
+   "€STR moyennes mensuelles 2026 (global-rates.com, données BCE) : janv. 1,932 ; févr. 1,931 ; mars 1,932 ; avr. 1,932 ; mai 1,931 ; juin 2,045 ; juil. 2,184 ; août 2,187 ; sept. 2,314 ; oct. 2,440 ; nov. 2,443 (MoneyVox : 2,443 % au 06/11/2026). Contrôle : moyenne janv.-juin = 1,9505 = 1,95 % publié par la Banque de France",
+   "Insee, IPC définitifs : juillet 2026 (IR du 14/08/2026) ensemble hors tabac +2,1 % sur un an ; août 2026 (IR n°218 du 15/09/2026) hors tabac +2,3 % ; septembre 2026 (IR n°247 du 15/10/2026) hors tabac +3,1 % ; octobre 2026 provisoire (IR n°266 du 30/10/2026) ensemble +3,4 %, énergie +24,1 %, hors tabac non publié, définitif le 13/11/2026",
+   "Plafond 30 000 € : amendement adopté en commission des finances début octobre puis tombé avec le rejet de la partie recettes (Selectra 10/10/2026, stephanelarue.com) ; rejet en séance le 16/10/2026, 51 voix contre 32, replis 56 contre 29 (Tout sur mes finances 23/10/2026 MAJ 27/10, Renseignement Économique 23/10/2026) ; plafond inchangé au 10/11/2026",
+   "LEP : plafond de versements 10 000 € (Meilleurtaux Placement, 17/06/2026 ; La finance pour tous 27/09/2023)",
+   "Teaser 006 : ordonnance du 3 septembre 2025 transposant la directive (UE) 2023/2225, entrée en vigueur le 20/11/2026 (vie-publique.fr, La finance pour tous)",
+   "Calculs (Python, 10/11/2026) : contrôles juillet 2026 (1,52 + 1,95)/2 = 1,735 → 1,7 ; janvier 2026 (0,88 + 1,93)/2 = 1,405 → 1,4. Projection février 2027 : €STR (2,184 + 2,187 + 2,314 + 2,440 + 2,443 + 2,443)/6 = 2,335 (nov.-déc. supposés à 2,443) ; inflation (2,1 + 2,3 + 3,1 + 3,4 + x + x)/6 ; x = 3,4 → 2,950 ; taux (2,335 + 2,950)/2 = 2,643 → 2,6. Seuils sur x : < 2,85 → 2,5 ; 2,85 à 3,44 → 2,6 ; ≥ 3,45 → 2,7 ; x = 2,0 → 2,41 → 2,4. Hausse BCE de 25 pb fin décembre : +0,015 sur l'€STR moyen (négligeable). LEP = max(2,6 + 0,5 ; 2,95) = 3,1 ; à 2,7 → 3,2. Intérêts sur un an : 10 000 € × 1,7 % = 170 € ; × 2,6 % = 260 € (+90) ; 22 950 € × 1,7 % = 390,15 € ; × 2,6 % = 596,70 € (+206,55). Rendement réel 2,6 − 3,4 = −0,8 point (exact 1,026/1,034 − 1 = −0,77 %) ; actuel 1,7 − 3,4 = −1,7 point."
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "Le chiffre de février",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "2,6 %",
+    "couleur": "accent",
+    "compteur": true,
+    "label": "Livret A au 1er février 2027 ? Projection de la formule"
+   },
+   "voix": "2,6 %. Retiens bien ce chiffre. Ce n'est ni une rumeur, ni un pronostic de comptoir. C'est ce que donne la formule officielle du Livret A quand on la nourrit avec les dernières données publiées. Et pourtant, autour de toi, la plupart des gens sont persuadés que leur livret va encore baisser."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Livret A 2027 :",
+     "4 idées reçues",
+     "face à la formule"
+    ],
+    "accent": 1
+   },
+   "voix": "Aujourd'hui, on fait un test. Quatre phrases qu'on entend partout sur le taux du Livret A. Pour chacune, on ouvre le texte officiel, on prend les chiffres de la Banque de France, de la BCE et de l'Insee, et on regarde si elle tient debout. Spoiler : une seule survit, et seulement à moitié. Et la dernière s'est jouée à l'Assemblée nationale il y a moins d'un mois."
+  },
+  {
+   "chapitre": "La formule en clair",
+   "visuel": {
+    "type": "section",
+    "titre": "La formule",
+    "sous": "Arrêté du 27 janvier 2021"
+   },
+   "voix": "Avant de tester quoi que ce soit, il faut savoir de quoi on parle. Le taux du Livret A ne sort pas d'un chapeau. Il sort d'un texte précis : l'arrêté du 27 janvier 2021, relatif aux taux de l'épargne réglementée. Deux pages au Journal officiel, que presque personne n'a lues."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "Inflation",
+      "moy. 6 mois"
+     ],
+     [
+      "+"
+     ],
+     [
+      "€STR",
+      "moy. 6 mois"
+     ],
+     [
+      "÷ 2"
+     ],
+     [
+      "="
+     ],
+     [
+      "Taux",
+      "arrondi",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "La recette tient en une ligne. D'un côté, l'inflation sur un an, hors tabac, en moyenne sur six mois. De l'autre, l'ESTER : le taux auquel les banques de la zone euro se prêtent de l'argent au jour le jour, lui aussi en moyenne sur six mois. On additionne les deux, on divise par deux. Et on arrondit au dixième le plus proche."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Les règles autour du calcul",
+    "items": [
+     "Plancher : 0,5 %",
+     "Calcul les 15 janvier et 15 juillet",
+     "Nouveau taux au 1er février et au 1er août",
+     "LDDS : même taux que le Livret A",
+     "LEP : Livret A + 0,5 point, ou l'inflation si elle est plus haute"
+    ]
+   },
+   "voix": "Autour de ce calcul, quelques règles. Le taux ne peut jamais descendre sous 0,5 %. La Banque de France fait le calcul deux fois par an, le 15 janvier et le 15 juillet, pour un nouveau taux au 1er février et au 1er août. Le LDDS a toujours le même taux que le Livret A. Et le LEP, le livret réservé aux revenus modestes, suit sa propre règle : le taux du Livret A plus un demi-point, ou l'inflation si elle est plus élevée. Voilà, tu as la grille de lecture. Place au premier mythe."
+  },
+  {
+   "chapitre": "Mythe 1 : le gouvernement décide",
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Le taux du Livret A,",
+     "c'est Bercy qui le choisit. »"
+    ]
+   },
+   "voix": "Premier mythe, le plus répandu : le taux du Livret A, c'est le gouvernement qui le choisit. Au doigt mouillé, selon ce qui l'arrange. Alors, vrai ou faux ?"
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "En temps normal :",
+     "faux."
+    ],
+    "ton": "negatif"
+   },
+   "voix": "En temps normal, c'est faux. Le texte est très clair. La Banque de France calcule le taux. Elle transmet le résultat au directeur général du Trésor. Et lui le fait publier au Journal officiel. Le ministre ne choisit pas le chiffre : il le reçoit."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "La porte de sortie prévue par l'arrêté",
+    "items": [
+     "Circonstances exceptionnelles",
+     "Ou pouvoir d'achat pas préservé",
+     "Le gouverneur propose un taux",
+     "Le ministre tranche"
+    ]
+   },
+   "voix": "Mais il existe une porte de sortie. Et c'est là que le mythe prend racine. Si la Banque de France estime que des circonstances exceptionnelles le justifient, ou que la règle ne préserve pas globalement le pouvoir d'achat des épargnants, son gouverneur peut proposer un autre taux. Et c'est alors le ministre de l'Économie qui tranche."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Livret A, janvier 2026 : formule et taux retenu",
+    "items": [
+     [
+      "Formule",
+      1.4,
+      "1,4 %",
+      "accent"
+     ],
+     [
+      "Taux retenu",
+      1.5,
+      "1,5 %",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Et cette porte, elle sert. En janvier 2026, la formule donnait 1,4 %. Le gouverneur a proposé 1,5 %, pour limiter la baisse. Et c'est bien 1,5 % qui s'est appliqué au 1er février."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "LEP, juillet 2026 : formule et taux retenu",
+    "items": [
+     [
+      "Formule",
+      2.2,
+      "2,2 %",
+      "accent"
+     ],
+     [
+      "Taux retenu",
+      2.5,
+      "2,5 %",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Même scénario en juillet 2026, pour le LEP cette fois. La formule donnait 2,2 %. Le gouverneur a recommandé de rester à 2,5 %. Et le LEP est resté à 2,5 % au 1er août. Dans ces deux cas récents, l'écart à la formule a joué en faveur des épargnants."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Verdict : à moitié vrai.",
+     "La formule d'abord, l'exception ensuite."
+    ],
+    "ton": "accent"
+   },
+   "voix": "Verdict sur le mythe numéro un : à moitié vrai. La formule fixe le point de départ, et les écarts restent l'exception, encadrée par le texte. Conséquence très concrète : si tu connais la formule, tu connais déjà, à un ou deux dixièmes près, le taux de février. Et c'est exactement ce qui va démolir le deuxième mythe."
+  },
+  {
+   "chapitre": "Mythe 2 : il va forcément baisser",
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Le Livret A,",
+     "ça ne fait que baisser. »"
+    ]
+   },
+   "voix": "Deuxième idée reçue : le Livret A, ça ne fait que baisser. On comprend d'où elle vient : ces dernières années, les annonces de baisse ont fait beaucoup plus de bruit que les hausses. Mais regarde les derniers mouvements."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Taux du Livret A",
+    "items": [
+     [
+      "Fin 2025",
+      1.7,
+      "1,7 %",
+      "accent"
+     ],
+     [
+      "Févr. 2026",
+      1.5,
+      "1,5 %",
+      "negatif"
+     ],
+     [
+      "Août 2026",
+      1.7,
+      "1,7 %",
+      "accent"
+     ],
+     [
+      "Févr. 2027 ?",
+      2.6,
+      "≈ 2,6 % (projection)",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Fin 2025, le livret est à 1,7 %. Au 1er février 2026, il tombe à 1,5. Puis il remonte à 1,7 au 1er août. Le mouvement s'est donc déjà inversé. Et la dernière barre, c'est notre projection pour février : environ 2,6 %. Pour comprendre d'où elle sort, il faut regarder les deux moteurs de la formule."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "2,50 %",
+    "couleur": "accent",
+    "compteur": true,
+    "label": "taux de dépôt de la BCE depuis le 16 septembre 2026"
+   },
+   "voix": "Premier moteur : la Banque centrale européenne. Elle a relevé ses taux le 11 juin, pour la première fois depuis trois ans. Puis de nouveau le 10 septembre. Son taux de dépôt est à 2,50 % depuis le 16 septembre. Et l'ESTER suit presque mécaniquement, juste en dessous."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "€STR, moyenne mensuelle (2026)",
+    "items": [
+     [
+      "Juillet",
+      2.184,
+      "2,18 %",
+      "accent"
+     ],
+     [
+      "Août",
+      2.187,
+      "2,19 %",
+      "accent"
+     ],
+     [
+      "Septembre",
+      2.314,
+      "2,31 %",
+      "positif"
+     ],
+     [
+      "Octobre",
+      2.44,
+      "2,44 %",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "En juillet, l'ESTER tourne autour de 2,18 %. En août, pareil. En septembre, la hausse de la BCE le fait grimper en cours de mois : 2,31 % en moyenne. Et en octobre, il est à 2,44 %. Début novembre, il n'a pas bougé. Pour comparer, sur le premier semestre, sa moyenne était de 1,95 % seulement."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Inflation sur un an (Insee)",
+    "items": [
+     [
+      "Juillet",
+      2.1,
+      "2,1 %",
+      "accent"
+     ],
+     [
+      "Août",
+      2.3,
+      "2,3 %",
+      "accent"
+     ],
+     [
+      "Septembre",
+      3.1,
+      "3,1 %",
+      "negatif"
+     ],
+     [
+      "Octobre",
+      3.4,
+      "3,4 % (provisoire)",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Deuxième moteur : l'inflation. Hors tabac, l'Insee mesure 2,1 % sur un an en juillet, 2,3 % en août, 3,1 % en septembre. Pour octobre, on a seulement l'estimation provisoire de l'indice d'ensemble : 3,4 %. Le chiffre définitif tombe le 13 novembre. Et c'est l'énergie qui tire tout : plus 24 % sur un an. Au premier semestre, l'inflation moyenne retenue par la Banque de France n'était que de 1,52 %."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Verdict : faux.",
+     "Les deux moteurs accélèrent."
+    ],
+    "ton": "negatif"
+   },
+   "voix": "Verdict : faux. Les deux ingrédients de la formule ont nettement monté depuis l'été. Pour que le taux baisse en février, il faudrait un effondrement de l'inflation et des taux en quelques semaines. Rien, dans les données publiées, ne va dans ce sens. Mais méfie-toi du troisième mythe : c'est lui qui fait rater la plupart des pronostics."
+  },
+  {
+   "chapitre": "Mythe 3 : l'inflation suffit",
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Regarde l'inflation,",
+     "tu as le taux. »"
+    ]
+   },
+   "voix": "Troisième idée reçue, plus subtile : pour deviner le taux du Livret A, il suffirait de regarder l'inflation. Inflation à 3 %, livret à 3 %. C'est intuitif. Et c'est faux, pour une raison toute bête : l'inflation ne compte que pour moitié."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "1,52 %",
+      "inflation"
+     ],
+     [
+      "+"
+     ],
+     [
+      "1,95 %",
+      "€STR"
+     ],
+     [
+      "÷"
+     ],
+     [
+      "2"
+     ],
+     [
+      "="
+     ],
+     [
+      "1,7 %",
+      "au 1er août 2026",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "La preuve avec le calcul de juillet 2026. Inflation moyenne du semestre : 1,52 %. ESTER moyen : 1,95 %. On additionne, on divise par deux : 1,735. Arrondi : 1,7 %. Si tu avais regardé seulement l'inflation, tu aurais parié sur 1,5. Raté de deux dixièmes."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "0,88 %",
+      "inflation"
+     ],
+     [
+      "+"
+     ],
+     [
+      "1,93 %",
+      "€STR"
+     ],
+     [
+      "÷"
+     ],
+     [
+      "2"
+     ],
+     [
+      "="
+     ],
+     [
+      "1,4 %",
+      "formule, janvier 2026",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Même leçon en janvier 2026, en plus spectaculaire. L'inflation moyenne n'était que de 0,88 %. Avec elle seule, tu aurais annoncé un livret sous 1 %. Mais l'ESTER, à 1,93 %, a tiré la moyenne vers le haut. La formule donnait 1,4 %, et le taux a fini à 1,5."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prix qui flambent, taux qui suivent moins vite :",
+     "le livret reste sous l'inflation."
+    ],
+    "accent": 1
+   },
+   "voix": "Et ça marche aussi dans l'autre sens. Quand l'inflation grimpe plus vite que les taux de la BCE, la formule fait la moyenne entre les deux. Le livret monte, mais moins vite que les prix. C'est exactement la situation de cet automne. Garde ça dans un coin de ta tête : on va le chiffrer en euros dans quelques minutes."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Verdict : faux.",
+     "Moitié inflation, moitié BCE."
+    ],
+    "ton": "negatif"
+   },
+   "voix": "Verdict : faux. Pour prévoir le Livret A, il faut suivre deux courbes, pas une. Et maintenant qu'on a les deux, on peut faire ce que presque personne ne fait : appliquer la formule nous-mêmes."
+  },
+  {
+   "chapitre": "Le calcul de la régie",
+   "visuel": {
+    "type": "section",
+    "titre": "Notre calcul",
+    "sous": "La formule appliquée aux données publiées"
+   },
+   "voix": "Voici notre propre calcul, avec les données publiées au 10 novembre 2026. Et je préfère être clair : c'est une projection, pas une annonce. Il manque encore deux mois de données."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Juillet → décembre 2026 (projection)",
+    "lignes": [
+     [
+      "€STR moyen sur 6 mois",
+      "≈ 2,34 %"
+     ],
+     [
+      "Inflation moyenne sur 6 mois",
+      "≈ 2,95 %"
+     ],
+     [
+      "Moyenne des deux",
+      "≈ 2,64 %",
+      "accent"
+     ]
+    ],
+    "total": [
+     "Arrondi au dixième",
+     "2,6 %",
+     "positif"
+    ]
+   },
+   "voix": "Pour l'ESTER, on prend les moyennes de juillet à octobre, et on suppose qu'il reste à 2,44 % en novembre et en décembre, son niveau actuel. Moyenne sur six mois : environ 2,34 %. Pour l'inflation, on prend juillet, août, septembre, la première estimation d'octobre, et on suppose que novembre et décembre restent à 3,4 %. Moyenne : environ 2,95 %. La moyenne des deux donne 2,64. Arrondi au dixième : 2,6 %."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Inflation moyenne de novembre-décembre → taux",
+    "items": [
+     [
+      "Sous 2,85 %",
+      2.5,
+      "2,5 %",
+      "accent"
+     ],
+     [
+      "De 2,85 à 3,4 %",
+      2.6,
+      "2,6 %",
+      "positif"
+     ],
+     [
+      "3,45 % et plus",
+      2.7,
+      "2,7 %",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Et si l'inflation bouge ? On a fait tourner la formule pour toutes les valeurs. Tant que l'inflation de novembre et décembre reste, en moyenne, entre 2,85 et 3,4 %, le résultat ne bouge pas : 2,6 %. Il faudrait au moins 3,45 % pour passer à 2,7. Et moins de 2,85 % pour retomber à 2,5. Et pour tomber à 2,4, il faudrait une inflation autour de 2 % dès novembre. Autant dire une chute brutale."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce qui peut encore bouger",
+    "items": [
+     "L'inflation de novembre et décembre",
+     "Une décision de la BCE en décembre (effet minime)",
+     "Une dérogation proposée par le gouverneur",
+     "Le calcul officiel du 15 janvier"
+    ]
+   },
+   "voix": "Trois choses peuvent encore faire bouger le résultat. L'inflation des deux derniers mois, évidemment. Une éventuelle décision de la BCE en décembre, mais elle pèserait très peu : elle ne jouerait que sur quelques jours du semestre. Et la porte de sortie du mythe numéro un : le gouverneur peut toujours proposer autre chose. Le verdict officiel tombera avec le calcul du 15 janvier."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "≈ 3,1 %",
+    "couleur": "positif",
+    "compteur": true,
+    "label": "LEP au 1er février 2027 selon la formule (projection)"
+   },
+   "voix": "Et le LEP ? Sa règle, c'est le Livret A plus un demi-point, ou l'inflation moyenne si elle est plus haute. Ici, 2,6 plus 0,5, ça fait 3,1 %, au-dessus des 2,95 % d'inflation. Donc, selon la formule, le LEP passerait de 2,5 à environ 3,1 %. Il reste réservé aux revenus modestes, avec un plafond de versements de 10 000 €."
+  },
+  {
+   "chapitre": "Ce que ça change en euros",
+   "visuel": {
+    "type": "ledger",
+    "titre": "10 000 € pendant un an",
+    "lignes": [
+     [
+      "À 1,7 %",
+      "170 €"
+     ],
+     [
+      "À 2,6 % (projection)",
+      "260 €",
+      "positif"
+     ]
+    ],
+    "total": [
+     "Différence",
+     "+ 90 €",
+     "positif"
+    ]
+   },
+   "voix": "Traduisons tout ça en euros. Avec 10 000 € sur un Livret A, un an à 1,7 %, c'est 170 € d'intérêts. Un an à 2,6 %, ça fait 260 €. 90 € de plus, sans impôt, sans prélèvements sociaux, sans lever le petit doigt."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Livret A rempli au plafond : 22 950 €",
+    "lignes": [
+     [
+      "À 1,7 %",
+      "≈ 390 €"
+     ],
+     [
+      "À 2,6 % (projection)",
+      "≈ 597 €",
+      "positif"
+     ]
+    ],
+    "total": [
+     "Différence",
+     "≈ + 207 €",
+     "positif"
+    ]
+   },
+   "voix": "Au plafond, 22 950 €, on passe d'environ 390 € par an à près de 597 €. Environ 207 € de plus sur un an. Mais avant de sortir le champagne, il faut regarder l'autre colonne du tableau."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "2,6 %",
+      "Livret A (projection)",
+      "positif"
+     ],
+     [
+      "−"
+     ],
+     [
+      "3,4 %",
+      "inflation d'octobre",
+      "negatif"
+     ],
+     [
+      "≈"
+     ],
+     [
+      "− 0,8 %",
+      "rendement réel",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Si l'inflation reste autour de 3,4 %, un livret à 2,6 % rapporte toujours moins que la hausse des prix. Environ 0,8 % de pouvoir d'achat perdu par an. C'est moins qu'aujourd'hui, où l'écart frôle 1,7 point. Mais ça reste négatif. C'est l'effet de la moyenne vu au mythe trois : la formule amortit les chocs, dans les deux sens."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "La règle des quinzaines",
+    "items": [
+     "Versé le 1er-15 : intérêts dès le 16",
+     "Versé le 16-31 : dès le 1er",
+     "Retrait : quinzaine perdue",
+     "Intérêts versés le 31/12"
+    ]
+   },
+   "voix": "Un détail pratique que beaucoup ignorent : le Livret A calcule ses intérêts par quinzaines. Un versement fait entre le 1er et le 15 rapporte à partir du 16. Un versement fait après le 16 attend le 1er du mois suivant. Pour un retrait, c'est l'inverse : la quinzaine entamée ne rapporte rien. Et les intérêts de l'année sont ajoutés au livret le 31 décembre. Ils peuvent même te faire dépasser le plafond. Ce qui nous amène au dernier mythe."
+  },
+  {
+   "chapitre": "Mythe 4 : le plafond va monter",
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Le plafond passe",
+     "à 30 000 €. »"
+    ]
+   },
+   "voix": "Quatrième et dernière idée reçue, lue un peu partout cet automne : le plafond du Livret A va passer à 30 000 €. Tu as peut-être vu le titre passer. Alors, c'est fait ?"
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "22 950 €",
+    "couleur": "accent",
+    "compteur": true,
+    "label": "plafond de versements du Livret A, inchangé depuis le 1er janvier 2013"
+   },
+   "voix": "Non. Au 10 novembre 2026, le plafond est toujours de 22 950 €. Le même depuis le 1er janvier 2013. Et il n'a rien à voir avec la formule : il est fixé par décret, pas par le calcul de la Banque de France. Un taux qui monte ne fait jamais monter le plafond."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Octobre 2026 à l'Assemblée",
+    "items": [
+     "Commission : 30 000 € votés",
+     "Puis l'amendement tombe",
+     "16/10 : rejeté, 51 contre 32",
+     "Plafond : 22 950 €"
+    ]
+   },
+   "voix": "Voici ce qui s'est passé. Début octobre, en commission des finances, les députés adoptent un amendement qui porte le plafond à 30 000 €. Mais la commission rejette ensuite toute la partie recettes du budget, et l'amendement tombe avec elle. Il revient en séance publique le 16 octobre. Rejeté, par 51 voix contre 32. Les amendements de repli sont rejetés aussi, par 56 voix contre 29."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Verdict : faux,",
+     "pour l'instant."
+    ],
+    "ton": "negatif"
+   },
+   "voix": "Verdict : faux, pour l'instant. Le débat peut revenir, au Sénat, ou par la voie d'un décret, puisqu'un décret suffit à changer ce plafond. Mais tant que rien n'est publié au Journal officiel, impossible de verser au-delà de 22 950 €. Inutile donc de garder de l'argent de côté en attendant une annonce. Et si ton livret est déjà plein, ses intérêts, eux, continuent de s'ajouter."
+  },
+  {
+   "chapitre": "Le bilan",
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Idée reçue",
+      "ton": "negatif",
+      "lignes": [
+       "Bercy choisit le taux",
+       "Il va forcément baisser",
+       "L'inflation suffit",
+       "Plafond à 30 000 €"
+      ]
+     },
+     {
+      "titre": "Réalité",
+      "ton": "positif",
+      "lignes": [
+       "La formule, sauf exception",
+       "Projection ≈ 2,6 %",
+       "Moitié inflation, moitié BCE",
+       "22 950 €, inchangé"
+      ]
+     }
+    ]
+   },
+   "voix": "Récapitulons. Le gouvernement ne choisit pas le taux : la formule le fait, sauf exception encadrée. Il ne va pas forcément baisser : notre projection donne environ 2,6 % en février. L'inflation ne suffit pas à le prévoir : elle ne pèse que pour moitié. Et le plafond n'est pas passé à 30 000 € : il reste à 22 950."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Trois réflexes",
+    "items": [
+     "Une projection n'est pas une décision",
+     "Calcul officiel le 15 janvier",
+     "Le LEP, si tu y as droit, garde son avance",
+     "Ce n'est pas un conseil en investissement"
+    ]
+   },
+   "voix": "Et trois réflexes à garder. Une projection n'est pas une décision : le chiffre officiel sortira du calcul du 15 janvier. Si tu as droit au LEP, il garde son avance sur le Livret A, d'après la formule comme aujourd'hui. Et comme toujours, cette vidéo est éducative : ce n'est pas un conseil en investissement, chaque situation est différente."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "paiement en 3 fois,",
+     "ce qui change le 20 novembre"
+    ],
+    "accent": 2
+   },
+   "voix": "Dans la prochaine vidéo, on quitte l'épargne pour le crédit. Le paiement en trois ou quatre fois, présenté comme gratuit, entre dans le droit du crédit à la consommation le 20 novembre. On calculera ce que coûte vraiment un achat de 1 200 € payé en plusieurs fois, quand un retard s'en mêle. Abonne-toi pour ne pas la rater. Et toi, tu paries sur combien pour février : 2,5, 2,6 ou 2,7 ? Écris ton chiffre en commentaire, on fera les comptes après le 15 janvier."
+  }
+ ]
+}
