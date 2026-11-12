@@ -1,0 +1,542 @@
+{
+ "id": "finance-fr-006",
+ "chaine": "finance-fr",
+ "titre": "Paiement en 3 fois : ce qui change le 20 novembre",
+ "titre_youtube": "Paiement en 3 fois : ce qui change le 20 novembre",
+ "theme": "finance",
+ "structure": "A",
+ "accroche": "Le 20 novembre 2026, le paiement en 3 ou 4 fois et les mini-crédits entrent dans le droit du crédit à la consommation. Ce que la réforme change pour toi (solvabilité, information, découvert, rétractation) et le vrai coût d'un achat de 1 200 € quand un retard s'en mêle.",
+ "tags": [
+  "paiement en 3 fois",
+  "paiement en 4 fois",
+  "paiement fractionné",
+  "crédit à la consommation 2026",
+  "réforme crédit 20 novembre 2026",
+  "mini-crédit",
+  "crédit renouvelable",
+  "taux d'usure",
+  "découvert bancaire",
+  "surendettement",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#Paiement3x",
+  "#Crédit",
+  "#FinancePerso"
+ ],
+ "miniature": {
+  "chiffre": "+436 €",
+  "l1": "Le piège",
+  "l2": "après le 4x",
+  "ton": "negatif"
+ },
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 0.97
+ },
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-Remy:DragonHDLatestNeural",
+  "debit": "+0%"
+ },
+ "verification": {
+  "date": "2026-11-12",
+  "sources": [
+   "service-public.gouv.fr, actualité A18451 (publiée le 17/09/2025, MAJ 27/10/2026) — ordonnance n° 2025-880 du 3/09/2025 (transpose la directive (UE) 2023/2225) ; décrets n° 2026-105 du 19/02/2026 (transparence, information précontractuelle : coût total, conséquences d'un défaut de paiement, voies de recours), n° 2026-643 du 21/07/2026, n° 2026-719 du 1/08/2026 (traçabilité de l'analyse de solvabilité, accompagnement des emprunteurs en difficulté) ; application le 20/11/2026 ; champ étendu aux crédits gratuits ou à frais négligeables, mini-crédits < 200 €, crédits < 3 mois en paiement fractionné ou différé, crédits de 75 000 à 100 000 €, LOA ; cartes à débit différé exclues ; mention « Attention ! Un crédit coûte de l'argent et doit être remboursé ! » ; interdiction de mettre en avant la facilité d'obtention ; FICP facultatif pour les petits crédits ; orientation gratuite vers des services de conseil ; rétractation allongée si l'information manque",
+   "service-public.gouv.fr, dossier N96 Crédit à la consommation — la réforme s'applique aux offres émises à partir du 20/11/2026 ; offres antérieures = contrats en cours, règles actuelles applicables",
+   "service-public.gouv.fr, actualité A18569 — découvert : analyse de solvabilité aujourd'hui pour ≥ 200 € et/ou > 1 mois, étendue au 20/11/2026 aux découverts < 200 € et/ou < 1 mois ; analyse proportionnée ; FICP facultatif pour petits découverts ; autorisations antérieures non concernées ; pas de nouvelle autorisation à chaque utilisation ; le découvert n'est pas un droit",
+   "Banque de France, Rapport annuel de l'Observatoire de l'inclusion bancaire 2025 (publié 06/2026) — 16,4 % des dossiers de surendettement traités en 2025 présentaient une dette liée au paiement fractionné ou aux mini-crédits (nouvelles catégories du portail créanciers depuis novembre 2025) ; production de paiements fractionnés 2025 : 9,8 Md€, soit 14,6 % des crédits à la consommation hors découverts ; 148 013 dossiers déposés en 2025",
+   "Institut national de la consommation (inc-conso.fr, 02/12/2025) — mini-crédit : somme versée sur le compte, remboursement en 3 mois au plus ; frais de mise à disposition instantanée souvent payants et pas toujours inclus dans le taux",
+   "Banque de France, Taux d'usure 2026-T4 (publié 28/09/2026, MAJ 09/11/2026) — prêts aux particuliers ≤ 3 000 € : 23,60 %",
+   "service-public.gouv.fr, fiche F2436 (vérifiée le 12/06/2026) — crédit renouvelable ≤ 3 000 € : durée maximale de remboursement 36 mois",
+   "service-public.gouv.fr, fiche F2451 — rétractation 14 jours calendaires ; défaillance : remboursement du capital restant dû, indemnité plafonnée à 8 % du solde restant dû",
+   "Ancien champ (jusqu'au 19/11/2026) : crédits de 200 € à 75 000 €, exclusion des crédits < 200 € et des crédits remboursables en 3 mois au plus sans intérêts ni frais — La finance pour tous (19/09/2025), Village de la justice (A. Reynet, avocat), Selectra (23/09/2026) ; Selectra et Village de la justice : solvabilité y compris pour 150 €, encadrement des outils automatisés, droit à une intervention humaine, explication et réexamen en cas de refus automatisé, renégociation (durée allongée, échéances reportées) ; paiement différé du commerçant sans tiers financeur exclu sous conditions",
+   "Calculs (Python, 12/11) : crédit renouvelable 1 200 € au TAEG 23,60 % (taux mensuel actuariel 1,236^(1/12) − 1 = 1,7813 %) : 12 mois → 111,95 €/mois, intérêts 143,44 € ; 36 mois → 45,44 €/mois, intérêts 435,92 €, total 1 635,92 € (+36,3 %). Paiement 4 fois de 1 200 € (300 € à l'achat puis à 1, 2, 3 mois ; 900 € financés), frais hypothétiques payés à l'achat, taux annuel actuariel équivalent : 12 € → 8,4 % ; 18 € → 12,9 % ; 24 € → 17,6 % ; 30 € → 22,6 %. Durée moyenne du financement (1+2+3)/3 = 2 mois. Empilement : 1 200/4 + 480/4 + 240/3 = 300 + 120 + 80 = 500 €/mois. Indemnité 8 % : plafond légal, sans application chiffrée."
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "Le crédit qui n'en était pas un",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "0 €",
+    "label": "de frais affichés sur ton paiement en 4 fois",
+    "couleur": "accent",
+    "compteur": false
+   },
+   "voix": "Zéro euro. C'est ce que t'annonce l'écran quand tu cliques sur « payer en 4 fois sans frais ». Pas d'intérêts, pas de dossier, pas de justificatif. Trois clics, et ta télé de 1 200 € part avec toi pour 300 € aujourd'hui. Sauf que jusqu'à maintenant, la loi ne considérait même pas ça comme un crédit. Et dans une semaine, ça change."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Paiement en 3 fois :",
+     "ce qui change",
+     "le 20 novembre"
+    ],
+    "accent": 2
+   },
+   "voix": "Le 20 novembre 2026, le paiement fractionné et les mini-crédits entrent dans le droit du crédit à la consommation. Dans cette vidéo, on va voir exactement ce que dit le texte, ce que ton prêteur devra faire de nouveau, et ce que ça change aussi pour ton découvert. Et surtout, on va faire un calcul que personne ne te montre au moment de payer : ce que coûtent vraiment ces 1 200 €, le jour où une échéance passe mal."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "16,4 %",
+    "label": "des dossiers de surendettement traités en 2025",
+    "couleur": "negatif",
+    "compteur": true
+   },
+   "voix": "D'abord, pourquoi ce sujet mérite douze minutes. La Banque de France a commencé à le mesurer fin 2025. Résultat publié en juin dernier : 16,4 % des dossiers de surendettement traités en 2025 contenaient une dette de paiement fractionné ou de mini-crédit. Environ un dossier sur six. Pour un produit censé ne rien coûter, c'est beaucoup."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "9,8 Md€",
+    "label": "de paiements fractionnés accordés en 2025",
+    "couleur": "accent",
+    "compteur": true
+   },
+   "voix": "Et ce n'est pas un marché de niche. Toujours selon le même rapport, les paiements fractionnés ont représenté 9,8 milliards d'euros en 2025. Soit 14,6 % des crédits à la consommation accordés cette année-là, hors découverts. Un peu plus d'un crédit conso sur sept. Et jusqu'au 19 novembre, aucun de ces euros n'est protégé par le droit du crédit. Pourquoi ? C'est là que ça devient intéressant."
+  },
+  {
+   "chapitre": "Ce que dit le texte",
+   "visuel": {
+    "type": "section",
+    "titre": "Ce que dit le texte",
+    "sous": "Une directive, une ordonnance, trois décrets"
+   },
+   "voix": "Commençons par le texte lui-même. Parce qu'on lit tout et n'importe quoi sur cette réforme."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "D'où vient la réforme",
+    "items": [
+     "Directive (UE) 2023/2225 du 18 octobre 2023",
+     "Ordonnance n° 2025-880 du 3 septembre 2025",
+     "Décrets de février, juillet et août 2026",
+     "Application : 20 novembre 2026"
+    ]
+   },
+   "voix": "Tout part d'une directive européenne du 18 octobre 2023 sur le crédit aux consommateurs. La France l'a transposée par une ordonnance du 3 septembre 2025. Trois décrets l'ont complétée en 2026, en février, en juillet et en août. Et l'ensemble s'applique aux offres émises à partir du 20 novembre 2026. Retiens bien ce mot, « offres ». On y revient à la fin, parce qu'il compte pour tes achats de cette semaine."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Avant",
+      "ton": "negatif",
+      "lignes": [
+       "De 200 à 75 000 €",
+       "Sous 200 € : exclu",
+       "3 mois sans frais : exclu"
+      ]
+     },
+     {
+      "titre": "Dès le 20/11",
+      "ton": "positif",
+      "lignes": [
+       "Jusqu'à 100 000 €",
+       "Sous 200 € : inclus",
+       "3x ou 4x : un crédit"
+      ]
+     }
+    ]
+   },
+   "voix": "Voici le changement de périmètre. Avant, la protection du crédit à la consommation couvrait les crédits de 200 € à 75 000 €. Les crédits remboursés en moins de trois mois sans frais étaient exclus, comme ceux de moins de 200 €. Résultat : ton paiement en 4 fois passait sous les radars. À partir du 20 novembre, ces trous sont bouchés. Les crédits courts, gratuits ou à frais négligeables entrent dans le champ, comme les mini-crédits sous 200 €. Et le plafond monte à 100 000 €."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce qui reste dehors",
+    "items": [
+     "Les cartes à débit différé",
+     "Le délai du commerçant lui-même, sans financeur"
+    ]
+   },
+   "voix": "Deux choses restent dehors. Les cartes à débit différé, celles qui débitent tous tes achats en fin de mois : elles ne deviennent pas des crédits. Et le simple délai de paiement accordé par le commerçant lui-même, sans intérêts et sans organisme financier derrière, sous des conditions strictes. Dès qu'une société de financement s'intercale entre toi et le vendeur, en revanche, tu es dans le crédit. Même pour un achat de 150 €."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Le mini-crédit, l'autre oublié",
+    "items": [
+     "De l'argent versé sur ton compte",
+     "Remboursé en 3 mois au plus",
+     "Souvent des frais pour l'avoir tout de suite"
+    ]
+   },
+   "voix": "Et puis il y a le cousin du paiement fractionné : le mini-crédit. Là, pas d'achat précis. On te verse une petite somme directement sur ton compte, remboursable en trois mois au plus. L'Institut national de la consommation relève que des frais de mise à disposition instantanée sont souvent facturés, et pas toujours inclus dans le taux affiché. Ces mini-crédits entrent eux aussi dans le droit du crédit le 20 novembre, y compris sous 200 €."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Le « sans frais »",
+     "ne change rien :",
+     "c'est un crédit."
+    ],
+    "ton": "accent"
+   },
+   "voix": "C'est le cœur de la réforme. Gratuit ou pas, un crédit reste un crédit. Ce qui compte, ce n'est plus le prix affiché. C'est le fait que tu achètes aujourd'hui avec de l'argent que tu n'as pas encore versé. Et ça déclenche toute une série d'obligations pour celui qui te prête."
+  },
+  {
+   "chapitre": "Ce que ton prêteur doit faire",
+   "visuel": {
+    "type": "section",
+    "titre": "Ce que ton prêteur doit faire",
+    "sous": "Les trois clics deviennent un peu plus longs"
+   },
+   "voix": "Alors concrètement, qu'est-ce qui change au moment où tu cliques ? Quatre choses."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "1. Vérifier que tu peux payer",
+    "items": [
+     "Revenus, charges, dettes en cours",
+     "Proportionné au montant et à la durée",
+     "Traçable : la banque doit pouvoir le prouver"
+    ]
+   },
+   "voix": "Un : le prêteur doit vérifier ta solvabilité. Tes revenus, tes charges, tes dettes en cours. Pas un examen de crédit immobilier pour un aspirateur : l'analyse est proportionnée au montant et à la durée. Mais elle devient obligatoire. Et depuis le décret d'août 2026, le prêteur doit pouvoir démontrer comment il a évalué ta situation. Plus question de dire oui à tout le monde, puis de découvrir les impayés après."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "2. Le fichier de la Banque de France",
+    "items": [
+     "FICP : fichier des incidents de remboursement",
+     "Consultation facultative pour les petits crédits",
+     "Possible même sous 200 €"
+    ]
+   },
+   "voix": "Deux : le fichier des incidents de remboursement de la Banque de France, le FICP. Pour les petits crédits et les crédits courts, sa consultation reste facultative. Le prêteur peut le consulter, il n'y est pas obligé. Nuance importante : ça veut dire que tu peux encore obtenir un paiement fractionné en étant fiché. La protection n'est pas automatique. Elle dépend aussi de toi."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "3. T'informer avant de signer",
+    "items": [
+     "Le coût total du crédit",
+     "Ce qui se passe en cas de défaut de paiement",
+     "Tes voies de recours"
+    ]
+   },
+   "voix": "Trois : l'information avant de signer. Le décret de février 2026 renforce ce que le prêteur doit te donner. Le coût total. Les conséquences d'un défaut de paiement. Et tes voies de recours. C'est exactement l'information qui manque aujourd'hui sur la plupart des écrans de paiement. Retiens la deuxième ligne, celle sur le défaut : c'est elle qui fait toute la différence dans notre calcul, juste après."
+  },
+  {
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Attention !",
+     "Un crédit coûte de l'argent",
+     "et doit être remboursé ! »"
+    ]
+   },
+   "voix": "Quatre : la publicité. Toute publicité pour un crédit devra porter cette nouvelle phrase : « Attention ! Un crédit coûte de l'argent et doit être remboursé ! » Elle remplace l'ancienne mention, celle qui commençait par « Un crédit vous engage ». Et il devient interdit de mettre en avant la facilité d'obtention du crédit. Tu verras donc peut-être moins de bannières qui crient « accepté en deux minutes »."
+  },
+  {
+   "chapitre": "Le vrai coût de 1 200 €",
+   "visuel": {
+    "type": "section",
+    "titre": "Le vrai coût de 1 200 €",
+    "sous": "Notre calcul, en trois scénarios"
+   },
+   "voix": "Maintenant, le calcul. Une télé à 1 200 €, payée en 4 fois. Trois scénarios. Le premier est rassurant. Le troisième beaucoup moins."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Scénario 1 · tout se passe bien",
+    "lignes": [
+     [
+      "Aujourd'hui",
+      "300 €"
+     ],
+     [
+      "Dans 1 mois",
+      "300 €"
+     ],
+     [
+      "Dans 2 mois",
+      "300 €"
+     ],
+     [
+      "Dans 3 mois",
+      "300 €"
+     ]
+    ],
+    "total": [
+     "Coût du crédit",
+     "0 €",
+     "positif"
+    ]
+   },
+   "voix": "Scénario un : tout se passe bien. Tu paies 300 € aujourd'hui, puis 300 € chaque mois pendant trois mois. Total : 1 200 €. Coût du crédit : zéro. Dans ce cas, le paiement en 4 fois fait exactement ce qu'il promet. Personne ne te le reproche, et la réforme ne l'interdit pas. Le problème n'est pas là."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Scénario 2 · frais hypothétiques en taux annuel",
+    "items": [
+     [
+      "12 € de frais",
+      8.4,
+      "8,4 %",
+      "accent"
+     ],
+     [
+      "18 € de frais",
+      12.9,
+      "12,9 %",
+      "accent"
+     ],
+     [
+      "24 € de frais",
+      17.6,
+      "17,6 %",
+      "negatif"
+     ],
+     [
+      "30 € de frais",
+      22.6,
+      "22,6 %",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Scénario deux : la même offre, mais avec quelques euros de frais. Ces chiffres sont des hypothèses de la régie, pas les tarifs d'une enseigne. Avec 12 € de frais sur ce paiement en 4 fois, le coût ramené à un taux annuel équivalent fait déjà 8,4 %. Avec 24 €, 17,6 %. Avec 30 €, 22,6 %. Pourquoi si haut ? Parce que tu n'empruntes vraiment que 900 €, et en moyenne pendant deux mois seulement. Quelques euros sur une durée aussi courte, ça fait un taux annuel énorme."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "23,60 %",
+    "label": "taux d'usure, prêts jusqu'à 3 000 € (4e trim. 2026)",
+    "couleur": "negatif",
+    "compteur": true
+   },
+   "voix": "Pour comparer : le taux d'usure, le maximum légal pour un prêt à la consommation de 3 000 € ou moins, est de 23,60 % au quatrième trimestre 2026, selon la Banque de France. Trente euros de frais sur un paiement en 4 fois, c'est donc presque le prix d'un crédit au plafond. Sauf qu'aucun écran ne te l'affichait comme ça. C'est précisément ce que l'obligation d'information sur le coût total doit corriger."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Et si la 3e échéance",
+     "tombe le mois",
+     "du loyer ?"
+    ],
+    "ton": "negatif"
+   },
+   "voix": "Mais le vrai danger, c'est le scénario trois. Imagine. Le mois de la troisième échéance, ta voiture tombe en panne. Tu n'as pas les 300 €. Que fais-tu ? La plupart des gens ne laissent pas l'échéance impayée. Ils la bouchent avec autre chose. Et souvent, cette autre chose, c'est un crédit renouvelable."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Scénario 3 · crédit renouvelable à 23,60 %",
+    "lignes": [
+     [
+      "Sur 12 mois",
+      "112 € par mois",
+      "accent"
+     ],
+     [
+      "Intérêts payés",
+      "143 €",
+      "negatif"
+     ],
+     [
+      "Sur 36 mois (durée maximale)",
+      "45 € par mois",
+      "accent"
+     ],
+     [
+      "Intérêts payés",
+      "436 €",
+      "negatif"
+     ]
+    ],
+    "total": [
+     "Ta télé coûte alors",
+     "1 636 €",
+     "negatif"
+    ]
+   },
+   "voix": "Pour mesurer le risque, prenons le cas extrême, mais légal. De bouche-trou en bouche-trou, la totalité des 1 200 € finit sur un crédit renouvelable, au taux d'usure de 23,60 %. Si tu rembourses en 12 mois, tu paies environ 112 € par mois, et 143 € d'intérêts. Mais un crédit renouvelable de 3 000 € ou moins peut s'étaler jusqu'à 36 mois. Là, la mensualité tombe à 45 €, ce qui paraît indolore. Sauf que tu paies 436 € d'intérêts. Ta télé « sans frais » t'a coûté 1 636 €. 36 % de plus que son prix."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "L'empilement · 3 achats en même temps",
+    "lignes": [
+     [
+      "Télé 1 200 € en 4 fois",
+      "300 €"
+     ],
+     [
+      "Téléphone 480 € en 4 fois",
+      "120 €"
+     ],
+     [
+      "Baskets 240 € en 3 fois",
+      "80 €"
+     ]
+    ],
+    "total": [
+     "Chaque mois",
+     "500 €",
+     "negatif"
+    ]
+   },
+   "voix": "Et ce scénario n'a rien d'exotique, à cause d'un mécanisme : l'empilement. Une télé en 4 fois, 300 € par mois. Un téléphone de 480 € en 4 fois, 120 €. Une paire de baskets de 240 € en 3 fois, 80 €. Trois achats raisonnables, pris séparément. Ensemble, 500 € qui sortent chaque mois de ton compte. C'est exactement ce que la vérification de solvabilité est censée repérer. Mais rappelle-toi : le fichier n'est pas obligatoirement consulté pour les petits crédits. Le seul qui voit toutes les lignes, c'est toi."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "8 %",
+    "label": "plafond de l'indemnité de défaillance (crédit conso)",
+    "couleur": "accent",
+    "compteur": false
+   },
+   "voix": "Et si tu laisses l'échéance impayée ? Dans le régime classique du crédit à la consommation, en cas de défaillance, le prêteur peut exiger le remboursement du capital restant dû, et une indemnité plafonnée à 8 % de ce solde. Pour les tout petits crédits courts, regarde ton contrat : depuis le décret de février, les conséquences d'un défaut de paiement doivent justement y figurer noir sur blanc. Mais l'indemnité n'est pas le pire. Le pire, c'est l'incident qui te suit."
+  },
+  {
+   "chapitre": "Ton découvert aussi",
+   "visuel": {
+    "type": "section",
+    "titre": "Ton découvert aussi",
+    "sous": "La partie de la réforme dont personne ne parle"
+   },
+   "voix": "Parce qu'il y a une autre partie de la réforme dont presque personne ne parle. Elle concerne un crédit que tu as peut-être déjà sans y penser : ton découvert."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Avant",
+      "ton": "negatif",
+      "lignes": [
+       "Solvabilité vérifiée à partir de 200 €",
+       "ou au-delà d'un mois",
+       "Petits découverts : pas d'analyse"
+      ]
+     },
+     {
+      "titre": "Dès le 20/11",
+      "ton": "positif",
+      "lignes": [
+       "Analyse aussi sous 200 €",
+       "et sous un mois",
+       "FICP facultatif pour les petits"
+      ]
+     }
+    ]
+   },
+   "voix": "Aujourd'hui, la banque doit analyser ta solvabilité pour un découvert autorisé de 200 € ou plus, ou de plus d'un mois. À partir du 20 novembre, cette obligation s'étend aux découverts de moins de 200 € et de moins d'un mois. L'analyse reste proportionnée, et la consultation du fichier reste facultative pour ces petits découverts. Mais la logique est la même que pour le paiement en 4 fois : plus de petit crédit invisible."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce qu'il faut savoir sur ton découvert",
+    "items": [
+     "Autorisations déjà en place : pas concernées",
+     "Pas de nouvelle demande à chaque utilisation",
+     "Le découvert n'est pas un droit"
+    ]
+   },
+   "voix": "Trois précisions, pour éviter de paniquer. Ton autorisation de découvert actuelle, mise en place avant le 20 novembre, n'est pas concernée. Une fois un découvert autorisé, tu n'as pas à redemander l'accord à chaque utilisation. Et rappel utile : le découvert n'est pas un droit. La banque n'est jamais obligée de l'accepter. Si tu comptes en demander un, c'est plutôt le moment de le faire en connaissance de cause."
+  },
+  {
+   "chapitre": "Tes nouveaux droits",
+   "visuel": {
+    "type": "section",
+    "titre": "Tes nouveaux droits",
+    "sous": "Ce que tu peux exiger dès le 20 novembre"
+   },
+   "voix": "Passons à ce que tu gagnes, toi. Parce que la réforme ne fait pas qu'ajouter des contrôles. Elle te donne aussi des droits."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce que tu peux exiger",
+    "items": [
+     "14 jours pour renoncer au crédit",
+     "Plus longtemps si l'information manque",
+     "Une renégociation en cas de difficulté",
+     "Une orientation gratuite vers un conseil"
+    ]
+   },
+   "voix": "D'abord, la rétractation. Un crédit à la consommation se rétracte en 14 jours calendaires, sans justification. Si le prêteur n'a pas respecté ses obligations d'information, ce délai est allongé. Ensuite, en cas de difficulté, le prêteur doit te proposer des solutions avant d'aller plus loin : allonger la durée, réduire les mensualités, reporter des échéances. Et il doit t'orienter gratuitement vers un service de conseil aux personnes endettées."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Si un logiciel te dit non",
+    "items": [
+     "Demander une intervention humaine",
+     "Obtenir une explication claire",
+     "Demander un réexamen"
+    ]
+   },
+   "voix": "Dernier droit, très moderne celui-là. Les prêteurs utilisent de plus en plus des outils automatisés pour décider. La réforme encadre leur usage, avec un devoir de transparence. Et si un logiciel refuse ton crédit, tu peux demander une intervention humaine, une explication claire et un réexamen. Ça paraît anecdotique. Pour un refus de crédit dont tu ne comprends pas la raison, c'est précieux."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "20 novembre",
+    "label": "les offres émises avant restent sous l'ancien régime",
+    "couleur": "accent",
+    "compteur": false
+   },
+   "voix": "Et maintenant, le piège du calendrier. Je t'avais dit de retenir le mot « offres ». Les nouvelles règles s'appliquent aux offres émises à partir du 20 novembre. Un paiement en 4 fois signé le 15 novembre reste sous l'ancien régime jusqu'à sa dernière échéance. Si tu profites d'une promo cette semaine, regarde bien la date de ton achat. Avant le 20, aucune des protections dont on vient de parler ne s'applique."
+  },
+  {
+   "chapitre": "Les trois réflexes",
+   "visuel": {
+    "type": "section",
+    "titre": "Les trois réflexes",
+    "sous": "Avant ton prochain clic"
+   },
+   "voix": "Pour finir, ce qu'il faut garder en tête avant ton prochain clic sur « payer en plusieurs fois »."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Avant de cliquer",
+    "items": [
+     "Additionne toutes tes échéances en cours",
+     "Ramène les frais à un taux annuel",
+     "Lis la ligne « défaut de paiement »",
+     "Ce n'est pas un conseil en investissement"
+    ]
+   },
+   "voix": "Un : additionne toutes tes échéances en cours, pas seulement la nouvelle. C'est l'empilement qui fait mal, pas un achat isolé. Deux : s'il y a des frais, même de quelques euros, ramène-les à un taux annuel et compare-les au taux d'usure de 23,60 %. Trois : lis la ligne sur le défaut de paiement, désormais obligatoire. Et comme toujours sur cette chaîne, cette vidéo est éducative : ce n'est pas un conseil en investissement, et chaque situation est différente."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Gratuit ne veut pas dire",
+     "sans risque."
+    ],
+    "ton": "accent"
+   },
+   "voix": "Le paiement en 4 fois sans frais n'est pas un piège en soi. Utilisé une fois, pour un achat prévu, il ne coûte rien. Ce que la réforme reconnaît enfin, c'est qu'il reste un crédit. Et qu'un crédit, même gratuit, peut finir par coûter plusieurs centaines d'euros à celui qui n'a pas regardé la ligne du dessous."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "avant le 31 décembre,",
+     "la checklist argent 2026"
+    ],
+    "accent": 2
+   },
+   "voix": "Dans la prochaine vidéo, on regarde le calendrier dans l'autre sens : tout ce qu'il faut faire pour ton argent avant le 31 décembre. Dons, plus-values, assurance vie, plan d'épargne retraite. Et on calculera ce que ça peut rapporter à un foyer type. Abonne-toi pour la recevoir. Et toi, combien de paiements en plusieurs fois as-tu en cours en ce moment ? Zéro, un, ou plus de trois ? Dis-le en commentaire, sans jugement."
+  }
+ ]
+}
