@@ -1,0 +1,726 @@
+{
+ "id": "finance-fr-007",
+ "chaine": "finance-fr",
+ "titre": "Avant le 31 décembre : la checklist argent 2026",
+ "titre_youtube": "Avant le 31 décembre : la checklist argent 2026",
+ "theme": "finance",
+ "structure": "C",
+ "accroche": "Six gestes datés à faire avant le 30 novembre et le 31 décembre 2026 : dispense d'acompte, dons, emploi à domicile, moins-values en compte-titres, abattement de l'assurance vie après 8 ans et PER. Sur un foyer type, on a calculé ce qui se joue : 1 796 €, à condition de distinguer ce qui est gagné, avancé ou seulement reporté.",
+ "tags": [
+  "31 décembre",
+  "checklist fin d'année",
+  "impôts 2026",
+  "réduction d'impôt dons",
+  "crédit d'impôt emploi à domicile",
+  "dispense d'acompte",
+  "moins-values compte-titres",
+  "abattement assurance vie",
+  "PER versement",
+  "optimisation fiscale",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#Impots2026",
+  "#FinancePerso",
+  "#Checklist"
+ ],
+ "miniature": {
+  "chiffre": "1 796 €",
+  "l1": "En jeu",
+  "l2": "avant 2027",
+  "ton": "positif"
+ },
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 0.97
+ },
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1",
+  "style": "excited",
+  "debit": "+0%"
+ },
+ "verification": {
+  "date": "2026-11-14",
+  "sources": [
+   "impots.gouv.fr, « Puis-je bénéficier d'une dispense du prélèvement forfaitaire non libératoire ? » (consulté le 14/11/2026) : PFNL 12,8 % ; dispense si RFR N-2 < 25 000 € (seul) / 50 000 € (couple) pour les intérêts, < 50 000 € / 75 000 € pour les dividendes ; attestation sur l'honneur avant le 30 novembre de l'année précédant le paiement ; assurance vie et PER : au plus tard à l'encaissement ; la dispense ne concerne pas les prélèvements sociaux",
+   "service-public.gouv.fr F426 (vérifiée le 15/04/2026) : 66 % dans la limite de 20 % du revenu imposable, excédent reporté sur 5 ans ; 75 % pour l'aide aux personnes en difficulté (repas, soins, logement gratuits) et les victimes de violences domestiques, limite 2 000 € de dons sur toute l'année 2026 (en 2025 : 1 000 € puis 2 000 € à partir du 14/10/2025) ; dons 2026 déclarés en 2027 ; reçu fiscal",
+   "service-public.gouv.fr F12 (vérifiée le 15/04/2026) : crédit d'impôt 50 %, plafond 12 000 € + 1 500 € par enfant à charge / membre de plus de 65 ans (max 15 000 €), première année d'emploi direct 15 000 € (max 18 000 €), invalidité 20 000 € ; dépenses payées en 2026 déclarées en 2027 ; avance immédiate via Cesu+ avec accord du salarié, gardes d'enfants au plus tard le 01/09/2027",
+   "BOFiP BOI-RPPM-PVBMI-20-10-40 : moins-values imputables exclusivement sur les plus-values de même nature de l'année ou des 10 années suivantes, aucune imputation sur le revenu global ; BOI-RPPM-PVBMI-30-10-10-20191220 : fait générateur = transfert de propriété (dénouement / règlement-livraison)",
+   "Legifiscal, repères PFU (MAJ 26/08/2026) : PFU 2026 31,4 % = 12,8 % IR + 18,6 % PS (hausse de CSG LFSS 2026), assurance vie maintenue à 17,2 %",
+   "service-public.gouv.fr F22414 (vérifiée le 15/04/2026) : contrats de 8 ans ou plus, abattement 4 600 € (seul) / 9 200 € (couple) tous contrats confondus, 7,5 % sous 150 000 € de primes, 12,8 % au-delà et avant 8 ans ; PS 17,2 % ; Tout sur mes finances (MAJ 27/10/2026) : part de gains d'un rachat partiel = rachat − primes × rachat / valeur de rachat, abattement annuel",
+   "Previssima (26/10/2026) : PER versements 2026, plafond salarié 10 % des revenus pro 2025, min 4 710 €, max 37 680 € ; plafond du conjoint utilisable ; report porté de 3 à 5 ans (LF 2026) ; versements après 70 ans non déductibles depuis le 01/01/2026 ; Que Choisir (07/03/2026) : report 5 ans pour les versements à partir du 01/01/2026, suppression de la déduction à compter du 70e anniversaire",
+   "Euronews (05/11/2026) : rejet de la première partie du PLF 2027 par l'Assemblée nationale le 04/11/2026, 458 voix contre, 0 pour, 2 abstentions ; texte initial du gouvernement transmis au Sénat ; Tout sur mes finances (22/10/2026, MAJ 28/10) : amendements des députés dont crédit emploi à domicile à 80 % pour les familles monoparentales (tombés avec le rejet)",
+   "service-public.gouv.fr F2385 (vérifiée le 22/05/2026) : date d'ouverture du PEA = date du 1er versement (non utilisé dans la vidéo)",
+   "Calculs (Python, 14/11/2026) : 15/11 → 31/12/2026 = 46 jours ; Léa 700 × 12,8 % = 89,60 € ; dons 300 × 75 % + 200 × 66 % = 225 + 132 = 357 € ; don 100 € à 75 % → coût 25 € ; 30 000 × 20 % = 6 000 € ; emploi 300 × 50 % = 150 € ; compte-titres (3 000 − 1 000) = 2 000 € de base, 1 000 × 31,4 % = 314 € ; assurance vie 20 000 − 45 000 × 20 000 / 60 000 = 5 000 € de gains < 9 200 €, 5 000 × 7,5 % = 375 € ; contrôle : après rachat et réinvestissement, gains latents 10 000 € au lieu de 15 000 € ; PER 2 000 × 30 % = 600 € ; total 357 + 150 + 314 + 375 + 600 = 1 796 € dont définitif 357, avancé/anticipé 150 + 314 = 464, impôt futur évité 375, reporté 600"
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "Le compte à rebours",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "46 jours",
+    "couleur": "accent",
+    "compteur": true,
+    "label": "Du 15 novembre au 31 décembre 2026"
+   },
+   "voix": "Quarante-six jours. C'est ce qu'il reste avant que l'année fiscale 2026 se referme. Le 1er janvier, une bonne partie des leviers qui concernent tes impôts de cette année seront figés. Pas modifiables, pas rattrapables. Et la première échéance tombe encore plus tôt que tu ne le crois."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Avant le 31 décembre :",
+     "la checklist",
+     "argent 2026"
+    ],
+    "accent": 1
+   },
+   "voix": "Alors aujourd'hui, pas de théorie. Une checklist. Six gestes, chacun avec sa date limite, son texte officiel et son chiffre. Et à la fin, on fait le total sur un foyer type. Spoiler : la somme est réelle, mais tout n'a pas la même valeur. Une partie est gagnée pour de bon, une autre seulement avancée, et une autre simplement reportée."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "La checklist",
+    "items": [
+     "30/11 : dispense d'acompte",
+     "31/12 : dons et emploi à domicile",
+     "31/12 : compte-titres et assurance vie",
+     "31/12 : versement PER"
+    ]
+   },
+   "voix": "Voici le programme. Une date au 30 novembre, cinq au 31 décembre. On va les prendre dans l'ordre du calendrier. Et attention, le geste le plus rentable n'est pas forcément celui auquel tu penses."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Budget 2027 :",
+     "toujours en débat"
+    ],
+    "ton": "accent"
+   },
+   "voix": "Petite précision avant de commencer. Le budget 2027 n'est pas voté. Le 4 novembre, l'Assemblée nationale a rejeté sa partie recettes, par 458 voix contre, aucune pour. Le texte part au Sénat. Donc tout ce que tu vas entendre ici, ce sont les règles en vigueur aujourd'hui, celles des fiches officielles. Si le Parlement change quelque chose en décembre, on le dira."
+  },
+  {
+   "chapitre": "30 novembre : l'acompte",
+   "visuel": {
+    "type": "section",
+    "titre": "30 novembre",
+    "sous": "La dispense d'acompte de 12,8 %"
+   },
+   "voix": "Première case, et c'est la plus urgente : le 30 novembre. Elle concerne les intérêts et les dividendes que tu toucheras l'an prochain. Peu de gens la connaissent, parce que ta banque ne t'en parlera presque jamais."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "12,8 %",
+    "couleur": "negatif",
+    "label": "Prélevé à la source sur intérêts et dividendes"
+   },
+   "voix": "Quand tu touches des intérêts ou des dividendes, ta banque prélève tout de suite 12,8 % d'impôt. Ce n'est pas l'impôt définitif. C'est une avance, qui est ensuite déduite de ton impôt de l'année suivante. Si tu en as payé trop, on te rembourse. Mais un an plus tard."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Dispense : revenu fiscal 2025 sous",
+    "lignes": [
+     [
+      "Intérêts, seul",
+      "25 000 €"
+     ],
+     [
+      "Intérêts, couple",
+      "50 000 €"
+     ],
+     [
+      "Dividendes, seul",
+      "50 000 €"
+     ],
+     [
+      "Dividendes, couple",
+      "75 000 €"
+     ]
+    ]
+   },
+   "voix": "Sauf que tu peux demander à en être dispensé. La condition, c'est ton revenu fiscal de référence d'il y a deux ans. Pour des revenus versés en 2027, c'est donc celui de 2025, celui de ton dernier avis d'impôt. Pour les intérêts, il doit être sous 25 000 € seul, ou 50 000 € en couple. Pour les dividendes, sous 50 000 € seul, ou 75 000 € en couple."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "700 €",
+      "intérêts de Léa"
+     ],
+     [
+      "×"
+     ],
+     [
+      "12,8 %"
+     ],
+     [
+      "="
+     ],
+     [
+      "89,60 €",
+      "avancés pour rien",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Prenons Léa. Célibataire, revenu fiscal de référence de 22 000 €, et environ 700 € d'intérêts par an sur des placements fiscalisés. Sans dispense, la banque lui retient 89,60 € dès le versement. De l'argent qu'elle prête à l'État, sans intérêts, pendant plus d'un an."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Comment faire",
+    "items": [
+     "Attestation sur l'honneur à ta banque",
+     "Avant le 30 novembre 2026",
+     "Valable pour les revenus 2027",
+     "Assurance vie : jusqu'au rachat",
+     "Les prélèvements sociaux restent dus"
+    ]
+   },
+   "voix": "La démarche : une attestation sur l'honneur, envoyée à chaque établissement qui te verse des intérêts ou des dividendes, avant le 30 novembre. Elle vaut pour les revenus de l'année suivante. Pour l'assurance vie, tu peux la faire jusqu'au moment du rachat. Et attention : la dispense ne touche que l'impôt, pas les prélèvements sociaux. Bon. Ça, c'était de la trésorerie. Maintenant, place aux euros qui ne reviennent pas."
+  },
+  {
+   "chapitre": "Les dons",
+   "visuel": {
+    "type": "section",
+    "titre": "Les dons",
+    "sous": "66 % ou 75 % de réduction"
+   },
+   "voix": "Deuxième case : les dons aux associations. Ici, l'avantage n'est pas une avance. C'est une vraie réduction d'impôt. Et en 2026, une règle a changé, qui rend le calcul plus intéressant que l'an dernier."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "75 %",
+      "ton": "positif",
+      "lignes": [
+       "Aide aux personnes en difficulté",
+       "Victimes de violences domestiques",
+       "Jusqu'à 2 000 € de dons en 2026"
+      ]
+     },
+     {
+      "titre": "66 %",
+      "ton": "accent",
+      "lignes": [
+       "Organismes d'intérêt général",
+       "Au-delà de 2 000 € pour les premiers",
+       "Limite : 20 % du revenu imposable"
+      ]
+     }
+    ]
+   },
+   "voix": "Il y a deux taux. 75 % pour les organismes qui fournissent gratuitement repas, soins ou logement aux personnes en difficulté, ou qui aident les victimes de violences domestiques. En 2026, ce taux s'applique jusqu'à 2 000 € de dons sur toute l'année. En 2025, ce plafond n'était que de 1 000 € avant la mi-octobre. Pour les autres organismes d'intérêt général, c'est 66 %, dans la limite de 20 % du revenu imposable."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Un don de 100 €",
+     "te coûte 25 €"
+    ],
+    "ton": "positif"
+   },
+   "voix": "Concrètement, un don de 100 € à une banque alimentaire te coûte 25 €. L'État paie les 75 autres, sous forme de réduction d'impôt l'année suivante. Et si tu dépasses la limite des 20 %, l'excédent n'est pas perdu : il se reporte sur les cinq années suivantes."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "30 000 €",
+      "revenu imposable"
+     ],
+     [
+      "×"
+     ],
+     [
+      "20 %"
+     ],
+     [
+      "="
+     ],
+     [
+      "6 000 €",
+      "de dons retenus",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Cette limite de 20 %, à quoi elle ressemble ? Avec 30 000 € de revenu imposable, tu peux faire retenir jusqu'à 6 000 € de dons sur l'année. Autant dire que la plupart des foyers ne l'atteignent jamais. Le vrai plafond à surveiller, c'est celui des 2 000 € à 75 %. Au-delà, chaque euro donné à ces mêmes organismes ne rapporte plus que 66 %."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Les Martin : dons 2026",
+    "lignes": [
+     [
+      "300 € aide alimentaire (75 %)",
+      "225 €",
+      "positif"
+     ],
+     [
+      "200 € intérêt général (66 %)",
+      "132 €",
+      "positif"
+     ]
+    ],
+    "total": [
+     "Réduction d'impôt en 2027",
+     "357 €",
+     "positif"
+    ]
+   },
+   "voix": "Voici les Martin, notre foyer type pour toute la vidéo. Un couple marié, deux enfants, une tranche marginale à 30 %. Cette année, ils donnent 300 € à une association d'aide alimentaire : 225 € de réduction. Et 200 € à une autre association d'intérêt général : 132 €. Total : 357 € en moins sur leur impôt, pour 500 € donnés."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "À retenir",
+    "items": [
+     "C'est l'année du versement qui compte",
+     "Dons 2026 déclarés au printemps 2027",
+     "Garde le reçu fiscal",
+     "Une réduction ne sert que si tu paies de l'impôt"
+    ]
+   },
+   "voix": "La règle de date est simple : un don versé en 2026 se déclare au printemps 2027. Un don fait le 2 janvier passe sur l'année suivante. Garde bien le reçu fiscal. Et un piège à connaître : une réduction d'impôt ne sert à rien si tu n'es pas imposable. Contrairement à la case suivante, qui elle peut te rapporter un chèque même sans impôt à payer."
+  },
+  {
+   "chapitre": "L'emploi à domicile",
+   "visuel": {
+    "type": "section",
+    "titre": "Emploi à domicile",
+    "sous": "Un crédit, pas une réduction"
+   },
+   "voix": "Troisième case : l'emploi à domicile. Ménage, garde d'enfants à la maison, soutien scolaire, petit jardinage. Ici, c'est un crédit d'impôt. La nuance est énorme : si le crédit dépasse ton impôt, l'administration te rembourse la différence."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Crédit d'impôt : 50 % des dépenses",
+    "lignes": [
+     [
+      "Plafond général",
+      "12 000 €"
+     ],
+     [
+      "Par enfant ou senior",
+      "+ 1 500 €"
+     ],
+     [
+      "Maximum majoré",
+      "15 000 €"
+     ],
+     [
+      "1re année d'emploi",
+      "15 000 à 18 000 €"
+     ],
+     [
+      "Invalidité",
+      "20 000 €"
+     ]
+    ]
+   },
+   "voix": "Le crédit vaut 50 % des dépenses, dans la limite de 12 000 € par an. Ce plafond monte de 1 500 € par enfant à charge ou par membre du foyer de plus de 65 ans, sans dépasser 15 000 €. La première année où tu emploies directement quelqu'un, c'est 15 000 €, et jusqu'à 18 000 € avec les majorations. Et 20 000 € en cas d'invalidité."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "300 €",
+      "facture de décembre"
+     ],
+     [
+      "×"
+     ],
+     [
+      "50 %"
+     ],
+     [
+      "="
+     ],
+     [
+      "150 €",
+      "un an plus tôt",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Le geste de fin d'année, c'est une question de date. Ce qui compte, c'est l'année du paiement, pas celle du service. Les Martin ont une facture de ménage de 300 € pour décembre. Payée le 30 décembre, elle entre dans les dépenses 2026 : 150 € de crédit, réglés avec l'impôt de 2027. Payée le 4 janvier, ces 150 € attendront un an de plus."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "L'avance immédiate",
+    "items": [
+     "Activée depuis ton compte Cesu+",
+     "Accord du salarié nécessaire",
+     "Tu ne paies que ta part de 50 %",
+     "Gardes d'enfants : au plus tard en septembre 2027"
+    ]
+   },
+   "voix": "Il existe d'ailleurs un raccourci : l'avance immédiate du crédit d'impôt. Tu l'actives depuis ton compte Cesu plus, avec l'accord de ton salarié, et tu ne paies directement que ta moitié de la dépense. Pour certains services, comme les gardes d'enfants, elle n'arrivera qu'au plus tard en septembre 2027. Si tu l'utilises déjà, le décalage d'un an disparaît, mais la règle de date reste la même : ce qui est payé en 2026 compte pour 2026."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Budget 2027 :",
+     "taux et plafonds",
+     "pas encore votés"
+    ],
+    "ton": "accent"
+   },
+   "voix": "Petit signal à surveiller : pendant le débat budgétaire, des députés ont voté des changements, comme un taux à 80 % pour les familles monoparentales. Ils sont tombés avec le rejet du texte. Rien n'est acquis. Pour 2026, la règle reste 50 %. Passons maintenant à la case que presque tout le monde oublie : le compte-titres."
+  },
+  {
+   "chapitre": "Le compte-titres",
+   "visuel": {
+    "type": "section",
+    "titre": "Le compte-titres",
+    "sous": "Les moins-values qui dorment"
+   },
+   "voix": "Quatrième case, pour ceux qui ont un compte-titres ordinaire. Là-dedans, chaque vente gagnante est imposée. En 2026, la flat tax est passée à 31,4 % : 12,8 % d'impôt, et 18,6 % de prélèvements sociaux, après la hausse de la CSG votée pour 2026."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "La règle des moins-values",
+    "items": [
+     "Imputables sur les plus-values de même nature",
+     "La même année…",
+     "… ou pendant les 10 années suivantes",
+     "Jamais sur tes autres revenus"
+    ]
+   },
+   "voix": "La règle est écrite dans la doctrine fiscale officielle. Une moins-value réalisée vient en déduction des plus-values de même nature de la même année. Si elle est trop grosse, le reste se reporte sur les dix années suivantes. Mais jamais sur ton salaire ni sur tes autres revenus."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Les Martin : compte-titres 2026",
+    "lignes": [
+     [
+      "Plus-value de mars",
+      "3 000 €",
+      "positif"
+     ],
+     [
+      "Moins-value latente",
+      "− 1 000 €",
+      "negatif"
+     ],
+     [
+      "Base taxable si vente",
+      "2 000 €"
+     ]
+    ],
+    "total": [
+     "Impôt en moins (31,4 %)",
+     "314 €",
+     "positif"
+    ]
+   },
+   "voix": "Chez les Martin : une plus-value de 3 000 € encaissée en mars. Et sur une autre ligne, une perte latente de 1 000 €, sur une position qu'ils voulaient de toute façon alléger. S'ils vendent avant la fin de l'année, la base taxable 2026 tombe à 2 000 €. Ça fait 314 € d'impôt en moins cette année."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Trois nuances",
+    "items": [
+     "La vente doit être dénouée en 2026",
+     "Pas d'urgence si aucune plus-value cette année",
+     "La fiscalité ne doit pas décider seule"
+    ]
+   },
+   "voix": "Trois nuances. Un : ce qui compte, c'est le transfert de propriété, au moment du règlement-livraison. Ne garde pas ça pour la toute dernière séance de l'année. Deux : si tu n'as encaissé aucune plus-value en 2026, rien ne presse, la moins-value se reporte de toute façon. Et trois : vendre une ligne uniquement pour l'impôt, c'est mettre la charrue avant les bœufs. La décision d'investissement passe d'abord."
+  },
+  {
+   "chapitre": "L'assurance vie",
+   "visuel": {
+    "type": "section",
+    "titre": "L'assurance vie",
+    "sous": "L'abattement des contrats de plus de 8 ans"
+   },
+   "voix": "Cinquième case : l'assurance vie. Si tu as un contrat de plus de huit ans, tu disposes chaque année d'un abattement sur les gains que tu retires. La plupart des épargnants ne s'en servent jamais. Résultat : un avantage annuel qui passe à la trappe."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Rachat sur un contrat de plus de 8 ans",
+    "lignes": [
+     [
+      "Abattement, personne seule",
+      "4 600 €"
+     ],
+     [
+      "Abattement, couple",
+      "9 200 €"
+     ],
+     [
+      "Au-delà, impôt (primes jusqu'à 150 000 €)",
+      "7,5 %"
+     ],
+     [
+      "Prélèvements sociaux",
+      "17,2 %"
+     ]
+    ]
+   },
+   "voix": "L'abattement, c'est 4 600 € de gains pour une personne seule, 9 200 € pour un couple, tous contrats confondus, pour les rachats de l'année. Au-delà, l'impôt est de 7,5 % tant que tes versements restent sous 150 000 €. Et les prélèvements sociaux, eux, restent dus, à 17,2 % : l'assurance vie a échappé à la hausse de la CSG."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "20 000 €",
+      "rachat"
+     ],
+     [
+      "×"
+     ],
+     [
+      "1/4",
+      "de gains"
+     ],
+     [
+      "="
+     ],
+     [
+      "5 000 €",
+      "de gains",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Attention, un retrait n'est pas fait que de gains. Chaque euro retiré contient la même proportion de gains que le contrat. Les Martin ont 60 000 € sur un vieux contrat, dont 15 000 € de gains, soit un quart. S'ils retirent 20 000 €, ce rachat contient 5 000 € de gains. Largement sous leur abattement de 9 200 €."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "375 € d'impôt",
+     "en moins… plus tard"
+    ],
+    "ton": "positif"
+   },
+   "voix": "Zéro euro d'impôt sur le revenu sur ce retrait. Et s'ils réinvestissent ces 20 000 €, sur le même contrat ou ailleurs, les 5 000 € de gains retirés redeviennent du capital, qui ne sera plus jamais taxé comme un gain. Le jour où leurs retraits dépasseront l'abattement, ce sont 375 € d'impôt qu'ils n'auront pas à payer, à 7,5 %. Ce geste n'a d'intérêt que si tu retireras un jour plus que l'abattement. Et il a un coût caché : les prélèvements sociaux sur la part en unités de compte sont payés dès le rachat."
+  },
+  {
+   "chapitre": "Le PER",
+   "visuel": {
+    "type": "section",
+    "titre": "Le PER",
+    "sous": "Déduire en 2026, payer plus tard"
+   },
+   "voix": "Sixième et dernière case : le plan d'épargne retraite. On lui a consacré une vidéo entière, avec trois profils, alors on va droit à l'essentiel, plus les deux changements de 2026."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "PER : versements 2026",
+    "lignes": [
+     [
+      "Plafond salarié",
+      "4 710 à 37 680 €"
+     ],
+     [
+      "Report des plafonds",
+      "5 ans"
+     ],
+     [
+      "Après 70 ans",
+      "non déductible"
+     ]
+    ]
+   },
+   "voix": "Un versement fait en 2026 se déduit de ton revenu imposable, dans la limite de 10 % de tes revenus professionnels de 2025, entre 4 710 € et 37 680 € pour un salarié. Ton plafond exact est écrit sur ton avis d'impôt. Nouveauté 2026 : les plafonds non utilisés se reportent désormais sur cinq ans au lieu de trois. Et les versements faits après 70 ans ne sont plus déductibles."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "En couple,",
+     "les plafonds",
+     "peuvent s'additionner"
+    ],
+    "ton": "positif"
+   },
+   "voix": "Un détail que beaucoup de couples ignorent : si tu es marié ou pacsé, tu peux utiliser le plafond de ton conjoint en plus du tien. Pratique quand un seul des deux a les moyens de verser. Mais méfie-toi : un versement qui dépasse le plafond disponible n'est tout simplement pas déductible. Il reste dans le plan, sans avantage à l'entrée."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "En 2027",
+      "ton": "positif",
+      "lignes": [
+       "2 000 € versés",
+       "600 € d'impôt en moins"
+      ]
+     },
+     {
+      "titre": "À la sortie",
+      "ton": "negatif",
+      "lignes": [
+       "Capital imposé",
+       "Selon ta tranche à la retraite"
+      ]
+     }
+    ]
+   },
+   "voix": "Les Martin, dans la tranche à 30 %, versent 2 000 €. Économie en 2027 : 600 €. Mais souviens-toi de la vidéo sur le PER : ce n'est pas un cadeau, c'est un report. À la sortie, ce capital sera imposé. Le gain réel dépend de ta tranche d'aujourd'hui comparée à celle de ta retraite, et de ce que tu fais des 600 € économisés."
+  },
+  {
+   "chapitre": "Trois pièges de décembre",
+   "visuel": {
+    "type": "section",
+    "titre": "Trois pièges",
+    "sous": "Ceux qui coûtent le plus cher"
+   },
+   "voix": "Avant le total, trois pièges qui reviennent chaque fin d'année. Ils ne coûtent rien à éviter, mais beaucoup quand on tombe dedans."
+  },
+  {
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« J'ai donné à une cagnotte,",
+     "j'aurai ma réduction. »"
+    ]
+   },
+   "voix": "Premier piège : croire que tout don ouvre droit à réduction. Une cagnotte entre particuliers, une collecte pour un voisin, une association qui n'est pas d'intérêt général : pas de reçu fiscal, donc pas de réduction. Avant de donner pour l'impôt, vérifie que l'organisme peut délivrer ce reçu."
+  },
+  {
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Mon contrat a six ans,",
+     "l'abattement s'applique. »"
+    ]
+   },
+   "voix": "Deuxième piège : retirer d'une assurance vie trop jeune en pensant profiter de l'abattement. Il est réservé aux contrats de plus de huit ans. Avant, les gains d'un rachat sont imposés à 12,8 %, plus les prélèvements sociaux. Regarde la date d'ouverture du contrat avant de demander quoi que ce soit."
+  },
+  {
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« J'enverrai l'attestation",
+     "en décembre. »"
+    ]
+   },
+   "voix": "Troisième piège : la dispense d'acompte envoyée en décembre. Trop tard pour l'année suivante : la date du 30 novembre est stricte, sauf pour l'assurance vie. Et pour la dispense, pense à chaque établissement : une attestation par banque, pas une seule pour tout ton patrimoine."
+  },
+  {
+   "chapitre": "Le total",
+   "visuel": {
+    "type": "ledger",
+    "titre": "Les Martin : ce qui se joue avant le 31/12",
+    "lignes": [
+     [
+      "Dons",
+      "357 €",
+      "positif"
+     ],
+     [
+      "Emploi à domicile (avancé)",
+      "150 €",
+      "accent"
+     ],
+     [
+      "Compte-titres (anticipé)",
+      "314 €",
+      "accent"
+     ],
+     [
+      "Assurance vie (impôt futur)",
+      "375 €",
+      "accent"
+     ],
+     [
+      "PER (reporté)",
+      "600 €",
+      "accent"
+     ]
+    ],
+    "total": [
+     "Total en jeu",
+     "1 796 €",
+     "positif"
+    ]
+   },
+   "voix": "Faisons le total pour les Martin. 357 € de dons, 150 € d'emploi à domicile, 314 € sur le compte-titres, 375 € sur l'assurance vie, 600 € sur le PER. Au total : 1 796 € en jeu, avec six gestes qui tiennent dans un mois et demi."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Mais pas la même nature",
+    "items": [
+     [
+      "Gagné pour de bon",
+      357,
+      "357 €",
+      "positif"
+     ],
+     [
+      "Avancé ou anticipé",
+      464,
+      "464 €",
+      "accent"
+     ],
+     [
+      "Impôt futur évité",
+      375,
+      "375 €",
+      "accent"
+     ],
+     [
+      "Reporté",
+      600,
+      "600 €",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Mais regarde la nature de chaque euro. Seuls les 357 € des dons sont un gain définitif, et encore, en échange de 500 € donnés. 464 € sont simplement avancés ou anticipés. 375 € dépendent de tes retraits futurs. Et 600 € sont un impôt reporté. Voilà ce que les articles « optimisez avant le 31 décembre » oublient souvent de préciser."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ta checklist",
+    "items": [
+     "30/11 : attestation de dispense",
+     "31/12 : dons, factures, moins-values",
+     "Assurance vie, PER : vérifier d'abord",
+     "Pas un conseil en investissement"
+    ]
+   },
+   "voix": "Ta checklist, à mettre en capture d'écran. Avant le 30 novembre, l'attestation de dispense. Avant le 31 décembre, les dons, les factures d'emploi à domicile, les ventes en moins-value si tu as des plus-values, l'abattement de l'assurance vie si tu en as l'usage, et le PER après avoir vérifié ton plafond. Et comme toujours, cette vidéo est éducative : ce n'est pas un conseil en investissement, chaque situation est différente."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "frais bancaires 2027,",
+     "3 profils, 10 ans"
+    ],
+    "accent": 2
+   },
+   "voix": "Dans la prochaine vidéo, on passe de l'impôt aux frais bancaires. Trois clients types : un étudiant, un couple souvent à découvert, et un client en situation de fragilité. Pour chacun, on additionne dix ans de frais de tenue de compte, de carte et de commissions, et on regarde ce que la loi plafonne vraiment. Abonne-toi pour ne pas la manquer. Et toi, dans cette checklist, quelle case tu n'avais jamais cochée ? Dis-le en commentaire."
+  }
+ ]
+}
