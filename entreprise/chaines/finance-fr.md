@@ -21,6 +21,7 @@
 - Finance personnelle pour les particuliers français : épargne, placements, fiscalité, frais bancaires, immobilier, retraite.
 - Fondée sur des statistiques et des sources officielles ; angle « ce que ta banque ne te dit pas », sans complotisme ni promesse de gain.
 - Avantage distinctif : précision juridique et fiscale française.
+- **Choix des sujets — recherche d'abord** (décision du 14/11/2026, D-2026-11-14-2) : sur 3 vidéos de la semaine, au moins 2 répondent à une question que les gens tapent dans YouTube (requête cible notée dans le champ `requete` de la régie, vérifiée par l'autocomplétion YouTube ou TubeAlfred `youtube-keyword-ideas`, ou à défaut WebSearch), formulée telle quelle au début du titre ; au plus 1 sujet d'actualité pure. Les sujets d'actualité sont rattachés à une requête durable (ex. « plafond Livret A »).
 
 ## Format des scripts
 - Vidéos longues : 11 à 14 minutes visées, **plancher absolu de 10 minutes** (le pipeline refuse en dessous) ; avant toute commande au studio, `estimer_duree.py` doit donner au moins 10 min 30 (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 700 à 2 300 mots de voix selon la voix. La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
@@ -57,9 +58,11 @@
 ## Conformité propre
 - Mention « ce n'est pas un conseil en investissement » dans chaque vidéo et chaque description.
 - Aucune recommandation de produit nominatif à acheter ; comparaisons de catégories uniquement.
+- **Transparence voix de synthèse** (décision du 14/11/2026, D-2026-11-14-3 ; politique YouTube « inauthentic content » clarifiée le 13/07/2026, qui vise notamment les voix IA se présentant comme des experts humains en finance) : chaque description contient, juste avant les sources, la ligne « Narration : voix de synthèse. Script, calculs et vérification des chiffres : Clear Assets, sources datées ci-dessous. » La voix ne se présente jamais comme une personne, un conseiller ou un expert (pas de « je suis conseiller », pas de prénom présenté comme un humain). Le contrôle qualité vérifie la ligne et écrit explicitement dans `qc.details` le résultat de la grille de variété (structure ≠ 2 précédentes, calcul original, 0 phrase de plus de 8 mots reprise).
 
 ## Créneaux
-- Longues : **16:00 Europe/Paris** (décision de direction du 07/11/2026, D-2026-11-07-1 ; indice d'audience Metricool +20 à 30 % vs 18:00). Jours : lun., mer., ven., dim. jusqu'au 15/11 inclus ; **à partir du 16/11 : lun., mer., jeu., ven.** (dimanche = créneau le plus faible de la grille, indice 16h 5 648 contre 11 979 le jeudi). Maximum 4 vidéos longues par semaine. Production la veille du créneau (tâches à recaler par le DG).
+- Longues : **16:00 Europe/Paris** (décision de direction du 07/11/2026, D-2026-11-07-1 ; indice d'audience Metricool +20 à 30 % vs 18:00).
+- **Cadence : 3 vidéos longues par semaine, mer., jeu., ven. à 16:00** (décision du 14/11/2026, D-2026-11-14-1 ; remplace la grille lun.-mer.-jeu.-ven.). Transition S47 : finance-fr-007 déplacée du dim. 15/11 au lun. 16/11 16:00, 008 mer. 18/11, **009 ven. 20/11** (ajustement DG du 14/11 : la tâche de production ne tourne pas le mercredi tant qu'elle n'est pas recalée, donc 009 ne pouvait pas être produite pour le jeudi) ; grille mer./jeu./ven. dès le 25/11. Retour à 4/semaine seulement si la chaîne dépasse 50 vues/semaine deux semaines de suite (décision PDG délégué). Jamais de vidéo longue le week-end. Maximum absolu 4 vidéos longues par semaine. Production la veille du créneau : tâche à recaler sur mar./mer./jeu. 8 h 37 (en attente d'autorisation du PDG au 14/11) ; contrôle avant diffusion lun./mer./jeu./ven. 11 h 43 ; contrôle qualité mar./mer./jeu. 12 h 17.
 - Réels : en pause (décision du PDG du 02/11/2026)
 
 ## Voix réservées aux futures chaînes
