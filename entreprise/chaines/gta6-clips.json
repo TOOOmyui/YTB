@@ -1,0 +1,28 @@
+{
+ "chaine": "gta6-clips",
+ "jeu": {
+  "noms": ["Grand Theft Auto VI", "Grand Theft Auto 6", "GTA VI"],
+  "nom_court": "GTA 6",
+  "id": null
+ },
+ "reperage": {
+  "langues": ["fr"],
+  "fenetre_heures": 24,
+  "duree_min": 12,
+  "duree_max": 60,
+  "vues_min": 150,
+  "max_par_streamer": 2,
+  "max_par_tournee": 3,
+  "file_max": 8,
+  "pages_prospection": 3,
+  "max_prospects": 15,
+  "mots_interdits": ["leak", "nude", "ban", "drama", "clash"]
+ },
+ "streamers_autorises": [],
+ "streamers_exclus": [],
+ "packaging": {
+  "hashtags": ["#GTA6", "#Twitch", "#Shorts"],
+  "tags": ["GTA 6", "GTA VI", "Grand Theft Auto 6", "clip Twitch", "best of GTA 6", "GTA 6 FR", "moments drôles GTA 6"]
+ },
+ "_aide": "streamers_autorises : [{\"login\": \"nom_twitch\", \"accord\": \"AAAA-MM-JJ, preuve (mail, DM, page du programme de clippers)\", \"facecam\": [x, y, largeur, hauteur] en fractions de l'image, ou null}]. Sans champ accord rempli, le streamer est ignoré."
+}
