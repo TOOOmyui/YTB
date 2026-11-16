@@ -25,7 +25,7 @@ def slug(t):
 
 
 def telecharger(url, dest):
-    """Téléchargement du clip (yt-dlp). Appelé uniquement pour un streamer de la liste blanche."""
+    """Téléchargement du clip (yt-dlp)."""
     subprocess.run([sys.executable, '-m', 'yt_dlp', '-q', '--no-warnings', '--no-playlist', '-f', 'best[height<=1080]/best',
                     '--merge-output-format', 'mp4', '-o', dest, url], check=True, timeout=600)
     return dest
@@ -47,7 +47,8 @@ def emballer(cfg, c, res, url_video):
         '',
         f"Clip original : {c['url']}",
         f"Chaîne Twitch : https://www.twitch.tv/{c['login']}",
-        f"Diffusé avec l'accord de {c['streamer']}.",
+        f"Crédit : {c['streamer']} — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.",
+        "Streamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.",
         '',
         ' '.join(p['hashtags']),
     ])
@@ -66,14 +67,10 @@ def tournee(cfg, etat, sorties, base_url='', heures=None, maxi=None, sous_titres
 
     sel = reperer.reperer(cfg, etat, heures, tw)
     bilan['notes'] += sel.get('notes', []) + ([sel['note']] if sel.get('note') else [])
-    if sel.get('prospects'):
-        ecrire(os.path.join(etat, 'rapports', 'prospects.json'), {'date': bilan['date'], 'jeu': sel['jeu'], 'prospects': sel['prospects']})
 
     en_file = len([f for f in os.listdir(file_dir) if f.endswith('.json')])
     place = max(0, cfg['reperage'].get('file_max', 8) - en_file)
     maxi = min(maxi or cfg['reperage'].get('max_par_tournee', 3), place)
-    if not cfg.get('streamers_autorises'):
-        bilan['notes'].append('liste blanche vide : aucun clip téléchargé (voir la fiche chaîne, « Accords »)')
     if place == 0:
         bilan['notes'].append(f'file pleine ({en_file} shorts en attente de programmation)')
 

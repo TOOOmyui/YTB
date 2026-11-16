@@ -1,11 +1,8 @@
 """Agent Repéreur — choisit les clips Twitch à monter.
 
-Deux sorties :
-  - `retenus`   : clips de streamers AUTORISÉS (liste blanche de la config), classés par score ;
-  - `prospects` : streamers non autorisés dont les clips marchent le mieux → à contacter pour obtenir leur accord.
-
-Règle de l'entreprise (manuel, poste Vérificateur) : aucun extrait protégé sans accord. Un clip d'un streamer
-absent de la liste blanche n'est JAMAIS téléchargé ni monté.
+Mode « ouvert » (décision du PDG du 16/11/2026) : meilleurs clips du jeu dans la langue visée, tous streamers
+confondus sauf `streamers_exclus`. Mode « liste_blanche » : seulement les streamers listés dans `streamers`.
+Dans tous les cas, un clip dont on ne peut pas établir le crédit (login de la chaîne) est écarté.
 
 Usage : python3 reperer.py config.json etat_dir [--heures 24] > selection.json
 """
@@ -61,9 +58,9 @@ def reperer(cfg, etat_dir, heures=None, tw=None, maintenant=None):
     if not jeu_id:
         return {'jeu': None, 'retenus': [], 'prospects': [], 'note': 'catégorie Twitch introuvable (jeu pas encore référencé ?)'}
 
-    autorises = {s['login'].lower(): s for s in cfg.get('streamers_autorises', []) if s.get('login') and s.get('accord')}
+    regles = {x['login'].lower(): x for x in cfg.get('streamers', []) if x.get('login')}
     exclus = {l.lower() for l in cfg.get('streamers_exclus', [])}
-    comptes = tw.utilisateurs(list(autorises)) if autorises else {}
+    ouvert = cfg.get('mode', 'liste_blanche') == 'ouvert'
 
     def garder(c, raisons):
         if c['id'] in deja:
@@ -82,43 +79,36 @@ def reperer(cfg, etat_dir, heures=None, tw=None, maintenant=None):
             return False
         return True
 
-    notes, retenus = [], []
-    for login, s in autorises.items():
-        u = comptes.get(login)
-        if not u:
-            notes.append(f'streamer autorisé introuvable sur Twitch : {login}')
+    notes = []
+    bruts = tw.clips(debut, fin, jeu_id=jeu_id, pages=r.get('pages_prospection', 3))
+    ids = sorted({c['broadcaster_id'] for c in bruts if garder(c, [])})
+    # le crédit exige le login exact de la chaîne (twitch.tv/<login>) : on le demande à Twitch
+    logins = {}
+    for i in range(0, len(ids), 100):
+        for u in tw.get('users', id=ids[i:i + 100]).get('data', []):
+            logins[u['id']] = (u['login'].lower(), u.get('display_name') or u['login'])
+    par_streamer = {}
+    for c in bruts:
+        if not garder(c, notes):
             continue
-        par_streamer = []
-        for c in tw.clips(debut, fin, diffuseur_id=u['id'], pages=1):
-            if garder(c, notes):
-                par_streamer.append({
-                    'id': c['id'], 'url': c['url'], 'titre_clip': titre_propre(c['title']),
-                    'streamer': u.get('display_name') or c['broadcaster_name'], 'login': login,
-                    'clippeur': c.get('creator_name'), 'vues': c['view_count'], 'duree': c['duration'],
-                    'langue': c.get('language'), 'cree': c['created_at'], 'score': score(c, maintenant),
-                    'accord': s['accord'], 'facecam': s.get('facecam'),
-                })
-        par_streamer.sort(key=lambda x: -x['score'])
-        retenus += par_streamer[:r.get('max_par_streamer', 2)]
+        login, nom = logins.get(c['broadcaster_id'], (None, None))
+        if not login:
+            notes.append(f"{c['id']} écarté (chaîne introuvable : crédit impossible)")
+            continue
+        if login in exclus or (not ouvert and login not in regles):
+            continue
+        par_streamer.setdefault(login, []).append({
+            'id': c['id'], 'url': c['url'], 'titre_clip': titre_propre(c['title']), 'streamer': nom, 'login': login,
+            'clippeur': c.get('creator_name'), 'vues': c['view_count'], 'duree': c['duration'],
+            'langue': c.get('language'), 'cree': c['created_at'], 'score': score(c, maintenant),
+            'facecam': regles.get(login, {}).get('facecam'),
+        })
+    retenus = []
+    for login, l in par_streamer.items():
+        l.sort(key=lambda x: -x['score'])
+        retenus += l[:r.get('max_par_streamer', 2)]
     retenus.sort(key=lambda x: -x['score'])
-
-    # Prospection : qui faudrait-il convaincre ?
-    prosp = {}
-    for c in tw.clips(debut, fin, jeu_id=jeu_id, pages=r.get('pages_prospection', 3)):
-        login = (c.get('broadcaster_name') or '').lower()
-        if r.get('langues') and c.get('language') not in r['langues']:
-            continue
-        p = prosp.setdefault(c['broadcaster_id'], {'streamer': c['broadcaster_name'], 'clips': 0, 'vues': 0, 'meilleur': None})
-        p['clips'] += 1
-        p['vues'] += c['view_count']
-        if not p['meilleur'] or c['view_count'] > p['meilleur']['vues']:
-            p['meilleur'] = {'url': c['url'], 'titre': titre_propre(c['title']), 'vues': c['view_count']}
-    noms_ok = {(comptes[l].get('display_name') or l).lower() for l in comptes} | set(autorises)
-    prospects = sorted((p for p in prosp.values() if p['streamer'].lower() not in noms_ok and p['streamer'].lower() not in exclus),
-                       key=lambda p: -p['vues'])[:r.get('max_prospects', 15)]
-
-    return {'jeu': {'id': jeu_id, 'nom': jeu_nom}, 'fenetre': [debut, fin], 'retenus': retenus,
-            'prospects': prospects, 'notes': notes}
+    return {'jeu': {'id': jeu_id, 'nom': jeu_nom}, 'fenetre': [debut, fin], 'retenus': retenus, 'prospects': [], 'notes': notes}
 
 
 if __name__ == '__main__':

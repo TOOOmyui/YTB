@@ -12,12 +12,11 @@
 - Toujours le streamer à l'honneur : son nom à l'écran, son lien en description.
 - Refusé : contenu humiliant pour une personne, propos haineux, nudité, « drama » entre streamers, fuites. Les titres de clips contenant un mot de `mots_interdits` sont écartés d'office.
 
-## Accords — règle bloquante
-- **Aucun clip n'est téléchargé ni monté sans accord du streamer.** Le repéreur ne retient que les streamers de `streamers_autorises`, et seulement si le champ `accord` est rempli (date + preuve : mail, message privé, page publique de son programme de clippers).
-- Raisons : le clip appartient au streamer (manuel, poste Vérificateur : « aucun extrait protégé ») ; YouTube démonétise le « contenu réutilisé » sans apport ; un retrait pour atteinte aux droits d'auteur vaut avertissement sur la chaîne, trois avertissements la ferment.
-- **Prospection** : à chaque tournée, `rapports/prospects.json` (branche `clips`) liste les streamers francophones non autorisés dont les clips GTA 6 marchent le mieux. Le DG les présente au PDG dans le rapport hebdomadaire ; le PDG envoie lui-même la demande (les agents n'écrivent pas aux streamers).
-- Modèle de demande : « Bonjour, je lance une chaîne de shorts GTA 6 (YouTube Shorts + Reels). J'aimerais reprendre certains de tes clips Twitch, avec ton nom à l'écran et le lien de ta chaîne en description de chaque vidéo. Si tu préfères un autre format de crédit, ou retirer une vidéo à tout moment, il suffit de me le dire. Est-ce que tu es d'accord ? »
-- Retrait : sur demande d'un streamer, le short est supprimé le jour même et le streamer passe dans `streamers_exclus`.
+## Crédit — règle bloquante (décision du PDG du 16/11/2026, remplace la liste blanche)
+- Mode « ouvert » : la régie clippe tous les streamers francophones du jeu, sans accord préalable, **toujours crédités** : `twitch.tv/<login>` à l'écran pendant tout le short, lien du clip original et de la chaîne Twitch en description.
+- Un clip dont le login de la chaîne ne peut pas être établi est écarté : pas de crédit, pas de short.
+- Retrait : sur demande d'un streamer (commentaire, message, réclamation), le short est supprimé le jour même et son login entre dans `streamers_exclus`. La description de chaque short l'indique.
+- Risque assumé par le PDG : réclamations pour atteinte aux droits d'auteur (avertissements YouTube) et politique « contenu réutilisé » pour la monétisation.
 
 ## Format et charte
 - 1080×1920, 12 à 59 s, son normalisé à −14 LUFS.
@@ -29,7 +28,7 @@
 
 ## Titres et descriptions
 - Titre : 60 caractères au plus, ce qui se passe + nom du streamer ; « GTA 6 » dans le titre ou les hashtags. Le titre du clip Twitch sert de brouillon ; l'agent de programmation le réécrit.
-- Description : une phrase, lien du clip original, lien de la chaîne Twitch, mention « Diffusé avec l'accord de … », hashtags `#GTA6 #Twitch #Shorts`.
+- Description : une phrase, lien du clip original, lien de la chaîne Twitch, ligne de crédit, ligne « retrait sur demande », hashtags `#GTA6 #Twitch #Shorts`.
 - YouTube : type `short`, catégorie `GAMING`, `madeForKids: false`, `isAiGeneratedContent: false`.
 
 ## Chaîne de fabrication
@@ -48,6 +47,6 @@
 
 ## Décisions attendues du PDG
 1. **Application Twitch** : créer l'application sur dev.twitch.tv et déposer `TWITCH_CLIENT_ID` et `TWITCH_CLIENT_SECRET` dans les secrets du dépôt GitHub (les agents ne manipulent pas ces identifiants).
-2. **Premiers accords** de streamers à inscrire dans la liste blanche.
+2. **Publication** : Metricool écarté par le PDG (16/11/2026) ; canal de publication à choisir.
 3. **Metricool** : l'offre gratuite plafonne à 20 publications par mois (3 shorts par jour ≈ 90) ; relier le compte Instagram « ÇA ».
 4. **Clear Assets** : sort des vidéos finance 008 (18/11) et 009 (20/11), nouveau nom et habillage de la chaîne.
