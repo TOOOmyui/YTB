@@ -1,0 +1,83 @@
+name: Clips
+
+# Tournée de clipping : repère les clips Twitch des streamers autorisés, les monte en shorts verticaux
+# et les dépose en release publique (clips-AAAAMMJJ) + manifeste sur la branche « clips ».
+# Sans les secrets TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET, la tournée s'arrête aussitôt (rien n'est installé).
+
+on:
+  schedule:
+    - cron: '17 6-23/3 * * *'   # toutes les 3 h, de 6 h 17 à 21 h 17 UTC
+  workflow_dispatch:
+    inputs:
+      heures:
+        description: Fenêtre de repérage en heures
+        default: '24'
+      max:
+        description: Nombre maximal de shorts
+        default: '3'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: clips
+  cancel-in-progress: false
+
+jobs:
+  tournee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+      TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Vérifier les identifiants Twitch
+        id: pret
+        run: |
+          if [ -n "$TWITCH_CLIENT_ID" ] && [ -n "$TWITCH_CLIENT_SECRET" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "Secrets Twitch absents : tournée sautée."; fi
+      - uses: actions/checkout@v4
+        if: steps.pret.outputs.ok
+        with: { ref: atelier, path: atelier }
+      - uses: actions/checkout@v4
+        if: steps.pret.outputs.ok
+        with: { ref: clips, path: etat }
+      - name: Installer l'atelier de clipping
+        if: steps.pret.outputs.ok
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          pip install -q yt-dlp faster-whisper pillow
+      - name: Tournée
+        if: steps.pret.outputs.ok
+        id: tournee
+        run: |
+          TAG="clips-$(date -u +%Y%m%d)"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          python3 atelier/moteur/clips/tournee.py atelier/entreprise/chaines/gta6-clips.json etat sorties \
+            --base-url "https://github.com/${{ github.repository }}/releases/download/$TAG" \
+            --heures "${{ inputs.heures || '24' }}" --max "${{ inputs.max || '3' }}"
+      - name: Déposer les shorts (release publique)
+        if: steps.pret.outputs.ok
+        run: |
+          TAG="${{ steps.tournee.outputs.tag }}"
+          shopt -s nullglob
+          FICHIERS=(sorties/*.mp4 sorties/*.jpg)
+          if [ ${#FICHIERS[@]} -gt 0 ]; then
+            gh release view "$TAG" -R "${{ github.repository }}" >/dev/null 2>&1 || \
+              gh release create "$TAG" -R "${{ github.repository }}" --target clips --title "Shorts $TAG" --notes "Shorts en attente de programmation."
+            gh release upload "$TAG" "${FICHIERS[@]}" -R "${{ github.repository }}" --clobber
+          fi
+          # ménage : releases de clips de plus de 4 jours (Metricool a importé les fichiers depuis longtemps)
+          LIMITE="clips-$(date -u -d '4 days ago' +%Y%m%d)"
+          gh release list -R "${{ github.repository }}" --limit 100 --json tagName -q '.[].tagName' | grep '^clips-' | while read -r T; do
+            if [[ "$T" < "$LIMITE" ]]; then gh release delete "$T" -R "${{ github.repository }}" --yes --cleanup-tag || true; fi
+          done
+      - name: Enregistrer l'état (file d'attente, historique, rapports)
+        if: steps.pret.outputs.ok
+        run: |
+          cd etat
+          git config user.name "Clips"
+          git config user.email "clips@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "tournée $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase origin clips && git push origin clips && break; sleep 5; done
