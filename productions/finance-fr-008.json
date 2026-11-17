@@ -1,0 +1,622 @@
+{
+ "id": "finance-fr-008",
+ "chaine": "finance-fr",
+ "titre": "Frais bancaires 2027 : 3 profils, 10 ans de frais",
+ "titre_youtube": "Frais bancaires 2027 : 3 profils, 10 ans de frais",
+ "theme": "finance",
+ "structure": "B",
+ "accroche": "Un étudiant, un couple qui dépasse son découvert, une personne en difficulté : on a additionné dix ans de frais bancaires avec les tarifs moyens de l'Observatoire des tarifs bancaires 2026. De 670 € à 5 794 €, et jusqu'à 4 474 € d'écart pour le même profil selon que les plafonds de fragilité et l'offre spécifique s'appliquent ou non.",
+ "tags": [
+  "frais bancaires",
+  "frais bancaires 2027",
+  "tarifs bancaires 2027",
+  "commission d'intervention",
+  "frais de tenue de compte",
+  "clientèle fragile",
+  "offre spécifique clientèle fragile",
+  "plafonnement frais bancaires",
+  "découvert",
+  "changer de banque",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#FraisBancaires",
+  "#FinancePerso",
+  "#Banque"
+ ],
+ "miniature": {
+  "chiffre": "4 474 €",
+  "l1": "Même client,",
+  "l2": "autre facture",
+  "ton": "negatif"
+ },
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 0.97
+ },
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-Remy:DragonHDLatestNeural",
+  "debit": "+0%"
+ },
+ "verification": {
+  "date": "2026-11-17",
+  "sources": [
+   "Banque de France / CCSF, Rapport annuel de l'Observatoire des tarifs bancaires 2026 (publié le 30/06/2026, consulté le 17/11/2026) : 102 établissements, 99 % du marché, tarifs au 01/04/2026 ; moyennes pondérées : tenue de compte 22,39 €/an (+3,71 % vs 31/12/2025), carte débit immédiat 44,61 €, débit différé 44,53 €, autorisation systématique 29,02 €, assurance perte ou vol 25,61 €, alertes SMS forfait 15,28 €, commission d'intervention 6,45 € ; 93 établissements au plafond de 8 € ; tenue de compte gratuite dans 10 établissements dont 6 banques en ligne ; carte débit immédiat gratuite dans 4 dont 3 en ligne ; 2,57 retraits déplacés gratuits/mois, puis 1,01 € ; plafond journalier des commissions affiché par 35 établissements (33 du même groupe mutualiste, 29 à 8 €) ; rejet de prélèvement : tarif moyen 20 € = plafond légal ; offre spécifique : 89 établissements à 12 €/an, plafond réglementaire 3 €/mois ; indice Insee des prix des services bancaires +2,7 % de février 2025 à février 2026",
+   "service-public.gouv.fr F18777 « Incidents de paiement » (vérifiée le 30/09/2024, consultée le 17/11/2026) : dépassement de découvert 8 €/opération et 80 €/mois ; offre spécifique 4 €/20 €/mois et 200 €/an ; client fragile : frais d'incidents plafonnés à 25 €/mois ; rejet de prélèvement ≤ montant de l'ordre et ≤ 20 €, pas de nouveaux frais en cas de rejets successifs du même ordre",
+   "Banque de France, « Le plafonnement des frais bancaires et l'offre clientèle fragile » (consultée le 17/11/2026) : critères réglementaires (surendettement recevable, FCC > 3 mois consécutifs) et modulables (ressources sous le seuil + incidents répétés sur 3 mois, ou 5 incidents dans un même mois) ; plafond 25 €/mois (durée de l'inscription FCC/FICP ou 3 mois pour le critère des 5 incidents) ; saisies exclues ; offre spécifique ≤ 3 €/mois, au moins compte, carte à autorisation systématique, 4 virements SEPA/mois, prélèvements illimités ; incidents 20 €/mois et 200 €/an ; adhésion facultative",
+   "service-public.gouv.fr F848 (vérifiée le 08/10/2026) : information au moins 2 mois avant l'application de nouveaux tarifs, droit de refuser et de résilier sans frais ; récapitulatif annuel détaillé des frais chaque janvier",
+   "service-public.gouv.fr F33881 (vérifiée le 21/09/2026) : service d'aide à la mobilité bancaire gratuit, 22 jours ouvrés, démarches faites par les banques, compte au solde négatif non clôturable",
+   "JeChange, 13/11/2026, d'après les brochures tarifaires 2027 : offre d'entrée de gamme d'un grand réseau 2 € → 3 €/mois (+50 %, +12 €/an), tenue de compte d'une caisse régionale mutualiste 4,50 € → 5,25 €/trimestre (+16,7 %) ; L312-1-1 CMF : silence = acceptation, préavis au plus tard le 31/10 pour une hausse au 01/01",
+   "Plafond du Livret A (prochaine vidéo) : annonce du Premier ministre du 03/11/2026, 22 950 € → 25 000 à 30 000 € en février 2027 par décret, non publié au 17/11/2026 (Tout sur mes finances, Moneyvox, Selectra, novembre 2026)",
+   "INC (inc-conso.fr, « L'offre spécifique clientèle fragile », vérifiée le 29/10/2025) : toutes les banques doivent proposer l'OCF aux clients identifiés comme fragiles (L312-1-3 al. 2 et R312-4-3 CMF) ; réclamation puis médiateur si elle ne l'est pas ; La finance pour tous (MAJ 08/01/2025) : le plafonnement des frais ne s'applique pas aux agios",
+   "Calculs (Python, 17/11/2026), tarifs moyens OTB 2026 constants sauf mention : Hugo 22,39 + 44,61 = 67 €/an → 670 € sur 10 ans ; avec +2,7 %/an 67 × 11,3068 = 757,55 € ≈ 758 € (hypothèse) ; tenue gratuite 22,39 × 10 = 223,90 € ; carte gratuite 44,61 × 10 ≈ 446 € ; Camille et Yanis socle 22,39 + 2 × 44,53 + 25,61 = 137,06 €/an, commissions 4 × 3 × 8 = 96 €/an → 10 ans 1 370,60 + 960 = 2 330,60 € (hors agios), part des commissions 41,2 % ; Nathalie socle 22,39 + 29,02 = 51,41 €, mois difficile 6 × 8 + 2 × 20 = 88 €, 6 mois/an → 579,41 €/an → 5 794 € ; plafond fragilité 51,41 + 6 × 25 = 201,41 €/an → 2 014 € ; offre spécifique 12 + 6 × 20 = 132 €/an → 1 320 € ; écart 5 794,10 − 1 320 = 4 474 €"
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "L'addition cachée",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "5 794 €",
+    "couleur": "negatif",
+    "compteur": true,
+    "label": "Frais d'un client fragile en 10 ans, sans protection"
+   },
+   "voix": "Cinq mille sept cent quatre-vingt-quatorze euros. C'est ce que peut coûter un simple compte courant en dix ans. Pas un crédit, pas un placement raté. Juste un compte, une carte, et des fins de mois difficiles. Et le plus dur à avaler, c'est que la loi permet de diviser cette facture par plus de quatre. Encore faut-il savoir qu'elle existe."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Frais bancaires 2027 :",
+     "3 profils,",
+     "10 ans de frais"
+    ],
+    "accent": 2
+   },
+   "voix": "Aujourd'hui, on fait les comptes de trois clients types. Un étudiant qui pense ne rien payer. Un couple qui flirte avec son découvert. Et une personne dont le budget déraille régulièrement. Pour chacun, on additionne dix ans de frais, ligne par ligne, avec les tarifs moyens relevés par la Banque de France. Et on regarde ce que les plafonds légaux changent vraiment."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Toutes les banques",
+     "t'ont écrit",
+     "avant le 31 octobre"
+    ],
+    "ton": "accent"
+   },
+   "voix": "Petit détail avant de commencer. Entre septembre et fin octobre, ta banque t'a probablement envoyé un courrier ou un message sur ses tarifs 2027. La plupart des gens ne l'ouvrent pas. Or ce document te donne un droit précis, et on y revient à la fin de la vidéo."
+  },
+  {
+   "chapitre": "Les prix de base",
+   "visuel": {
+    "type": "section",
+    "titre": "Les prix de base",
+    "sous": "Observatoire des tarifs bancaires 2026"
+   },
+   "voix": "D'abord, il faut des prix de référence. Chaque année, l'Observatoire des tarifs bancaires, rattaché à la Banque de France, relève les tarifs de 102 établissements, qui pèsent 99 % du marché. Le dernier rapport est sorti le 30 juin 2026, avec des tarifs relevés au 1er avril."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Tarifs moyens au 1er avril 2026",
+    "lignes": [
+     [
+      "Tenue de compte",
+      "22,39 €/an"
+     ],
+     [
+      "Carte à débit immédiat",
+      "44,61 €/an"
+     ],
+     [
+      "Carte à débit différé",
+      "44,53 €/an"
+     ],
+     [
+      "Carte à autorisation systématique",
+      "29,02 €/an"
+     ],
+     [
+      "Assurance perte ou vol",
+      "25,61 €/an"
+     ],
+     [
+      "Commission d'intervention",
+      "6,45 €"
+     ]
+    ]
+   },
+   "voix": "Voici les moyennes. 22,39 € par an pour la tenue de compte. Environ 44,60 € pour une carte classique, à débit immédiat ou différé. 29,02 € pour une carte à autorisation systématique, celle qui vérifie ton solde à chaque paiement. 25,61 € pour l'assurance perte ou vol des moyens de paiement. Et 6,45 € en moyenne par commission d'intervention."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "+ 3,71 %",
+    "couleur": "negatif",
+    "label": "Tenue de compte, entre fin 2025 et avril 2026"
+   },
+   "voix": "La ligne qui grimpe le plus vite, c'est la tenue de compte. Plus 3,71 % en à peine trois mois, entre fin 2025 et avril 2026. Sur l'année, l'indice Insee des prix des services bancaires a progressé de 2,7 %. Ça paraît minuscule. Mais garde ce chiffre en tête, parce que sur dix ans, il compte."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "93 établissements",
+     "au plafond de 8 €"
+    ],
+    "ton": "negatif"
+   },
+   "voix": "Et attention au piège de la moyenne. La commission d'intervention moyenne est de 6,45 €, mais le rapport précise que 93 établissements facturent exactement le plafond légal : 8 € par opération. La moyenne est tirée vers le bas par quelques banques en ligne qui n'en facturent pas. Dans une banque de réseau, compte plutôt 8 €. C'est ce qu'on retiendra pour nos profils."
+  },
+  {
+   "chapitre": "Hugo, l'étudiant",
+   "visuel": {
+    "type": "section",
+    "titre": "Hugo, 20 ans",
+    "sous": "L'étudiant qui croit ne rien payer"
+   },
+   "voix": "Premier profil : Hugo, vingt ans, étudiant. Un compte, une carte à débit immédiat, jamais de découvert. Il est persuadé que sa banque ne lui coûte rien. Vérifions."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "22,39 €",
+      "tenue de compte"
+     ],
+     [
+      "+"
+     ],
+     [
+      "44,61 €",
+      "carte"
+     ],
+     [
+      "="
+     ],
+     [
+      "67 €",
+      "par an",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Tenue de compte, 22,39 €. Carte, 44,61 €. Total : 67 € par an. Soit un peu plus de 5,50 € par mois, prélevés sans qu'il ne s'en rende compte, souvent en une ou quatre fois dans l'année."
+  },
+  {
+   "visuel": {
+    "type": "courbe",
+    "titre": "Hugo : frais cumulés sur 10 ans",
+    "axe_x": [
+     "An 1",
+     "An 5",
+     "An 10"
+    ],
+    "series": [
+     {
+      "nom": "Tarifs figés",
+      "ton": "accent",
+      "fin": "670 €",
+      "points": [
+       67,
+       335,
+       670
+      ]
+     },
+     {
+      "nom": "+ 2,7 % par an",
+      "ton": "negatif",
+      "fin": "758 €",
+      "points": [
+       67,
+       354,
+       758
+      ]
+     }
+    ]
+   },
+   "voix": "Sur dix ans, à tarifs figés, ça fait 670 €. Mais les tarifs ne restent pas figés. Si les frais montent de 2,7 % par an, comme l'indice Insee de l'an dernier, on arrive à environ 758 €. C'est notre calcul, une hypothèse et pas une prévision. Mais l'ordre de grandeur est là : le prix d'un ordinateur portable, pour un compte de base."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce qui peut s'ajouter",
+    "items": [
+     "Retraits hors de sa banque : 2,57 gratuits/mois en moyenne",
+     "Puis 1,01 € le retrait",
+     "Assurance perte ou vol : 25,61 €/an",
+     "Alertes SMS : 15,28 €/an au forfait"
+    ]
+   },
+   "voix": "Et c'est le scénario sage. Les retraits dans un distributeur d'une autre banque sont gratuits en moyenne 2,57 fois par mois, puis facturés environ 1 € chacun. L'assurance perte ou vol, souvent ajoutée par défaut, coûte 25,61 € par an. Le forfait d'alertes SMS, 15,28 €. Chaque option paraît anodine. Additionnées, elles peuvent presque doubler la facture."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Compte gratuit",
+      "ton": "positif",
+      "lignes": [
+       "10 établissements",
+       "dont 6 banques en ligne",
+       "223,90 € évités en 10 ans"
+      ]
+     },
+     {
+      "titre": "Carte gratuite",
+      "ton": "positif",
+      "lignes": [
+       "4 établissements",
+       "dont 3 banques en ligne",
+       "≈ 446 € évités en 10 ans"
+      ]
+     }
+    ]
+   },
+   "voix": "La bonne nouvelle pour Hugo, c'est que ce n'est pas une fatalité. Selon l'Observatoire, 10 établissements ne facturent pas la tenue de compte, dont 6 banques en ligne. Sur dix ans, ça représente 223,90 € évités. Et 4 établissements, dont 3 en ligne, proposent une carte à débit immédiat gratuite, souvent sous conditions d'usage. Pour un profil sans découvert, la question mérite d'être posée. Mais Hugo, c'est le cas facile. Le suivant coûte trois fois plus."
+  },
+  {
+   "chapitre": "Camille et Yanis, le découvert",
+   "visuel": {
+    "type": "section",
+    "titre": "Camille et Yanis",
+    "sous": "Le couple qui frôle le découvert"
+   },
+   "voix": "Deuxième profil : Camille et Yanis, la trentaine, un compte joint. Deux cartes à débit différé, l'assurance perte ou vol, et un découvert autorisé qu'ils dépassent de temps en temps. Rien de dramatique en apparence. Juste trois mois un peu serrés dans l'année : la rentrée, les fêtes, et une grosse réparation."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Camille et Yanis : le socle annuel",
+    "lignes": [
+     [
+      "Tenue de compte",
+      "22,39 €"
+     ],
+     [
+      "2 cartes à débit différé",
+      "89,06 €"
+     ],
+     [
+      "Assurance perte ou vol",
+      "25,61 €"
+     ]
+    ],
+    "total": [
+     "Socle",
+     "137,06 €",
+     "accent"
+    ]
+   },
+   "voix": "Commençons par le socle. Une tenue de compte, 22,39 €. Deux cartes à débit différé, 89,06 €. L'assurance perte ou vol, 25,61 €. Total : 137,06 € par an. Jusque-là, c'est le prix du confort à deux."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "8 €",
+    "couleur": "negatif",
+    "label": "Par opération qui dépasse le découvert autorisé"
+   },
+   "voix": "Maintenant, les trois mois serrés. Chaque fois que le compte dépasse le découvert autorisé, et que la banque accepte quand même un paiement, elle facture une commission d'intervention. Une par opération. Le plafond légal, c'est 8 € par opération et 80 € par mois. Et comme on l'a vu, la quasi-totalité des établissements est au plafond."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "4",
+      "paiements par mois"
+     ],
+     [
+      "×"
+     ],
+     [
+      "3",
+      "mois"
+     ],
+     [
+      "×"
+     ],
+     [
+      "8 €"
+     ],
+     [
+      "="
+     ],
+     [
+      "96 €",
+      "par an",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Hypothèse prudente : quatre paiements en dépassement par mois difficile. Un plein d'essence, une course, un abonnement, un prélèvement. Quatre fois 8 €, sur trois mois : 96 € par an. Rien qu'en commissions. Et ce n'est pas tout, puisque les agios, les intérêts du découvert, s'ajoutent par-dessus. Ils ne sont pas plafonnés de la même façon, et on ne les compte même pas ici."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Camille et Yanis : 10 ans de frais",
+    "items": [
+     [
+      "Socle (compte, cartes, assurance)",
+      1370.6,
+      "1 370,60 €",
+      "accent"
+     ],
+     [
+      "Commissions d'intervention",
+      960,
+      "960 €",
+      "negatif"
+     ],
+     [
+      "Total",
+      2330.6,
+      "2 330,60 €",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Sur dix ans, à tarifs constants : 1 370,60 € de socle, et 960 € de commissions d'intervention. Total : 2 330,60 €, hors agios. Regarde la deuxième barre. Près de 41 % de la facture vient de trois mois difficiles par an. Ce n'est pas le compte qui coûte cher. C'est le découvert."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Les leviers du couple",
+    "items": [
+     "Demander un relèvement du découvert autorisé",
+     "Vérifier si la banque a un plafond journalier",
+     "Une seule carte à débit différé suffit-elle ?",
+     "Relire le récapitulatif annuel des frais"
+    ]
+   },
+   "voix": "Que peuvent-ils faire ? D'abord, demander un découvert autorisé ajusté à leurs vrais mois creux : un dépassement évité, c'est une commission évitée. Ensuite, vérifier si leur banque applique un plafond journalier. D'après le rapport, 35 établissements en affichent un, la plupart dans un même groupe mutualiste, souvent à 8 € par jour. Enfin, se demander si deux cartes à débit différé sont nécessaires. Mais pour notre troisième profil, ces leviers ne suffisent plus."
+  },
+  {
+   "chapitre": "Nathalie, la fragilité",
+   "visuel": {
+    "type": "section",
+    "titre": "Nathalie",
+    "sous": "Quand les incidents s'enchaînent"
+   },
+   "voix": "Troisième profil : Nathalie. Des revenus faibles, un budget qui déraille environ six mois par an. Un compte, une carte à autorisation systématique. Et pendant ces mois difficiles, des incidents en cascade. C'est elle, le chiffre du début."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Un mois difficile pour Nathalie",
+    "lignes": [
+     [
+      "6 commissions d'intervention × 8 €",
+      "48 €",
+      "negatif"
+     ],
+     [
+      "2 rejets de prélèvement × 20 €",
+      "40 €",
+      "negatif"
+     ]
+    ],
+    "total": [
+     "Frais du mois",
+     "88 €",
+     "negatif"
+    ]
+   },
+   "voix": "Un mois difficile, pour elle, ressemble à ça. Six opérations en dépassement : six commissions, 48 €. Deux prélèvements rejetés, facturés 20 € chacun : 40 €. Le rapport note d'ailleurs que le tarif moyen du rejet de prélèvement est exactement de 20 €, le plafond légal. Total : 88 € de frais en un seul mois."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "5 794 €",
+    "couleur": "negatif",
+    "compteur": true,
+    "label": "En 10 ans, avec les seuls plafonds généraux"
+   },
+   "voix": "Six mois comme ça par an, plus le socle du compte et de la carte, 51,41 €. Ça fait 579,41 € par an. Sur dix ans : 5 794 €. Et pourtant, chaque frais respecte les plafonds généraux. C'est tout le problème : 8 € par opération et 80 € par mois, c'est un plafond pensé pour un accident, pas pour une situation qui dure."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Fragilité financière : les critères",
+    "items": [
+     "Surendettement : dossier recevable",
+     "Fichier central des chèques depuis 3 mois",
+     "Ou : faibles ressources et incidents répétés",
+     "Ou : 5 incidents dans le même mois"
+    ]
+   },
+   "voix": "C'est là qu'intervient une protection que peu de gens connaissent : la situation de fragilité financière. La banque doit la reconnaître dans certains cas fixés par les textes. Un dossier de surendettement déclaré recevable. Une inscription au fichier central des chèques depuis plus de trois mois. Ou, selon des seuils fixés par chaque banque, des ressources faibles combinées à des incidents répétés, ou au moins cinq incidents dans le même mois."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "25 €",
+    "couleur": "positif",
+    "label": "Plafond mensuel de tous les frais d'incidents, client fragile"
+   },
+   "voix": "Une fois reconnue fragile, Nathalie bénéficie d'un plafond global : 25 € par mois pour l'ensemble des frais d'incidents, commissions d'intervention comprises. Pas 88. Vingt-cinq. La durée dépend du critère : tant que dure l'inscription au fichier pour certains, trois mois pour le critère des cinq incidents. Attention, ce plafond ne couvre ni les agios, ni les frais de saisie sur compte."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Offre spécifique",
+      "ton": "positif",
+      "lignes": [
+       "3 € par mois au maximum",
+       "12 €/an dans 89 établissements",
+       "Incidents : 20 €/mois, 200 €/an"
+      ]
+     },
+     {
+      "titre": "Inclus au minimum",
+      "ton": "accent",
+      "lignes": [
+       "Compte et carte à autorisation",
+       "4 virements par mois",
+       "Prélèvements illimités"
+      ]
+     }
+    ]
+   },
+   "voix": "Et il y a encore mieux : l'offre spécifique clientèle fragile. La loi plafonne son prix à 3 € par mois. En pratique, au 1er avril 2026, 89 établissements la facturent 12 € par an, soit 1 € par mois. Elle comprend au minimum le compte, une carte à autorisation systématique, quatre virements par mois et les prélèvements en illimité. Et surtout, les frais d'incidents y sont limités à 20 € par mois et 200 € par an."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Nathalie : 10 ans de frais selon sa protection",
+    "items": [
+     [
+      "Plafonds généraux seuls",
+      5794.1,
+      "5 794 €",
+      "negatif"
+     ],
+     [
+      "Plafond fragilité 25 €/mois",
+      2014.1,
+      "2 014 €",
+      "accent"
+     ],
+     [
+      "Offre spécifique",
+      1320,
+      "1 320 €",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Faisons le calcul de la régie sur dix ans, avec la même vie et les mêmes mois difficiles. Avec les seuls plafonds généraux : 5 794 €. Avec le plafond de fragilité à 25 € par mois : 2 014 €. Avec l'offre spécifique : 1 320 €. 4 474 € d'écart entre la première et la dernière barre. Pour exactement les mêmes incidents."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Elle ne s'active pas",
+     "toute seule"
+    ],
+    "ton": "negatif"
+   },
+   "voix": "Le hic ? La banque doit proposer l'offre spécifique aux clients qu'elle identifie comme fragiles, mais l'adhésion reste facultative, et beaucoup ne savent pas qu'elle existe. Si tu te reconnais dans le profil de Nathalie, demande à ton conseiller si tu y es éligible. Et si la banque ne te la propose pas alors que tu remplis les critères, tu peux faire une réclamation, puis saisir le médiateur. Bon. Reste la question qui fâche : ce qui change en janvier."
+  },
+  {
+   "chapitre": "2027 : ce qui augmente",
+   "visuel": {
+    "type": "section",
+    "titre": "Janvier 2027",
+    "sous": "Ce qui augmente, et ton droit de refuser"
+   },
+   "voix": "Parce qu'au 1er janvier 2027, de nouvelles grilles entrent en vigueur. Et certaines hausses sont bien plus fortes que les 2,7 % de l'indice."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Exemples de hausses au 1er janvier 2027",
+    "lignes": [
+     [
+      "Offre d'entrée de gamme (grand réseau)",
+      "2 € → 3 €/mois",
+      "negatif"
+     ],
+     [
+      "Tenue de compte (caisse régionale)",
+      "4,50 € → 5,25 €/trim.",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Deux exemples relevés dans les brochures tarifaires publiées cet automne. Dans un grand réseau national, une offre d'entrée de gamme passe de 2 à 3 € par mois : plus 50 %, 12 € de plus par an. Dans une caisse régionale mutualiste, la tenue de compte passe de 4,50 à 5,25 € par trimestre : plus 16,7 %. On ne cite pas de nom, parce que ce qui compte, c'est de vérifier ta propre grille."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce que dit la loi",
+    "items": [
+     "Préavis : 2 mois avant la hausse",
+     "Refus possible avant l'entrée en vigueur",
+     "Résiliation sans frais de la convention",
+     "Sans réponse : hausse acceptée"
+    ]
+   },
+   "voix": "Et ta grille vient avec un droit. Toute hausse doit t'être notifiée au moins deux mois avant son application : pour le 1er janvier, au plus tard fin octobre. Tu peux la refuser avant son entrée en vigueur, et résilier ta convention de compte sans frais. Attention au piège : si tu ne dis rien, tu es réputé avoir accepté. Et refuser ne garantit pas de garder l'ancien tarif, c'est surtout une porte de sortie gratuite."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "22 jours ouvrés",
+    "couleur": "accent",
+    "label": "Mobilité bancaire : la nouvelle banque fait les démarches"
+   },
+   "voix": "Partir, justement, est moins compliqué qu'on le croit. Le service d'aide à la mobilité bancaire est gratuit. Une fois ton accord signé, les deux banques ont 22 jours ouvrés pour transférer tes virements et prélèvements récurrents. C'est la nouvelle banque qui fait les démarches à ta place. Seule limite : un compte à découvert ne peut pas être clôturé tant qu'il reste négatif."
+  },
+  {
+   "chapitre": "Ton plan d'action",
+   "visuel": {
+    "type": "section",
+    "titre": "Ton plan en 4 gestes",
+    "sous": "À faire avant fin janvier"
+   },
+   "voix": "Alors, concrètement, qu'est-ce que tu fais de tout ça ? Quatre gestes, quel que soit ton profil."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Les 4 gestes",
+    "items": [
+     "Janvier : lire le récapitulatif annuel des frais",
+     "Supprimer les options inutiles",
+     "Découvert : ajuster l'autorisation",
+     "Fragilité : demander l'offre spécifique"
+    ]
+   },
+   "voix": "Un : en janvier, ta banque doit t'envoyer le récapitulatif détaillé des frais perçus l'année précédente. Lis-le, ligne par ligne, et compare-le aux moyennes de cette vidéo. Deux : supprime les options que tu n'utilises pas, assurance ou alertes. Trois : si tu dépasses ton découvert, renégocie l'autorisation plutôt que de payer 8 € par opération. Quatre : si tu es en difficulté, demande l'offre spécifique et le plafonnement."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "10 ans de frais : nos 3 profils",
+    "items": [
+     [
+      "Hugo",
+      670,
+      "670 €",
+      "accent"
+     ],
+     [
+      "Camille et Yanis",
+      2330.6,
+      "2 330,60 €",
+      "negatif"
+     ],
+     [
+      "Nathalie, sans protection",
+      5794.1,
+      "5 794 €",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Récapitulons. Hugo : 670 € en dix ans pour un compte sans histoire. Camille et Yanis : 2 330,60 €, dont 960 € de commissions. Nathalie : jusqu'à 5 794 €, ou 1 320 € avec la bonne protection. La leçon est contre-intuitive : ce sont les clients qui ont le moins d'argent qui paient le plus de frais. Et ce sont eux qui ont le plus à gagner à connaître ces règles. Rappel : cette vidéo est éducative, ce n'est pas un conseil en investissement, et chaque situation est différente."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "plafond du Livret A,",
+     "combien en plus ?"
+    ],
+    "accent": 2
+   },
+   "voix": "La prochaine vidéo parle de l'argent que tu gardes, cette fois. Le gouvernement a annoncé un relèvement du plafond du Livret A, de 22 950 € à un montant entre 25 000 et 30 000 €, en février 2027. On calcule ce que ça rapporte vraiment, et ce qui n'est pas encore officiel. Abonne-toi pour la voir dès sa sortie. Et toi, tu as déjà regardé combien ta banque te prend chaque année ? Donne ton chiffre en commentaire."
+  }
+ ]
+}
