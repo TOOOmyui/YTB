@@ -1,0 +1,731 @@
+{
+ "id": "finance-fr-009",
+ "chaine": "finance-fr",
+ "titre": "Plafond Livret A relevé : combien ça rapporte vraiment ?",
+ "titre_youtube": "Plafond Livret A relevé : combien ça rapporte vraiment ?",
+ "theme": "finance",
+ "structure": "A",
+ "accroche": "Le plafond du Livret A doit passer de 22 950 € à un montant entre 25 000 et 30 000 € en février 2027, mais aucun texte n'est publié au 19 novembre 2026. On calcule ta vraie marge (intérêts 2026 compris), le gain selon le plafond et le taux projeté par la formule, et on compare au LDDS, au LEP et aux fonds en euros.",
+ "tags": [
+  "plafond livret A",
+  "Livret A",
+  "Livret A 2027",
+  "plafond Livret A 30000",
+  "taux Livret A février 2027",
+  "LDDS",
+  "LEP 2027",
+  "fonds euros 2025",
+  "épargne réglementée",
+  "Caisse des dépôts",
+  "finance personnelle"
+ ],
+ "hashtags": [
+  "#LivretA",
+  "#Epargne",
+  "#PlafondLivretA"
+ ],
+ "miniature": {
+  "chiffre": "+ 183 €",
+  "l1": "Le vrai",
+  "l2": "gain",
+  "ton": "positif"
+ },
+ "voix": {
+  "modele": "fr_FR-upmc-medium.onnx",
+  "locuteur": 1,
+  "vitesse": 0.97
+ },
+ "voix_studio": {
+  "fournisseur": "azure",
+  "voix": "fr-FR-Marc:MAI-Voice-2.1",
+  "style": "excited",
+  "debit": "+0%"
+ },
+ "verification": {
+  "date": "2026-11-19",
+  "sources": [
+   "LCP, « Livret A : Sébastien Lecornu annonce un plafond entre 25 000 et 30 000 euros dès février 2027 » (03/11/2026) : annonce en questions au gouvernement, plafond actuel 22 950 €, « entre 25 et 30 000 euros », application février 2027, Roland Lescure précisera après concertation avec les banques et la Caisse des dépôts, « Le taux sera lui aussi amené à augmenter » ; Livret A seul mentionné",
+   "MoneyVox/AFP (03/11/2026) : même annonce ; usages : logement social, nouveau nucléaire, adaptation au changement climatique ; projet de budget 2027 : prêt issu de l'épargne réglementée plafonné à 60 Md€ pour financer jusqu'à 60 % de six EPR2",
+   "Tout sur mes finances (03/11/2026) : « Le montant exact reste donc à arrêter » ; plafond inchangé depuis le 01/01/2013 ; amendements Coquerel à 30 000 € rejetés le 16/10/2026 ; voie réglementaire ; usages selon Matignon : logement social, production et réseaux d'électricité, réseaux d'eau, lycées et collèges",
+   "Lexis Veille (03/11/2026) et Neofa (MAJ 04/11/2026) : « Le montant exact et le texte d'application ne sont pas encore publiés » ; recherches WebSearch du 19/11/2026 : aucun décret de relèvement publié",
+   "Code monétaire et financier, art. R221-2 (en vigueur depuis le 01/04/2020, Légifrance via french-business-law.com) : plafond L. 221-4 fixé à 22 950 € pour les personnes physiques ; la capitalisation des intérêts peut porter le solde au-delà",
+   "service-public.gouv.fr F2365 (vérifiée le 01/08/2026) : plafond 22 950 €, versements impossibles si solde ≥ plafond, intérêts capitalisés pouvant dépasser le plafond, quinzaines, taux 1,7 % du 01/08/2026 au 31/01/2027 (arrêté du 28/07/2026), exonération IR et PS",
+   "service-public.gouv.fr F2368 (vérifiée le 01/08/2026) : LDDS plafond 12 000 €, taux 1,7 % du 01/08/2026 au 31/01/2027",
+   "Taux 2026 du Livret A : 1,7 % jusqu'au 31/01/2026, 1,5 % du 01/02 au 31/07/2026, 1,7 % depuis le 01/08/2026 (service-public A18000, spec finance-fr-005 vérifiée le 10/11/2026) ; LEP 2,5 %, plafond 10 000 € ; formule : arrêté du 27/01/2021",
+   "Insee, Informations rapides n° 271 du 13/11/2026 (IPC définitif octobre 2026) : ensemble +3,4 %, hors tabac +3,4 % sur un an ; juillet 2,1 %, août 2,3 %, septembre 3,1 % hors tabac (IR du 14/08, n° 218, n° 247)",
+   "€STR moyennes mensuelles 2026 (global-rates.com, données BCE, consulté le 19/11/2026) : juil. 2,184 ; août 2,187 ; sept. 2,314 ; oct. 2,440 ; nov. 2,441",
+   "ACPR (MoneyVox 30/06/2026 ; Meilleurtaux 29/03/2026) : taux moyen de revalorisation des fonds en euros 2025 2,63 %, bonifications comprises ; France Assureurs 2,6 %",
+   "La finance pour tous (17/12/2025), LFSS 2026 : prélèvements sociaux 18,6 % sur les revenus obligataires dont livrets bancaires fiscalisés ; assurance vie et épargne logement restent à 17,2 % ; livrets réglementés exonérés",
+   "Banque des Territoires / Localtis (18/05/2026) : prêts sur fonds d'épargne 2025 record 41,7 Md€, dont 22,9 Md€ logement social et politique de la ville (plus de 123 000 logements sociaux neufs), 9,5 Md€ secteur public local",
+   "Calculs (Python, 19/11/2026) : intérêts 2026 sur 22 950 € = 22 950 × (1,7 % × 1/12 + 1,5 % × 6/12 + 1,7 % × 5/12) = 32,51 + 172,13 + 162,56 = 367,20 € ; solde 01/01/2027 = 23 317,20 € ; marge 25 000 → 1 682,80 € (au lieu de 2 050), 30 000 → 6 682,80 € (au lieu de 7 050). €STR moyen (2,184 + 2,187 + 2,314 + 2,440 + 2,441 × 2)/6 = 2,3345 (nov.-déc. supposés à 2,441) ; inflation (2,1 + 2,3 + 3,1 + 3,4 + 3,4 × 2)/6 = 2,95 ; taux (2,95 + 2,3345)/2 = 2,642 → 2,6 ; x = 2,0 → 2,409 → 2,4 ; x = 3,0 → 2,576 → 2,6 ; x = 3,45 → 2,651 → 2,7 ; seuil 2,85 → 2,551 → 2,6. LEP = max(2,6 + 0,5 ; 2,95) = 3,1. Intérêts sur un an : 22 950 × 1,7 % = 390,15 ; 25 000 × 2,6 % = 650 ; 30 000 × 2,6 % = 780 ; 22 950 × 2,6 % = 596,70 (+206,55) ; 7 050 × 2,6 % = 183,30 ; 2 050 × 2,6 % = 53,30 (4,44 €/mois). Fonds euros 2,63 × (1 − 0,172) = 2,178. Livret fiscalisé : 2,6/(1 − 0,314) = 3,790. Rendement réel 1,026/1,034 − 1 = −0,77 % ; actuel 1,7 − 3,4 = −1,7 point. 7 050 × 1,026^10 = 9 113 (intérêts 2 063) ; 9 113 / 1,034^10 = 6 523 € ; points tous les 2 ans 7 050, 7 421, 7 812, 8 224, 8 657, 9 113 ; réel 6 941, 6 834, 6 729, 6 625, 6 523."
+  ]
+ },
+ "scenes": [
+  {
+   "chapitre": "Ce qui a été annoncé",
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "7 050 €",
+    "couleur": "accent",
+    "compteur": true,
+    "label": "Place en plus sur un Livret A plein, si le plafond passe à 30 000 €"
+   },
+   "voix": "Sept mille cinquante euros. C'est la place qui pourrait s'ouvrir sur ton Livret A en février. Le Premier ministre l'a dit à l'Assemblée le 3 novembre : le plafond va grimper. Bonne nouvelle, non ? Sauf que, quand on fait le calcul, la vraie question n'est pas de savoir combien tu pourras mettre. C'est combien ça va te rapporter, une fois l'inflation passée par là."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Plafond Livret A relevé :",
+     "combien ça rapporte",
+     "vraiment ?"
+    ],
+    "accent": 1
+   },
+   "voix": "Dans cette vidéo, on fait l'enquête jusqu'au bout. Ce qui a vraiment été annoncé, et ce qui ne l'est pas encore. Combien d'euros d'intérêts en plus, selon le plafond et le taux retenus. Et comment ce livret se compare au LDDS, au LEP et aux fonds en euros de l'assurance vie. Tous les chiffres sont sourcés, et les calculs sont les nôtres."
+  },
+  {
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "« Entre 25 000",
+     "et 30 000 euros »"
+    ]
+   },
+   "voix": "Commençons par les mots exacts. Mardi 3 novembre, pendant les questions au gouvernement, Sébastien Lecornu annonce que le plafond du Livret A sera porté entre 25 000 et 30 000 €. Application prévue : février 2027. Il ajoute une phrase que beaucoup ont ratée : le taux sera, lui aussi, amené à augmenter."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce qui reste à décider",
+    "items": [
+     "Le montant exact du plafond",
+     "Le texte qui le fixe",
+     "Le taux au 1er février",
+     "Le LDDS, non mentionné"
+    ]
+   },
+   "voix": "Maintenant, ce qui manque. Le montant exact n'est pas fixé : le ministre de l'Économie, Roland Lescure, doit le préciser après une concertation avec les banques et la Caisse des dépôts. Le plafond est inscrit dans un article réglementaire du Code monétaire et financier, donc il faudra un nouveau texte publié au Journal officiel. Et l'annonce ne parle que du Livret A, pas du LDDS."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Au 19 novembre :",
+     "aucun texte publié"
+    ],
+    "ton": "negatif"
+   },
+   "voix": "On a vérifié ce matin, 19 novembre 2026. Aucun décret n'est paru. Le plafond officiel reste donc de 22 950 €, un montant fixé au 1er janvier 2013. Retiens bien la nuance : tant que le texte n'est pas au Journal officiel, ta banque ne peut pas accepter un euro au-dessus de 22 950. Annoncé, ce n'est pas encore applicable."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "22 950 €",
+    "couleur": "accent",
+    "label": "Plafond en vigueur, inchangé depuis le 1er janvier 2013"
+   },
+   "voix": "Et ce chiffre a une histoire. Il n'a pas bougé depuis près de quatorze ans. Cet automne, des députés avaient déjà tenté de le pousser à 30 000 € dans le budget. Leur amendement a été rejeté en séance le 16 octobre. Cette fois, la voie choisie est différente : le gouvernement peut agir seul, par voie réglementaire, sans vote du Parlement."
+  },
+  {
+   "chapitre": "Le piège des intérêts",
+   "visuel": {
+    "type": "section",
+    "titre": "Le piège des intérêts",
+    "sous": "Ta marge réelle sera plus petite"
+   },
+   "voix": "Premier calcul, et premier piège. Tu penses que, si ton livret est plein, tu pourras verser exactement la différence entre l'ancien et le nouveau plafond ? Pas tout à fait. Il y a un détail que presque personne ne prend en compte : les intérêts de cette année."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Livret A plein toute l'année 2026",
+    "lignes": [
+     [
+      "Janvier à 1,7 %",
+      "32,51 €"
+     ],
+     [
+      "Février à juillet à 1,5 %",
+      "172,13 €"
+     ],
+     [
+      "Août à décembre à 1,7 %",
+      "162,56 €"
+     ]
+    ],
+    "total": [
+     "Intérêts 2026",
+     "367,20 €",
+     "positif"
+    ]
+   },
+   "voix": "Prends un livret à 22 950 € toute l'année 2026. En janvier, il rapporte au taux de 1,7 %. De février à juillet, à 1,5 %. Puis à nouveau 1,7 % depuis le 1er août. Au total, 367,20 € d'intérêts. Et ils sont ajoutés au solde le 31 décembre, même si ça fait dépasser le plafond. C'est la règle."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "23 317,20 €",
+    "couleur": "accent",
+    "compteur": true,
+    "label": "Solde au 1er janvier 2027 : 22 950 € + 367,20 € d'intérêts"
+   },
+   "voix": "Résultat : au 1er janvier 2027, ton solde sera de 23 317,20 €. Et c'est ce montant-là qui comptera quand le nouveau plafond arrivera. Les versements sont bloqués tant que le solde atteint ou dépasse le plafond. Donc ta marge réelle se calcule à partir de ce solde, pas à partir de 22 950."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Ce que tu pourras vraiment verser",
+    "items": [
+     [
+      "Plafond à 25 000 €",
+      1683,
+      "1 682,80 €",
+      "accent"
+     ],
+     [
+      "Plafond à 30 000 €",
+      6683,
+      "6 682,80 €",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Si le plafond est fixé à 25 000 €, tu ne pourras verser que 1 682,80 €, et pas 2 050. Si c'est 30 000, ce sera 6 682,80 €. Environ 370 € de moins que ce que les titres annoncent. Ce n'est pas énorme. Mais c'est exactement le genre de détail qui fait qu'un virement se fait refuser par ta banque."
+  },
+  {
+   "chapitre": "Le taux de février",
+   "visuel": {
+    "type": "section",
+    "titre": "Le taux de février",
+    "sous": "Ce que donne la formule"
+   },
+   "voix": "Deuxième ingrédient du calcul : le taux. Car un plafond plus haut ne vaut rien sans rendement. Et là, bonne nouvelle, on n'a pas besoin d'attendre l'annonce officielle pour avoir une idée sérieuse du chiffre."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "La formule du Livret A",
+    "items": [
+     "Inflation hors tabac : moyenne sur 6 mois",
+     "€STR : moyenne sur 6 mois",
+     "(Inflation + €STR) ÷ 2",
+     "Arrondi au dixième, plancher 0,5 %"
+    ]
+   },
+   "voix": "Le taux suit une formule fixée par un arrêté de janvier 2021. On fait la moyenne de deux chiffres sur six mois. D'un côté, l'inflation hors tabac mesurée par l'Insee. De l'autre, l'ESTER, le loyer de l'argent prêté pour une nuit entre banques européennes. On additionne, on divise par deux, on arrondit au dixième."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Inflation hors tabac sur un an (Insee)",
+    "items": [
+     [
+      "Juillet",
+      2.1,
+      "2,1 %"
+     ],
+     [
+      "Août",
+      2.3,
+      "2,3 %"
+     ],
+     [
+      "Septembre",
+      3.1,
+      "3,1 %",
+      "negatif"
+     ],
+     [
+      "Octobre",
+      3.4,
+      "3,4 %",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Côté inflation, l'Insee a publié le chiffre définitif d'octobre le 13 novembre : 3,4 % sur un an, hors tabac. Après 2,1 % en juillet, 2,3 % en août et 3,1 % en septembre. La courbe monte nettement depuis l'été, et c'est ce qui va tirer le livret vers le haut."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "€STR, moyenne mensuelle",
+    "items": [
+     [
+      "Juillet",
+      2.184,
+      "2,18 %"
+     ],
+     [
+      "Août",
+      2.187,
+      "2,19 %"
+     ],
+     [
+      "Septembre",
+      2.314,
+      "2,31 %"
+     ],
+     [
+      "Octobre-novembre",
+      2.44,
+      "2,44 %",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Côté ESTER, les moyennes mensuelles tournent autour de 2,18 % en juillet et en août. Puis 2,31 % en septembre, après la hausse de la Banque centrale européenne. Et 2,44 % en octobre comme en novembre. Si ce niveau tient jusqu'à fin décembre, la moyenne sur six mois sera d'environ 2,33 %."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "≈ 2,6 %",
+    "couleur": "positif",
+    "label": "Projection de la régie pour le 1er février 2027"
+   },
+   "voix": "On assemble. Si l'inflation de novembre et de décembre reste autour de 3,4 %, la moyenne d'inflation sur le semestre fait 2,95 %. Avec 2,33 % d'ESTER, la formule donne 2,64 %. Arrondi : 2,6 %. Attention, c'est une projection de la régie, pas un chiffre officiel. Il manque encore deux mois de données."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Si l'inflation de fin d'année change",
+    "items": [
+     [
+      "Nov.-déc. à 2,0 %",
+      2.4,
+      "2,4 %"
+     ],
+     [
+      "Nov.-déc. à 3,0 %",
+      2.6,
+      "2,6 %",
+      "accent"
+     ],
+     [
+      "Nov.-déc. à 3,4 %",
+      2.6,
+      "2,6 %",
+      "accent"
+     ],
+     [
+      "Nov.-déc. à 3,5 %",
+      2.7,
+      "2,7 %",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Et si l'inflation ralentit ? On a testé. Même avec seulement 2 % en novembre et en décembre, le taux resterait à 2,4 %. Entre 2,85 et 3,4 %, on reste à 2,6. Au-delà, on passe à 2,7. Dans tous les cas, ça reste bien au-dessus du taux actuel de 1,7 %. Le calcul officiel sera fait par la Banque de France à la mi-janvier."
+  },
+  {
+   "chapitre": "Le gain en euros",
+   "visuel": {
+    "type": "section",
+    "titre": "Le gain en euros",
+    "sous": "Quatre scénarios"
+   },
+   "voix": "On a maintenant les deux pièces du puzzle : la place en plus, et le taux probable. Passons à ce que tout le monde veut savoir. Combien d'euros, concrètement, sur un an ?"
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Intérêts sur un an, livret rempli au plafond",
+    "lignes": [
+     [
+      "22 950 € à 1,7 %",
+      "390,15 €"
+     ],
+     [
+      "25 000 € à 2,6 %",
+      "650,00 €"
+     ],
+     [
+      "30 000 € à 2,6 %",
+      "780,00 €",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Aujourd'hui, un livret plein à 22 950 €, au taux de 1,7 %, rapporte 390,15 € par an. Avec un plafond à 25 000 € et un taux de 2,6 %, ce serait 650 €. Et avec 30 000 € à 2,6 %, on arrive à 780 €. Exactement le double d'aujourd'hui. Mais attention à ce que ce chiffre mélange."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Effet taux",
+      "ton": "accent",
+      "lignes": [
+       "22 950 € à 2,6 %",
+       "596,70 €",
+       "+ 206,55 € par an"
+      ]
+     },
+     {
+      "titre": "Effet plafond",
+      "ton": "positif",
+      "lignes": [
+       "7 050 € en plus à 2,6 %",
+       "183,30 €",
+       "seulement si livret plein"
+      ]
+     }
+    ]
+   },
+   "voix": "Il mélange deux effets. Le premier, c'est la hausse du taux : sur 22 950 €, passer de 1,7 à 2,6 % fait gagner 206,55 € par an. Ça, tout le monde en profite, livret plein ou pas. Le second, c'est le plafond : les 7 050 € de place en plus, à 2,6 %, rapportent 183,30 €. Mais seulement si tu as l'argent pour les remplir."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Gain annuel de la place en plus, à 2,6 %",
+    "items": [
+     [
+      "Plafond 25 000 €",
+      53.3,
+      "53,30 €"
+     ],
+     [
+      "Plafond 30 000 €",
+      183.3,
+      "183,30 €",
+      "positif"
+     ]
+    ]
+   },
+   "voix": "Et si le plafond s'arrête à 25 000 € ? Les 2 050 € de place en plus rapportent 53,30 € par an. Soit environ 4,40 € par mois. Autrement dit, pour la grande majorité des épargnants, le vrai changement de février, ce sera le taux, beaucoup plus que le plafond."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Le plafond ne sert",
+     "que si ton livret",
+     "est déjà plein"
+    ],
+    "ton": "accent"
+   },
+   "voix": "C'est la première conclusion de l'enquête. Si ton Livret A n'est pas rempli, le nouveau plafond ne change strictement rien pour toi. Tu avais déjà de la place. Et si tu as mis de côté plus de 22 950 €, la question devient : où ranger le reste ? Et là, il y a d'autres cases à regarder avant."
+  },
+  {
+   "chapitre": "Livret A contre les autres",
+   "visuel": {
+    "type": "section",
+    "titre": "Livret A contre les autres",
+    "sous": "LDDS, LEP, fonds en euros"
+   },
+   "voix": "Parce que le Livret A n'est pas seul. Avant de te réjouir de quelques milliers d'euros de place en plus, regarde ce qui existe déjà à côté, avec des règles parfois plus intéressantes."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "LDDS",
+      "ton": "accent",
+      "lignes": [
+       "Plafond 12 000 €",
+       "Même taux que le Livret A",
+       "Net d'impôt"
+      ]
+     },
+     {
+      "titre": "LEP",
+      "ton": "positif",
+      "lignes": [
+       "Plafond 10 000 €",
+       "2,5 % aujourd'hui",
+       "Sous conditions de revenus"
+      ]
+     }
+    ]
+   },
+   "voix": "Le LDDS, d'abord. Même taux que le Livret A, 1,7 % aujourd'hui, et lui aussi exonéré d'impôt et de prélèvements sociaux. Son plafond est de 12 000 €. Ensuite, le LEP : 2,5 % aujourd'hui, avec un plafond de 10 000 €. Mais il est réservé aux foyers sous un certain revenu fiscal."
+  },
+  {
+   "visuel": {
+    "type": "chiffre",
+    "valeur": "3,1 %",
+    "couleur": "positif",
+    "label": "LEP au 1er février selon la formule (projection)"
+   },
+   "voix": "Pour le LEP, la règle prend le plus haut de deux chiffres : Livret A majoré de 0,5 point, ou inflation semestrielle. Avec notre projection, 2,6 plus 0,5, ça donne 3,1 %, qui dépasse les 2,95 % d'inflation moyenne. Donc si tu y as droit, le LEP garderait une nette avance. Et le coup de pouce du gouvernement reste possible."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "2,63 %",
+      "fonds euros 2025, brut"
+     ],
+     [
+      "− 17,2 %",
+      "prélèvements sociaux",
+      "negatif"
+     ],
+     [
+      "="
+     ],
+     [
+      "≈ 2,18 %",
+      "net de prélèvements",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Et l'assurance vie ? Selon l'Autorité de contrôle prudentiel, les fonds en euros ont servi 2,63 % en moyenne en 2025. Mais ce taux est avant prélèvements sociaux. Sur l'assurance vie, ils restent à 17,2 %. Une fois retirés, on tombe autour de 2,18 %. En dessous de nos 2,6 % projetés pour le Livret A."
+  },
+  {
+   "visuel": {
+    "type": "equation",
+    "termes": [
+     [
+      "2,6 %",
+      "Livret A, net"
+     ],
+     [
+      "÷ 0,686",
+      "après flat tax de 31,4 %"
+     ],
+     [
+      "="
+     ],
+     [
+      "3,79 %",
+      "taux brut équivalent",
+      "accent"
+     ]
+    ]
+   },
+   "voix": "Dernier repère, très utile. Un livret bancaire classique est taxé à 31,4 % depuis 2026 : la flat tax combine l'impôt à 12,8 % et des prélèvements sociaux passés à 18,6 %. Pour faire aussi bien qu'un Livret A à 2,6 % net, il lui faudrait afficher 3,79 % brut. Garde ce chiffre en tête la prochaine fois qu'une banque te vante un livret boosté."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "L'ordre de remplissage, sur le papier",
+    "items": [
+     "LEP, si tu y as droit",
+     "Livret A et LDDS, même taux",
+     "Au-delà : comparer brut contre net"
+    ]
+   },
+   "voix": "Sur le papier, la logique de rendement est donc simple. Si tu as droit au LEP, c'est lui qui paie le mieux. Ensuite, Livret A et LDDS, au même taux. Au-delà, il faut comparer en net, après impôts. Mais rendement ne veut pas dire bon choix pour toi : ça dépend de tes projets et de ta situation. Ce n'est pas un conseil en investissement."
+  },
+  {
+   "chapitre": "L'inflation dans l'équation",
+   "visuel": {
+    "type": "section",
+    "titre": "L'inflation dans l'équation",
+    "sous": "Le rendement réel"
+   },
+   "voix": "Il reste un invité qu'on ne peut pas ignorer. Parce que gagner des intérêts, c'est bien. Mais si les prix grimpent plus vite, ton épargne recule quand même."
+  },
+  {
+   "visuel": {
+    "type": "barres",
+    "titre": "Taux contre inflation",
+    "items": [
+     [
+      "Livret A aujourd'hui",
+      1.7,
+      "1,7 %",
+      "negatif"
+     ],
+     [
+      "Livret A projeté",
+      2.6,
+      "2,6 %",
+      "accent"
+     ],
+     [
+      "Inflation octobre",
+      3.4,
+      "3,4 %",
+      "negatif"
+     ]
+    ]
+   },
+   "voix": "Avec une inflation à 3,4 %, même un Livret A à 2,6 % perd du terrain. Le rendement réel serait d'environ moins 0,8 point par an. Aujourd'hui, avec 1,7 % de taux, l'écart atteint presque 1,7 point. Il se réduit donc, sans disparaître. Autrement dit, le livret protège moins ton pouvoir d'achat qu'il n'en a l'air."
+  },
+  {
+   "visuel": {
+    "type": "courbe",
+    "titre": "7 050 € pendant 10 ans à 2,6 %",
+    "axe_x": [
+     "0",
+     "2",
+     "4",
+     "6",
+     "8",
+     "10"
+    ],
+    "series": [
+     {
+      "nom": "Solde en euros",
+      "ton": "positif",
+      "fin": "9 113 €",
+      "points": [
+       7050,
+       7421,
+       7812,
+       8224,
+       8657,
+       9113
+      ]
+     },
+     {
+      "nom": "Pouvoir d'achat, inflation 3,4 %",
+      "ton": "negatif",
+      "fin": "6 523 €",
+      "points": [
+       7050,
+       6941,
+       6834,
+       6729,
+       6625,
+       6523
+      ]
+     }
+    ]
+   },
+   "voix": "Un exemple sur la durée. Mets 7 050 € à 2,6 % pendant dix ans, sans y toucher. Tu obtiens environ 9 113 €. Plus de 2 000 € d'intérêts. Mais si les prix montaient de 3,4 % par an pendant tout ce temps, ce capital vaudrait l'équivalent de 6 523 € d'aujourd'hui. C'est un scénario volontairement pessimiste, mais il montre l'enjeu."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Le Livret A :",
+     "une réserve,",
+     "pas un moteur"
+    ],
+    "ton": "accent"
+   },
+   "voix": "C'est pour ça que le Livret A est fait pour l'épargne de précaution. L'argent disponible tout de suite, sans risque, sans impôt. Il est parfait pour ça. Pour un horizon de dix ans, en revanche, ses règles ne sont pas pensées pour battre l'inflation."
+  },
+  {
+   "chapitre": "Où va ton argent",
+   "visuel": {
+    "type": "section",
+    "titre": "Où va ton argent",
+    "sous": "Caisse des dépôts et fonds d'épargne"
+   },
+   "voix": "Et puis il y a une question qu'on se pose rarement : pourquoi l'État veut-il que tu mettes plus sur ce livret ? La réponse dit beaucoup sur la manière dont il fonctionne."
+  },
+  {
+   "visuel": {
+    "type": "ledger",
+    "titre": "Prêts du fonds d'épargne en 2025",
+    "lignes": [
+     [
+      "Logement social et politique de la ville",
+      "22,9 Md€"
+     ],
+     [
+      "Secteur public local",
+      "9,5 Md€"
+     ]
+    ],
+    "total": [
+     "Total des prêts accordés",
+     "41,7 Md€",
+     "accent"
+    ]
+   },
+   "voix": "Une grande partie de l'argent des livrets réglementés remonte à la Caisse des dépôts, dans ce qu'on appelle le fonds d'épargne. En 2025, ce fonds a accordé un record de 41,7 milliards d'euros de prêts. Dont 22,9 milliards pour les HLM et les quartiers prioritaires, avec plus de 123 000 logements sociaux neufs soutenus. Et 9,5 milliards pour les collectivités."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Ce que le gouvernement veut financer",
+    "items": [
+     "Logement social",
+     "Production et réseaux d'électricité",
+     "Réseaux d'eau",
+     "Lycées et collèges"
+    ]
+   },
+   "voix": "Avec le nouveau plafond, Matignon veut élargir la liste : logement social, mais aussi production et réseaux d'électricité, rénovation des réseaux d'eau, travaux dans les lycées et les collèges. Le projet de budget 2027 prévoit aussi un prêt issu de l'épargne réglementée, plafonné à 60 milliards, pour financer une partie des nouveaux réacteurs EPR2."
+  },
+  {
+   "visuel": {
+    "type": "punch",
+    "lignes": [
+     "Plus de place,",
+     "c'est plus d'argent",
+     "à prêter"
+    ],
+    "ton": "accent"
+   },
+   "voix": "Voilà donc la logique. Relever le plafond, c'est donner plus de ressources au fonds d'épargne, pour financer des projets à long terme à un coût maîtrisé. Pour toi, ça ne change pas la sécurité du livret : ton argent reste disponible à tout moment. Mais c'est utile de savoir à quoi il sert."
+  },
+  {
+   "chapitre": "Ton plan pour février",
+   "visuel": {
+    "type": "section",
+    "titre": "Ton plan pour février",
+    "sous": "Trois réflexes"
+   },
+   "voix": "Résumons ce que tout ça change concrètement, et ce que tu peux faire d'ici février, sans rien précipiter."
+  },
+  {
+   "visuel": {
+    "type": "liste",
+    "titre": "Avant de verser au-delà de 22 950 €",
+    "items": [
+     "Attendre le texte au Journal officiel",
+     "Calculer ta marge depuis ton solde au 1er janvier",
+     "Viser la première quinzaine"
+    ]
+   },
+   "voix": "Premier réflexe : n'essaie pas de verser au-dessus de 22 950 € tant que le nouveau texte n'est pas publié. Deuxième réflexe : calcule ta marge à partir de ton solde au 1er janvier, intérêts compris. Troisième réflexe : les intérêts se comptent par quinzaines. Un versement entre le 1er et le 15 du mois rapporte dès le 16. Après le 16, il attend le 1er du mois suivant."
+  },
+  {
+   "visuel": {
+    "type": "comparatif",
+    "colonnes": [
+     {
+      "titre": "Officiel",
+      "ton": "positif",
+      "lignes": [
+       "Plafond 22 950 €",
+       "Taux 1,7 % jusqu'au 31 janvier",
+       "LDDS 12 000 €"
+      ]
+     },
+     {
+      "titre": "Annoncé ou projeté",
+      "ton": "accent",
+      "lignes": [
+       "Plafond 25 000 à 30 000 €",
+       "Taux ≈ 2,6 % (formule)",
+       "Date exacte à confirmer"
+      ]
+     }
+    ]
+   },
+   "voix": "Et garde bien les deux colonnes séparées. À gauche, ce qui est officiel aujourd'hui. À droite, ce qui est annoncé ou calculé, mais pas encore publié. On mettra cette vidéo à jour dans les commentaires dès que le texte et le taux officiels seront sortis."
+  },
+  {
+   "visuel": {
+    "type": "citation",
+    "lignes": [
+     "Ce n'est pas un conseil",
+     "en investissement"
+    ]
+   },
+   "voix": "Précision indispensable : on parle ici de mécanismes et de calculs. Ce n'est pas un conseil en investissement. Les projections de taux dépendent de données qui ne sont pas encore publiées, et ta situation personnelle compte plus que n'importe quelle moyenne."
+  },
+  {
+   "visuel": {
+    "type": "titre",
+    "lignes": [
+     "Prochaine vidéo :",
+     "assurance emprunteur,",
+     "4 idées reçues"
+    ],
+    "accent": 2
+   },
+   "voix": "Dans la prochaine vidéo, on passe de ton épargne à ton crédit immobilier. Changer d'assurance de prêt, c'est compliqué, risqué, réservé aux nouveaux emprunteurs ? On teste quatre idées reçues, textes à l'appui. Abonne-toi, elle arrive très vite. Et toi, ton Livret A, il est déjà plein ? Dis-le en commentaire, on fera les comptes ensemble."
+  }
+ ]
+}
