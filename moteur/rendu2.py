@@ -113,7 +113,10 @@ def nombre_anime(valeur, a):
 
 
 def couper(d, txt, pol, largeur):
-    mots, lignes, cur = txt.split(), [], ''
+    # espaces insécables dans les nombres (« 30 000 € », « 3,4 % ») : jamais coupés en fin de ligne
+    txt = re.sub(r'(?<=\d) (?=\d{3}(?!\d))', '\u00a0', txt)
+    txt = re.sub(r'(?<=\d) (?=[€%])', '\u00a0', txt)
+    mots, lignes, cur = re.split(r'[ \t\n]+', txt.strip()), [], ''
     for m in mots:
         essai = (cur + ' ' + m).strip()
         if d.textlength(essai, font=pol) <= largeur or not cur:
@@ -460,12 +463,25 @@ def dessiner(v, t, dur, th):
                 a, _ = apparait(t, deb + dt)
                 xe, ye = fine[-1]
                 yl = ye - 50
-                for autre in etiq_y.values():
-                    if abs(yl - autre) < 112:
-                        yl = autre + 112
-                etiq_y[i] = yl
-                d.text((xe + 34, yl), s['nom'], font=P('semibold', 38), fill=rgba(T('muet'), a))
-                d.text((xe + 34, yl + 44), s.get('fin', ''), font=P('black', 56), fill=rgba(c, a))
+                # nom de série : retour à la ligne pour ne jamais sortir du cadre (marge de sécurité pour les zooms)
+                lmax = W * 0.93 - (xe + 34)
+                f_nom = P('semibold', 38)
+                lignes_nom, cour = [], ''
+                for mot in s['nom'].replace(' %', '\u00a0%').replace(' €', '\u00a0€').split(' '):
+                    essai = (cour + ' ' + mot).strip()
+                    if cour and d.textlength(essai, font=f_nom) > lmax:
+                        lignes_nom.append(cour); cour = mot
+                    else:
+                        cour = essai
+                lignes_nom.append(cour)
+                haut = 44 * len(lignes_nom) + 68
+                for (autre, h_autre) in etiq_y.values():
+                    if yl < autre + h_autre and yl + haut > autre:
+                        yl = autre + h_autre
+                etiq_y[i] = (yl, haut)
+                for kk, ln in enumerate(lignes_nom):
+                    d.text((xe + 34, yl + 44 * kk), ln, font=f_nom, fill=rgba(T('muet'), a))
+                d.text((xe + 34, yl + 44 * len(lignes_nom)), s.get('fin', ''), font=P('black', 56), fill=rgba(c, a))
         return img
 
     raise ValueError('type de visuel inconnu : ' + typ)
