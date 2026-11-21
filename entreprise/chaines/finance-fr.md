@@ -23,6 +23,8 @@
 - Avantage distinctif : précision juridique et fiscale française.
 - **Choix des sujets — recherche d'abord** (décision du 14/11/2026, D-2026-11-14-2) : sur 3 vidéos de la semaine, au moins 2 répondent à une question que les gens tapent dans YouTube (requête cible notée dans le champ `requete` de la régie, vérifiée par l'autocomplétion YouTube ou TubeAlfred `youtube-keyword-ideas`, ou à défaut WebSearch), formulée telle quelle au début du titre ; au plus 1 sujet d'actualité pure. Les sujets d'actualité sont rattachés à une requête durable (ex. « plafond Livret A »).
 
+- **Pilier « épargne réglementée 2027 »** (décision du 21/11/2026, D-2026-11-21-2, jusqu'au 15/02/2027) : 1 vidéo sur 3 chaque semaine traite l'épargne réglementée (LEP, LDDS, PEL/CEL, taux au 01/02/2027, plafond du Livret A dès que le montant est fixé par texte). Jamais deux vidéos du pilier d'affilée sur le même produit ; structure toujours différente des 2 vidéos précédentes. Chaque description du pilier renvoie, avant les sources, vers 2 vidéos déjà publiées de la chaîne sur le même pilier (liens youtu.be), et le teaser de fin annonce la prochaine vidéo du pilier quand elle est planifiée.
+
 ## Format des scripts
 - Vidéos longues : 11 à 14 minutes visées, **plancher absolu de 10 minutes** (le pipeline refuse en dessous) ; avant toute commande au studio, `estimer_duree.py` doit donner au moins 10 min 30 (décision du PDG ; au-delà du seuil de 8 minutes des publicités en milieu de vidéo). Environ 1 700 à 2 300 mots de voix selon la voix. La durée vient de la densité (cas chiffrés, nuances, erreurs fréquentes), jamais du remplissage : la rétention prime.
 - Réels / Shorts : **en pause** (décision du PDG du 02/11/2026). Ne pas en produire ni en programmer jusqu'à nouvel ordre.
@@ -35,6 +37,7 @@
 ### Variété obligatoire — prévention du contenu « produit en masse » (décision du 07/11/2026, D-2026-11-07-2)
 - Chaque vidéo suit l'une des 4 structures ci-dessous, **jamais la même que l'une des 2 vidéos précédentes** : (A) enquête / démonstration chiffrée ; (B) cas par profils (3 personnages chiffrés) ; (C) checklist datée (échéance réelle) ; (D) idée reçue contre réalité (3 à 5 mythes testés sur sources). Le champ `structure` de la régie l'indique.
 - Chaque vidéo contient au moins **un calcul original de la régie** (simulation propre, recalculée en Python par le vérificateur) et au moins une source primaire nouvelle par rapport aux 3 vidéos précédentes.
+- **Accroche — promesse en 15 secondes** (décision du 21/11/2026, D-2026-11-21-3) : la question ou le chiffre du titre est posé, et ce que le spectateur saura à la fin est annoncé, dans les 15 premières secondes de voix ; aucun préambule de plus de 10 s avant le premier fait. Le contrôle qualité note dans `qc.details` le temps (en secondes) où la promesse est formulée.
 - Accroche, transitions et conclusion réécrites à chaque vidéo : aucune phrase de plus de 8 mots reprise mot pour mot d'une vidéo précédente (hors mention de conformité). Le contrôle qualité le vérifie.
 
 ## Charte visuelle (moteur v2 — validée par le PDG le 27/10/2026)
@@ -48,6 +51,7 @@
 
 ## Titres (décision du 07/11/2026, D-2026-11-07-3)
 - **60 caractères maximum** (lisible en entier sur mobile), mot-clé recherché dans les 30 premiers caractères (ex. « PER », « Livret A 2027 », « ETF »), promesse tenue par la vidéo, aucun gain garanti ni urgence fabriquée.
+- Mesure annoncée mais non publiée au Journal officiel : le titre dit « annoncé » (ou équivalent), jamais un fait accompli (revue du 21/11 de D-2026-11-07-3 ; cas de 009 « Plafond Livret A relevé », alors qu'aucun texte n'était publié).
 - Miniature : 4 mots maximum, un seul chiffre, différent du titre (le titre et la miniature se complètent).
 
 ## Miniatures
@@ -62,7 +66,7 @@
 
 ## Créneaux
 - Longues : **16:00 Europe/Paris** (décision de direction du 07/11/2026, D-2026-11-07-1 ; indice d'audience Metricool +20 à 30 % vs 18:00).
-- **Cadence : 3 vidéos longues par semaine, mer., jeu., ven. à 16:00** (décision du 14/11/2026, D-2026-11-14-1 ; remplace la grille lun.-mer.-jeu.-ven.). Transition S47 : finance-fr-007 déplacée du dim. 15/11 au lun. 16/11 16:00, 008 mer. 18/11, **009 ven. 20/11** (ajustement DG du 14/11 : la tâche de production ne tourne pas le mercredi tant qu'elle n'est pas recalée, donc 009 ne pouvait pas être produite pour le jeudi) ; grille mer./jeu./ven. dès le 25/11. Retour à 4/semaine seulement si la chaîne dépasse 50 vues/semaine deux semaines de suite (décision PDG délégué). Jamais de vidéo longue le week-end. Maximum absolu 4 vidéos longues par semaine. Production la veille du créneau : tâche à recaler sur mar./mer./jeu. 8 h 37 (en attente d'autorisation du PDG au 14/11) ; contrôle avant diffusion lun./mer./jeu./ven. 11 h 43 ; contrôle qualité mar./mer./jeu. 12 h 17.
+- **Cadence : 3 vidéos longues par semaine, lun., mer., ven. à 16:00** (décision du 21/11/2026, D-2026-11-21-1 ; remplace la grille mer./jeu./ven. de D-2026-11-14-1, inapplicable le jeudi faute de production la veille). Grille alignée sur la tâche de production existante (dim., mar., jeu. 8 h 37 = veille du créneau). Indices Metricool 16h : lun. 9 351, mer. 12 033, ven. 10 698 (jeu. 11 979 non servi). Transition S48 : finance-fr-010 mer. 25/11, finance-fr-011 ven. 27/11 ; grille complète dès le lun. 30/11. Le contrôle qualité indépendant passe le jour de la production (dim., mar., jeu. 12 h 17) et le contrôle avant diffusion le jour du créneau (lun., mer., ven. 11 h 43) : le DG recale ces deux tâches. Aucune vidéo ne part sans QC indépendant consigné (cas de 009 à ne pas reproduire). Retour à 4/semaine seulement si la chaîne dépasse 50 vues/semaine deux semaines de suite. Jamais de vidéo longue le week-end. Maximum absolu 4 vidéos longues par semaine.
 - Réels : en pause (décision du PDG du 02/11/2026)
 
 ## Voix réservées aux futures chaînes
