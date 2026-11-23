@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261123-michou-3fxtpn",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "programmée",
  "clip": {
   "id": "KitschyApatheticSlothHumbleLife-X6wDES7IdT3Fxtpn",
   "url": "https://www.twitch.tv/michou/clip/KitschyApatheticSlothHumbleLife-X6wDES7IdT3Fxtpn",
@@ -41,5 +41,9 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261123/gta6-clips-20261123-michou-3fxtpn.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261123/gta6-clips-20261123-michou-3fxtpn.jpg",
- "cree": "2026-11-23T17:06:45+00:00"
+ "cree": "2026-11-23T17:06:45+00:00",
+ "creneau": "2026-11-24T12:30:00+01:00",
+ "metricool_id": 439142901,
+ "metricool_post": "459501565877308341",
+ "fournisseur": "metricool"
 }
