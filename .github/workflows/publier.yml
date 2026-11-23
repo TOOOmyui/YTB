@@ -1,0 +1,57 @@
+name: Publier
+
+# Publication des shorts de la file (branche « clips ») sur YouTube / Instagram via Upload-Post.
+# Toutes les heures : publie au créneau ouvert selon les réglages de la chaîne (mode auto ou manuel).
+# À la demande (centre de contrôle) : publie immédiatement le short indiqué.
+# Sans le secret UPLOAD_POST_API_KEY, rien n'est installé ni envoyé.
+
+on:
+  schedule:
+    - cron: '4 * * * *'
+  workflow_dispatch:
+    inputs:
+      id:
+        description: Identifiant du short à publier tout de suite (vide = règle des créneaux)
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publier
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+    steps:
+      - name: Vérifier la clé Upload-Post
+        id: pret
+        run: |
+          if [ -n "$UPLOAD_POST_API_KEY" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "Secret UPLOAD_POST_API_KEY absent : publication sautée."; fi
+      - uses: actions/checkout@v4
+        if: steps.pret.outputs.ok
+        with: { ref: atelier, path: atelier, sparse-checkout: "moteur/clips\nentreprise/chaines" }
+      - uses: actions/checkout@v4
+        if: steps.pret.outputs.ok
+        with: { ref: clips, path: etat }
+      - name: Publication
+        if: steps.pret.outputs.ok
+        id: pub
+        continue-on-error: true
+        run: python3 atelier/moteur/clips/publier.py atelier/entreprise/chaines/gta6-clips.json etat --id "${{ inputs.id }}"
+      - name: Enregistrer l'état
+        if: steps.pret.outputs.ok
+        run: |
+          cd etat
+          git config user.name "Publication"
+          git config user.email "publication@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "publication $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase origin clips && git push origin clips && break; sleep 5; done
+      - name: Signaler un échec de publication
+        if: steps.pub.outcome == 'failure'
+        run: exit 1

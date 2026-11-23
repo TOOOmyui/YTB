@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Régie — Centre de contrôle</title>
+<style>
+:root{
+  --bg:#f6f5f2;--surface:#fff;--surface2:#f0eee9;--text:#17181c;--muted:#6b6d76;--line:#e2dfd8;
+  --accent:#6d3df5;--accent-soft:#efe9ff;--ok:#11845b;--ok-soft:#e3f5ec;--warn:#b26a00;--warn-soft:#fff3df;
+  --bad:#c23934;--bad-soft:#fde9e8;--info:#1f6fd1;--info-soft:#e7f0fd;
+  --r:14px;--shadow:0 1px 2px rgba(0,0,0,.04),0 4px 14px rgba(0,0,0,.05);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#111215;--surface:#1a1c20;--surface2:#23252b;--text:#ececf0;--muted:#9a9ca6;--line:#2e3037;
+  --accent:#9b7bff;--accent-soft:#2a2342;--ok:#3fcf8e;--ok-soft:#173226;--warn:#f0a83c;--warn-soft:#3a2c14;
+  --bad:#ff6b66;--bad-soft:#3c1d1c;--info:#6aa8ff;--info-soft:#172a44;--shadow:none}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 var(--font);-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:10px 16px}
+.logo{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-weight:800;font-size:14px;flex:none}
+.titre{font-weight:700;line-height:1.15}
+.titre small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.spacer{flex:1}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;background:var(--surface2);color:var(--muted);white-space:nowrap}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}.chip.info{background:var(--info-soft);color:var(--info)}
+.chip.acc{background:var(--accent-soft);color:var(--accent)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+nav.tabs{max-width:1100px;margin:0 auto;display:flex;gap:4px;padding:0 12px 8px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{border:0;background:none;padding:7px 12px;border-radius:10px;color:var(--muted);font-weight:600;cursor:pointer;white-space:nowrap}
+nav.tabs button.on{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+main{max-width:1100px;margin:0 auto;padding:16px 16px 96px}
+section{display:none}section.on{display:block}
+h2{font-size:20px;margin:6px 0 14px}
+h3{font-size:15px;margin:0 0 10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.stats{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.stat b{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted)}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.muted{color:var(--muted)}.small{font-size:12.5px}
+.btn{border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:10px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--text)}
+.btn:hover{border-color:var(--muted)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.btn.bad{color:var(--bad)}
+.btn.sm{padding:5px 10px;font-size:13px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.seg{display:inline-flex;background:var(--surface2);border-radius:10px;padding:3px}
+.seg button{border:0;background:none;padding:6px 12px;border-radius:8px;font-weight:600;color:var(--muted);cursor:pointer}
+.seg button.on{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list .ico{flex:none;width:22px;text-align:center}
+.clips{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.clip{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.clip .media{background:#000;aspect-ratio:9/12;max-height:62vh;position:relative}
+.clip video{width:100%;height:100%;object-fit:contain;display:block}
+.clip .media .badge{position:absolute;top:8px;left:8px}
+.clip .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+label.f{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin:8px 0 4px}
+input[type=text],input[type=number],input[type=password],select,textarea{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:var(--surface);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+textarea{min-height:84px;resize:vertical}
+.cnt{float:right;font-weight:500}
+.cnt.over{color:var(--bad)}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:999px;font-weight:600;cursor:pointer;color:var(--muted)}
+.filters button.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.empty{text-align:center;padding:36px 16px;color:var(--muted)}
+.alert{display:flex;gap:10px;padding:12px 14px;border-radius:12px;margin-bottom:10px;font-size:14px}
+.alert.warn{background:var(--warn-soft)}.alert.bad{background:var(--bad-soft)}.alert.info{background:var(--info-soft)}.alert.ok{background:var(--ok-soft)}
+.form2{display:grid;gap:0 14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:0 6px 24px rgba(0,0,0,.25);z-index:50;max-width:92vw;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+.toast.bad{background:var(--bad);color:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600}
+code{font-size:12.5px;background:var(--surface2);padding:1px 5px;border-radius:5px}
+details summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--muted)}
+.spin{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:s .8s linear infinite;display:inline-block}
+@keyframes s{to{transform:rotate(360deg)}}
+@media (max-width:640px){
+  .bar{padding:8px 12px}.titre small{display:none}
+  nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom));justify-content:space-around}
+  nav.tabs button{flex:1;font-size:12px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;gap:2px}
+  nav.tabs button.on{box-shadow:none;background:var(--accent-soft);color:var(--accent)}
+  main{padding:12px 12px 100px}
+  .clips{grid-template-columns:1fr}
+  .toast{bottom:90px}
+}
+nav.tabs .i{font-size:16px;line-height:1}
+@media (min-width:641px){nav.tabs .i{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="logo">R</div>
+    <div class="titre">Centre de contrôle<small id="sousTitre">Régie · clips et vidéos YouTube</small></div>
+    <div class="spacer"></div>
+    <span id="etatConnexion" class="chip"><span class="dot"></span>…</span>
+    <button class="btn sm" id="btnActualiser" title="Actualiser">↻</button>
+  </div>
+  <nav class="tabs" id="onglets">
+    <button data-t="tdb" class="on"><span class="i">◎</span>Tableau de bord</button>
+    <button data-t="clips"><span class="i">▶</span>Clips</button>
+    <button data-t="longues"><span class="i">▭</span>Vidéos longues</button>
+    <button data-t="reglages"><span class="i">⚙</span>Réglages</button>
+    <button data-t="journal"><span class="i">≡</span>Journal</button>
+  </nav>
+</header>
+
+<main>
+  <!-- TABLEAU DE BORD -->
+  <section id="tdb" class="on">
+    <div id="alertes"></div>
+    <div class="grid stats" id="stats"></div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card">
+        <h3>Pilotage — Clips GTA 6</h3>
+        <div class="row" style="justify-content:space-between;margin-bottom:10px">
+          <span class="muted">Chaîne</span>
+          <div class="seg" id="segStatut"><button data-v="active">Active</button><button data-v="pause">En pause</button></div>
+        </div>
+        <div class="row" style="justify-content:space-between;margin-bottom:10px">
+          <span class="muted">Publication</span>
+          <div class="seg" id="segMode"><button data-v="auto">Automatique</button><button data-v="manuel">Après validation</button></div>
+        </div>
+        <div class="row" style="justify-content:space-between;margin-bottom:14px">
+          <span class="muted">Prochain créneau</span><b id="prochainCreneau">—</b>
+        </div>
+        <div class="row">
+          <button class="btn pri" id="btnTournee">⟳ Lancer une tournée</button>
+          <button class="btn" data-goto="clips">Voir la file</button>
+        </div>
+        <p class="small muted" style="margin:10px 0 0">Automatique : le meilleur short de la file part à chaque créneau. Après validation : seuls les shorts que tu as validés partent.</p>
+      </div>
+      <div class="card">
+        <h3>Dernières opérations</h3>
+        <ul class="list" id="dernieres"></ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between"><h3 style="margin:0">Exécutions récentes</h3><a class="small" id="lienActions" target="_blank" rel="noopener">Tout voir sur GitHub ↗</a></div>
+      <ul class="list" id="runsTdb"></ul>
+    </div>
+  </section>
+
+  <!-- CLIPS -->
+  <section id="clips">
+    <div class="row" style="justify-content:space-between"><h2>Clips</h2><button class="btn sm" id="btnTournee2">⟳ Tournée</button></div>
+    <div class="filters" id="filtres">
+      <button data-f="atraiter" class="on">À traiter</button>
+      <button data-f="validee">Validés</button>
+      <button data-f="publiee">Publiés</button>
+      <button data-f="rejetee">Rejetés</button>
+    </div>
+    <div class="clips" id="listeClips"></div>
+  </section>
+
+  <!-- VIDÉOS LONGUES -->
+  <section id="longues">
+    <h2>Vidéos longues</h2>
+    <div class="alert info"><span>ℹ</span><div>La production des vidéos longues (script, voix, montage, programmation) est pilotée dans Claude, depuis la régie. Ici : les spécifications du dépôt et les fichiers prêts sur le quai. <a id="lienRegie" target="_blank" rel="noopener">Ouvrir la régie ↗</a></div></div>
+    <div class="card"><h3>Spécifications de production</h3><div id="productions" class="small muted">—</div></div>
+    <div class="card"><h3>Fichiers sur le quai (releases)</h3><div id="releases" class="small muted">—</div></div>
+  </section>
+
+  <!-- RÉGLAGES -->
+  <section id="reglages">
+    <h2>Réglages</h2>
+    <div class="card">
+      <h3>Connexion au dépôt GitHub</h3>
+      <div class="form2">
+        <div><label class="f" for="inRepo">Dépôt</label><input type="text" id="inRepo" autocomplete="off" spellcheck="false"></div>
+        <div><label class="f" for="inJeton">Jeton d'accès GitHub</label><input type="password" id="inJeton" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></div>
+      </div>
+      <label class="row small" style="margin-top:10px"><input type="checkbox" id="inMemo"> Mémoriser le jeton sur cet appareil</label>
+      <div class="row" style="margin-top:12px"><button class="btn pri" id="btnConnexion">Enregistrer</button><button class="btn" id="btnOublier">Oublier le jeton</button></div>
+      <details style="margin-top:12px"><summary>Créer le jeton (2 minutes)</summary>
+        <ol class="small" style="padding-left:18px">
+          <li>Ouvre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → Fine-grained token ↗</a>.</li>
+          <li>Repository access : <b>Only select repositories</b> → le dépôt de la régie.</li>
+          <li>Permissions du dépôt : <b>Contents</b> lecture et écriture, <b>Actions</b> lecture et écriture, <b>Secrets</b> lecture (pour vérifier la configuration).</li>
+          <li>Génère, copie, colle ici. Le jeton reste dans ce navigateur : il n'est envoyé qu'à api.github.com.</li>
+        </ol>
+        <p class="small muted">Sans jeton, la page fonctionne en lecture seule (données publiques, rafraîchies toutes les 5 minutes environ).</p>
+      </details>
+    </div>
+    <div class="card">
+      <h3>Secrets de la chaîne de production</h3>
+      <ul class="list" id="secrets"></ul>
+      <p class="small muted" style="margin:8px 0 0">Les valeurs se saisissent uniquement dans GitHub : ni cette page ni Claude ne les voient.</p>
+    </div>
+    <div class="card" id="carteConfig">
+      <h3>Chaîne de clips — réglages</h3>
+      <div id="formConfig" class="muted small">Chargement…</div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal">
+    <h2>Journal</h2>
+    <div class="card"><h3>Exécutions (tournées, publications, studio, quai)</h3><ul class="list" id="runsTous"></ul></div>
+    <div class="card"><h3>Historique de la file de clips</h3><ul class="list" id="commitsClips"></ul></div>
+    <div class="card">
+      <h3>Exports</h3>
+      <div class="row">
+        <button class="btn" id="expPub">Publications (CSV)</button>
+        <button class="btn" id="expConfig">Réglages (JSON)</button>
+        <button class="btn" id="expPage">Cette interface (HTML)</button>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+// ------------------------------------------------------------------ constantes
+const DEPOT_DEFAUT = 'TOOOmyui/YTB';
+const CONFIG = 'entreprise/chaines/gta6-clips.json';
+const REGIE = 'https://claude.ai/artifact/Db1JnzgfH5JxqkUkGXrQuK';
+const FUSEAU = 'Europe/Paris';
+const EXPIRATION_H = 96;
+const SECRETS = [
+  ['TWITCH_CLIENT_ID', 'Identifiant de l’application Twitch (repérage des clips)', 'https://dev.twitch.tv/console/apps'],
+  ['TWITCH_CLIENT_SECRET', 'Secret de l’application Twitch', 'https://dev.twitch.tv/console/apps'],
+  ['UPLOAD_POST_API_KEY', 'Clé API Upload-Post (publication YouTube / Instagram)', 'https://app.upload-post.com/'],
+];
+
+// ------------------------------------------------------------------ état
+const S = {
+  depot: DEPOT_DEFAUT, jeton: '', cfg: null, file: [], publies: [], rejetes: [], publications: [],
+  tournee: null, publication: null, runs: [], secrets: null, filtre: 'atraiter', blobs: new Map(),
+  longuesChargees: false, erreur: null,
+};
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const stock = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} },
+};
+function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function url(u) { return /^https:\/\//.test(u || '') ? esc(u) : '#'; }
+function toast(msg, mauvais) {
+  const t = $('#toast'); t.textContent = msg; t.className = 'toast on' + (mauvais ? ' bad' : '');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.className = 'toast', mauvais ? 6000 : 3200);
+}
+const fmt = new Intl.DateTimeFormat('fr-FR', {timeZone: FUSEAU, day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'});
+function date(d) { if (!d) return '—'; const x = new Date(d); return isNaN(x) ? esc(d) : fmt.format(x).replace(' ', ' à '); }
+function depuis(d) {
+  const m = (Date.now() - new Date(d)) / 60000;
+  if (!isFinite(m)) return '';
+  if (m < 1) return 'à l’instant'; if (m < 60) return `il y a ${Math.round(m)} min`;
+  if (m < 1440) return `il y a ${Math.round(m / 60)} h`; return `il y a ${Math.round(m / 1440)} j`;
+}
+function jourParis(d = new Date()) { return new Intl.DateTimeFormat('fr-CA', {timeZone: FUSEAU}).format(d); }
+
+// ------------------------------------------------------------------ GitHub
+class ErreurGH extends Error { constructor(m, s) { super(m); this.status = s; } }
+async function gh(chemin, opts = {}) {
+  const h = {'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'};
+  if (S.jeton) h.Authorization = 'Bearer ' + S.jeton;
+  if (opts.body) h['Content-Type'] = 'application/json';
+  const r = await fetch('https://api.github.com' + chemin, {method: opts.method || 'GET', headers: h,
+    body: opts.body ? JSON.stringify(opts.body) : undefined, cache: 'no-store'});
+  if (r.status === 204) return null;
+  const txt = await r.text();
+  let j = null; try { j = txt ? JSON.parse(txt) : null; } catch (e) {}
+  if (!r.ok) {
+    let m = (j && j.message) || ('HTTP ' + r.status);
+    if (r.status === 401) m = 'Jeton refusé par GitHub (expiré ou invalide)';
+    if (r.status === 403 && /rate limit/i.test(m)) m = 'Limite de requêtes GitHub atteinte : ajoute un jeton dans Réglages';
+    if (r.status === 403 && /Resource not accessible/i.test(m)) m = 'Permission manquante sur le jeton (' + chemin.split('/').slice(4, 6).join('/') + ')';
+    throw new ErreurGH(m, r.status);
+  }
+  return j;
+}
+const R = () => `/repos/${S.depot}`;
+function b64dec(s) { const bin = atob(s.replace(/\n/g, '')); return new TextDecoder().decode(Uint8Array.from(bin, c => c.charCodeAt(0))); }
+async function lireTexte(branche, chemin, sha) {
+  if (S.jeton && sha) {
+    if (S.blobs.has(sha)) return S.blobs.get(sha);
+    const b = await gh(`${R()}/git/blobs/${sha}`);
+    const t = b64dec(b.content); S.blobs.set(sha, t); return t;
+  }
+  const r = await fetch(`https://raw.githubusercontent.com/${S.depot}/${branche}/${chemin.split('/').map(encodeURIComponent).join('/')}`, {cache: 'no-store'});
+  if (!r.ok) throw new ErreurGH('Lecture impossible : ' + chemin, r.status);
+  return r.text();
+}
+async function lireJSON(branche, chemin, sha, defaut) {
+  try { return JSON.parse(await lireTexte(branche, chemin, sha)); } catch (e) { if (defaut !== undefined) return defaut; throw e; }
+}
+async function arbre(branche) {
+  const t = await gh(`${R()}/git/trees/${branche}?recursive=1`);
+  return t.tree.filter(x => x.type === 'blob');
+}
+/** Un seul commit atomique sur `branche`. changes : [{path, content} | {path, supprimer:true}].
+ *  doitExister : chemins qui doivent encore exister (sinon l'état a changé entre-temps). */
+async function commit(branche, changes, message, doitExister = []) {
+  exigerJeton();
+  for (let essai = 0; essai < 3; essai++) {
+    const ref = await gh(`${R()}/git/ref/heads/${branche}`);
+    const parent = ref.object.sha;
+    for (const p of doitExister) {
+      try { await gh(`${R()}/contents/${p.split('/').map(encodeURIComponent).join('/')}?ref=${parent}`); }
+      catch (e) { if (e.status === 404) throw new ErreurGH('Ce short a changé d’état entre-temps (publié ou retiré) : actualise la page.', 409); throw e; }
+    }
+    const pc = await gh(`${R()}/git/commits/${parent}`);
+    const tree = await gh(`${R()}/git/trees`, {method: 'POST', body: {base_tree: pc.tree.sha,
+      tree: changes.map(c => c.supprimer ? {path: c.path, mode: '100644', type: 'blob', sha: null}
+                                          : {path: c.path, mode: '100644', type: 'blob', content: c.content})}});
+    const nc = await gh(`${R()}/git/commits`, {method: 'POST', body: {message: message + '\n\nCentre de contrôle', tree: tree.sha, parents: [parent]}});
+    try { await gh(`${R()}/git/refs/heads/${branche}`, {method: 'PATCH', body: {sha: nc.sha, force: false}}); return nc.sha; }
+    catch (e) { if (e.status !== 422 || essai === 2) throw e; }
+  }
+}
+async function lancer(workflow, inputs = {}) {
+  exigerJeton();
+  await gh(`${R()}/actions/workflows/${workflow}/dispatches`, {method: 'POST', body: {ref: 'main', inputs}});
+}
+function exigerJeton() { if (!S.jeton) throw new ErreurGH('Action impossible en lecture seule : ajoute un jeton dans Réglages.', 0); }
+const json = o => JSON.stringify(o, null, 1) + '\n';
+
+// ------------------------------------------------------------------ chargement
+async function charger() {
+  const b = $('#btnActualiser'); b.innerHTML = '<span class="spin"></span>'; b.disabled = true;
+  S.erreur = null;
+  try {
+    const [tClips, cfgTxt] = await Promise.all([arbre('clips'), lireTexte('atelier', CONFIG)]);
+    S.cfg = JSON.parse(cfgTxt);
+    const par = d => tClips.filter(x => x.path.startsWith(d + '/') && x.path.endsWith('.json'))
+                          .sort((a, b) => b.path.localeCompare(a.path));
+    const trouve = p => tClips.find(x => x.path === p);
+    const charge = async (liste, n) => (await Promise.all(liste.slice(0, n).map(x =>
+      lireJSON('clips', x.path, x.sha, null).then(m => m && Object.assign(m, {_path: x.path}))))).filter(Boolean);
+    const lim = S.jeton ? 40 : 12;
+    const fp = trouve('publications.json'), ft = trouve('rapports/derniere-tournee.json'), fpub = trouve('rapports/derniere-publication.json');
+    [S.file, S.publies, S.rejetes, S.publications, S.tournee, S.publication] = await Promise.all([
+      charge(par('file'), 60), charge(par('publies'), lim), charge(par('rejetes'), lim),
+      fp ? lireJSON('clips', fp.path, fp.sha, []).then(x => Array.isArray(x) ? x : []) : [], ft ? lireJSON('clips', ft.path, ft.sha, null) : null,
+      fpub ? lireJSON('clips', fpub.path, fpub.sha, null) : null]);
+    S.nbPublies = par('publies').length; S.nbRejetes = par('rejetes').length;
+    try { S.runs = (await gh(`${R()}/actions/runs?per_page=25`)).workflow_runs; } catch (e) { S.runs = []; }
+    S.secrets = null;
+    if (S.jeton) { try { S.secrets = (await gh(`${R()}/actions/secrets`)).secrets.map(s => s.name); } catch (e) { S.secrets = null; } }
+  } catch (e) { S.erreur = e.message; toast(e.message, true); }
+  b.textContent = '↻'; b.disabled = false;
+  rendre();
+}
+
+// ------------------------------------------------------------------ rendu
+function rendre() {
+  const c = $('#etatConnexion');
+  if (S.erreur) c.className = 'chip bad', c.innerHTML = '<span class="dot"></span>Erreur';
+  else if (S.jeton) c.className = 'chip ok', c.innerHTML = '<span class="dot"></span>Connecté';
+  else c.className = 'chip warn', c.innerHTML = '<span class="dot"></span>Lecture seule';
+  $('#lienActions').href = `https://github.com/${S.depot}/actions`;
+  $('#lienRegie').href = REGIE;
+  rendreTdb(); rendreClips(); rendreReglages(); rendreJournal();
+  if ($('#longues').classList.contains('on')) chargerLongues();
+}
+
+function prochainCreneau() {
+  const pub = S.cfg?.publication; if (!pub?.creneaux?.length) return '—';
+  const p = Object.fromEntries(new Intl.DateTimeFormat('fr-FR', {timeZone: FUSEAU, hour: '2-digit', minute: '2-digit', hourCycle: 'h23'})
+    .formatToParts(new Date()).map(x => [x.type, x.value]));
+  const now = +p.hour * 60 + +p.minute;
+  const cr = [...pub.creneaux].sort();
+  const auj = S.publications.filter(x => x.jour === jourParis()).length;
+  const suiv = cr.find(c => { const [h, m] = c.split(':').map(Number); return h * 60 + m > now; });
+  if (suiv && auj < (pub.max_par_jour || 4)) return `aujourd’hui ${suiv}`;
+  return `demain ${cr[0]}`;
+}
+
+function alertes() {
+  const a = [];
+  if (S.erreur) a.push(['bad', '⚠', esc(S.erreur)]);
+  if (!S.jeton) a.push(['warn', '🔑', 'Lecture seule. Pour valider, publier ou changer les réglages, ajoute un jeton GitHub dans <a href="#" data-goto="reglages">Réglages</a>.']);
+  if (S.secrets) {
+    const manque = SECRETS.filter(([n]) => !S.secrets.includes(n)).map(([n]) => n);
+    if (manque.length) a.push(['bad', '⛔', `Secrets manquants : <b>${manque.map(esc).join(', ')}</b>. Sans eux, ${manque.some(n => n.startsWith('TWITCH')) ? 'aucun clip n’est repéré' : ''}${manque.length > 1 && manque.includes('UPLOAD_POST_API_KEY') && manque.some(n => n.startsWith('TWITCH')) ? ' et ' : ''}${manque.includes('UPLOAD_POST_API_KEY') ? 'rien n’est publié' : ''}. <a href="#" data-goto="reglages">Configurer</a>`]);
+  }
+  if (S.cfg) {
+    if (S.cfg.statut === 'pause') a.push(['warn', '⏸', 'Chaîne en pause : ni tournée ni publication.']);
+    if (!S.cfg.publication?.upload_post_user) a.push(['warn', '✎', 'Profil Upload-Post non renseigné : <a href="#" data-goto="reglages">Réglages → Publication</a>.']);
+  }
+  const bloques = S.file.filter(m => m.statut === 'bloquée').length;
+  if (bloques) a.push(['bad', '⛔', `${bloques} short(s) bloqué(s) après deux échecs de publication. <a href="#" data-goto="clips">Voir</a>`]);
+  const expire = S.file.filter(m => ageH(m) > EXPIRATION_H - 12 && m.statut !== 'bloquée').length;
+  if (expire) a.push(['info', '⏳', `${expire} short(s) expirent dans moins de 12 h s’ils ne sont pas publiés.`]);
+  return a.map(([t, i, m]) => `<div class="alert ${t}"><span>${i}</span><div>${m}</div></div>`).join('');
+}
+function ageH(m) { return (Date.now() - new Date(m.cree)) / 3600000; }
+
+function rendreTdb() {
+  $('#alertes').innerHTML = alertes();
+  const auj = S.publications.filter(x => x.jour === jourParis()).length;
+  const semaine = S.publications.filter(x => Date.now() - new Date(x.date) < 7 * 864e5).length;
+  const max = S.cfg?.publication?.max_par_jour ?? '—';
+  const st = [
+    [S.file.filter(m => m.statut === 'montée').length, 'À traiter'],
+    [S.file.filter(m => m.statut === 'validée').length, 'Validés, prêts'],
+    [`${auj}<small class="muted" style="font-size:14px"> / ${max}</small>`, 'Publiés aujourd’hui'],
+    [semaine, 'Publiés sur 7 jours'],
+    [S.nbRejetes ?? 0, 'Rejetés (total)'],
+  ];
+  $('#stats').innerHTML = st.map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('');
+  $$('#segStatut button').forEach(b => b.classList.toggle('on', (S.cfg?.statut || 'active') === b.dataset.v));
+  $$('#segMode button').forEach(b => b.classList.toggle('on', (S.cfg?.publication?.mode || 'manuel') === b.dataset.v));
+  $('#prochainCreneau').textContent = S.cfg?.statut === 'pause' ? 'en pause' : prochainCreneau();
+  const d = [];
+  if (S.tournee) d.push(['⟳', `<b>Tournée</b> · ${date(S.tournee.date)} — ${S.tournee.produits?.length || 0} short(s) monté(s)${S.tournee.echecs?.length ? `, ${S.tournee.echecs.length} échec(s)` : ''}`,
+    (S.tournee.notes || []).slice(0, 2).map(esc).join(' · ')]);
+  else d.push(['⟳', '<b>Tournée</b> · aucune tournée productive pour l’instant', 'Elle démarre dès que les secrets Twitch sont en place.']);
+  if (S.publication) d.push(['↑', `<b>Publication</b> · ${date(S.publication.date)} — ${S.publication.publie ? 'publié : ' + esc(titreDe(S.publication.publie)) : 'rien publié'}`, esc(S.publication.note || '')]);
+  else d.push(['↑', '<b>Publication</b> · aucune publication pour l’instant', '']);
+  const der = S.publications.at(-1);
+  if (der) d.push(['✓', `<b>Dernier short en ligne</b> · ${date(der.date)}`, esc(der.titre || der.id)]);
+  $('#dernieres').innerHTML = d.map(([i, t, s]) => `<li><span class="ico">${i}</span><div>${t}${s ? `<div class="small muted">${s}</div>` : ''}</div></li>`).join('');
+  $('#runsTdb').innerHTML = listeRuns(S.runs.filter(r => ['Clips', 'Publier'].includes(r.name)).slice(0, 6));
+}
+function titreDe(id) { return (S.publies.find(m => m.id === id) || {}).titre_youtube || id; }
+
+function listeRuns(runs) {
+  if (!runs.length) return '<li class="muted small">Aucune exécution lisible.</li>';
+  return runs.map(r => {
+    const enCours = r.status !== 'completed';
+    const cl = enCours ? 'info' : r.conclusion === 'success' ? 'ok' : r.conclusion === 'skipped' || r.conclusion === 'cancelled' ? '' : 'bad';
+    const lib = enCours ? 'en cours' : ({success: 'réussi', failure: 'échec', cancelled: 'annulé', skipped: 'sauté'}[r.conclusion] || r.conclusion);
+    const dec = r.event === 'workflow_dispatch' ? 'à la demande' : r.event === 'schedule' ? 'planifié' : r.event;
+    return `<li><span class="ico">${enCours ? '<span class="spin"></span>' : r.conclusion === 'success' ? '✓' : '✕'}</span>
+      <div style="flex:1"><b>${esc(r.name)}</b> <span class="chip ${cl}">${esc(lib)}</span><div class="small muted">${date(r.created_at)} · ${esc(dec)}</div></div>
+      <a class="small" href="${url(r.html_url)}" target="_blank" rel="noopener">détail ↗</a></li>`;
+  }).join('');
+}
+
+const LIB = {montée: ['À traiter', 'info'], validée: ['Validé', 'ok'], bloquée: ['Bloqué', 'bad'], publiée: ['Publié', 'acc'], rejetée: ['Rejeté', '']};
+function rendreClips() {
+  $$('#filtres button').forEach(b => b.classList.toggle('on', b.dataset.f === S.filtre));
+  const n = {atraiter: S.file.filter(m => m.statut !== 'validée').length, validee: S.file.filter(m => m.statut === 'validée').length,
+             publiee: S.nbPublies ?? S.publies.length, rejetee: S.nbRejetes ?? S.rejetes.length};
+  $$('#filtres button').forEach(b => { b.textContent = b.textContent.replace(/ \(\d+\)$/, '') + ` (${n[b.dataset.f] ?? 0})`; });
+  let l = S.filtre === 'atraiter' ? S.file.filter(m => m.statut !== 'validée')
+        : S.filtre === 'validee' ? S.file.filter(m => m.statut === 'validée')
+        : S.filtre === 'publiee' ? S.publies : S.rejetes;
+  if (S.filtre === 'atraiter' || S.filtre === 'validee') l = [...l].sort((a, b) => (b.clip?.score || 0) - (a.clip?.score || 0));
+  if (!l.length) {
+    const vide = {atraiter: S.cfg?.publication?.mode === 'auto' ? 'File vide. Les shorts montés apparaissent ici après chaque tournée (toutes les 3 h).' : 'Rien à valider pour l’instant.',
+      validee: 'Aucun short validé en attente.', publiee: 'Aucun short publié pour l’instant.', rejetee: 'Aucun short rejeté.'}[S.filtre];
+    $('#listeClips').innerHTML = `<div class="empty" style="grid-column:1/-1">${vide}</div>`; return;
+  }
+  $('#listeClips').innerHTML = l.map(carteClip).join('');
+}
+function carteClip(m) {
+  const c = m.clip || {};
+  const [lib, cl] = LIB[m.statut] || [m.statut, ''];
+  const enFile = m._path?.startsWith('file/');
+  const age = ageH(m);
+  const t = m.titre_youtube || '';
+  const id = esc(m.id);
+  let infos = `<div class="meta">
+      <a class="chip acc" href="https://www.twitch.tv/${encodeURIComponent(c.login || '')}" target="_blank" rel="noopener">twitch.tv/${esc(c.login)}</a>
+      <span class="chip">${(c.vues ?? 0).toLocaleString('fr-FR')} vues</span>
+      <span class="chip">${esc(m.montage?.duree ?? c.duree ?? '?')} s</span>
+      ${c.score != null ? `<span class="chip">score ${esc(Math.round(c.score))}</span>` : ''}
+      ${m.montage?.sous_titres ? '<span class="chip">sous-titres</span>' : ''}
+    </div>
+    <div class="small muted">Clip du ${date(c.cree)} · monté ${depuis(m.cree)}${enFile && age > EXPIRATION_H - 12 ? ' · <b style="color:var(--warn)">expire bientôt</b>' : ''}</div>`;
+  if (m.erreur_publication) infos += `<div class="alert bad small" style="margin:0"><span>✕</span><div>Échec de publication (HTTP ${esc(m.erreur_publication.http)}) : ${esc(JSON.stringify(m.erreur_publication.reponse).slice(0, 160))}</div></div>`;
+  if (m.publication) infos += `<div class="small">Publié le ${date(m.publication.date)} · ${esc((m.publication.plateformes || []).join(', '))}</div>`;
+  if (m.motif) infos += `<div class="small"><b>Motif :</b> ${esc(m.motif)}</div>`;
+  let edit = '', act = '';
+  if (enFile) {
+    edit = `<label class="f">Titre <span class="cnt" data-cnt="${id}">${t.length}/60</span></label>
+      <input type="text" maxlength="100" data-titre="${id}" value="${esc(t)}">
+      <details><summary>Description</summary><textarea data-desc="${id}">${esc(m.description || '')}</textarea></details>`;
+    act = `<div class="actions">
+      ${m.statut === 'bloquée' ? `<button class="btn sm" data-a="debloquer" data-id="${id}">Débloquer</button>` :
+        m.statut === 'validée' ? `<button class="btn sm" data-a="devalider" data-id="${id}">Retirer la validation</button>` :
+        `<button class="btn sm ok" data-a="valider" data-id="${id}">✓ Valider</button>`}
+      <button class="btn sm pri" data-a="publier" data-id="${id}">↑ Publier maintenant</button>
+      <button class="btn sm" data-a="enregistrer" data-id="${id}" hidden>Enregistrer</button>
+      <button class="btn sm bad" data-a="rejeter" data-id="${id}">Rejeter</button></div>`;
+  } else {
+    edit = `<div><b>${esc(t)}</b></div>`;
+    act = `<div class="actions"><a class="btn sm" href="${url(c.url)}" target="_blank" rel="noopener">Clip original ↗</a>
+      ${m.statut === 'rejetée' && age < EXPIRATION_H ? `<button class="btn sm" data-a="remettre" data-id="${id}">Remettre en file</button>` : ''}</div>`;
+  }
+  const media = m.url_video && (enFile || m.statut === 'publiée')
+    ? `<video src="${url(m.url_video)}" ${m.url_couverture ? `poster="${url(m.url_couverture)}"` : ''} controls playsinline preload="none"></video>`
+    : `<div class="empty" style="color:#999">Aperçu indisponible</div>`;
+  return `<article class="clip" data-carte="${id}"><div class="media">${media}<span class="badge chip ${cl}">${esc(lib)}</span></div>
+    <div class="body"><div class="small muted"><b style="color:var(--text)">${esc(c.streamer)}</b> · « ${esc(c.titre_clip)} »</div>${infos}${edit}${act}</div></article>`;
+}
+
+// ------------------------------------------------------------------ actions clips
+function trouver(id) { return S.file.find(m => m.id === id) || S.rejetes.find(m => m.id === id) || S.publies.find(m => m.id === id); }
+function editions(m) {
+  const ti = document.querySelector(`[data-titre="${CSS.escape(m.id)}"]`), de = document.querySelector(`[data-desc="${CSS.escape(m.id)}"]`);
+  const o = {};
+  if (ti && ti.value.trim() !== (m.titre_youtube || '')) o.titre_youtube = ti.value.trim();
+  if (de && de.value !== (m.description || '')) o.description = de.value;
+  return o;
+}
+const propre = m => { const o = {...m}; delete o._path; return o; };
+async function action(a, id, bouton) {
+  const m = trouver(id); if (!m) return;
+  const old = bouton.innerHTML; bouton.disabled = true; bouton.innerHTML = '<span class="spin"></span>';
+  try {
+    const ed = editions(m);
+    if (ed.titre_youtube !== undefined && !ed.titre_youtube) throw new ErreurGH('Le titre ne peut pas être vide.', 0);
+    const ici = `file/${m.id}.json`;
+    if (a === 'valider' || a === 'devalider' || a === 'enregistrer' || a === 'debloquer') {
+      const n = {...propre(m), ...ed};
+      if (a === 'valider') Object.assign(n, {statut: 'validée', valide: new Date().toISOString()});
+      if (a === 'devalider') { n.statut = 'montée'; delete n.valide; }
+      if (a === 'debloquer') { n.statut = 'montée'; n.echecs = 0; delete n.erreur_publication; }
+      await commit('clips', [{path: ici, content: json(n)}], `${a} ${m.id}`, [ici]);
+      Object.assign(m, n);
+      toast({valider: 'Validé', devalider: 'Validation retirée', enregistrer: 'Enregistré', debloquer: 'Débloqué'}[a]);
+    } else if (a === 'publier') {
+      const pub = S.cfg?.publication || {};
+      if (!pub.upload_post_user) throw new ErreurGH('Renseigne d’abord le profil Upload-Post (Réglages → Publication).', 0);
+      if (S.secrets && !S.secrets.includes('UPLOAD_POST_API_KEY')) throw new ErreurGH('Secret UPLOAD_POST_API_KEY absent : la publication ne partira pas.', 0);
+      if (!confirm(`Publier maintenant sur ${(pub.plateformes || ['youtube']).join(' + ')} ?\n\n« ${ed.titre_youtube ?? m.titre_youtube} »`)) { bouton.disabled = false; bouton.innerHTML = old; return; }
+      if (Object.keys(ed).length) { await commit('clips', [{path: ici, content: json({...propre(m), ...ed})}], `titre ${m.id}`, [ici]); Object.assign(m, ed); }
+      await lancer('publier.yml', {id: m.id});
+      toast('Publication lancée : en ligne dans 1 à 3 minutes.');
+      setTimeout(charger, 20000);
+    } else if (a === 'rejeter') {
+      const motif = prompt('Motif du rejet (gardé dans l’historique) :', 'hors sujet');
+      if (motif === null) { bouton.disabled = false; bouton.innerHTML = old; return; }
+      const n = {...propre(m), ...ed, statut: 'rejetée', motif: motif || 'rejeté au contrôle', rejete: new Date().toISOString()};
+      await commit('clips', [{path: `rejetes/${m.id}.json`, content: json(n)}, {path: ici, supprimer: true}], `rejet ${m.id}`, [ici]);
+      S.file = S.file.filter(x => x.id !== m.id); S.rejetes.unshift({...n, _path: `rejetes/${m.id}.json`}); S.nbRejetes++;
+      toast('Rejeté');
+    } else if (a === 'remettre') {
+      const la = `rejetes/${m.id}.json`;
+      const n = {...propre(m), statut: 'montée'}; delete n.motif; delete n.rejete;
+      await commit('clips', [{path: ici, content: json(n)}, {path: la, supprimer: true}], `remise en file ${m.id}`, [la]);
+      S.rejetes = S.rejetes.filter(x => x.id !== m.id); S.file.push({...n, _path: ici}); S.nbRejetes--;
+      toast('Remis en file');
+    }
+    rendreClips(); rendreTdb();
+  } catch (e) { toast(e.message, true); bouton.disabled = false; bouton.innerHTML = old; }
+}
+
+// ------------------------------------------------------------------ réglages
+function champ(id, lib, val, type = 'text', aide = '') {
+  return `<div><label class="f" for="${id}">${lib}</label><input type="${type}" id="${id}" value="${esc(val ?? '')}">${aide ? `<div class="small muted">${aide}</div>` : ''}</div>`;
+}
+function rendreReglages() {
+  $('#inRepo').value = S.depot; $('#inJeton').value = S.jeton; $('#inMemo').checked = !!stock.get('regie.jeton');
+  const lien = n => `https://github.com/${S.depot}/settings/secrets/actions/new?name=${encodeURIComponent(n)}`;
+  $('#secrets').innerHTML = SECRETS.map(([n, d, src]) => {
+    const etat = S.secrets == null ? ['inconnu', ''] : S.secrets.includes(n) ? ['présent', 'ok'] : ['absent', 'bad'];
+    return `<li><span class="ico">${etat[1] === 'ok' ? '✓' : etat[1] === 'bad' ? '✕' : '?'}</span><div style="flex:1"><code>${n}</code> <span class="chip ${etat[1]}">${etat[0]}</span>
+      <div class="small muted">${esc(d)} · <a href="${src}" target="_blank" rel="noopener">obtenir ↗</a></div></div>
+      <a class="btn sm" href="${lien(n)}" target="_blank" rel="noopener">${etat[0] === 'présent' ? 'Remplacer' : 'Ajouter'} ↗</a></li>`;
+  }).join('');
+  const c = S.cfg; if (!c) return;
+  const r = c.reperage || {}, p = c.publication || {}, k = c.packaging || {};
+  $('#formConfig').classList.remove('muted', 'small');
+  $('#formConfig').innerHTML = `
+    <h3 style="margin-top:4px">Publication</h3>
+    <div class="form2">
+      <div><label class="f" for="cMode">Mode</label><select id="cMode"><option value="auto">Automatique</option><option value="manuel">Après validation</option></select></div>
+      ${champ('cUser', 'Profil Upload-Post', p.upload_post_user, 'text', 'Nom du profil créé dans Upload-Post (Manage Users).')}
+      ${champ('cCreneaux', 'Créneaux (heure de Paris)', (p.creneaux || []).join(', '), 'text', 'Ex. 12:30, 15:30, 18:00, 21:00')}
+      ${champ('cMaxJour', 'Shorts par jour (max.)', p.max_par_jour, 'number')}
+      <div><label class="f">Plateformes</label><div class="row" style="padding-top:6px">
+        <label class="row"><input type="checkbox" id="cYt" ${(p.plateformes || []).includes('youtube') ? 'checked' : ''}> YouTube Shorts</label>
+        <label class="row"><input type="checkbox" id="cIg" ${(p.plateformes || []).includes('instagram') ? 'checked' : ''}> Instagram Reels</label></div></div>
+    </div>
+    <h3 style="margin-top:18px">Repérage des clips</h3>
+    <div class="form2">
+      <div><label class="f" for="cStatut">Chaîne</label><select id="cStatut"><option value="active">Active</option><option value="pause">En pause</option></select></div>
+      ${champ('cLangues', 'Langues', (r.langues || []).join(', '), 'text', 'Codes Twitch, ex. fr')}
+      ${champ('cVues', 'Vues minimum du clip', r.vues_min, 'number')}
+      ${champ('cDmin', 'Durée min. (s)', r.duree_min, 'number')}
+      ${champ('cDmax', 'Durée max. (s)', r.duree_max, 'number')}
+      ${champ('cFen', 'Fenêtre de repérage (h)', r.fenetre_heures, 'number')}
+      ${champ('cParT', 'Shorts par tournée', r.max_par_tournee, 'number')}
+      ${champ('cParS', 'Max. par streamer et tournée', r.max_par_streamer, 'number')}
+      ${champ('cFile', 'Taille max. de la file', r.file_max, 'number')}
+    </div>
+    <label class="f" for="cMots">Mots interdits dans le titre du clip (séparés par des virgules)</label><input type="text" id="cMots" value="${esc((r.mots_interdits || []).join(', '))}">
+    <label class="f" for="cExclus">Streamers exclus — retrait demandé (un login Twitch par ligne)</label><textarea id="cExclus">${esc((c.streamers_exclus || []).join('\n'))}</textarea>
+    <h3 style="margin-top:18px">Habillage</h3>
+    <div class="form2">
+      ${champ('cHash', 'Hashtags', (k.hashtags || []).join(' '))}
+      ${champ('cTags', 'Tags YouTube (virgules)', (k.tags || []).join(', '))}
+    </div>
+    <details style="margin-top:12px"><summary>Zones de facecam par streamer (avancé)</summary>
+      <p class="small muted">Liste JSON : [{"login": "nom", "facecam": [x, y, largeur, hauteur]}] en fractions de l’image. Sans zone, le jeu est simplement zoomé.</p>
+      <textarea id="cStreamers" style="font-family:ui-monospace,monospace;font-size:12.5px">${esc(JSON.stringify(c.streamers || [], null, 1))}</textarea></details>
+    <div class="row" style="margin-top:16px"><button class="btn pri" id="btnSauverCfg">Enregistrer les réglages</button><span class="small muted">Effet à la prochaine tournée / publication.</span></div>`;
+  $('#cMode').value = p.mode || 'manuel'; $('#cStatut').value = c.statut || 'active';
+  $('#btnSauverCfg').onclick = e => sauverConfig(e.currentTarget);
+}
+const liste = (s, sep = /\s*,\s*/) => s.split(sep).map(x => x.trim()).filter(Boolean);
+const nombre = (id, d) => { const v = parseInt($(id).value, 10); return Number.isFinite(v) ? v : d; };
+async function sauverConfig(btn) {
+  const c = structuredClone(S.cfg);
+  try {
+    const cr = liste($('#cCreneaux').value);
+    if (cr.some(x => !/^([01]\d|2[0-3]):[0-5]\d$/.test(x))) throw new ErreurGH('Créneaux au format HH:MM, séparés par des virgules.', 0);
+    const plat = [$('#cYt').checked && 'youtube', $('#cIg').checked && 'instagram'].filter(Boolean);
+    if (!plat.length) throw new ErreurGH('Choisis au moins une plateforme.', 0);
+    let streamers; try { streamers = JSON.parse($('#cStreamers').value || '[]'); if (!Array.isArray(streamers)) throw 0; }
+    catch (e) { throw new ErreurGH('Zones de facecam : JSON invalide.', 0); }
+    c.statut = $('#cStatut').value;
+    c.publication = {...c.publication, mode: $('#cMode').value, upload_post_user: $('#cUser').value.trim(), creneaux: cr.sort(),
+                     max_par_jour: nombre('#cMaxJour', 4), plateformes: plat};
+    Object.assign(c.reperage, {langues: liste($('#cLangues').value), vues_min: nombre('#cVues', 300), duree_min: nombre('#cDmin', 12),
+      duree_max: nombre('#cDmax', 60), fenetre_heures: nombre('#cFen', 24), max_par_tournee: nombre('#cParT', 3),
+      max_par_streamer: nombre('#cParS', 2), file_max: nombre('#cFile', 8), mots_interdits: liste($('#cMots').value)});
+    c.streamers_exclus = liste($('#cExclus').value, /\s*[\n,]\s*/).map(x => x.toLowerCase().replace(/^.*twitch\.tv\//, ''));
+    c.streamers = streamers;
+    c.packaging = {...c.packaging, hashtags: liste($('#cHash').value, /\s+/), tags: liste($('#cTags').value)};
+    await sauverCfg(c, 'réglages de la chaîne de clips', btn);
+  } catch (e) { toast(e.message, true); }
+}
+async function sauverCfg(c, msg, btn) {
+  const old = btn?.innerHTML; if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spin"></span>'; }
+  try { await commit('atelier', [{path: CONFIG, content: json(c)}], 'Clips : ' + msg); S.cfg = c; toast('Réglages enregistrés'); rendreTdb(); }
+  catch (e) { toast(e.message, true); }
+  finally { if (btn) { btn.disabled = false; btn.innerHTML = old; } }
+}
+
+// ------------------------------------------------------------------ vidéos longues
+async function chargerLongues() {
+  if (S.longuesChargees) return; S.longuesChargees = true;
+  try {
+    const t = await arbre('atelier');
+    const prods = t.filter(x => /^productions\/[^/]+\.json$/.test(x.path)).sort((a, b) => b.path.localeCompare(a.path));
+    const specs = await Promise.all(prods.slice(0, S.jeton ? 30 : 10).map(x => lireJSON('atelier', x.path, x.sha, null).then(s => [x, s])));
+    $('#productions').innerHTML = specs.length ? `<table><thead><tr><th>Vidéo</th><th>Titre</th><th>Scènes</th></tr></thead><tbody>${specs.map(([x, s]) =>
+      `<tr><td><a href="https://github.com/${S.depot}/blob/atelier/${encodeURI(x.path)}" target="_blank" rel="noopener"><code>${esc(s?.id || x.path.split('/').pop())}</code></a></td>
+       <td>${esc(s?.titre_youtube || s?.titre || '—')}<div class="small muted">${esc(s?.voix_studio?.voix || '')}</div></td><td>${s?.scenes?.length ?? '—'}</td></tr>`).join('')}</tbody></table>`
+      : 'Aucune spécification.';
+  } catch (e) { $('#productions').textContent = e.message; S.longuesChargees = false; }
+  try {
+    const rel = (await gh(`${R()}/releases?per_page=40`)).filter(r => !r.tag_name.startsWith('clips-'));
+    $('#releases').innerHTML = rel.length ? `<ul class="list">${rel.map(r => `<li><span class="ico">▭</span><div style="flex:1"><b>${esc(r.name || r.tag_name)}</b>
+      <div class="small muted">${date(r.created_at)}</div><div class="row small">${r.assets.map(a => `<a href="${url(a.browser_download_url)}" target="_blank" rel="noopener">${esc(a.name)}</a>`).join(' · ')}</div></div></li>`).join('')}</ul>`
+      : 'Aucun fichier en attente sur le quai.';
+  } catch (e) { $('#releases').textContent = e.message; }
+}
+
+// ------------------------------------------------------------------ journal et exports
+async function rendreJournal() {
+  $('#runsTous').innerHTML = listeRuns(S.runs.slice(0, 20));
+  try {
+    const cs = await gh(`${R()}/commits?sha=clips&per_page=20`);
+    $('#commitsClips').innerHTML = cs.map(c => `<li><span class="ico">•</span><div style="flex:1">${esc(c.commit.message.split('\n')[0])}
+      <div class="small muted">${date(c.commit.author.date)} · ${esc(c.commit.author.name)}</div></div>
+      <a class="small" href="${url(c.html_url)}" target="_blank" rel="noopener">↗</a></li>`).join('');
+  } catch (e) { $('#commitsClips').innerHTML = `<li class="small muted">${esc(e.message)}</li>`; }
+}
+function telecharger(nom, texte, type) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([texte], {type})); a.download = nom; document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function csv(lignes) { return lignes.map(l => l.map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(';')).join('\r\n'); }
+
+// ------------------------------------------------------------------ événements
+document.addEventListener('click', e => {
+  const g = e.target.closest('[data-goto]'); if (g) { e.preventDefault(); ouvrir(g.dataset.goto); return; }
+  const b = e.target.closest('[data-a]'); if (b) { action(b.dataset.a, b.dataset.id, b); }
+});
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.dataset.titre !== undefined || t.dataset.desc !== undefined) {
+    const id = t.dataset.titre ?? t.dataset.desc;
+    const carte = document.querySelector(`[data-carte="${CSS.escape(id)}"]`);
+    const m = trouver(id); const ed = m ? editions(m) : {};
+    carte.querySelector('[data-a="enregistrer"]').hidden = !Object.keys(ed).length;
+    if (t.dataset.titre !== undefined) { const c = carte.querySelector('[data-cnt]'); c.textContent = `${t.value.length}/60`; c.classList.toggle('over', t.value.length > 60); }
+  }
+});
+function ouvrir(t) {
+  $$('#onglets button').forEach(b => b.classList.toggle('on', b.dataset.t === t));
+  $$('main section').forEach(s => s.classList.toggle('on', s.id === t));
+  if (t === 'longues') chargerLongues();
+  try { history.replaceState(null, '', '#' + t); } catch (e) {}
+  window.scrollTo(0, 0);
+}
+$$('#onglets button').forEach(b => b.onclick = () => ouvrir(b.dataset.t));
+$$('#filtres button').forEach(b => b.onclick = () => { S.filtre = b.dataset.f; rendreClips(); });
+$('#btnActualiser').onclick = () => { S.longuesChargees = false; charger(); };
+const tournee = async btn => {
+  const old = btn.innerHTML; btn.disabled = true; btn.innerHTML = '<span class="spin"></span>';
+  try {
+    if (S.cfg?.statut === 'pause') throw new ErreurGH('Chaîne en pause : réactive-la d’abord.', 0);
+    await lancer('clips.yml', {heures: String(S.cfg?.reperage?.fenetre_heures || 24), max: String(S.cfg?.reperage?.max_par_tournee || 3)});
+    toast('Tournée lancée : les shorts arrivent dans la file d’ici 5 à 15 minutes.'); setTimeout(charger, 15000);
+  } catch (e) { toast(e.message, true); }
+  btn.disabled = false; btn.innerHTML = old;
+};
+$('#btnTournee').onclick = e => tournee(e.currentTarget);
+$('#btnTournee2').onclick = e => tournee(e.currentTarget);
+$$('#segStatut button').forEach(b => b.onclick = () => {
+  if (!S.cfg || S.cfg.statut === b.dataset.v) return;
+  sauverCfg({...S.cfg, statut: b.dataset.v}, b.dataset.v === 'pause' ? 'mise en pause' : 'reprise', b);
+});
+$$('#segMode button').forEach(b => b.onclick = () => {
+  if (!S.cfg || S.cfg.publication?.mode === b.dataset.v) return;
+  sauverCfg({...S.cfg, publication: {...S.cfg.publication, mode: b.dataset.v}}, 'publication ' + (b.dataset.v === 'auto' ? 'automatique' : 'après validation'), b);
+});
+$('#btnConnexion').onclick = () => {
+  const d = $('#inRepo').value.trim().replace(/^https:\/\/github\.com\//, '').replace(/\/$/, '');
+  if (!/^[\w.-]+\/[\w.-]+$/.test(d)) return toast('Dépôt au format propriétaire/nom', true);
+  S.depot = d; S.jeton = $('#inJeton').value.trim(); S.blobs.clear(); S.longuesChargees = false;
+  stock.set('regie.depot', d); stock.set('regie.jeton', $('#inMemo').checked && S.jeton ? S.jeton : null);
+  try { sessionStorage.setItem('regie.jeton', S.jeton); } catch (e) {}
+  toast('Connexion enregistrée'); charger();
+};
+$('#btnOublier').onclick = () => { S.jeton = ''; stock.set('regie.jeton', null); try { sessionStorage.removeItem('regie.jeton'); } catch (e) {} toast('Jeton oublié'); charger(); };
+$('#expPub').onclick = () => telecharger(`publications-${jourParis()}.csv`, '﻿' + csv([['date', 'créneau', 'id', 'streamer', 'titre', 'request_id'],
+  ...S.publications.map(p => [p.date, p.creneau, p.id, p.login, p.titre, p.request_id])]), 'text/csv');
+$('#expConfig').onclick = () => S.cfg && telecharger('gta6-clips.json', json(S.cfg), 'application/json');
+$('#expPage').onclick = async () => {
+  // la page source telle que publiée (sans données ni jeton) ; à défaut, la page courante
+  let src = null;
+  try { const r = await fetch(location.href.split('#')[0], {cache: 'no-store'}); if (r.ok) src = await r.text(); } catch (e) {}
+  telecharger('centre-de-controle.html', src || '<!DOCTYPE html>\n' + document.documentElement.outerHTML, 'text/html');
+};
+
+// ------------------------------------------------------------------ démarrage
+S.depot = stock.get('regie.depot') || DEPOT_DEFAUT;
+S.jeton = stock.get('regie.jeton') || (() => { try { return sessionStorage.getItem('regie.jeton') || ''; } catch (e) { return ''; } })();
+const h = location.hash.slice(1); if (['tdb', 'clips', 'longues', 'reglages', 'journal'].includes(h)) ouvrir(h);
+charger();
+setInterval(() => { if (document.visibilityState === 'visible') charger(); }, 120000);
+</script>
+</body>
+</html>

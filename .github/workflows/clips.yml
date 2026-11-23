@@ -67,8 +67,8 @@ jobs:
               gh release create "$TAG" -R "${{ github.repository }}" --target clips --title "Shorts $TAG" --notes "Shorts en attente de programmation."
             gh release upload "$TAG" "${FICHIERS[@]}" -R "${{ github.repository }}" --clobber
           fi
-          # ménage : releases de clips de plus de 4 jours (Metricool a importé les fichiers depuis longtemps)
-          LIMITE="clips-$(date -u -d '4 days ago' +%Y%m%d)"
+          # ménage : releases de clips de plus de 5 jours (non publiés à temps : la publication les a déjà écartés)
+          LIMITE="clips-$(date -u -d '5 days ago' +%Y%m%d)"
           gh release list -R "${{ github.repository }}" --limit 100 --json tagName -q '.[].tagName' | grep '^clips-' | while read -r T; do
             if [[ "$T" < "$LIMITE" ]]; then gh release delete "$T" -R "${{ github.repository }}" --yes --cleanup-tag || true; fi
           done
