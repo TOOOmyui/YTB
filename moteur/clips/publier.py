@@ -1,25 +1,41 @@
-"""Agent Publication (shorts) — publie les shorts de la file sur YouTube (et Instagram) via Upload-Post.
+"""Agent Publication (shorts) — publie les shorts de la file.
 
-Lancé toutes les heures par le workflow « Publier » (branche main), ou à la demande depuis le centre de contrôle
-avec --id (publication immédiate d'un short précis, même hors créneau et en mode manuel).
+Fournisseurs (réglage `publication.fournisseur`) :
+  - « youtube_api » (défaut) : envoi direct par l'API YouTube Data v3, gratuit. Identifiants dans l'environnement :
+    YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN. Tant que l'audit YouTube n'est pas accordé
+    (`publication.youtube_verifie` faux), YouTube verrouille en privé toute vidéo envoyée par l'API : la publication
+    automatique est alors suspendue (publication manuelle depuis le centre de contrôle) ; seul l'envoi de test
+    (--test, en privé) est permis.
+  - « upload_post » : service Upload-Post (UPLOAD_POST_API_KEY, profil `upload_post_user`).
+  - « manuel » : aucune publication automatique.
 
-Règles (réglages `publication` de la chaîne) :
-  - statut de la chaîne « active », sinon rien ;
-  - mode « auto » : publie le meilleur short de la file au créneau ; mode « manuel » : seulement les shorts validés ;
-  - un short par créneau, `max_par_jour` au plus, jamais deux fois de suite le même streamer s'il y a un autre choix ;
-  - un short dont le fichier a expiré (release nettoyée) passe dans rejetes/.
+Lancé toutes les heures par le workflow « Publier » (branche main), ou à la demande avec --id (publication immédiate
+d'un short précis, même hors créneau et en mode manuel).
 
-Usage : python3 publier.py config.json etat_dir [--id ID] [--essai]
+Règles : chaîne « active » ; mode « auto » = meilleur short de la file au créneau, mode « manuel » = shorts validés ;
+un short par créneau, `max_par_jour` au plus, jamais deux fois de suite le même streamer s'il y a un autre choix ;
+un short dont le fichier a expiré (release nettoyée) passe dans rejetes/.
+
+Usage : python3 publier.py config.json etat_dir [--id ID] [--test] [--essai]
 Codes : 0 = terminé (y compris « rien à faire ») ; 2 = échec de publication.
 """
-import argparse, datetime as dt, json, os, sys, urllib.error, urllib.request, uuid
+import argparse, datetime as dt, json, os, re, sys, urllib.error, urllib.parse, urllib.request, uuid
 from zoneinfo import ZoneInfo
 
-API = 'https://api.upload-post.com/api/upload'
+UPLOAD_POST = 'https://api.upload-post.com/api/upload'
+JETON_GOOGLE = 'https://oauth2.googleapis.com/token'
+ENVOI_YT = 'https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status'
 EXPIRATION_H = 96  # les releases de shorts sont supprimées après 5 jours : marge d'un jour
 UTC = dt.timezone.utc
 
 
+class ErreurEnvoi(RuntimeError):
+    def __init__(self, http, reponse):
+        super().__init__(f'HTTP {http}')
+        self.http, self.reponse = http, reponse
+
+
+# ------------------------------------------------------------------ fichiers d'état
 def lire(p, defaut):
     try:
         return json.load(open(p, encoding='utf-8'))
@@ -60,6 +76,7 @@ def age_h(man, maintenant):
     return (maintenant - cree).total_seconds() / 3600
 
 
+# ------------------------------------------------------------------ choix du short
 def creneau_courant(pub, maintenant):
     """Renvoie (jour, 'HH:MM') du créneau ouvert (dans l'heure qui suit son début), sinon None."""
     loc = maintenant.astimezone(ZoneInfo(pub.get('fuseau', 'Europe/Paris')))
@@ -97,101 +114,183 @@ def choisir(cfg, etat, maintenant, journal):
     return m, None
 
 
-def champs_post(cfg, man):
+# ------------------------------------------------------------------ HTTP
+def http(url, data=None, entetes=None, methode=None, delai=600):
+    """Requête HTTP → (statut, entêtes, corps). Ne lève pas sur 4xx/5xx."""
+    req = urllib.request.Request(url, data=data, headers=entetes or {}, method=methode)
+    try:
+        with urllib.request.urlopen(req, timeout=delai) as r:
+            return r.status, dict(r.headers), r.read()
+    except urllib.error.HTTPError as e:
+        return e.code, dict(e.headers or {}), e.read()
+
+
+def jsonou(corps):
+    try:
+        return json.loads(corps.decode('utf-8') or '{}')
+    except ValueError:
+        return {'erreur': corps.decode('utf-8', 'replace')[:400]}
+
+
+def propre_yt(t):
+    """YouTube refuse < et > dans le titre et la description."""
+    return re.sub(r'[<>]', '', t or '')
+
+
+# ------------------------------------------------------------------ fournisseur : API YouTube
+def jeton_youtube(env, h=http):
+    corps = urllib.parse.urlencode({'client_id': env['YT_CLIENT_ID'], 'client_secret': env['YT_CLIENT_SECRET'],
+                                    'refresh_token': env['YT_REFRESH_TOKEN'], 'grant_type': 'refresh_token'}).encode()
+    st, _, c = h(JETON_GOOGLE, corps, {'Content-Type': 'application/x-www-form-urlencoded'}, 'POST', 60)
+    rep = jsonou(c)
+    if st != 200 or 'access_token' not in rep:
+        raise ErreurEnvoi(st, {'etape': 'jeton Google', **rep})
+    return rep['access_token']
+
+
+def publier_youtube(cfg, man, env, prive=False, h=http):
+    jeton = jeton_youtube(env, h)
+    # 1. récupérer le fichier monté (release GitHub)
+    st, _, video = h(man['url_video'], None, {}, 'GET', 300)
+    if st != 200 or len(video) < 10000:
+        raise ErreurEnvoi(st, {'etape': 'téléchargement du short', 'url': man['url_video']})
+    titre = propre_yt(man.get('titre_youtube') or man['clip']['titre_clip'])[:100]
+    meta = {'snippet': {'title': titre, 'description': propre_yt(man.get('description', ''))[:4900],
+                        'tags': [t for t in man.get('tags', []) if t][:15], 'categoryId': '20',
+                        'defaultLanguage': 'fr', 'defaultAudioLanguage': 'fr'},
+            'status': {'privacyStatus': 'private' if prive else 'public', 'selfDeclaredMadeForKids': False,
+                       'containsSyntheticMedia': False, 'embeddable': True}}
+    # 2. ouvrir une session d'envoi reprenable
+    st, ent, c = h(ENVOI_YT, json.dumps(meta).encode(), {
+        'Authorization': 'Bearer ' + jeton, 'Content-Type': 'application/json; charset=UTF-8',
+        'X-Upload-Content-Type': 'video/mp4', 'X-Upload-Content-Length': str(len(video))}, 'POST', 60)
+    lieu = {k.lower(): v for k, v in ent.items()}.get('location')
+    if st != 200 or not lieu:
+        raise ErreurEnvoi(st, {'etape': 'ouverture de l’envoi', **jsonou(c)})
+    # 3. envoyer la vidéo (deux reprises en cas de coupure)
+    for essai in range(3):
+        st, _, c = h(lieu, video, {'Authorization': 'Bearer ' + jeton, 'Content-Type': 'video/mp4'}, 'PUT', 900)
+        if st in (200, 201):
+            rep = jsonou(c)
+            return {'video_id': rep.get('id'), 'url': f"https://youtube.com/shorts/{rep.get('id')}",
+                    'statut_youtube': rep.get('status', {}), 'prive': prive}
+        if st not in (500, 502, 503, 504):
+            break
+    raise ErreurEnvoi(st, {'etape': 'envoi de la vidéo', **jsonou(c)})
+
+
+# ------------------------------------------------------------------ fournisseur : Upload-Post
+def multipart(champs):
+    borne = 'regie' + uuid.uuid4().hex
+    morceaux = [f'--{borne}\r\nContent-Disposition: form-data; name="{n}"\r\n\r\n{v}\r\n'.encode('utf-8') for n, v in champs]
+    morceaux.append(f'--{borne}--\r\n'.encode())
+    return b''.join(morceaux), f'multipart/form-data; boundary={borne}'
+
+
+def champs_upload_post(cfg, man):
     pub = cfg.get('publication', {})
     plateformes = pub.get('plateformes') or ['youtube']
     titre = (man.get('titre_youtube') or man['clip']['titre_clip'])[:100]
-    desc = man.get('description', '')
-    tags = [t for t in man.get('tags', []) if t][:15]
     f = [('user', pub['upload_post_user']), ('video', man['url_video']), ('title', titre),
-         ('description', desc), ('categoryId', '20'), ('privacyStatus', 'public'),
+         ('description', man.get('description', '')), ('categoryId', '20'), ('privacyStatus', 'public'),
          ('selfDeclaredMadeForKids', 'false'), ('containsSyntheticMedia', 'false')]
     f += [('platform[]', p) for p in plateformes]
-    f += [('tags[]', t) for t in tags]
+    f += [('tags[]', t) for t in man.get('tags', []) if t][:15]
     if 'instagram' in plateformes:
-        # Légende Instagram : titre + crédit + hashtags (les liens ne sont pas cliquables sur Instagram)
         c = man['clip']
         f += [('instagram_title', f"{titre}\n\nCrédit : {c['streamer']} — twitch.tv/{c['login']}\n\n{' '.join(man.get('hashtags', []))}"[:2100]),
               ('media_type', 'REELS'), ('share_to_feed', 'true')]
     return f
 
 
-def multipart(champs):
-    borne = 'regie' + uuid.uuid4().hex
-    morceaux = []
-    for nom, val in champs:
-        morceaux.append(f'--{borne}\r\nContent-Disposition: form-data; name="{nom}"\r\n\r\n{val}\r\n'.encode('utf-8'))
-    morceaux.append(f'--{borne}--\r\n'.encode())
-    return b''.join(morceaux), f'multipart/form-data; boundary={borne}'
+def publier_upload_post(cfg, man, env, prive=False, h=http):
+    corps, ctype = multipart(champs_upload_post(cfg, man))
+    st, _, c = h(UPLOAD_POST, corps, {'Authorization': 'Apikey ' + env['UPLOAD_POST_API_KEY'], 'Content-Type': ctype,
+                                      'Idempotency-Key': man['id']}, 'POST', 900)
+    rep = jsonou(c)
+    if not (200 <= st < 300) or rep.get('success') is False:
+        raise ErreurEnvoi(st, rep)
+    return {'request_id': rep.get('request_id'), 'reponse': rep}
 
 
-def envoyer(champs, cle, cle_idem):
-    corps, ctype = multipart(champs)
-    req = urllib.request.Request(API, data=corps, method='POST', headers={
-        'Authorization': 'Apikey ' + cle, 'Content-Type': ctype, 'Idempotency-Key': cle_idem})
-    try:
-        with urllib.request.urlopen(req, timeout=900) as r:
-            return r.status, json.loads(r.read().decode('utf-8') or '{}')
-    except urllib.error.HTTPError as e:
-        txt = e.read().decode('utf-8', 'replace')
-        try:
-            return e.code, json.loads(txt)
-        except ValueError:
-            return e.code, {'erreur': txt[:400]}
+FOURNISSEURS = {
+    'youtube_api': (publier_youtube, ('YT_CLIENT_ID', 'YT_CLIENT_SECRET', 'YT_REFRESH_TOKEN'), ['youtube']),
+    'upload_post': (publier_upload_post, ('UPLOAD_POST_API_KEY',), None),
+}
 
 
-def publier(cfg, etat, id_force=None, cle=None, essai=False, maintenant=None, envoi=envoyer):
+# ------------------------------------------------------------------ tournée de publication
+def publier(cfg, etat, id_force=None, env=None, essai=False, test=False, maintenant=None, h=http):
+    env = os.environ if env is None else env
     maintenant = maintenant or dt.datetime.now(UTC)
     jp = os.path.join(etat, 'publications.json')
     journal = lire(jp, [])
     bilan = {'date': maintenant.isoformat(timespec='seconds'), 'publie': None, 'expires': [], 'note': None}
+    pub = cfg.get('publication', {})
+    fourn = pub.get('fournisseur', 'youtube_api')
 
-    # ménage : fichiers expirés
-    for m in file_attente(etat):
+    for m in file_attente(etat):  # ménage : fichiers expirés
         if age_h(m, maintenant) > EXPIRATION_H and m.get('id') != id_force:
-            deplacer(etat, m, 'rejetes', statut='rejetée', motif='fichier expiré (non publié à temps)',
-                     rejete=bilan['date'])
+            deplacer(etat, m, 'rejetes', statut='rejetée', motif='fichier expiré (non publié à temps)', rejete=bilan['date'])
             bilan['expires'].append(m['id'])
 
-    pub = cfg.get('publication', {})
-    if not pub.get('upload_post_user'):
+    m = None
+    if fourn not in FOURNISSEURS:
+        bilan['note'] = 'publication automatique désactivée (fournisseur « manuel ») : publier depuis le centre de contrôle'
+    elif any(not env.get(k) for k in FOURNISSEURS[fourn][1]):
+        bilan['note'] = 'identifiants absents : ' + ', '.join(k for k in FOURNISSEURS[fourn][1] if not env.get(k))
+    elif fourn == 'upload_post' and not pub.get('upload_post_user'):
         bilan['note'] = 'profil Upload-Post non renseigné (Réglages → Publication)'
+    elif fourn == 'youtube_api' and not pub.get('youtube_verifie') and not test:
+        bilan['note'] = ('audit YouTube en attente : tout envoi par l’API serait verrouillé en privé, publication '
+                         'automatique suspendue (publier à la main depuis le centre de contrôle)')
     elif id_force:
         m = next((x for x in file_attente(etat) if x['id'] == id_force), None)
         if not m:
             bilan['note'] = f'short introuvable en file : {id_force}'
         else:
             loc = maintenant.astimezone(ZoneInfo(pub.get('fuseau', 'Europe/Paris')))
-            m['_creneau'] = (loc.strftime('%Y-%m-%d'), 'manuel ' + loc.strftime('%H:%M'))
+            m['_creneau'] = (loc.strftime('%Y-%m-%d'), ('test ' if test else 'manuel ') + loc.strftime('%H:%M'))
+    elif test:
+        file_ = sorted(file_attente(etat), key=lambda x: -(x.get('clip', {}).get('score') or 0))
+        m = file_[0] if file_ else None
+        if m:
+            m['_creneau'] = (None, 'test')
+        else:
+            bilan['note'] = 'aucun short en file pour le test'
     else:
         m, bilan['note'] = choisir(cfg, etat, maintenant, journal)
 
     code = 0
-    if not bilan['note'] and m:
+    if m and not bilan['note']:
         jour, heure = m.pop('_creneau')
-        champs = champs_post(cfg, m)
+        fonction, _, plat = FOURNISSEURS[fourn]
         if essai:
-            bilan['essai'] = champs
-            print(json.dumps(bilan, ensure_ascii=False, indent=1))
+            bilan['essai'] = {'fournisseur': fourn, 'short': m['id'], 'test': test}
             return bilan, 0
-        statut, rep = envoi(champs, cle, m['id'])
-        ok = 200 <= statut < 300 and rep.get('success', True) is not False
-        if ok:
-            deplacer(etat, m, 'publies', statut='publiée', publication={
-                'date': bilan['date'], 'creneau': heure, 'plateformes': pub.get('plateformes') or ['youtube'],
-                'request_id': rep.get('request_id'), 'reponse': rep})
-            journal.append({'id': m['id'], 'jour': jour, 'creneau': heure, 'date': bilan['date'],
-                            'login': m['clip']['login'], 'titre': m.get('titre_youtube'), 'request_id': rep.get('request_id')})
-            ecrire(jp, journal)
-            bilan['publie'] = m['id']
-        else:
-            m['echecs'] = m.get('echecs', 0) + 1
-            m['erreur_publication'] = {'date': bilan['date'], 'http': statut, 'reponse': rep}
-            if m['echecs'] >= 2:
-                m['statut'] = 'bloquée'
-            ecrire(os.path.join(etat, 'file', m['id'] + '.json'), m)
-            bilan['note'] = f'échec de publication (HTTP {statut}) : {json.dumps(rep, ensure_ascii=False)[:300]}'
+        try:
+            res = fonction(cfg, m, env, prive=test, h=h)
+            if test:  # le short reste en file : l'essai ne compte pas comme une publication
+                bilan['test'] = {'short': m['id'], **res}
+                bilan['note'] = 'envoi de test réussi (vidéo privée sur la chaîne, à supprimer dans YouTube Studio)'
+            else:
+                deplacer(etat, m, 'publies', statut='publiée', publication={
+                    'date': bilan['date'], 'creneau': heure, 'fournisseur': fourn,
+                    'plateformes': plat or pub.get('plateformes') or ['youtube'], **res})
+                journal.append({'id': m['id'], 'jour': jour, 'creneau': heure, 'date': bilan['date'],
+                                'login': m['clip']['login'], 'titre': m.get('titre_youtube'), 'url': res.get('url'),
+                                'request_id': res.get('request_id')})
+                ecrire(jp, journal)
+                bilan['publie'] = m['id']
+        except ErreurEnvoi as e:
+            bilan['note'] = f'échec de publication (HTTP {e.http}) : {json.dumps(e.reponse, ensure_ascii=False)[:300]}'
             code = 2
+            if not test:
+                m['echecs'] = m.get('echecs', 0) + 1
+                m['erreur_publication'] = {'date': bilan['date'], 'http': e.http, 'reponse': e.reponse}
+                if m['echecs'] >= 2:
+                    m['statut'] = 'bloquée'
+                ecrire(os.path.join(etat, 'file', m['id'] + '.json'), m)
     ecrire(os.path.join(etat, 'rapports', 'derniere-publication.json'), bilan)
     return bilan, code
 
@@ -199,13 +298,9 @@ def publier(cfg, etat, id_force=None, cle=None, essai=False, maintenant=None, en
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('config'); ap.add_argument('etat')
-    ap.add_argument('--id', default=''); ap.add_argument('--essai', action='store_true')
+    ap.add_argument('--id', default=''); ap.add_argument('--test', action='store_true'); ap.add_argument('--essai', action='store_true')
     a = ap.parse_args()
     cfg = json.load(open(a.config, encoding='utf-8'))
-    cle = os.environ.get('UPLOAD_POST_API_KEY', '')
-    if not cle and not a.essai:
-        print('Clé UPLOAD_POST_API_KEY absente : publication sautée.')
-        sys.exit(0)
-    b, code = publier(cfg, a.etat, a.id or None, cle, a.essai)
+    b, code = publier(cfg, a.etat, a.id or None, essai=a.essai, test=a.test)
     print(json.dumps(b, ensure_ascii=False))
     sys.exit(code)
