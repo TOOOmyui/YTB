@@ -3,7 +3,7 @@
 - **Statut** : en préparation (16/11/2026). Moteur prêt et testé ; ouverture suspendue aux 4 décisions du PDG listées en bas de fiche.
 - **Décision de cap** (PDG, 13/11/2026) : à la sortie de GTA 6 (annoncée le 19/11/2026), la chaîne YouTube de Clear Assets est réutilisée pour des clips Twitch de GTA 6 ; même contenu en Reels sur le compte Instagram « ÇA ».
 - **Identifiant interne** : gta6-clips · **Langue** : français · **Nom public** : à choisir par le PDG.
-- **Plateformes** : YouTube Shorts ; Instagram Reels dès que le compte est relié à Upload-Post. Publication via Upload-Post (Metricool écarté par le PDG le 16/11/2026).
+- **Plateformes** : YouTube Shorts ; Instagram Reels dès que le compte est relié à Upload-Post. Publication directe par l'API YouTube, gratuite (décision du PDG du 23/11/2026 ; Metricool et Upload-Post écartés car payants). Mise en place et dossier d'audit : `entreprise/youtube-api-audit.md`. Tant que l'audit n'est pas accordé, publication à la main depuis le centre de contrôle.
 - **Pilotage** : centre de contrôle `docs/index.html` (branche `main`) — file des clips, validation, rejet, publication immédiate, pause, mode de publication, réglages, journal.
 - **Réglages machine** : `entreprise/chaines/gta6-clips.json` (jeu, filtres, liste blanche, hashtags). Cette fiche explique, le JSON commande.
 
@@ -35,7 +35,7 @@
 ## Chaîne de fabrication
 1. **Tournée** (workflow `Clips` sur `main`, toutes les 3 h) : `moteur/clips/tournee.py` repère → télécharge → monte → dépose les fichiers en release `clips-AAAAMMJJ` et un manifeste par short dans `file/` (branche `clips`, statut « montée »).
 2. **Contrôle** (centre de contrôle, facultatif) : titre retouché, short validé ou rejeté.
-3. **Publication** (workflow `Publier` sur `main`, toutes les heures, ou bouton « Publier maintenant ») : `moteur/clips/publier.py` envoie à Upload-Post au créneau ouvert ; mode « auto » = meilleur short de la file, mode « manuel » = shorts validés seulement. Manifeste déplacé dans `publies/`, journal `publications.json`. Deux échecs → statut « bloquée ». Un short non publié sous 96 h passe dans `rejetes/` (fichier expiré).
+3. **Publication** (workflow `Publier` sur `main`, toutes les heures, ou bouton « Publier maintenant ») : `moteur/clips/publier.py` envoie par l'API YouTube (ou Upload-Post selon `publication.fournisseur`) au créneau ouvert, seulement une fois l'audit accordé (`youtube_verifie`) ; avant, publication à la main (⬇ Télécharger, ✓ Marquer publié) ; mode « auto » = meilleur short de la file, mode « manuel » = shorts validés seulement. Manifeste déplacé dans `publies/`, journal `publications.json`. Deux échecs → statut « bloquée ». Un short non publié sous 96 h passe dans `rejetes/` (fichier expiré).
 4. **Analyse** : avec le rapport hebdomadaire de l'analyste.
 
 ## Créneaux (hypothèse de départ, à ajuster par l'analyste après 2 semaines)
@@ -50,5 +50,5 @@
 ## Décisions attendues du PDG
 1. **Application Twitch** : créer l'application sur dev.twitch.tv et déposer `TWITCH_CLIENT_ID` et `TWITCH_CLIENT_SECRET` dans les secrets du dépôt GitHub (les agents ne manipulent pas ces identifiants).
 2. **Publication** : Metricool écarté par le PDG (16/11/2026) ; canal de publication à choisir.
-3. **Upload-Post** : créer le compte, le profil (à saisir dans Réglages → Publication), relier YouTube (et Instagram « ÇA »), déposer `UPLOAD_POST_API_KEY` dans les secrets GitHub. Offre gratuite = 10 envois/mois pour tester ; ensuite Basic.
+3. **API YouTube** : projet Google Cloud, secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, demande d'audit (voir `entreprise/youtube-api-audit.md`).
 4. **Clear Assets** : sort des vidéos finance 008 (18/11) et 009 (20/11), nouveau nom et habillage de la chaîne.
