@@ -6,6 +6,15 @@ le short sort sans sous-titres (jamais de sous-titres inventés).
 import re
 
 
+def audio_16k(video):
+    """Piste audio mono 16 kHz en float32, décodée par ffmpeg (évite le décodeur PyAV de faster-whisper)."""
+    import subprocess
+    import numpy as np
+    r = subprocess.run(['ffmpeg', '-v', 'error', '-i', video, '-vn', '-ac', '1', '-ar', '16000', '-f', 's16le', '-'],
+                       capture_output=True, check=True)
+    return np.frombuffer(r.stdout, dtype=np.int16).astype(np.float32) / 32768.0
+
+
 def transcrire(video, langue='fr', modele='small'):
     """Renvoie [(debut, fin, mot)] ou [] si la transcription est indisponible."""
     try:
@@ -13,8 +22,11 @@ def transcrire(video, langue='fr', modele='small'):
     except ImportError:
         return []
     try:
-        m = WhisperModel(modele, device='cpu', compute_type='int8')
-        segments, _ = m.transcribe(video, language=langue, word_timestamps=True, vad_filter=True,
+        audio = audio_16k(video)
+        if len(audio) < 16000:
+            return []
+        m = transcrire._modele = getattr(transcrire, '_modele', None) or WhisperModel(modele, device='cpu', compute_type='int8')
+        segments, _ = m.transcribe(audio, language=langue, word_timestamps=True, vad_filter=True,
                                    condition_on_previous_text=False, no_speech_threshold=0.5)
         mots = []
         for s in segments:
