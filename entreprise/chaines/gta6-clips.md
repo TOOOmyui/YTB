@@ -21,7 +21,7 @@
 
 ## Format et charte
 - 1080×1920, 12 à 59 s, son normalisé à −14 LUFS.
-- Fond : le clip agrandi et flouté. Jeu zoomé ×1,33 au centre ; si la zone de facecam du streamer est renseignée (`facecam: [x, y, largeur, hauteur]` en fractions de l'image), facecam en haut et jeu dessous.
+- Fond : le clip agrandi et flouté. Image complète du stream au centre (facecam et incrustations du streamer visibles, décision du 23/11/2026 après contrôle des premiers shorts) ; si la zone de facecam du streamer est renseignée (`facecam: [x, y, largeur, hauteur]` en fractions de l'image), facecam en haut et jeu dessous.
 - Accroche en capitales en haut (8 mots au plus, lisible en 1 seconde, sans piège à clics : elle décrit ce qui se passe vraiment).
 - Crédit `twitch.tv/<login>` à l'écran pendant tout le short.
 - Sous-titres « pop » par groupes de 1 à 3 mots, générés par transcription ; si la transcription est douteuse, pas de sous-titres plutôt que des sous-titres faux.

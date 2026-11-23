@@ -15,7 +15,7 @@ def audio_16k(video):
     return np.frombuffer(r.stdout, dtype=np.int16).astype(np.float32) / 32768.0
 
 
-def transcrire(video, langue='fr', modele='small'):
+def transcrire(video, langue='fr', modele='medium'):
     """Renvoie [(debut, fin, mot)] ou [] si la transcription est indisponible."""
     try:
         from faster_whisper import WhisperModel

@@ -2,7 +2,7 @@
 
 Composition :
   - fond : le clip agrandi et flouté ;
-  - sans facecam : le jeu, zoomé (×1,33) et centré ;
+  - sans zone de facecam renseignée : l'image complète du stream, centrée (facecam et incrustations comprises) ;
   - avec facecam (zone [x, y, l, h] en fractions de l'image, fournie par streamer) : la facecam en haut, le jeu dessous ;
   - accroche en haut (2 premières secondes décisives), crédit du streamer, sous-titres « pop » facultatifs ;
   - zones de sécurité Shorts/Reels respectées (rien d'important sous 1 560 px ni à droite de 930 px en bas).
@@ -10,7 +10,7 @@ Composition :
 Usage : python3 monter.py clip.mp4 sortie.mp4 --accroche "TEXTE" --streamer Nom --login nom [--facecam x,y,l,h]
                           [--debut s] [--fin s] [--sans-sous-titres]
 """
-import argparse, json, os, shutil, subprocess, sys, textwrap
+import argparse, json, os, re, shutil, subprocess, sys, textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -45,7 +45,8 @@ def calque(accroche, streamer, login, y_titre, h_titre, y_credit, chemin):
     img = Image.new('RGBA', (L, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     if accroche:
-        texte = accroche.strip().upper()
+        # typographie française : espace insécable avant ! ? : ; pour ne jamais isoler la ponctuation
+        texte = re.sub(r'\s+([!?:;»])', '\u00a0\\1', accroche.strip().upper())
         for taille in range(104, 52, -6):
             f = police(taille)
             car = max(8, int(940 / (taille * 0.62)))
@@ -68,7 +69,7 @@ def calque(accroche, streamer, login, y_titre, h_titre, y_credit, chemin):
 
 
 def monter(clip, sortie, accroche='', streamer='', login='', facecam=None, debut=0.0, fin=None,
-           sous_titres=True, langue='fr', zoom=1.333):
+           sous_titres=True, langue='fr', zoom=1.0):
     s = sonde(clip)
     fin = min(fin or s['duree'], s['duree'])
     duree = min(fin - debut, DUREE_MAX)
@@ -95,8 +96,9 @@ def monter(clip, sortie, accroche='', streamer='', login='', facecam=None, debut
     else:
         lz = int(L * zoom) // 2 * 2
         hz = int(lz * s['h'] / s['l']) // 2 * 2
-        y_jeu = 470
-        y_titre, h_titre = 170, 270
+        # image complète par défaut (zoom 1) : la facecam et les incrustations du streamer restent visibles
+        y_jeu = 560 if zoom <= 1.01 else 470
+        y_titre, h_titre = (230, 290) if zoom <= 1.01 else (170, 270)
         y_sub, y_credit = y_jeu + hz + 50, y_jeu + hz + 200
         blocs = (f"[0:v]split=2[a][b];"
                  f"[a]scale={L}:{H}:force_original_aspect_ratio=increase,crop={L}:{H},gblur=sigma=28,eq=brightness=-0.22:saturation=0.9[fond];"
