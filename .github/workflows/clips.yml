@@ -35,6 +35,8 @@ jobs:
       - name: Vérifier les identifiants Twitch
         id: pret
         run: |
+          [ -n "$TWITCH_CLIENT_ID" ] && echo "TWITCH_CLIENT_ID : présent" || echo "::warning::TWITCH_CLIENT_ID absent"
+          [ -n "$TWITCH_CLIENT_SECRET" ] && echo "TWITCH_CLIENT_SECRET : présent" || echo "::warning::TWITCH_CLIENT_SECRET absent"
           if [ -n "$TWITCH_CLIENT_ID" ] && [ -n "$TWITCH_CLIENT_SECRET" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "Secrets Twitch absents : tournée sautée."; fi
       - uses: actions/checkout@v4
         if: steps.pret.outputs.ok

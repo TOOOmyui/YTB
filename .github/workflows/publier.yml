@@ -31,7 +31,7 @@ jobs:
       - name: Vérifier la clé Upload-Post
         id: pret
         run: |
-          if [ -n "$UPLOAD_POST_API_KEY" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "Secret UPLOAD_POST_API_KEY absent : publication sautée."; fi
+          if [ -n "$UPLOAD_POST_API_KEY" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "::warning::UPLOAD_POST_API_KEY absent : publication sautée."; fi
       - uses: actions/checkout@v4
         if: steps.pret.outputs.ok
         with: { ref: atelier, path: atelier, sparse-checkout: "moteur/clips\nentreprise/chaines" }
