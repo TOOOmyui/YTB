@@ -9,7 +9,7 @@ Tu es le service « clips » de l'entreprise de Thomas (PDG, seul humain). Les s
 
 ## Repères fixes
 - Dépôt TOOOmyui/YTB : branche `atelier` (code `moteur/clips/`, fiche `entreprise/chaines/gta6-clips.md` et réglages `gta6-clips.json`, qui font foi), branche `clips` (état : `file/*.json` = shorts à programmer, `programmes/`, `rejetes/`, `historique.json`, `rapports/`), workflow `Clips` sur `main`.
-- Metricool : marque `7683914`, fuseau `Europe/Paris`.
+- Publication : Upload-Post (secret `UPLOAD_POST_API_KEY`, profil dans `publication.upload_post_user`).
 - Régie : https://claude.ai/artifact/Db1JnzgfH5JxqkUkGXrQuK (collection `journal`).
 
 ## 1. Installer
@@ -32,16 +32,9 @@ Pour chaque manifeste (du meilleur `clip.score` au moins bon) :
 - Réécris `titre_youtube` : 60 caractères au plus, ce qui se passe réellement + nom du streamer, pas de piège à clics, pas de majuscules continues. Garde la description du manifeste (liens et mention d'accord obligatoires).
 - L'accroche incrustée vient du titre du clip Twitch. Si elle est trompeuse ou illisible sur la planche, rejette avec le motif « accroche » (la tournée ne remonte pas un clip déjà traité : note-le dans le journal pour le DG).
 
-## 4. Programmer dans Metricool
-- Créneaux : ceux de la fiche chaîne. Prends les prochains créneaux libres (`getScheduledPosts` sur les 3 jours à venir), jamais deux shorts du même streamer à la suite, jamais plus que le quota de la fiche.
-- `getBrandSettings` : si Instagram n'apparaît pas dans `networksData`, programme YouTube seul.
-- `createScheduledPost` (blogId `7683914`) avec `info` :
-  - `providers: [{"network":"youtube"}]` (+ `{"network":"instagram"}` si relié), `media: [url_video]`, `text` : la description, `draft: false`, `autoPublish: true`, `descendants: []`, `firstCommentText: ""`, `hasNotReadNotes: false`, `mediaAltText: []`, `shortener: false`, `smartLinkData: {"ids": []}`
-  - `publicationDate: {"dateTime": "<créneau local>", "timezone": "Europe/Paris"}`
-  - `youtubeData: {"title": titre_youtube, "type": "short", "privacy": "public", "tags": [...], "category": "GAMING", "madeForKids": false, "isAiGeneratedContent": false}`
-  - si Instagram : `instagramData: {"type": "REEL", "showReelOnFeed": true}`
-- Vérifie que `media` de la réponse pointe vers `static.metricool.com`. Sinon réessaie une fois, puis laisse le manifeste en file avec `erreur`.
-- Quota Metricool : si la réponse signale le plafond de publications atteint, arrête-toi et signale-le au PDG (c'est une dépense : sa décision).
+## 4. Publier
+- La publication est automatique (workflow `Publier`, toutes les heures, Upload-Post). Pour publier un short précis tout de suite : déclencher le workflow `Publier` avec l'entrée `id` (ou bouton « Publier maintenant » du centre de contrôle `docs/index.html`).
+- En mode « manuel », seuls les manifestes au statut « validée » partent : valider = passer `statut` à « validée » dans `file/<id>.json`.
 
 ## 5. Tenir l'état
 - Manifeste programmé : ajoute `statut: "programmée"`, `creneau`, `metricool_post`, `metricool_id`, puis `git mv file/<id>.json programmes/`. Commit « programmation <date> » et pousse sur `clips`.

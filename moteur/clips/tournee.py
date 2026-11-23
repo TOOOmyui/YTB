@@ -106,6 +106,9 @@ if __name__ == '__main__':
     ap.add_argument('--sans-sous-titres', action='store_true')
     a = ap.parse_args()
     cfg = json.load(open(a.config, encoding='utf-8'))
+    if cfg.get('statut', 'active') != 'active':
+        print('Chaîne en pause : tournée sautée.')
+        sys.exit(0)
     if not Twitch().configure:
         print('Identifiants Twitch absents (secrets TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET) : tournée sautée.')
         sys.exit(0)

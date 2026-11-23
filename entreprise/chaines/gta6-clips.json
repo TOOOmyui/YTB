@@ -1,5 +1,6 @@
 {
  "chaine": "gta6-clips",
+ "statut": "active",
  "mode": "ouvert",
  "jeu": {
   "noms": [
@@ -48,6 +49,21 @@
    "moments drôles GTA 6"
   ]
  },
- "_aide": "mode « ouvert » (décision du PDG du 16/11/2026) : tous les streamers de la langue visée, sauf streamers_exclus, toujours crédités à l'écran et en description. mode « liste_blanche » : seulement les logins de `streamers`. `streamers` : réglages facultatifs par streamer, ex. [{\"login\": \"nom_twitch\", \"facecam\": [x, y, largeur, hauteur]}] (fractions de l'image).",
- "streamers": []
+ "streamers": [],
+ "publication": {
+  "mode": "auto",
+  "plateformes": [
+   "youtube"
+  ],
+  "creneaux": [
+   "12:30",
+   "15:30",
+   "18:00",
+   "21:00"
+  ],
+  "max_par_jour": 4,
+  "fuseau": "Europe/Paris",
+  "upload_post_user": ""
+ },
+ "_aide": "mode « ouvert » (décision du PDG du 16/11/2026) : tous les streamers de la langue visée, sauf streamers_exclus, toujours crédités à l'écran et en description. mode « liste_blanche » : seulement les logins de `streamers`. `streamers` : réglages facultatifs par streamer, ex. [{\"login\": \"nom_twitch\", \"facecam\": [x, y, largeur, hauteur]}] (fractions de l'image). statut : « active » ou « pause » (pause = ni tournée ni publication). publication.mode : « auto » (publie le meilleur short de la file à chaque créneau) ou « manuel » (seulement les shorts validés dans le centre de contrôle). upload_post_user : nom du profil créé dans Upload-Post."
 }

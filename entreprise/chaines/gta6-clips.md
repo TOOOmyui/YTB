@@ -3,7 +3,8 @@
 - **Statut** : en préparation (16/11/2026). Moteur prêt et testé ; ouverture suspendue aux 4 décisions du PDG listées en bas de fiche.
 - **Décision de cap** (PDG, 13/11/2026) : à la sortie de GTA 6 (annoncée le 19/11/2026), la chaîne YouTube de Clear Assets est réutilisée pour des clips Twitch de GTA 6 ; même contenu en Reels sur le compte Instagram « ÇA ».
 - **Identifiant interne** : gta6-clips · **Langue** : français · **Nom public** : à choisir par le PDG.
-- **Plateformes** : YouTube Shorts (marque Metricool 7683914) ; Instagram Reels dès que le compte est relié à Metricool.
+- **Plateformes** : YouTube Shorts ; Instagram Reels dès que le compte est relié à Upload-Post. Publication via Upload-Post (Metricool écarté par le PDG le 16/11/2026).
+- **Pilotage** : centre de contrôle `docs/index.html` (branche `main`) — file des clips, validation, rejet, publication immédiate, pause, mode de publication, réglages, journal.
 - **Réglages machine** : `entreprise/chaines/gta6-clips.json` (jeu, filtres, liste blanche, hashtags). Cette fiche explique, le JSON commande.
 
 ## Ligne éditoriale
@@ -32,12 +33,13 @@
 - YouTube : type `short`, catégorie `GAMING`, `madeForKids: false`, `isAiGeneratedContent: false`.
 
 ## Chaîne de fabrication
-1. **Tournée** (GitHub Actions, workflow `Clips` sur `main`, toutes les 3 h de 6 h 17 à 21 h 17 UTC) : `moteur/clips/tournee.py` repère → télécharge → monte → dépose les fichiers en release `clips-AAAAMMJJ` et un manifeste par short dans `file/` sur la branche `clips`. Jamais plus de 8 shorts en file.
-2. **Programmation** (session Claude, skill `regie-clips`) : contrôle visuel de chaque short, réécriture du titre et de l'accroche, programmation Metricool, passage du manifeste de `file/` à `programmes/`.
-3. **Analyse** : avec le rapport hebdomadaire de l'analyste (vues à 48 h par streamer, par durée, par créneau).
+1. **Tournée** (workflow `Clips` sur `main`, toutes les 3 h) : `moteur/clips/tournee.py` repère → télécharge → monte → dépose les fichiers en release `clips-AAAAMMJJ` et un manifeste par short dans `file/` (branche `clips`, statut « montée »).
+2. **Contrôle** (centre de contrôle, facultatif) : titre retouché, short validé ou rejeté.
+3. **Publication** (workflow `Publier` sur `main`, toutes les heures, ou bouton « Publier maintenant ») : `moteur/clips/publier.py` envoie à Upload-Post au créneau ouvert ; mode « auto » = meilleur short de la file, mode « manuel » = shorts validés seulement. Manifeste déplacé dans `publies/`, journal `publications.json`. Deux échecs → statut « bloquée ». Un short non publié sous 96 h passe dans `rejetes/` (fichier expiré).
+4. **Analyse** : avec le rapport hebdomadaire de l'analyste.
 
 ## Créneaux (hypothèse de départ, à ajuster par l'analyste après 2 semaines)
-- 3 shorts par jour : 12:30, 18:00, 21:00 (Europe/Paris). Semaine de sortie : jusqu'à 4 par jour si la file le permet.
+- 4 shorts par jour : 12:30, 15:30, 18:00, 21:00 (Europe/Paris) — réglables dans le centre de contrôle (`publication.creneaux`, `max_par_jour`).
 - Jamais deux shorts du même streamer à la suite.
 
 ## Conformité propre
@@ -48,5 +50,5 @@
 ## Décisions attendues du PDG
 1. **Application Twitch** : créer l'application sur dev.twitch.tv et déposer `TWITCH_CLIENT_ID` et `TWITCH_CLIENT_SECRET` dans les secrets du dépôt GitHub (les agents ne manipulent pas ces identifiants).
 2. **Publication** : Metricool écarté par le PDG (16/11/2026) ; canal de publication à choisir.
-3. **Metricool** : l'offre gratuite plafonne à 20 publications par mois (3 shorts par jour ≈ 90) ; relier le compte Instagram « ÇA ».
+3. **Upload-Post** : créer le compte, le profil (à saisir dans Réglages → Publication), relier YouTube (et Instagram « ÇA »), déposer `UPLOAD_POST_API_KEY` dans les secrets GitHub. Offre gratuite = 10 envois/mois pour tester ; ensuite Basic.
 4. **Clear Assets** : sort des vidéos finance 008 (18/11) et 009 (20/11), nouveau nom et habillage de la chaîne.
