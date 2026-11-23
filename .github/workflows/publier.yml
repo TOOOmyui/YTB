@@ -1,9 +1,10 @@
 name: Publier
 
-# Publication des shorts de la file (branche « clips ») sur YouTube / Instagram via Upload-Post.
+# Publication des shorts de la file (branche « clips ») : API YouTube directe (défaut) ou Upload-Post.
 # Toutes les heures : publie au créneau ouvert selon les réglages de la chaîne (mode auto ou manuel).
 # À la demande (centre de contrôle) : publie immédiatement le short indiqué.
-# Sans le secret UPLOAD_POST_API_KEY, rien n'est installé ni envoyé.
+# Sans identifiants (YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN, ou UPLOAD_POST_API_KEY), rien n'est envoyé.
+# Entrée « test » : envoie le meilleur short de la file en PRIVÉ sur YouTube pour vérifier la chaîne d'envoi.
 
 on:
   schedule:
@@ -12,6 +13,9 @@ on:
     inputs:
       id:
         description: Identifiant du short à publier tout de suite (vide = règle des créneaux)
+        default: ''
+      test:
+        description: Envoi de test en privé (oui / vide)
         default: ''
 
 permissions:
@@ -27,11 +31,17 @@ jobs:
     timeout-minutes: 30
     env:
       UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
     steps:
-      - name: Vérifier la clé Upload-Post
+      - name: Vérifier les identifiants de publication
         id: pret
         run: |
-          if [ -n "$UPLOAD_POST_API_KEY" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "::warning::UPLOAD_POST_API_KEY absent : publication sautée."; fi
+          for S in YT_CLIENT_ID YT_CLIENT_SECRET YT_REFRESH_TOKEN UPLOAD_POST_API_KEY; do [ -n "${!S}" ] && echo "$S : présent" || echo "$S : absent"; done
+          if { [ -n "$YT_CLIENT_ID" ] && [ -n "$YT_CLIENT_SECRET" ] && [ -n "$YT_REFRESH_TOKEN" ]; } || [ -n "$UPLOAD_POST_API_KEY" ]; then
+            echo "ok=1" >> "$GITHUB_OUTPUT"
+          else echo "::warning::Aucun identifiant de publication (YouTube ou Upload-Post) : publication sautée."; fi
       - uses: actions/checkout@v4
         if: steps.pret.outputs.ok
         with: { ref: atelier, path: atelier, sparse-checkout: "moteur/clips\nentreprise/chaines" }
@@ -42,7 +52,7 @@ jobs:
         if: steps.pret.outputs.ok
         id: pub
         continue-on-error: true
-        run: python3 atelier/moteur/clips/publier.py atelier/entreprise/chaines/gta6-clips.json etat --id "${{ inputs.id }}"
+        run: python3 atelier/moteur/clips/publier.py atelier/entreprise/chaines/gta6-clips.json etat --id "${{ inputs.id }}" ${{ inputs.test && '--test' || '' }}
       - name: Enregistrer l'état
         if: steps.pret.outputs.ok
         run: |

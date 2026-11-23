@@ -147,6 +147,7 @@ nav.tabs .i{font-size:16px;line-height:1}
         <div class="row">
           <button class="btn pri" id="btnTournee">⟳ Lancer une tournée</button>
           <button class="btn" data-goto="clips">Voir la file</button>
+          <button class="btn" id="btnTestYt" hidden>Tester l’envoi YouTube (privé)</button>
         </div>
         <p class="small muted" style="margin:10px 0 0">Automatique : le meilleur short de la file part à chaque créneau. Après validation : seuls les shorts que tu as validés partent.</p>
       </div>
@@ -238,11 +239,17 @@ const CONFIG = 'entreprise/chaines/gta6-clips.json';
 const REGIE = 'https://claude.ai/artifact/Db1JnzgfH5JxqkUkGXrQuK';
 const FUSEAU = 'Europe/Paris';
 const EXPIRATION_H = 96;
-const SECRETS = [
-  ['TWITCH_CLIENT_ID', 'Identifiant de l’application Twitch (repérage des clips)', 'https://dev.twitch.tv/console/apps'],
-  ['TWITCH_CLIENT_SECRET', 'Secret de l’application Twitch', 'https://dev.twitch.tv/console/apps'],
-  ['UPLOAD_POST_API_KEY', 'Clé API Upload-Post (publication YouTube / Instagram)', 'https://app.upload-post.com/'],
+const SECRETS_TOUS = [
+  ['TWITCH_CLIENT_ID', 'Identifiant de l’application Twitch (repérage des clips)', 'https://dev.twitch.tv/console/apps', 'twitch'],
+  ['TWITCH_CLIENT_SECRET', 'Secret de l’application Twitch', 'https://dev.twitch.tv/console/apps', 'twitch'],
+  ['YT_CLIENT_ID', 'ID client OAuth Google (publication YouTube)', 'https://console.cloud.google.com/apis/credentials', 'youtube_api'],
+  ['YT_CLIENT_SECRET', 'Code secret du client OAuth Google', 'https://console.cloud.google.com/apis/credentials', 'youtube_api'],
+  ['YT_REFRESH_TOKEN', 'Jeton d’actualisation YouTube (OAuth Playground)', 'https://developers.google.com/oauthplayground', 'youtube_api'],
+  ['UPLOAD_POST_API_KEY', 'Clé API Upload-Post', 'https://app.upload-post.com/', 'upload_post'],
 ];
+const fournisseur = () => S.cfg?.publication?.fournisseur || 'youtube_api';
+const ytBloque = () => fournisseur() === 'youtube_api' && !S.cfg?.publication?.youtube_verifie;
+const SECRETS_ = () => SECRETS_TOUS.filter(x => x[3] === 'twitch' || x[3] === fournisseur());
 
 // noms acceptés aussi par les workflows (secrets créés sous un autre nom)
 const ALIAS = {TWITCH_CLIENT_ID: ['TWITCH_ID', 'TWITCHID'], TWITCH_CLIENT_SECRET: ['TWITCH']};
@@ -398,12 +405,15 @@ function alertes() {
   if (S.erreur) a.push(['bad', '⚠', esc(S.erreur)]);
   if (!S.jeton) a.push(['warn', '🔑', 'Lecture seule. Pour valider, publier ou changer les réglages, ajoute un jeton GitHub dans <a href="#" data-goto="reglages">Réglages</a>.']);
   if (S.secrets) {
-    const manque = SECRETS.filter(([n]) => !aSecret(n)).map(([n]) => n);
-    if (manque.length) a.push(['bad', '⛔', `Secrets manquants : <b>${manque.map(esc).join(', ')}</b>. Sans eux, ${manque.some(n => n.startsWith('TWITCH')) ? 'aucun clip n’est repéré' : ''}${manque.length > 1 && manque.includes('UPLOAD_POST_API_KEY') && manque.some(n => n.startsWith('TWITCH')) ? ' et ' : ''}${manque.includes('UPLOAD_POST_API_KEY') ? 'rien n’est publié' : ''}. <a href="#" data-goto="reglages">Configurer</a>`]);
+    const manque = SECRETS_().filter(([n]) => !aSecret(n)).map(([n]) => n);
+    const tw = manque.some(n => n.startsWith('TWITCH')), pb = manque.some(n => !n.startsWith('TWITCH'));
+    if (manque.length) a.push(['bad', '⛔', `Secrets manquants : <b>${manque.map(esc).join(', ')}</b>. Sans eux, ${[tw && 'aucun clip n’est repéré', pb && 'rien n’est publié automatiquement'].filter(Boolean).join(' et ')}. <a href="#" data-goto="reglages">Configurer</a>`]);
   }
   if (S.cfg) {
     if (S.cfg.statut === 'pause') a.push(['warn', '⏸', 'Chaîne en pause : ni tournée ni publication.']);
-    if (!S.cfg.publication?.upload_post_user) a.push(['warn', '✎', 'Profil Upload-Post non renseigné : <a href="#" data-goto="reglages">Réglages → Publication</a>.']);
+    if (fournisseur() === 'upload_post' && !S.cfg.publication?.upload_post_user) a.push(['warn', '✎', 'Profil Upload-Post non renseigné : <a href="#" data-goto="reglages">Réglages → Publication</a>.']);
+    if (ytBloque()) a.push(['info', '⏳', 'Audit YouTube en attente : YouTube verrouillerait en privé tout envoi automatique. En attendant, publie à la main : <b>⬇ Télécharger</b> le short, poste-le depuis l’app YouTube, puis <b>Marquer publié</b>.']);
+    if (fournisseur() === 'manuel') a.push(['info', '✋', 'Publication automatique désactivée : publie à la main depuis l’onglet Clips.']);
   }
   const bloques = S.file.filter(m => m.statut === 'bloquée').length;
   if (bloques) a.push(['bad', '⛔', `${bloques} short(s) bloqué(s) après deux échecs de publication. <a href="#" data-goto="clips">Voir</a>`]);
@@ -428,7 +438,8 @@ function rendreTdb() {
   $('#stats').innerHTML = st.map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('');
   $$('#segStatut button').forEach(b => b.classList.toggle('on', (S.cfg?.statut || 'active') === b.dataset.v));
   $$('#segMode button').forEach(b => b.classList.toggle('on', (S.cfg?.publication?.mode || 'manuel') === b.dataset.v));
-  $('#prochainCreneau').textContent = S.cfg?.statut === 'pause' ? 'en pause' : prochainCreneau();
+  $('#prochainCreneau').textContent = S.cfg?.statut === 'pause' ? 'en pause' : ytBloque() ? 'à la main (audit YouTube)' : fournisseur() === 'manuel' ? 'à la main' : prochainCreneau();
+  $('#btnTestYt').hidden = !(S.jeton && fournisseur() === 'youtube_api');
   const d = [];
   if (S.tournee) d.push(['⟳', `<b>Tournée</b> · ${date(S.tournee.date)} — ${S.tournee.produits?.length || 0} short(s) monté(s)${S.tournee.echecs?.length ? `, ${S.tournee.echecs.length} échec(s)` : ''}`,
     (S.tournee.notes || []).slice(0, 2).map(esc).join(' · ')]);
@@ -488,7 +499,7 @@ function carteClip(m) {
     </div>
     <div class="small muted">Clip du ${date(c.cree)} · monté ${depuis(m.cree)}${enFile && age > EXPIRATION_H - 12 ? ' · <b style="color:var(--warn)">expire bientôt</b>' : ''}</div>`;
   if (m.erreur_publication) infos += `<div class="alert bad small" style="margin:0"><span>✕</span><div>Échec de publication (HTTP ${esc(m.erreur_publication.http)}) : ${esc(JSON.stringify(m.erreur_publication.reponse).slice(0, 160))}</div></div>`;
-  if (m.publication) infos += `<div class="small">Publié le ${date(m.publication.date)} · ${esc((m.publication.plateformes || []).join(', '))}</div>`;
+  if (m.publication) infos += `<div class="small">Publié le ${date(m.publication.date)} · ${esc((m.publication.plateformes || []).join(', '))}${m.publication.manuel ? ' · à la main' : ''}${m.publication.url ? ` · <a href="${url(m.publication.url)}" target="_blank" rel="noopener">voir ↗</a>` : ''}</div>`;
   if (m.motif) infos += `<div class="small"><b>Motif :</b> ${esc(m.motif)}</div>`;
   let edit = '', act = '';
   if (enFile) {
@@ -499,7 +510,9 @@ function carteClip(m) {
       ${m.statut === 'bloquée' ? `<button class="btn sm" data-a="debloquer" data-id="${id}">Débloquer</button>` :
         m.statut === 'validée' ? `<button class="btn sm" data-a="devalider" data-id="${id}">Retirer la validation</button>` :
         `<button class="btn sm ok" data-a="valider" data-id="${id}">✓ Valider</button>`}
-      <button class="btn sm pri" data-a="publier" data-id="${id}">↑ Publier maintenant</button>
+      ${ytBloque() || fournisseur() === 'manuel' ? '' : `<button class="btn sm pri" data-a="publier" data-id="${id}">↑ Publier maintenant</button>`}
+      <a class="btn sm" href="${url(m.url_video)}" download="${id}.mp4" target="_blank" rel="noopener">⬇ Télécharger</a>
+      <button class="btn sm" data-a="marquer" data-id="${id}">✓ Marquer publié</button>
       <button class="btn sm" data-a="enregistrer" data-id="${id}" hidden>Enregistrer</button>
       <button class="btn sm bad" data-a="rejeter" data-id="${id}">Rejeter</button></div>`;
   } else {
@@ -541,13 +554,29 @@ async function action(a, id, bouton) {
       toast({valider: 'Validé', devalider: 'Validation retirée', enregistrer: 'Enregistré', debloquer: 'Débloqué'}[a]);
     } else if (a === 'publier') {
       const pub = S.cfg?.publication || {};
-      if (!pub.upload_post_user) throw new ErreurGH('Renseigne d’abord le profil Upload-Post (Réglages → Publication).', 0);
-      if (S.secrets && !aSecret('UPLOAD_POST_API_KEY')) throw new ErreurGH('Secret UPLOAD_POST_API_KEY absent : la publication ne partira pas.', 0);
-      if (!confirm(`Publier maintenant sur ${(pub.plateformes || ['youtube']).join(' + ')} ?\n\n« ${ed.titre_youtube ?? m.titre_youtube} »`)) { bouton.disabled = false; bouton.innerHTML = old; return; }
+      if (ytBloque()) throw new ErreurGH('Audit YouTube en attente : l’envoi serait verrouillé en privé. Utilise « Télécharger » puis « Marquer publié ».', 0);
+      if (fournisseur() === 'manuel') throw new ErreurGH('Publication automatique désactivée (Réglages → Publication).', 0);
+      if (fournisseur() === 'upload_post' && !pub.upload_post_user) throw new ErreurGH('Renseigne d’abord le profil Upload-Post (Réglages → Publication).', 0);
+      const manque = S.secrets ? SECRETS_().filter(x => x[3] !== 'twitch' && !aSecret(x[0])).map(x => x[0]) : [];
+      if (manque.length) throw new ErreurGH('Secrets absents : ' + manque.join(', ') + ' — la publication ne partira pas.', 0);
+      if (!confirm(`Publier maintenant sur ${fournisseur() === 'youtube_api' ? 'YouTube' : (pub.plateformes || ['youtube']).join(' + ')} ?\n\n« ${ed.titre_youtube ?? m.titre_youtube} »`)) { bouton.disabled = false; bouton.innerHTML = old; return; }
       if (Object.keys(ed).length) { await commit('clips', [{path: ici, content: json({...propre(m), ...ed})}], `titre ${m.id}`, [ici]); Object.assign(m, ed); }
       await lancer('publier.yml', {id: m.id});
       toast('Publication lancée : en ligne dans 1 à 3 minutes.');
       setTimeout(charger, 20000);
+    } else if (a === 'marquer') {
+      const lien = prompt('Short posté à la main ? Colle son lien YouTube (facultatif) :', '');
+      if (lien === null) { bouton.disabled = false; bouton.innerHTML = old; return; }
+      const loc = new Intl.DateTimeFormat('fr-FR', {timeZone: FUSEAU, hour: '2-digit', minute: '2-digit', hourCycle: 'h23'}).format(new Date());
+      const pubInfo = {date: new Date().toISOString(), creneau: 'manuel ' + loc, plateformes: ['youtube'], manuel: true, url: /^https:\/\//.test(lien.trim()) ? lien.trim() : null};
+      const n = {...propre(m), ...ed, statut: 'publiée', publication: pubInfo};
+      let journal = [];
+      try { journal = JSON.parse(b64dec((await gh(`${R()}/contents/publications.json?ref=clips`)).content)); } catch (e) { if (e.status && e.status !== 404) throw e; }
+      if (!Array.isArray(journal)) journal = [];
+      journal.push({id: m.id, jour: jourParis(), creneau: pubInfo.creneau, date: pubInfo.date, login: m.clip?.login, titre: n.titre_youtube, url: pubInfo.url, manuel: true});
+      await commit('clips', [{path: `publies/${m.id}.json`, content: json(n)}, {path: ici, supprimer: true}, {path: 'publications.json', content: json(journal)}], `publié à la main ${m.id}`, [ici]);
+      S.file = S.file.filter(x => x.id !== m.id); S.publies.unshift({...n, _path: `publies/${m.id}.json`}); S.nbPublies = (S.nbPublies || 0) + 1; S.publications = journal;
+      toast('Marqué comme publié');
     } else if (a === 'rejeter') {
       const motif = prompt('Motif du rejet (gardé dans l’historique) :', 'hors sujet');
       if (motif === null) { bouton.disabled = false; bouton.innerHTML = old; return; }
@@ -573,7 +602,7 @@ function champ(id, lib, val, type = 'text', aide = '') {
 function rendreReglages() {
   $('#inRepo').value = S.depot; $('#inJeton').value = S.jeton; $('#inMemo').checked = !!stock.get('regie.jeton');
   const lien = n => `https://github.com/${S.depot}/settings/secrets/actions/new?name=${encodeURIComponent(n)}`;
-  $('#secrets').innerHTML = SECRETS.map(([n, d, src]) => {
+  $('#secrets').innerHTML = SECRETS_().map(([n, d, src]) => {
     const etat = S.secrets == null ? ['inconnu', ''] : aSecret(n) ? ['présent', 'ok'] : ['absent', 'bad'];
     return `<li><span class="ico">${etat[1] === 'ok' ? '✓' : etat[1] === 'bad' ? '✕' : '?'}</span><div style="flex:1"><code>${n}</code> <span class="chip ${etat[1]}">${etat[0]}</span>
       <div class="small muted">${esc(d)} · <a href="${src}" target="_blank" rel="noopener">obtenir ↗</a></div></div>
@@ -585,8 +614,10 @@ function rendreReglages() {
   $('#formConfig').innerHTML = `
     <h3 style="margin-top:4px">Publication</h3>
     <div class="form2">
+      <div><label class="f" for="cFourn">Envoi</label><select id="cFourn"><option value="youtube_api">API YouTube directe (gratuit)</option><option value="upload_post">Upload-Post</option><option value="manuel">À la main uniquement</option></select></div>
+      <div><label class="f">Audit YouTube</label><label class="row" style="padding-top:6px"><input type="checkbox" id="cVerif" ${p.youtube_verifie ? 'checked' : ''}> Audit accordé par YouTube</label><div class="small muted">À cocher seulement après l’e-mail de validation : avant, tout envoi par l’API reste privé.</div></div>
       <div><label class="f" for="cMode">Mode</label><select id="cMode"><option value="auto">Automatique</option><option value="manuel">Après validation</option></select></div>
-      ${champ('cUser', 'Profil Upload-Post', p.upload_post_user, 'text', 'Nom du profil créé dans Upload-Post (Manage Users).')}
+      ${champ('cUser', 'Profil Upload-Post', p.upload_post_user, 'text', 'Seulement si l’envoi passe par Upload-Post.')}
       ${champ('cCreneaux', 'Créneaux (heure de Paris)', (p.creneaux || []).join(', '), 'text', 'Ex. 12:30, 15:30, 18:00, 21:00')}
       ${champ('cMaxJour', 'Shorts par jour (max.)', p.max_par_jour, 'number')}
       <div><label class="f">Plateformes</label><div class="row" style="padding-top:6px">
@@ -616,7 +647,7 @@ function rendreReglages() {
       <p class="small muted">Liste JSON : [{"login": "nom", "facecam": [x, y, largeur, hauteur]}] en fractions de l’image. Sans zone, le jeu est simplement zoomé.</p>
       <textarea id="cStreamers" style="font-family:ui-monospace,monospace;font-size:12.5px">${esc(JSON.stringify(c.streamers || [], null, 1))}</textarea></details>
     <div class="row" style="margin-top:16px"><button class="btn pri" id="btnSauverCfg">Enregistrer les réglages</button><span class="small muted">Effet à la prochaine tournée / publication.</span></div>`;
-  $('#cMode').value = p.mode || 'manuel'; $('#cStatut').value = c.statut || 'active';
+  $('#cMode').value = p.mode || 'manuel'; $('#cStatut').value = c.statut || 'active'; $('#cFourn').value = p.fournisseur || 'youtube_api';
   $('#btnSauverCfg').onclick = e => sauverConfig(e.currentTarget);
 }
 const liste = (s, sep = /\s*,\s*/) => s.split(sep).map(x => x.trim()).filter(Boolean);
@@ -631,7 +662,7 @@ async function sauverConfig(btn) {
     let streamers; try { streamers = JSON.parse($('#cStreamers').value || '[]'); if (!Array.isArray(streamers)) throw 0; }
     catch (e) { throw new ErreurGH('Zones de facecam : JSON invalide.', 0); }
     c.statut = $('#cStatut').value;
-    c.publication = {...c.publication, mode: $('#cMode').value, upload_post_user: $('#cUser').value.trim(), creneaux: cr.sort(),
+    c.publication = {...c.publication, fournisseur: $('#cFourn').value, youtube_verifie: $('#cVerif').checked, mode: $('#cMode').value, upload_post_user: $('#cUser').value.trim(), creneaux: cr.sort(),
                      max_par_jour: nombre('#cMaxJour', 4), plateformes: plat};
     Object.assign(c.reperage, {langues: liste($('#cLangues').value), vues_min: nombre('#cVues', 300), duree_min: nombre('#cDmin', 12),
       duree_max: nombre('#cDmax', 60), fenetre_heures: nombre('#cFen', 24), max_par_tournee: nombre('#cParT', 3),
@@ -721,6 +752,14 @@ const tournee = async btn => {
   btn.disabled = false; btn.innerHTML = old;
 };
 $('#btnTournee').onclick = e => tournee(e.currentTarget);
+$('#btnTestYt').onclick = async e => {
+  const b = e.currentTarget, old = b.innerHTML;
+  if (!confirm('Envoyer le meilleur short de la file sur YouTube en PRIVÉ, pour vérifier que l’envoi fonctionne ?\n(Il reste en file ; supprime la vidéo privée ensuite dans YouTube Studio.)')) return;
+  b.disabled = true; b.innerHTML = '<span class="spin"></span>';
+  try { await lancer('publier.yml', {test: 'oui'}); toast('Test lancé : résultat dans « Dernières opérations » d’ici 2 minutes.'); setTimeout(charger, 60000); }
+  catch (err) { toast(err.message, true); }
+  b.disabled = false; b.innerHTML = old;
+};
 $('#btnTournee2').onclick = e => tournee(e.currentTarget);
 $$('#segStatut button').forEach(b => b.onclick = () => {
   if (!S.cfg || S.cfg.statut === b.dataset.v) return;
