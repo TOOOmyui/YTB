@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261123-anyme023-cwo25s",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "HyperEnergeticSalamanderVoteNay-Us2V6kOGUhcWO25s",
   "url": "https://www.twitch.tv/anyme023/clip/HyperEnergeticSalamanderVoteNay-Us2V6kOGUhcWO25s",
@@ -41,5 +41,7 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261123/gta6-clips-20261123-anyme023-cwo25s.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261123/gta6-clips-20261123-anyme023-cwo25s.jpg",
- "cree": "2026-11-23T17:06:45+00:00"
+ "cree": "2026-11-23T17:06:45+00:00",
+ "motif": "hors sujet : discussion face caméra sans jeu à l'écran, titre « REV 5 » inexploitable",
+ "rejete": "2026-11-23T17:14:56+00:00"
 }
