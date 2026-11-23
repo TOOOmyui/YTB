@@ -49,7 +49,7 @@ def recoller(mots):
         t = t.replace('’', "'")
         if out and (t[:1] == "'" or out[-1][2][-1:] == "'" or t[:1] in ',.!?;:'):
             pd, _, pt = out[-1]
-            sep = '' if (t[:1] in "',.!?;:" or pt[-1:] == "'") else ' '
+            sep = '\u00a0' if t[:1] in '!?;:' else '' if (t[:1] in "',." or pt[-1:] == "'") else ' '
             out[-1] = (pd, f, pt + sep + t)
         else:
             out.append((d, f, t))
