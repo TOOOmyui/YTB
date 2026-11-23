@@ -30,7 +30,8 @@
    "ban",
    "drama",
    "clash"
-  ]
+  ],
+  "titre_min_mots": 3
  },
  "streamers_exclus": [],
  "packaging": {

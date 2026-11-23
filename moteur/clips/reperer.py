@@ -73,6 +73,8 @@ def reperer(cfg, etat_dir, heures=None, tw=None, maintenant=None):
             return False
         if c['view_count'] < r['vues_min']:
             return False
+        if len(re.findall(r"[A-Za-zÀ-ÿ]{2,}", c.get('title') or '')) < r.get('titre_min_mots', 0):
+            return False  # titre trop pauvre pour servir d'accroche (ex. « REV 5 »)
         m = interdit(c.get('title'), r.get('mots_interdits', []))
         if m:
             raisons.append(f"{c['id']} écarté (mot interdit : {m})")

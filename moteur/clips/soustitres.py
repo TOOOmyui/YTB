@@ -42,8 +42,23 @@ def transcrire(video, langue='fr', modele='medium'):
         return []
 
 
+def recoller(mots):
+    """Recolle les élisions coupées par la transcription (« J » + « 'ai » → « J'ai »)."""
+    out = []
+    for d, f, t in mots:
+        t = t.replace('’', "'")
+        if out and (t[:1] == "'" or out[-1][2][-1:] == "'" or t[:1] in ',.!?;:'):
+            pd, _, pt = out[-1]
+            sep = '' if (t[:1] in "',.!?;:" or pt[-1:] == "'") else ' '
+            out[-1] = (pd, f, pt + sep + t)
+        else:
+            out.append((d, f, t))
+    return out
+
+
 def grouper(mots, max_mots=3, max_car=16, trou=0.45):
     """Regroupe les mots en petits blocs lisibles d'un coup d'œil."""
+    mots = recoller(mots)
     blocs, cour = [], []
     for d, f, t in mots:
         long = sum(len(x[2]) for x in cour) + len(cour) + len(t)
