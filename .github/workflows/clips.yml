@@ -67,7 +67,9 @@ jobs:
           if [ ${#FICHIERS[@]} -gt 0 ]; then
             gh release view "$TAG" -R "${{ github.repository }}" >/dev/null 2>&1 || \
               gh release create "$TAG" -R "${{ github.repository }}" --target clips --title "Shorts $TAG" --notes "Shorts en attente de programmation."
-            gh release upload "$TAG" "${FICHIERS[@]}" -R "${{ github.repository }}" --clobber
+            for F in "${FICHIERS[@]}"; do
+              for i in 1 2 3 4; do gh release upload "$TAG" "$F" -R "${{ github.repository }}" --clobber && break; echo "nouvel essai ($i) : $F"; sleep $((i * 10)); done
+            done
           fi
           # ménage : releases de clips de plus de 5 jours (non publiés à temps : la publication les a déjà écartés)
           LIMITE="clips-$(date -u -d '5 days ago' +%Y%m%d)"
@@ -75,7 +77,7 @@ jobs:
             if [[ "$T" < "$LIMITE" ]]; then gh release delete "$T" -R "${{ github.repository }}" --yes --cleanup-tag || true; fi
           done
       - name: Enregistrer l'état (file d'attente, historique, rapports)
-        if: steps.pret.outputs.ok
+        if: always() && steps.pret.outputs.ok
         run: |
           cd etat
           git config user.name "Clips"
