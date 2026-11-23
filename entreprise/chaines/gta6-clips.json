@@ -52,7 +52,7 @@
  },
  "streamers": [],
  "publication": {
-  "fournisseur": "youtube_api",
+  "fournisseur": "metricool",
   "youtube_verifie": false,
   "mode": "auto",
   "plateformes": [
@@ -60,13 +60,14 @@
   ],
   "creneaux": [
    "12:30",
-   "15:30",
    "18:00",
    "21:00"
   ],
-  "max_par_jour": 4,
+  "max_par_jour": 1,
   "fuseau": "Europe/Paris",
-  "upload_post_user": ""
+  "upload_post_user": "",
+  "quota_mensuel_metricool": 20,
+  "marque_metricool": "7683914"
  },
  "_aide": "mode « ouvert » (décision du PDG du 16/11/2026) : tous les streamers de la langue visée, sauf streamers_exclus, toujours crédités à l'écran et en description. mode « liste_blanche » : seulement les logins de `streamers`. `streamers` : réglages facultatifs par streamer, ex. [{\"login\": \"nom_twitch\", \"facecam\": [x, y, largeur, hauteur]}] (fractions de l'image). statut : « active » ou « pause » (pause = ni tournée ni publication). publication.mode : « auto » (publie le meilleur short de la file à chaque créneau) ou « manuel » (seulement les shorts validés dans le centre de contrôle). publication.fournisseur : « youtube_api » (API YouTube directe, gratuite ; youtube_verifie passe à true une fois l'audit accordé), « upload_post » ou « manuel ». upload_post_user : profil Upload-Post (si ce fournisseur est choisi)."
 }

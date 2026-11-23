@@ -7,6 +7,8 @@ Fournisseurs (réglage `publication.fournisseur`) :
     automatique est alors suspendue (publication manuelle depuis le centre de contrôle) ; seul l'envoi de test
     (--test, en privé) est permis.
   - « upload_post » : service Upload-Post (UPLOAD_POST_API_KEY, profil `upload_post_user`).
+  - « metricool » : publié par une session Claude programmée via le connecteur Metricool (skill regie-clips) ;
+    ce script ne fait alors que le ménage des fichiers expirés.
   - « manuel » : aucune publication automatique.
 
 Lancé toutes les heures par le workflow « Publier » (branche main), ou à la demande avec --id (publication immédiate
@@ -235,7 +237,9 @@ def publier(cfg, etat, id_force=None, env=None, essai=False, test=False, mainten
             bilan['expires'].append(m['id'])
 
     m = None
-    if fourn not in FOURNISSEURS:
+    if fourn == 'metricool':
+        bilan['note'] = 'publication par la session Claude programmée (Metricool) : rien à faire ici'
+    elif fourn not in FOURNISSEURS:
         bilan['note'] = 'publication automatique désactivée (fournisseur « manuel ») : publier depuis le centre de contrôle'
     elif any(not env.get(k) for k in FOURNISSEURS[fourn][1]):
         bilan['note'] = 'identifiants absents : ' + ', '.join(k for k in FOURNISSEURS[fourn][1] if not env.get(k))
