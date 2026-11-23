@@ -244,6 +244,10 @@ const SECRETS = [
   ['UPLOAD_POST_API_KEY', 'Clé API Upload-Post (publication YouTube / Instagram)', 'https://app.upload-post.com/'],
 ];
 
+// noms acceptés aussi par les workflows (secrets créés sous un autre nom)
+const ALIAS = {TWITCH_CLIENT_ID: ['TWITCH_ID', 'TWITCHID'], TWITCH_CLIENT_SECRET: ['TWITCH']};
+const aSecret = n => !!S.secrets && [n, ...(ALIAS[n] || [])].some(x => S.secrets.includes(x));
+
 // ------------------------------------------------------------------ état
 const S = {
   depot: DEPOT_DEFAUT, jeton: '', cfg: null, file: [], publies: [], rejetes: [], publications: [],
@@ -394,7 +398,7 @@ function alertes() {
   if (S.erreur) a.push(['bad', '⚠', esc(S.erreur)]);
   if (!S.jeton) a.push(['warn', '🔑', 'Lecture seule. Pour valider, publier ou changer les réglages, ajoute un jeton GitHub dans <a href="#" data-goto="reglages">Réglages</a>.']);
   if (S.secrets) {
-    const manque = SECRETS.filter(([n]) => !S.secrets.includes(n)).map(([n]) => n);
+    const manque = SECRETS.filter(([n]) => !aSecret(n)).map(([n]) => n);
     if (manque.length) a.push(['bad', '⛔', `Secrets manquants : <b>${manque.map(esc).join(', ')}</b>. Sans eux, ${manque.some(n => n.startsWith('TWITCH')) ? 'aucun clip n’est repéré' : ''}${manque.length > 1 && manque.includes('UPLOAD_POST_API_KEY') && manque.some(n => n.startsWith('TWITCH')) ? ' et ' : ''}${manque.includes('UPLOAD_POST_API_KEY') ? 'rien n’est publié' : ''}. <a href="#" data-goto="reglages">Configurer</a>`]);
   }
   if (S.cfg) {
@@ -538,7 +542,7 @@ async function action(a, id, bouton) {
     } else if (a === 'publier') {
       const pub = S.cfg?.publication || {};
       if (!pub.upload_post_user) throw new ErreurGH('Renseigne d’abord le profil Upload-Post (Réglages → Publication).', 0);
-      if (S.secrets && !S.secrets.includes('UPLOAD_POST_API_KEY')) throw new ErreurGH('Secret UPLOAD_POST_API_KEY absent : la publication ne partira pas.', 0);
+      if (S.secrets && !aSecret('UPLOAD_POST_API_KEY')) throw new ErreurGH('Secret UPLOAD_POST_API_KEY absent : la publication ne partira pas.', 0);
       if (!confirm(`Publier maintenant sur ${(pub.plateformes || ['youtube']).join(' + ')} ?\n\n« ${ed.titre_youtube ?? m.titre_youtube} »`)) { bouton.disabled = false; bouton.innerHTML = old; return; }
       if (Object.keys(ed).length) { await commit('clips', [{path: ici, content: json({...propre(m), ...ed})}], `titre ${m.id}`, [ici]); Object.assign(m, ed); }
       await lancer('publier.yml', {id: m.id});
@@ -570,7 +574,7 @@ function rendreReglages() {
   $('#inRepo').value = S.depot; $('#inJeton').value = S.jeton; $('#inMemo').checked = !!stock.get('regie.jeton');
   const lien = n => `https://github.com/${S.depot}/settings/secrets/actions/new?name=${encodeURIComponent(n)}`;
   $('#secrets').innerHTML = SECRETS.map(([n, d, src]) => {
-    const etat = S.secrets == null ? ['inconnu', ''] : S.secrets.includes(n) ? ['présent', 'ok'] : ['absent', 'bad'];
+    const etat = S.secrets == null ? ['inconnu', ''] : aSecret(n) ? ['présent', 'ok'] : ['absent', 'bad'];
     return `<li><span class="ico">${etat[1] === 'ok' ? '✓' : etat[1] === 'bad' ? '✕' : '?'}</span><div style="flex:1"><code>${n}</code> <span class="chip ${etat[1]}">${etat[0]}</span>
       <div class="small muted">${esc(d)} · <a href="${src}" target="_blank" rel="noopener">obtenir ↗</a></div></div>
       <a class="btn sm" href="${lien(n)}" target="_blank" rel="noopener">${etat[0] === 'présent' ? 'Remplacer' : 'Ajouter'} ↗</a></li>`;
