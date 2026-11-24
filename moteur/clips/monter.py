@@ -68,9 +68,34 @@ def calque(accroche, streamer, login, y_titre, h_titre, y_credit, chemin):
     img.save(chemin)
 
 
+def fenetre_pic(clip, duree_cible=32.0, apres_pic=4.0):
+    """Fenêtre de `duree_cible` s qui se termine peu après le moment le plus fort (pic sonore = réaction).
+    Coupe le début « mort » des clips Twitch et finit sur la réaction (fin qui boucle bien)."""
+    import numpy as np
+    try:
+        a = soustitres.audio_16k(clip)
+    except Exception:
+        return 0.0, None
+    duree = len(a) / 16000
+    if duree <= duree_cible + 2:
+        return 0.0, None
+    pas = 8000  # 0,5 s
+    n = len(a) // pas
+    rms = np.sqrt((a[:n * pas].reshape(n, pas) ** 2).mean(axis=1))
+    rms = np.convolve(rms, np.ones(3) / 3, mode='same')
+    marge = int(min(duree_cible, 8) / 0.5)
+    i = marge + int(np.argmax(rms[marge:])) if n > marge else int(np.argmax(rms))
+    fin = min(duree, i * 0.5 + apres_pic)
+    debut = max(0.0, fin - duree_cible)
+    fin = min(duree, debut + duree_cible)
+    return round(debut, 2), round(fin, 2)
+
+
 def monter(clip, sortie, accroche='', streamer='', login='', facecam=None, debut=0.0, fin=None,
-           sous_titres=True, langue='fr', zoom=1.0):
+           sous_titres=True, langue='fr', zoom=1.0, duree_cible=32.0):
     s = sonde(clip)
+    if debut == 0.0 and fin is None and duree_cible:
+        debut, fin = fenetre_pic(clip, duree_cible)
     fin = min(fin or s['duree'], s['duree'])
     duree = min(fin - debut, DUREE_MAX)
     if duree < 5:
