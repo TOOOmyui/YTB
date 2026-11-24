@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-kamet0-epvndy",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "VenomousKathishEyeballTheTarFu-2B4Ldq6W2fepVNdy",
   "url": "https://www.twitch.tv/kamet0/clip/VenomousKathishEyeballTheTarFu-2B4Ldq6W2fepVNdy",
@@ -41,5 +41,7 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261124/gta6-clips-20261124-kamet0-epvndy.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261124/gta6-clips-20261124-kamet0-epvndy.jpg",
- "cree": "2026-11-24T15:33:05+00:00"
+ "cree": "2026-11-24T15:33:05+00:00",
+ "motif": "hors sujet : facecam seule, aucun jeu à l'écran ; titre « Highlight Part 12 » inexploitable",
+ "rejete": "2026-11-24T15:40:57+00:00"
 }

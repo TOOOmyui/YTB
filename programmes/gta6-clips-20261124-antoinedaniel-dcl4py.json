@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-antoinedaniel-dcl4py",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "programmée",
  "clip": {
   "id": "AgreeableFaithfulGoblinTwitchRPG-RBgol90KQPdCL4PY",
   "url": "https://www.twitch.tv/antoinedaniel/clip/AgreeableFaithfulGoblinTwitchRPG-RBgol90KQPdCL4PY",
@@ -41,5 +41,12 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261124/gta6-clips-20261124-antoinedaniel-dcl4py.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261124/gta6-clips-20261124-antoinedaniel-dcl4py.jpg",
- "cree": "2026-11-24T15:33:05+00:00"
+ "cree": "2026-11-24T15:33:05+00:00",
+ "creneau": "2026-11-25T21:00:00+01:00",
+ "metricool_id": 440480028,
+ "metricool_post": "7435737062083740303",
+ "fournisseur": "metricool",
+ "plateformes": [
+  "youtube"
+ ]
 }

@@ -52,5 +52,53 @@
   "plateformes": [
    "youtube"
   ]
+ },
+ {
+  "id": "gta6-clips-20261124-michou-pmhydx",
+  "jour": "2026-11-25",
+  "creneau": "09:30",
+  "date": "2026-11-25T09:30:00+01:00",
+  "login": "michou",
+  "titre": "Le bug de voiture le plus absurde — Michou sur GTA 6",
+  "metricool_id": 440479691,
+  "plateformes": [
+   "youtube"
+  ]
+ },
+ {
+  "id": "gta6-clips-20261124-donatchottv--qmjj5",
+  "jour": "2026-11-25",
+  "creneau": "15:30",
+  "date": "2026-11-25T15:30:00+01:00",
+  "login": "donatchottv",
+  "titre": "Au bout de la 3e mort, il craque — Donatchottv sur GTA 6",
+  "metricool_id": 440479798,
+  "plateformes": [
+   "youtube"
+  ]
+ },
+ {
+  "id": "gta6-clips-20261124-michou-d75lsf",
+  "jour": "2026-11-25",
+  "creneau": "18:00",
+  "date": "2026-11-25T18:00:00+01:00",
+  "login": "michou",
+  "titre": "Lucia pète un plomb sur la plage — Michou sur GTA 6",
+  "metricool_id": 440479931,
+  "plateformes": [
+   "youtube"
+  ]
+ },
+ {
+  "id": "gta6-clips-20261124-antoinedaniel-dcl4py",
+  "jour": "2026-11-25",
+  "creneau": "21:00",
+  "date": "2026-11-25T21:00:00+01:00",
+  "login": "antoinedaniel",
+  "titre": "Paf le chien — AntoineDaniel sur GTA 6",
+  "metricool_id": 440480028,
+  "plateformes": [
+   "youtube"
+  ]
  }
 ]
