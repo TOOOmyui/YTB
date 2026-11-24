@@ -15,13 +15,13 @@
   "langues": [
    "fr"
   ],
-  "fenetre_heures": 24,
+  "fenetre_heures": 48,
   "duree_min": 12,
   "duree_max": 60,
-  "vues_min": 300,
-  "max_par_streamer": 2,
-  "max_par_tournee": 3,
-  "file_max": 8,
+  "vues_min": 100,
+  "max_par_streamer": 3,
+  "max_par_tournee": 6,
+  "file_max": 12,
   "pages_prospection": 3,
   "max_prospects": 15,
   "mots_interdits": [
@@ -59,11 +59,13 @@
    "youtube"
   ],
   "creneaux": [
+   "09:30",
    "12:30",
+   "15:30",
    "18:00",
    "21:00"
   ],
-  "max_par_jour": 1,
+  "max_par_jour": 5,
   "fuseau": "Europe/Paris",
   "upload_post_user": "",
   "quota_mensuel_metricool": 20,
