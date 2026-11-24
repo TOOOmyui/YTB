@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261123-antoinedaniel-u0wkmi",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "programmée",
  "clip": {
   "id": "SpinelessInspiringFrogPicoMause-aBToqFgPsaU0wKmI",
   "url": "https://www.twitch.tv/antoinedaniel/clip/SpinelessInspiringFrogPicoMause-aBToqFgPsaU0wKmI",
@@ -21,7 +21,7 @@
   "sous_titres": 7,
   "facecam": false
  },
- "titre_youtube": "Trust me Bro — AntoineDaniel sur GTA 6",
+ "titre_youtube": "Saut en voiture « trust me bro » — AntoineDaniel sur GTA 6",
  "description": "AntoineDaniel en direct sur GTA 6.\n\nClip original : https://www.twitch.tv/antoinedaniel/clip/SpinelessInspiringFrogPicoMause-aBToqFgPsaU0wKmI\nChaîne Twitch : https://www.twitch.tv/antoinedaniel\nCrédit : AntoineDaniel — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.\nStreamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.\n\n#GTA6 #Twitch #Shorts",
  "tags": [
   "GTA 6",
@@ -41,5 +41,12 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261123/gta6-clips-20261123-antoinedaniel-u0wkmi.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261123/gta6-clips-20261123-antoinedaniel-u0wkmi.jpg",
- "cree": "2026-11-23T18:07:48+00:00"
+ "cree": "2026-11-23T18:07:48+00:00",
+ "creneau": "2026-11-25T12:30:00+01:00",
+ "metricool_id": 439957871,
+ "metricool_post": "-7044423351613632611",
+ "plateformes": [
+  "youtube"
+ ],
+ "fournisseur": "metricool"
 }

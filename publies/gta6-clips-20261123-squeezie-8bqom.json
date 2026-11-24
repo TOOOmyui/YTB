@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261123-squeezie-8bqom",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "EsteemedVainCakeDBstyle-3nKe7sxxbG8BqOm_",
   "url": "https://www.twitch.tv/squeezie/clip/EsteemedVainCakeDBstyle-3nKe7sxxbG8BqOm_",
@@ -45,5 +45,13 @@
  "creneau": "2026-11-23T21:00:00+01:00",
  "metricool_id": 439142864,
  "metricool_post": "1796805373760849165",
- "fournisseur": "metricool"
+ "fournisseur": "metricool",
+ "publication": {
+  "date": "2026-11-23T21:00:00+01:00",
+  "url": "https://www.youtube.com/shorts/h70gTRF4IJw",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }
