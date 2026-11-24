@@ -28,5 +28,29 @@
   "plateformes": [
    "youtube"
   ]
+ },
+ {
+  "id": "gta6-clips-20261124-michou-j8iodb",
+  "jour": "2026-11-24",
+  "creneau": "18:00",
+  "date": "2026-11-24T18:00:00+01:00",
+  "login": "michou",
+  "titre": "Il règle enfin son compte au chasseur — Michou sur GTA 6",
+  "metricool_id": 440466893,
+  "plateformes": [
+   "youtube"
+  ]
+ },
+ {
+  "id": "gta6-clips-20261124-samueletienne-k7xnjp",
+  "jour": "2026-11-24",
+  "creneau": "21:00",
+  "date": "2026-11-24T21:00:00+01:00",
+  "login": "samueletienne",
+  "titre": "Satané streamer IRL — Samuel Étienne sur GTA 6",
+  "metricool_id": 440467011,
+  "plateformes": [
+   "youtube"
+  ]
  }
 ]

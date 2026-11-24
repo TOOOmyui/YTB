@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-michou-j8iodb",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "programmée",
  "clip": {
   "id": "DirtyBovineBaboonMrDestructoid-KVNsttYAsZJ8iODb",
   "url": "https://www.twitch.tv/michou/clip/DirtyBovineBaboonMrDestructoid-KVNsttYAsZJ8iODb",
@@ -21,7 +21,7 @@
   "sous_titres": 9,
   "facecam": false
  },
- "titre_youtube": "Michou tue le chasseur — Michou sur GTA 6",
+ "titre_youtube": "Il règle enfin son compte au chasseur — Michou sur GTA 6",
  "description": "Michou en direct sur GTA 6.\n\nClip original : https://www.twitch.tv/michou/clip/DirtyBovineBaboonMrDestructoid-KVNsttYAsZJ8iODb\nChaîne Twitch : https://www.twitch.tv/michou\nCrédit : Michou — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.\nStreamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.\n\n#GTA6 #Twitch #Shorts",
  "tags": [
   "GTA 6",
@@ -41,5 +41,12 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261124/gta6-clips-20261124-michou-j8iodb.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261124/gta6-clips-20261124-michou-j8iodb.jpg",
- "cree": "2026-11-24T15:27:23+00:00"
+ "cree": "2026-11-24T15:27:23+00:00",
+ "creneau": "2026-11-24T18:00:00+01:00",
+ "metricool_id": 440466893,
+ "metricool_post": "-487989076790721472",
+ "fournisseur": "metricool",
+ "plateformes": [
+  "youtube"
+ ]
 }
