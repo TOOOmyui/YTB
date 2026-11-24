@@ -3,7 +3,7 @@
 - **Nom public** : Clear Assets (décision du PDG, 02/11/2026) — devise : « La finance personnelle, textes et chiffres à l'appui »
 - **Identifiant interne** : finance-fr
 - **Langue** : français
-- **Statut** : **arrêtée** le 23/11/2026 (décision du PDG : la chaîne YouTube passe aux shorts GTA 6, `gta6-clips`, et le quota gratuit Metricool leur est réservé). Production suspendue, vidéos 010 à 012 non produites ; les 9 vidéos publiées restent en ligne. Tâches suspendues, réactivables : production, contrôle avant diffusion, contrôle qualité, DG, PDG délégué, rédacteur en chef, superviseur.
+- **Statut** : **abandonnée** (décision définitive du PDG du 24/11/2026 ; production arrêtée le 23/11/2026) (décision du PDG : la chaîne YouTube passe aux shorts GTA 6, `gta6-clips`, et le quota gratuit Metricool leur est réservé). Production suspendue, vidéos 010 à 012 non produites ; les 9 vidéos publiées restent en ligne. Tâches suspendues, réactivables : production, contrôle avant diffusion, contrôle qualité, DG, PDG délégué, rédacteur en chef, superviseur.
 - **Plateformes** : YouTube (vidéos longues ; Shorts et Reels en pause) — via Metricool, marque 7683914
 - **Chaîne YouTube** : vérifiée par téléphone le 03/11/2026 (miniatures personnalisées et vidéos de plus de 15 min autorisées)
 - **Voix** : deux voix en alternance d'une vidéo à l'autre (décision du PDG, 02/11/2026) — Marc énergique (Azure fr-FR-Marc:MAI-Voice-2.1, style « excited ») pour les vidéos de numéro impair, Rémy HD (Azure fr-FR-Remy:DragonHDLatestNeural) pour les vidéos de numéro pair. Voix exclusives de la chaîne. La voix locale (Piper) sert uniquement aux tests : jamais de publication avec elle.
