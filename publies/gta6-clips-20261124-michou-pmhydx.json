@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-michou-pmhydx",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "ExcitedAbstemiousWheelFloof-hC6HtELkC5PMhYdx",
   "url": "https://www.twitch.tv/michou/clip/ExcitedAbstemiousWheelFloof-hC6HtELkC5PMhYdx",
@@ -48,5 +48,13 @@
  "fournisseur": "metricool",
  "plateformes": [
   "youtube"
- ]
+ ],
+ "publication": {
+  "date": "2026-11-25T09:30:00+01:00",
+  "url": "https://www.youtube.com/shorts/WgrqSmvPVcs",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }

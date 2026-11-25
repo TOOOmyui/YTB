@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261125-samueletienne-zxtmqs",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "programmée",
  "clip": {
   "id": "TallGoldenMarrowSeemsGood-Q5_ExDs1vJZXTmQS",
   "url": "https://www.twitch.tv/samueletienne/clip/TallGoldenMarrowSeemsGood-Q5_ExDs1vJZXTmQS",
@@ -21,8 +21,8 @@
   "sous_titres": 5,
   "facecam": false
  },
- "titre_youtube": "Atterrissage en finesse — samueletienne sur GTA 6",
- "description": "samueletienne en direct sur GTA 6.\n\nClip original : https://www.twitch.tv/samueletienne/clip/TallGoldenMarrowSeemsGood-Q5_ExDs1vJZXTmQS\nChaîne Twitch : https://www.twitch.tv/samueletienne\nCrédit : samueletienne — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.\nStreamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.\n\n#GTA6 #Twitch #Shorts",
+ "titre_youtube": "Atterrissage d'hélico en finesse — Samuel Étienne sur GTA 6",
+ "description": "Samuel Étienne en direct sur GTA 6.\n\nClip original : https://www.twitch.tv/samueletienne/clip/TallGoldenMarrowSeemsGood-Q5_ExDs1vJZXTmQS\nChaîne Twitch : https://www.twitch.tv/samueletienne\nCrédit : Samuel Étienne — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.\nStreamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.\n\n#GTA6 #Twitch #Shorts",
  "tags": [
   "GTA 6",
   "GTA VI",
@@ -41,5 +41,17 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261125/gta6-clips-20261125-samueletienne-zxtmqs.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261125/gta6-clips-20261125-samueletienne-zxtmqs.jpg",
- "cree": "2026-11-25T09:51:49+00:00"
+ "cree": "2026-11-25T09:51:49+00:00",
+ "creneau": "2026-11-26T09:30:00+01:00",
+ "metricool_id": 441758729,
+ "metricool_post": {
+  "id": 441758729,
+  "uuid": "2809838089040317219",
+  "media": "https://static.metricool.com/planner/202611/7683914-file-646578400559363411.mp4",
+  "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7683914&openWithPostUuid=2809838089040317219"
+ },
+ "plateformes": [
+  "youtube"
+ ],
+ "fournisseur": "metricool"
 }

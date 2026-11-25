@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261123-antoinedaniel-u0wkmi",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "SpinelessInspiringFrogPicoMause-aBToqFgPsaU0wKmI",
   "url": "https://www.twitch.tv/antoinedaniel/clip/SpinelessInspiringFrogPicoMause-aBToqFgPsaU0wKmI",
@@ -48,5 +48,13 @@
  "plateformes": [
   "youtube"
  ],
- "fournisseur": "metricool"
+ "fournisseur": "metricool",
+ "publication": {
+  "date": "2026-11-25T12:30:00+01:00",
+  "url": "https://www.youtube.com/shorts/HaEwjFXp5DI",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }
