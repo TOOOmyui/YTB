@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-samueletienne-k7xnjp",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "ResilientCreativeSushiBlargNaut-RBIbTDgeFPk7xnjp",
   "url": "https://www.twitch.tv/samueletienne/clip/ResilientCreativeSushiBlargNaut-RBIbTDgeFPk7xnjp",
@@ -48,5 +48,13 @@
  "fournisseur": "metricool",
  "plateformes": [
   "youtube"
- ]
+ ],
+ "publication": {
+  "date": "2026-11-24T21:00:00+01:00",
+  "url": "https://www.youtube.com/shorts/vOAtApu_PCI",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }

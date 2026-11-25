@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-michou-j8iodb",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "DirtyBovineBaboonMrDestructoid-KVNsttYAsZJ8iODb",
   "url": "https://www.twitch.tv/michou/clip/DirtyBovineBaboonMrDestructoid-KVNsttYAsZJ8iODb",
@@ -48,5 +48,13 @@
  "fournisseur": "metricool",
  "plateformes": [
   "youtube"
- ]
+ ],
+ "publication": {
+  "date": "2026-11-24T18:00:00+01:00",
+  "url": "https://www.youtube.com/shorts/Qm2Z3LsTDds",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }

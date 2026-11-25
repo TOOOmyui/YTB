@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261123-michou-3fxtpn",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "KitschyApatheticSlothHumbleLife-X6wDES7IdT3Fxtpn",
   "url": "https://www.twitch.tv/michou/clip/KitschyApatheticSlothHumbleLife-X6wDES7IdT3Fxtpn",
@@ -45,5 +45,13 @@
  "creneau": "2026-11-24T12:30:00+01:00",
  "metricool_id": 439142901,
  "metricool_post": "459501565877308341",
- "fournisseur": "metricool"
+ "fournisseur": "metricool",
+ "publication": {
+  "date": "2026-11-24T12:30:00+01:00",
+  "url": "https://www.youtube.com/shorts/wibtRWjJwzU",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }
