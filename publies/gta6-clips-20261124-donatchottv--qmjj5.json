@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-donatchottv--qmjj5",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "StupidBlazingHerbsPMSTwin-OZ8TwAwV2h-qMJJ5",
   "url": "https://www.twitch.tv/donatchottv/clip/StupidBlazingHerbsPMSTwin-OZ8TwAwV2h-qMJJ5",
@@ -48,5 +48,13 @@
  "fournisseur": "metricool",
  "plateformes": [
   "youtube"
- ]
+ ],
+ "publication": {
+  "date": "2026-11-25T15:30:00+01:00",
+  "url": "https://www.youtube.com/shorts/lO4y2XniGP8",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }

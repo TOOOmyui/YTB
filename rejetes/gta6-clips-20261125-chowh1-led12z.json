@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261125-chowh1-led12z",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "TallElatedWatercressNinjaGrumpy--aKFXIwoAZLed12Z",
   "url": "https://www.twitch.tv/chowh1/clip/TallElatedWatercressNinjaGrumpy--aKFXIwoAZLed12Z",
@@ -41,5 +41,6 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261125/gta6-clips-20261125-chowh1-led12z.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261125/gta6-clips-20261125-chowh1-led12z.jpg",
- "cree": "2026-11-25T19:57:28+00:00"
+ "cree": "2026-11-25T19:57:28+00:00",
+ "motif": "accroche illisible : titre de stream « [DROP] … !secretlab !promo »"
 }

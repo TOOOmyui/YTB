@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-antoinedaniel-dcl4py",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "AgreeableFaithfulGoblinTwitchRPG-RBgol90KQPdCL4PY",
   "url": "https://www.twitch.tv/antoinedaniel/clip/AgreeableFaithfulGoblinTwitchRPG-RBgol90KQPdCL4PY",
@@ -48,5 +48,13 @@
  "fournisseur": "metricool",
  "plateformes": [
   "youtube"
- ]
+ ],
+ "publication": {
+  "date": "2026-11-25T21:00:00+01:00",
+  "url": "https://www.youtube.com/shorts/vSBONRAWc5w",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }

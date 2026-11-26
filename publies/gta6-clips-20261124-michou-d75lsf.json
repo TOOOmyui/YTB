@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261124-michou-d75lsf",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "AggressiveDirtyJuiceMau5-JUtlF1yJnsd75LSF",
   "url": "https://www.twitch.tv/michou/clip/AggressiveDirtyJuiceMau5-JUtlF1yJnsd75LSF",
@@ -48,5 +48,13 @@
  "fournisseur": "metricool",
  "plateformes": [
   "youtube"
- ]
+ ],
+ "publication": {
+  "date": "2026-11-25T18:00:00+01:00",
+  "url": "https://www.youtube.com/shorts/6GeMUqpj_P0",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }
