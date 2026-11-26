@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261125-mistermv-gu90qu",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "ScrumptiousSpeedyDiscPupper-GcoI9rhs50GU90Qu",
   "url": "https://www.twitch.tv/mistermv/clip/ScrumptiousSpeedyDiscPupper-GcoI9rhs50GU90Qu",
@@ -48,5 +48,13 @@
  "plateformes": [
   "youtube"
  ],
- "fournisseur": "metricool"
+ "fournisseur": "metricool",
+ "publication": {
+  "date": "2026-11-26T12:30:00+01:00",
+  "url": "https://www.youtube.com/shorts/Pdd8cxJEG38",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }

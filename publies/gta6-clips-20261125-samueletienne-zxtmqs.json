@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261125-samueletienne-zxtmqs",
  "chaine": "gta6-clips",
- "statut": "programmée",
+ "statut": "publiée",
  "clip": {
   "id": "TallGoldenMarrowSeemsGood-Q5_ExDs1vJZXTmQS",
   "url": "https://www.twitch.tv/samueletienne/clip/TallGoldenMarrowSeemsGood-Q5_ExDs1vJZXTmQS",
@@ -53,5 +53,13 @@
  "plateformes": [
   "youtube"
  ],
- "fournisseur": "metricool"
+ "fournisseur": "metricool",
+ "publication": {
+  "date": "2026-11-26T09:30:00+01:00",
+  "url": "https://www.youtube.com/shorts/NEe7rW8XD60",
+  "plateformes": [
+   "youtube"
+  ],
+  "fournisseur": "metricool"
+ }
 }
