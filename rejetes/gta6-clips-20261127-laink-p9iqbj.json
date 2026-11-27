@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261127-laink-p9iqbj",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "PleasantCrunchyHorseLeeroyJenkins-pPCszqkDdTp9IqBj",
   "url": "https://www.twitch.tv/laink/clip/PleasantCrunchyHorseLeeroyJenkins-pPCszqkDdTp9IqBj",
@@ -41,5 +41,6 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-laink-p9iqbj.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-laink-p9iqbj.jpg",
- "cree": "2026-11-27T05:03:42+00:00"
+ "cree": "2026-11-27T05:03:42+00:00",
+ "motif": "pas de jeu à l'écran (menu de sauvegarde puis écran d'attente) et accroche = titre de stream"
 }
