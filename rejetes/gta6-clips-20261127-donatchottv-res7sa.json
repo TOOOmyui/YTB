@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261127-donatchottv-res7sa",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "RepleteIncredulousRingPRChase-7mc4_LQ3Khres7SA",
   "url": "https://www.twitch.tv/donatchottv/clip/RepleteIncredulousRingPRChase-7mc4_LQ3Khres7SA",
@@ -41,5 +41,6 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-donatchottv-res7sa.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-donatchottv-res7sa.jpg",
- "cree": "2026-11-27T15:05:44+00:00"
+ "cree": "2026-11-27T15:05:44+00:00",
+ "motif": "accroche = titre de clip brut mal orthographié (« ces quoi se bordel »), moment incompréhensible sans contexte"
 }

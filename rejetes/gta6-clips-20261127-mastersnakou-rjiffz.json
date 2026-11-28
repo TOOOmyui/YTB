@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261127-mastersnakou-rjiffz",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "SilkySuaveMeatloafCharlieBitMe-N9vhGm0ixcrjIFfZ",
   "url": "https://www.twitch.tv/mastersnakou/clip/SilkySuaveMeatloafCharlieBitMe-N9vhGm0ixcrjIFfZ",
@@ -41,5 +41,6 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-mastersnakou-rjiffz.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-mastersnakou-rjiffz.jpg",
- "cree": "2026-11-27T15:05:44+00:00"
+ "cree": "2026-11-27T15:05:44+00:00",
+ "motif": "accroche = titre de stream (« WzBot CLIP | GTA 6: Slow Runner… ») et sous-titres manifestement faux (« alors'est 183 »)"
 }

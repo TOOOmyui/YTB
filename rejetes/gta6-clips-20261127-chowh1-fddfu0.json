@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261127-chowh1-fddfu0",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "SparklingAbnegateTubersOMGScoots-m5ERqgsDHsfdDFU0",
   "url": "https://www.twitch.tv/chowh1/clip/SparklingAbnegateTubersOMGScoots-m5ERqgsDHsfdDFU0",
@@ -41,5 +41,6 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-chowh1-fddfu0.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261127/gta6-clips-20261127-chowh1-fddfu0.jpg",
- "cree": "2026-11-27T15:05:44+00:00"
+ "cree": "2026-11-27T15:05:44+00:00",
+ "motif": "accroche = titre de stream avec commandes promo (« !secretlab !promo »)"
 }
