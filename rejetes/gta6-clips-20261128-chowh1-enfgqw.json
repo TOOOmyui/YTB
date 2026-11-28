@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261128-chowh1-enfgqw",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "rejetée",
  "clip": {
   "id": "FilthyVainWeaselCoolCat-3H3LRMnS0WEnfGqw",
   "url": "https://www.twitch.tv/chowh1/clip/FilthyVainWeaselCoolCat-3H3LRMnS0WEnfGqw",
@@ -41,5 +41,6 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261128/gta6-clips-20261128-chowh1-enfgqw.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261128/gta6-clips-20261128-chowh1-enfgqw.jpg",
- "cree": "2026-11-28T07:48:56+00:00"
+ "cree": "2026-11-28T07:48:56+00:00",
+ "motif": "accroche illisible/trompeuse : titre de stream avec commande sponsor (« PSYCHOPATHE EN 120 FPS !TRADEREPUBLIC »)"
 }

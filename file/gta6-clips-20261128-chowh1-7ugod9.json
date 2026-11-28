@@ -1,7 +1,7 @@
 {
  "id": "gta6-clips-20261128-chowh1-7ugod9",
  "chaine": "gta6-clips",
- "statut": "montée",
+ "statut": "validée",
  "clip": {
   "id": "YummySpineyCasetteGingerPower-HBz41UuNzg7ugOd9",
   "url": "https://www.twitch.tv/chowh1/clip/YummySpineyCasetteGingerPower-HBz41UuNzg7ugOd9",
@@ -21,8 +21,8 @@
   "sous_titres": 0,
   "facecam": false
  },
- "titre_youtube": "shoot tank helicoptère — chowh1 sur GTA 6",
- "description": "chowh1 en direct sur GTA 6.\n\nClip original : https://www.twitch.tv/chowh1/clip/YummySpineyCasetteGingerPower-HBz41UuNzg7ugOd9\nChaîne Twitch : https://www.twitch.tv/chowh1\nCrédit : chowh1 — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.\nStreamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.\n\n#GTA6 #Twitch #Shorts",
+ "titre_youtube": "Tank contre hélico sur la base militaire — Chowh1 sur GTA 6",
+ "description": "Chowh1 en direct sur GTA 6.\n\nClip original : https://www.twitch.tv/chowh1/clip/YummySpineyCasetteGingerPower-HBz41UuNzg7ugOd9\nChaîne Twitch : https://www.twitch.tv/chowh1\nCrédit : Chowh1 — tout le mérite du moment lui revient. Abonne-toi à sa chaîne Twitch.\nStreamer concerné et tu veux un retrait ou un autre crédit ? Écris en commentaire, c'est fait dans la journée.\n\n#GTA6 #Twitch #Shorts",
  "tags": [
   "GTA 6",
   "GTA VI",
@@ -41,5 +41,10 @@
  "categorie": "GAMING",
  "url_video": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261128/gta6-clips-20261128-chowh1-7ugod9.mp4",
  "url_couverture": "https://github.com/TOOOmyui/YTB/releases/download/clips-20261128/gta6-clips-20261128-chowh1-7ugod9.jpg",
- "cree": "2026-11-28T07:48:56+00:00"
+ "cree": "2026-11-28T07:48:56+00:00",
+ "controle": {
+  "date": "2026-11-28T13:45:00+00:00",
+  "agent": "clips",
+  "resultat": "ok"
+ }
 }
